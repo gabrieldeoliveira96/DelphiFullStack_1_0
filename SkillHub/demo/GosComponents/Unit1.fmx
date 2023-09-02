@@ -1,0 +1,816 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 741
+  ClientWidth = 459
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object TabControl1: TTabControl
+    Align = Client
+    Size.Width = 459.000000000000000000
+    Size.Height = 741.000000000000000000
+    Size.PlatformDefault = False
+    TabIndex = 9
+    TabOrder = 0
+    TabPosition = PlatformDefault
+    Sizes = (
+      459s
+      715s
+      459s
+      715s
+      459s
+      715s
+      459s
+      715s
+      459s
+      715s
+      459s
+      715s
+      459s
+      715s
+      459s
+      715s
+      459s
+      715s
+      459s
+      715s)
+    object TabItem1: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 69.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'TabItem1'
+      object Button1: TButton
+        Position.X = 104.000000000000000000
+        Position.Y = 449.000000000000000000
+        TabOrder = 0
+        Text = 'Button1'
+        OnClick = Button1Click
+      end
+      object Edit1: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 1
+        Position.X = 104.000000000000000000
+        Position.Y = 240.000000000000000000
+        Size.Width = 177.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object GosButtonView1: TGosButtonView
+        Background.XRadius = 20.000000000000000000
+        Background.YRadius = 20.000000000000000000
+        Background.ItemDefault.Color = claCornflowerblue
+        Size.Width = 177.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        Position.X = 104.000000000000000000
+        Position.Y = 401.000000000000000000
+        TabOrder = 2
+        Text = 'GosButtonView1'
+        TextSettings.Gravity = Center
+        object ShadowEffect1: TShadowEffect
+          Distance = 3.000000000000000000
+          Direction = 45.000000000000000000
+          Softness = 0.300000011920929000
+          Opacity = 0.600000023841857900
+          ShadowColor = claBlack
+        end
+      end
+      object GosEditView1: TGosEditView
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Background.XRadius = 20.000000000000000000
+        Background.YRadius = 20.000000000000000000
+        Background.ItemDefault.Color = claSilver
+        Background.Border.Color.Default = xBFC0C0C0
+        Background.Border.Color.Pressed = claNull
+        Background.Border.Color.Focused = xFF0066CC
+        Background.Border.Color.Hovered = claSilver
+        Background.Border.Color.Selected = claNull
+        Background.Border.Color.Checked = claNull
+        Background.Border.Color.Enabled = claNull
+        ClipChildren = True
+        Padding.Left = 20.000000000000000000
+        Padding.Top = 2.000000000000000000
+        Padding.Right = 6.000000000000000000
+        Padding.Bottom = 2.000000000000000000
+        Size.Width = 225.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        Position.X = 104.000000000000000000
+        Position.Y = 289.000000000000000000
+        TabOrder = 3
+        Text = 'GosEditView1'
+        TextSettings.Gravity = CenterVertical
+        Drawable.ItemDefault.Color = claPeachpuff
+        Drawable.ItemDefault.Kind = Solid
+        DisableFocusEffect = True
+      end
+      object GosRectangle1: TGosRectangle
+        Position.X = 104.000000000000000000
+        Position.Y = 48.000000000000000000
+        Size.Width = 201.000000000000000000
+        Size.Height = 97.000000000000000000
+        Size.PlatformDefault = False
+        XRadius = 20.000000000000000000
+        YRadius = 20.000000000000000000
+      end
+      object GosTextView1: TGosTextView
+        Size.Width = 217.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        Position.X = 104.000000000000000000
+        Position.Y = 352.000000000000000000
+        TabOrder = 5
+        Text = 'GosTextView1'
+      end
+    end
+    object TabItem2: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 53.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Ballon'
+      object Button2: TButton
+        Align = Top
+        Size.Width = 459.000000000000000000
+        Size.Height = 73.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Button2'
+        OnClick = Button2Click
+      end
+      object GosAguardeBallon1: TGosAguardeBallon
+        Align = Client
+        Size.Width = 459.000000000000000000
+        Size.Height = 642.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Delay = 0
+        Cor1 = xFF0050A0
+        Cor2 = xFF4DA6FF
+        Cor3 = xFF809AB4
+        Cor4 = xFF18324C
+        Cor5 = xFFBFD4EA
+      end
+    end
+    object TabItem3: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 63.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Loading'
+      object Button3: TButton
+        Align = Top
+        Size.Width = 459.000000000000000000
+        Size.Height = 73.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Button2'
+        OnClick = Button3Click
+      end
+      object GosAguardeText1: TGosAguardeText
+        Align = Client
+        Size.Width = 459.000000000000000000
+        Size.Height = 642.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        OpacityBackGround = 0.699999988079071000
+        object TRectangle
+          Align = Contents
+          Fill.Color = claBlack
+          Opacity = 0.000000000000000000
+          Size.Width = 50.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+          Visible = False
+        end
+        object TLayout
+          Align = Contents
+          Opacity = 0.000000000000000000
+          Size.Width = 50.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          Visible = False
+          TabOrder = 1
+          object TArc
+            Align = Center
+            Margins.Bottom = 55.000000000000000000
+            Size.Width = 25.000000000000000000
+            Size.Height = 25.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Color = xFFFEFFFF
+            Stroke.Thickness = 2.000000000000000000
+            EndAngle = 280.000000000000000000
+            object TFloatAnimation
+              AnimationType = InOut
+              Duration = 0.800000011920929000
+              Loop = True
+              PropertyName = 'RotationAngle'
+              StartValue = 0.000000000000000000
+              StopValue = 360.000000000000000000
+            end
+          end
+          object TLabel
+            Align = Center
+            StyledSettings = [Family, Style]
+            Margins.Top = 60.000000000000000000
+            Size.Width = 120.000000000000000000
+            Size.Height = 70.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 13.000000000000000000
+            TextSettings.FontColor = xFFFEFFFF
+            TextSettings.HorzAlign = Center
+            TextSettings.VertAlign = Leading
+            TextSettings.Trimming = None
+            TabOrder = 1
+            TabStop = False
+          end
+        end
+      end
+    end
+    object TabItem4: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 99.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'DrawerButtons'
+      object Button4: TButton
+        Align = Top
+        Size.Width = 459.000000000000000000
+        Size.Height = 73.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Button2'
+        OnClick = Button4Click
+      end
+    end
+    object TabItem5: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 129.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Drawer Components'
+      object GosRectangle2: TGosRectangle
+        Align = Client
+        Locked = True
+        Size.Width = 459.000000000000000000
+        Size.Height = 715.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        object Button5: TButton
+          Align = Top
+          Size.Width = 459.000000000000000000
+          Size.Height = 73.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'Button2'
+          OnClick = Button5Click
+        end
+      end
+      object GosDrawerComponents1: TGosDrawerComponents
+        Fill.Color = claWhite
+        Position.X = 29.000000000000000000
+        Position.Y = 272.000000000000000000
+        Size.Width = 385.000000000000000000
+        Size.Height = 435.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        Duration = 0.699999988079071000
+        EnableClickHide = True
+        HeightContainer = 5.782803121059974E19
+        object Label1: TLabel
+          Align = Top
+          Margins.Left = 16.000000000000000000
+          Margins.Top = 16.000000000000000000
+          Margins.Right = 16.000000000000000000
+          Margins.Bottom = 16.000000000000000000
+          Position.X = 16.000000000000000000
+          Position.Y = 16.000000000000000000
+          Size.Width = 353.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Insira alguma observa'#231#227'o para o item'
+          TabOrder = 0
+        end
+        object GosEditView2: TGosEditView
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Top
+          Background.Border.Color.Default = xBFC0C0C0
+          Background.Border.Color.Pressed = claNull
+          Background.Border.Color.Focused = xFF0066CC
+          Background.Border.Color.Hovered = claSilver
+          Background.Border.Color.Selected = claNull
+          Background.Border.Color.Checked = claNull
+          Background.Border.Color.Enabled = claNull
+          ClipChildren = True
+          Padding.Left = 6.000000000000000000
+          Padding.Top = 2.000000000000000000
+          Padding.Right = 6.000000000000000000
+          Padding.Bottom = 2.000000000000000000
+          Margins.Left = 16.000000000000000000
+          Margins.Top = 16.000000000000000000
+          Margins.Right = 16.000000000000000000
+          Margins.Bottom = 16.000000000000000000
+          Size.Width = 353.000000000000000000
+          Size.Height = 72.000000000000000000
+          Size.PlatformDefault = False
+          Position.X = 16.000000000000000000
+          Position.Y = 65.000000000000000000
+          TabOrder = 1
+          TextSettings.Gravity = CenterVertical
+          DisableFocusEffect = True
+        end
+      end
+    end
+    object TabItem6: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 63.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'editTitle'
+      object GosEditTitle1: TGosEditTitle
+        Fill.Color = claWhite
+        HitTest = False
+        Position.X = 105.000000000000000000
+        Position.Y = 174.000000000000000000
+        Size.Width = 200.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        XRadius = 5.000000000000000000
+        YRadius = 5.000000000000000000
+        BorderColor = xFF087AF7
+        BackGroundColor = claWhite
+        BorderStroke = 2
+        EditCustom.Touch.InteractiveGestures = [LongTap, DoubleTap]
+        EditCustom.Align = Client
+        EditCustom.Background.Border.Color.Default = xBFC0C0C0
+        EditCustom.Background.Border.Color.Pressed = claNull
+        EditCustom.Background.Border.Color.Focused = xFF0066CC
+        EditCustom.Background.Border.Color.Hovered = claSilver
+        EditCustom.Background.Border.Color.Selected = claNull
+        EditCustom.Background.Border.Color.Checked = claNull
+        EditCustom.Background.Border.Color.Enabled = claNull
+        EditCustom.Background.Border.Kind = None
+        EditCustom.ClipChildren = True
+        EditCustom.Padding.Left = 6.000000000000000000
+        EditCustom.Padding.Top = 2.000000000000000000
+        EditCustom.Padding.Right = 6.000000000000000000
+        EditCustom.Padding.Bottom = 2.000000000000000000
+        EditCustom.Margins.Left = 8.000000000000000000
+        EditCustom.Margins.Top = 4.000000000000000000
+        EditCustom.Margins.Right = 8.000000000000000000
+        EditCustom.Margins.Bottom = 4.000000000000000000
+        EditCustom.Size.Width = 184.000000000000000000
+        EditCustom.Size.Height = 31.000000000000000000
+        EditCustom.Size.PlatformDefault = False
+        EditCustom.TextSettings.Gravity = CenterVertical
+        EditCustom.DisableFocusEffect = True
+        Mode = Rectangle
+        TextPrompt = 'Digite seu Nome'
+        TextTitulo = 'Digite seu Nome'
+        CorTextTitle = xFF087AF7
+        FontSize.SizeTitle = 12.000000000000000000
+        FontSize.SizePrompt = 12.000000000000000000
+        FontSize.SizeText = 12.000000000000000000
+      end
+      object GosEditTitle2: TGosEditTitle
+        Fill.Color = claWhite
+        HitTest = False
+        Position.X = 105.000000000000000000
+        Position.Y = 270.000000000000000000
+        Size.Width = 200.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        XRadius = 5.000000000000000000
+        YRadius = 5.000000000000000000
+        BorderColor = xFF087AF7
+        BackGroundColor = claWhite
+        BorderStroke = 2
+        EditCustom.Touch.InteractiveGestures = [LongTap, DoubleTap]
+        EditCustom.Align = Client
+        EditCustom.Background.Border.Color.Default = xBFC0C0C0
+        EditCustom.Background.Border.Color.Pressed = claNull
+        EditCustom.Background.Border.Color.Focused = xFF0066CC
+        EditCustom.Background.Border.Color.Hovered = claSilver
+        EditCustom.Background.Border.Color.Selected = claNull
+        EditCustom.Background.Border.Color.Checked = claNull
+        EditCustom.Background.Border.Color.Enabled = claNull
+        EditCustom.Background.Border.Kind = None
+        EditCustom.ClipChildren = True
+        EditCustom.Padding.Left = 6.000000000000000000
+        EditCustom.Padding.Top = 2.000000000000000000
+        EditCustom.Padding.Right = 6.000000000000000000
+        EditCustom.Padding.Bottom = 2.000000000000000000
+        EditCustom.Margins.Left = 8.000000000000000000
+        EditCustom.Margins.Top = 4.000000000000000000
+        EditCustom.Margins.Right = 8.000000000000000000
+        EditCustom.Margins.Bottom = 4.000000000000000000
+        EditCustom.Size.Width = 184.000000000000000000
+        EditCustom.Size.Height = 31.000000000000000000
+        EditCustom.Size.PlatformDefault = False
+        EditCustom.TextSettings.Gravity = CenterVertical
+        EditCustom.DisableFocusEffect = True
+        Mode = Rectangle
+        TextPrompt = 'Digite seu CPF'
+        TextTitulo = 'Digite seu CPF'
+        CorTextTitle = xFF087AF7
+        FontSize.SizeTitle = 12.000000000000000000
+        FontSize.SizePrompt = 12.000000000000000000
+        FontSize.SizeText = 12.000000000000000000
+      end
+    end
+    object TabItem7: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 86.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'gosMessage'
+      object Button6: TButton
+        Align = Top
+        Size.Width = 459.000000000000000000
+        Size.Height = 73.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Button2'
+        OnClick = Button6Click
+      end
+      object GosMessage1: TGosMessage
+        Align = Client
+        Size.Width = 459.000000000000000000
+        Size.Height = 642.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        BackgroundOpacity = 0.699999988079071000
+        ColorGreen = xFF35BD27
+        ColorRed = xFFE64D4D
+        ColorGray = xFFAAAAAA
+        ColorBlue = xFF3085D6
+        ColorOrange = xFFF3A867
+        object TRectangle
+          Align = Contents
+          Fill.Color = claBlack
+          Opacity = 0.000000000000000000
+          Size.Width = 50.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+          Visible = False
+        end
+        object TLayout
+          Align = Contents
+          Opacity = 0.000000000000000000
+          Visible = False
+          TabOrder = 1
+          object TRectangle
+            Align = Center
+            Fill.Color = claWhite
+            Size.Width = 280.000000000000000000
+            Size.Height = 400.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Kind = None
+            XRadius = 6.000000000000000000
+            YRadius = 6.000000000000000000
+            object TArc
+              Align = MostTop
+              Margins.Left = 85.000000000000000000
+              Margins.Top = 40.000000000000000000
+              Margins.Right = 85.000000000000000000
+              Position.X = 85.000000000000000000
+              Position.Y = 40.000000000000000000
+              Size.Width = 110.000000000000000000
+              Size.Height = 110.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = xFF35BD27
+              Stroke.Thickness = 3.000000000000000000
+              StartAngle = -90.000000000000000000
+              object TRectangle
+                Align = Center
+                Size.Width = 50.000000000000000000
+                Size.Height = 5.000000000000000000
+                Size.PlatformDefault = False
+                Stroke.Kind = None
+                XRadius = 2.500000000000000000
+                YRadius = 2.500000000000000000
+              end
+              object TRectangle
+                Align = Center
+                Size.Width = 50.000000000000000000
+                Size.Height = 5.000000000000000000
+                Size.PlatformDefault = False
+                Stroke.Kind = None
+                XRadius = 2.500000000000000000
+                YRadius = 2.500000000000000000
+              end
+              object TLabel
+                Align = Client
+                StyledSettings = [Family, Style]
+                Size.Width = 110.000000000000000000
+                Size.Height = 110.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Size = 30.000000000000000000
+                TextSettings.FontColor = xFFAAAAAA
+                TextSettings.HorzAlign = Center
+                TextSettings.Trimming = None
+                TabOrder = 2
+              end
+              object TFloatAnimation
+                Delay = 0.100000001490116100
+                Duration = 0.400000005960464500
+                Interpolation = Circular
+                PropertyName = 'EndAngle'
+                StartValue = 0.000000000000000000
+                StopValue = 360.000000000000000000
+              end
+            end
+            object TLabel
+              Align = Client
+              StyledSettings = [Family, Style]
+              Margins.Left = 20.000000000000000000
+              Margins.Top = 20.000000000000000000
+              Margins.Right = 20.000000000000000000
+              Size.Width = 240.000000000000000000
+              Size.Height = 100.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 15.000000000000000000
+              TextSettings.FontColor = xFF848484
+              TextSettings.HorzAlign = Center
+              TextSettings.VertAlign = Leading
+              TextSettings.Trimming = None
+              Text = 'Sua mensagem foi enviada com sucesso'
+              TabOrder = 1
+            end
+            object TLabel
+              Align = Top
+              AutoSize = True
+              StyledSettings = [Family, Style]
+              Margins.Left = 20.000000000000000000
+              Margins.Top = 30.000000000000000000
+              Margins.Right = 20.000000000000000000
+              Position.X = 20.000000000000000000
+              Position.Y = 180.000000000000000000
+              Size.Width = 240.000000000000000000
+              Size.Height = 25.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 19.000000000000000000
+              TextSettings.FontColor = xFF2C2C2C
+              TextSettings.HorzAlign = Center
+              TextSettings.VertAlign = Leading
+              TextSettings.Trimming = None
+              TabOrder = 2
+            end
+            object TLayout
+              Align = Bottom
+              Margins.Left = 10.000000000000000000
+              Margins.Right = 10.000000000000000000
+              Margins.Bottom = 25.000000000000000000
+              Position.X = 10.000000000000000000
+              Position.Y = 325.000000000000000000
+              Size.Width = 260.000000000000000000
+              Size.Height = 50.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 3
+              object TRectangle
+                Fill.Color = xFF3085D6
+                Size.Width = 190.000000000000000000
+                Size.Height = 50.000000000000000000
+                Size.PlatformDefault = False
+                Stroke.Kind = None
+                Visible = False
+                XRadius = 4.000000000000000000
+                YRadius = 4.000000000000000000
+                object TLabel
+                  Align = Contents
+                  StyledSettings = [Family, Style]
+                  Size.Width = 190.000000000000000000
+                  Size.Height = 50.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.Size = 17.000000000000000000
+                  TextSettings.FontColor = claWhite
+                  TextSettings.HorzAlign = Center
+                  TextSettings.Trimming = None
+                  Text = 'Enviar'
+                  TabOrder = 0
+                end
+              end
+              object TRectangle
+                Fill.Color = xFF3085D6
+                Size.Width = 190.000000000000000000
+                Size.Height = 50.000000000000000000
+                Size.PlatformDefault = False
+                Stroke.Kind = None
+                Visible = False
+                XRadius = 4.000000000000000000
+                YRadius = 4.000000000000000000
+                object TLabel
+                  Align = Contents
+                  StyledSettings = [Family, Style]
+                  Size.Width = 190.000000000000000000
+                  Size.Height = 50.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.Size = 17.000000000000000000
+                  TextSettings.FontColor = claWhite
+                  TextSettings.HorzAlign = Center
+                  TextSettings.Trimming = None
+                  Text = 'Cancelar'
+                  TabOrder = 0
+                end
+              end
+            end
+          end
+          object TFloatAnimation
+            Duration = 0.200000002980232200
+            StartValue = 0.000000000000000000
+            StopValue = 0.000000000000000000
+          end
+        end
+      end
+    end
+    object TabItem8: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 62.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'QrCode'
+      object Button7: TButton
+        Align = Top
+        Size.Width = 459.000000000000000000
+        Size.Height = 73.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Button2'
+        OnClick = Button7Click
+      end
+      object GosQrCode1: TGosQrCode
+        MultiResBitmap = <
+          item
+          end>
+        Position.X = 67.000000000000000000
+        Position.Y = 166.000000000000000000
+        Size.Width = 331.000000000000000000
+        Size.Height = 259.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+    object TabItem9: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 48.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Toast'
+      object Button8: TButton
+        Align = Top
+        Size.Width = 459.000000000000000000
+        Size.Height = 73.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Button2'
+        OnClick = Button8Click
+      end
+    end
+    object TabItem10: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 86.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'GosAguarde'
+      object GosLoadButton1: TGosLoadButton
+        Background.XRadius = 30.000000000000000000
+        Background.YRadius = 30.000000000000000000
+        Background.ItemDefault.Color = claGreen
+        Background.ItemEnabled.Color = claGreen
+        Background.ItemEnabled.Kind = Solid
+        Size.Width = 273.000000000000000000
+        Size.Height = 60.000000000000000000
+        Size.PlatformDefault = False
+        Position.X = 95.000000000000000000
+        Position.Y = 182.000000000000000000
+        TabOrder = 0
+        OnClick = GosLoadButton1Click
+        Text = 'Salvar'
+        TextSettings.Color.Default = claWhite
+        TextSettings.Color.Focused = claNull
+        TextSettings.Color.Selected = claNull
+        TextSettings.Color.Enabled = claNull
+        TextSettings.Gravity = Center
+        object TAniIndicator
+          Align = HorzCenter
+          Visible = False
+          object TFillRGBEffect
+            Color = claWhite
+          end
+        end
+        object TShadowEffect
+          Distance = 3.000000000000000000
+          Direction = 45.000000000000000000
+          Softness = 0.300000011920929000
+          Opacity = 0.600000023841857900
+          ShadowColor = claSilver
+        end
+      end
+    end
+  end
+  object GosDrawerButtons1: TGosDrawerButtons
+    Tag = 0
+    TitleMenuText = 'Escolha uma op'#231#227'o'
+    TitleFontSize = 15
+    TitleFontColor = claSilver
+    CancelMenuText = 'Cancelar'
+    CancelFontSize = 17
+    CancelFontColor = xFF087AF7
+    BackgroundOpacity = 0.500000000000000000
+    MenuColor = claWhite
+    TagString = ''
+    Items = <
+      item
+        itemText = 'Confirmar'
+        fontTextColor = xFF087AF7
+        fontSize = 17
+      end
+      item
+        itemText = 'Cancelar'
+        fontTextColor = claRed
+        fontSize = 17
+      end
+      item
+        itemText = 'Op'#231#245'es'
+        fontTextColor = claGold
+        fontSize = 17
+      end>
+    Left = 32
+    Top = 40
+  end
+  object GosToast_v1: TGosToast_v1
+    Duration = 5.000000000000000000
+    OpacityRectangle = 0.500000000000000000
+    CorRectangle = claBlack
+    Left = 144
+    Top = 288
+  end
+  object GosToast_v2: TGosToast_v2
+    Duration = 2.000000000000000000
+    TypeToast = Erro
+    CorSucess = claGreen
+    CorError = claRed
+    CorInfo = claAqua
+    CorWaring = claYellow
+    Mensagem = 'Toast V2'
+    Left = 144
+    Top = 360
+  end
+end
