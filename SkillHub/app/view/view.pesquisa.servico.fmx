@@ -1,0 +1,112 @@
+object frmPesquisaServico: TfrmPesquisaServico
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 729
+  ClientWidth = 398
+  Fill.Color = xFFEBECF1
+  Fill.Kind = Solid
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnClose = FormClose
+  DesignerMasterStyle = 0
+  object layoutTopo: TLayout
+    Align = Top
+    Size.Width = 398.000000000000000000
+    Size.Height = 161.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Rectangle1: TRectangle
+      Align = Contents
+      Fill.Color = xFFEBECF1
+      Opacity = 0.899999976158142100
+      Size.Width = 398.000000000000000000
+      Size.Height = 161.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+    end
+    object GosEditView1: TGosEditView
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Bottom
+      Background.XRadius = 30.000000000000000000
+      Background.YRadius = 30.000000000000000000
+      Background.Corners = [BottomLeft, BottomRight]
+      Background.Border.Color.Default = xBFC0C0C0
+      Background.Border.Color.Pressed = claNull
+      Background.Border.Color.Focused = xFF0066CC
+      Background.Border.Color.Hovered = claSilver
+      Background.Border.Color.Selected = claNull
+      Background.Border.Color.Checked = claNull
+      Background.Border.Color.Enabled = claNull
+      Background.Border.Kind = None
+      ClipChildren = True
+      Padding.Left = 12.000000000000000000
+      Padding.Top = 2.000000000000000000
+      Padding.Right = 6.000000000000000000
+      Padding.Bottom = 2.000000000000000000
+      Margins.Left = 16.000000000000000000
+      Margins.Top = 8.000000000000000000
+      Margins.Right = 16.000000000000000000
+      Margins.Bottom = 8.000000000000000000
+      Size.Width = 366.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      Position.X = 16.000000000000000000
+      Position.Y = 104.000000000000000000
+      TabOrder = 1
+      TextHint = 'O que voc'#234' precisa ?'
+      TextSettings.Color.HintText = xFF3B3B3B
+      TextSettings.Font.Size = 15.000000000000000000
+      TextSettings.Gravity = CenterVertical
+      Drawable.SizeWidth = 24
+      Drawable.SizeHeight = 24
+      Drawable.Padding = 16
+      Drawable.ItemDefault.Kind = AccessoryBitmap
+      Drawable.ItemDefault.Accessory.Accessory = Search
+      Drawable.ItemDefault.Accessory.Color = xFF3B3B3B
+      DisableFocusEffect = True
+    end
+    object Layout2: TLayout
+      Align = Top
+      Padding.Left = 16.000000000000000000
+      Padding.Top = 16.000000000000000000
+      Padding.Right = 16.000000000000000000
+      Size.Width = 398.000000000000000000
+      Size.Height = 81.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      object SpeedButton1: TSpeedButton
+        Align = Left
+        Position.X = 16.000000000000000000
+        Position.Y = 16.000000000000000000
+        Size.Width = 48.000000000000000000
+        Size.Height = 65.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'arrowlefttoolbuttonbordered'
+        Text = 'SpeedButton1'
+        OnClick = SpeedButton1Click
+        object FillRGBEffect1: TFillRGBEffect
+          Color = claBlack
+        end
+      end
+    end
+  end
+  object LayoutBody: TLayout
+    Align = Client
+    Size.Width = 398.000000000000000000
+    Size.Height = 568.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object VertScrollBox1: TVertScrollBox
+      Align = Client
+      Size.Width = 398.000000000000000000
+      Size.Height = 568.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Viewport.Width = 398.000000000000000000
+      Viewport.Height = 568.000000000000000000
+    end
+  end
+end

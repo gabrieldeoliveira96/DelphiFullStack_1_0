@@ -1,0 +1,190 @@
+object frmPesquisaProfissoes: TfrmPesquisaProfissoes
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 672
+  ClientWidth = 384
+  Fill.Color = xFFEBECF1
+  Fill.Kind = Solid
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnClose = FormClose
+  DesignerMasterStyle = 0
+  object VertScrollBox1: TVertScrollBox
+    Align = Contents
+    Size.Width = 384.000000000000000000
+    Size.Height = 672.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Viewport.Width = 368.000000000000000000
+    Viewport.Height = 672.000000000000000000
+    object LayoutTopo: TLayout
+      Align = Top
+      Margins.Left = 16.000000000000000000
+      Margins.Top = 16.000000000000000000
+      Margins.Right = 16.000000000000000000
+      Position.X = 16.000000000000000000
+      Position.Y = 16.000000000000000000
+      Size.Width = 336.000000000000000000
+      Size.Height = 201.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object Layout1: TLayout
+        Align = Top
+        Size.Width = 336.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object Layout2: TLayout
+          Align = Contents
+          Size.Width = 336.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+        end
+        object SpeedButton1: TSpeedButton
+          Align = Left
+          Size.Width = 44.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'arrowlefttoolbuttonbordered'
+          Text = 'SpeedButton1'
+          OnClick = SpeedButton1Click
+          object FillRGBEffect1: TFillRGBEffect
+            Color = claBlack
+          end
+        end
+      end
+      object Layout3: TLayout
+        Align = Center
+        Size.Width = 110.000000000000000000
+        Size.Height = 130.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object imgProfissao: TSkSvg
+          Align = Top
+          Size.Width = 110.000000000000000000
+          Size.Height = 90.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object lblProfissao: TSkLabel
+          Align = Bottom
+          Position.Y = 98.000000000000000000
+          Size.Width = 110.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          StyledSettings = [Family, FontColor]
+          TextSettings.Font.Size = 24.000000000000000000
+          TextSettings.Font.Weight = Semibold
+          TextSettings.HorzAlign = Center
+          Words = <
+            item
+              Text = 'Pedreiro'
+            end>
+        end
+      end
+    end
+    inline frameServico1: TframeServico
+      Align = Top
+      Margins.Left = 16.000000000000000000
+      Margins.Top = 16.000000000000000000
+      Margins.Right = 16.000000000000000000
+      Position.X = 16.000000000000000000
+      Position.Y = 913.000000000000000000
+      Size.Width = 336.000000000000000000
+      Size.Height = 154.000000000000000000
+      Size.PlatformDefault = False
+      inherited recImg: TRectangle
+        Size.Width = 336.000000000000000000
+        inherited Rectangle2: TRectangle
+          Size.Width = 336.000000000000000000
+          inherited lblTexto: TSkLabel
+            Size.Width = 312.000000000000000000
+          end
+        end
+      end
+    end
+    inline frameServico2: TframeServico
+      Align = Top
+      Margins.Left = 16.000000000000000000
+      Margins.Top = 16.000000000000000000
+      Margins.Right = 16.000000000000000000
+      Position.X = 16.000000000000000000
+      Position.Y = 743.000000000000000000
+      Size.Width = 336.000000000000000000
+      Size.Height = 154.000000000000000000
+      Size.PlatformDefault = False
+      inherited recImg: TRectangle
+        Size.Width = 336.000000000000000000
+        inherited Rectangle2: TRectangle
+          Size.Width = 336.000000000000000000
+          inherited lblTexto: TSkLabel
+            Size.Width = 312.000000000000000000
+          end
+        end
+      end
+    end
+    inline frameServico3: TframeServico
+      Align = Top
+      Margins.Left = 16.000000000000000000
+      Margins.Top = 16.000000000000000000
+      Margins.Right = 16.000000000000000000
+      Position.X = 16.000000000000000000
+      Position.Y = 573.000000000000000000
+      Size.Width = 336.000000000000000000
+      Size.Height = 154.000000000000000000
+      Size.PlatformDefault = False
+      inherited recImg: TRectangle
+        Size.Width = 336.000000000000000000
+        inherited Rectangle2: TRectangle
+          Size.Width = 336.000000000000000000
+          inherited lblTexto: TSkLabel
+            Size.Width = 312.000000000000000000
+          end
+        end
+      end
+    end
+    inline frameServico4: TframeServico
+      Align = Top
+      Margins.Left = 16.000000000000000000
+      Margins.Top = 16.000000000000000000
+      Margins.Right = 16.000000000000000000
+      Position.X = 16.000000000000000000
+      Position.Y = 403.000000000000000000
+      Size.Width = 336.000000000000000000
+      Size.Height = 154.000000000000000000
+      Size.PlatformDefault = False
+      inherited recImg: TRectangle
+        Size.Width = 336.000000000000000000
+        inherited Rectangle2: TRectangle
+          Size.Width = 336.000000000000000000
+          inherited lblTexto: TSkLabel
+            Size.Width = 312.000000000000000000
+          end
+        end
+      end
+    end
+    inline frameServico5: TframeServico
+      Align = Top
+      Margins.Left = 16.000000000000000000
+      Margins.Top = 16.000000000000000000
+      Margins.Right = 16.000000000000000000
+      Position.X = 16.000000000000000000
+      Position.Y = 233.000000000000000000
+      Size.Width = 336.000000000000000000
+      Size.Height = 154.000000000000000000
+      Size.PlatformDefault = False
+      inherited recImg: TRectangle
+        Size.Width = 336.000000000000000000
+        inherited Rectangle2: TRectangle
+          Size.Width = 336.000000000000000000
+          inherited lblTexto: TSkLabel
+            Size.Width = 312.000000000000000000
+          end
+        end
+      end
+    end
+  end
+end

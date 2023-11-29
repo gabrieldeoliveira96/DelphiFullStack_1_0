@@ -1,0 +1,325 @@
+object frmDadosdoUsuario: TfrmDadosdoUsuario
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 764
+  ClientWidth = 433
+  Fill.Color = xFFEBECF1
+  Fill.Kind = Solid
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnClose = FormClose
+  DesignerMasterStyle = 0
+  object LayoutBody: TLayout
+    Align = Client
+    Size.Width = 433.000000000000000000
+    Size.Height = 539.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object Rectangle2: TRectangle
+      Align = Client
+      Corners = [TopLeft, TopRight]
+      Fill.Color = claWhite
+      Size.Width = 433.000000000000000000
+      Size.Height = 539.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      XRadius = 40.000000000000000000
+      YRadius = 40.000000000000000000
+      object VertScrollBox1: TVertScrollBox
+        Align = Client
+        Size.Width = 433.000000000000000000
+        Size.Height = 539.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Viewport.Width = 433.000000000000000000
+        Viewport.Height = 539.000000000000000000
+        object Layout3: TLayout
+          Align = Top
+          Size.Width = 433.000000000000000000
+          Size.Height = 401.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object LayoutNome: TLayout
+            Align = Top
+            Size.Width = 433.000000000000000000
+            Size.Height = 100.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 3
+            object SkLabel2: TSkLabel
+              Align = Left
+              Margins.Left = 36.000000000000000000
+              Margins.Right = 24.000000000000000000
+              Position.X = 36.000000000000000000
+              Size.Width = 56.000000000000000000
+              Size.Height = 99.000000000000000000
+              Size.PlatformDefault = False
+              StyledSettings = [Family, FontColor]
+              TextSettings.Font.Size = 20.000000000000000000
+              TextSettings.Font.Weight = Semibold
+              Words = <
+                item
+                  Text = 'Nome'
+                end>
+            end
+            object Line1: TLine
+              Align = Bottom
+              LineType = Bottom
+              Position.Y = 99.000000000000000000
+              Size.Width = 433.000000000000000000
+              Size.Height = 1.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = xFFD9D9D9
+            end
+            object SkLabel1: TSkLabel
+              Align = Client
+              Size.Width = 317.000000000000000000
+              Size.Height = 99.000000000000000000
+              Size.PlatformDefault = False
+              StyledSettings = [Family, Style]
+              TextSettings.Font.Size = 16.000000000000000000
+              TextSettings.FontColor = xFFA8A0A0
+              Words = <
+                item
+                  Text = 'Gabriel Oliveira'
+                end>
+            end
+          end
+          object LayoutCPF: TLayout
+            Align = Top
+            Position.Y = 100.000000000000000000
+            Size.Width = 433.000000000000000000
+            Size.Height = 100.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 2
+            object SkLabel3: TSkLabel
+              Align = Left
+              Margins.Left = 36.000000000000000000
+              Margins.Right = 24.000000000000000000
+              Position.X = 36.000000000000000000
+              Size.Width = 35.000000000000000000
+              Size.Height = 99.000000000000000000
+              Size.PlatformDefault = False
+              StyledSettings = [Family, FontColor]
+              TextSettings.Font.Size = 20.000000000000000000
+              TextSettings.Font.Weight = Semibold
+              Words = <
+                item
+                  Text = 'CPF'
+                end>
+            end
+            object Line2: TLine
+              Align = Bottom
+              LineType = Bottom
+              Position.Y = 99.000000000000000000
+              Size.Width = 433.000000000000000000
+              Size.Height = 1.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = xFFD9D9D9
+            end
+            object SkLabel4: TSkLabel
+              Align = Client
+              Size.Width = 338.000000000000000000
+              Size.Height = 99.000000000000000000
+              Size.PlatformDefault = False
+              StyledSettings = [Family, Style]
+              TextSettings.Font.Size = 16.000000000000000000
+              TextSettings.FontColor = xFFA8A0A0
+              Words = <
+                item
+                  Text = '123.456.789.01'
+                end>
+            end
+          end
+          object LayoutEmail: TLayout
+            Align = Top
+            Position.Y = 200.000000000000000000
+            Size.Width = 433.000000000000000000
+            Size.Height = 100.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            object SkLabel5: TSkLabel
+              Align = Left
+              Margins.Left = 36.000000000000000000
+              Margins.Right = 24.000000000000000000
+              Position.X = 36.000000000000000000
+              Size.Width = 58.000000000000000000
+              Size.Height = 99.000000000000000000
+              Size.PlatformDefault = False
+              StyledSettings = [Family, FontColor]
+              TextSettings.Font.Size = 20.000000000000000000
+              TextSettings.Font.Weight = Semibold
+              Words = <
+                item
+                  Text = 'E-Mail'
+                end>
+            end
+            object Line3: TLine
+              Align = Bottom
+              LineType = Bottom
+              Position.Y = 99.000000000000000000
+              Size.Width = 433.000000000000000000
+              Size.Height = 1.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = xFFD9D9D9
+            end
+            object SkLabel7: TSkLabel
+              Align = Client
+              Size.Width = 315.000000000000000000
+              Size.Height = 99.000000000000000000
+              Size.PlatformDefault = False
+              StyledSettings = [Family, Style]
+              TextSettings.Font.Size = 16.000000000000000000
+              TextSettings.FontColor = xFFA8A0A0
+              Words = <
+                item
+                  Text = 'gabriel.o.s@hotmail.com'
+                end>
+            end
+          end
+          object Layout5: TLayout
+            Align = Top
+            Position.Y = 300.000000000000000000
+            Size.Width = 433.000000000000000000
+            Size.Height = 100.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object SkLabel8: TSkLabel
+              Align = Client
+              Margins.Left = 24.000000000000000000
+              Margins.Right = 24.000000000000000000
+              Size.Width = 385.000000000000000000
+              Size.Height = 99.000000000000000000
+              Size.PlatformDefault = False
+              StyledSettings = [Family, FontColor]
+              TextSettings.Font.Size = 20.000000000000000000
+              TextSettings.Font.Weight = Semibold
+              TextSettings.HorzAlign = Center
+              Words = <
+                item
+                  Text = 'Alterar Senha'
+                end>
+            end
+            object Line4: TLine
+              Align = Bottom
+              LineType = Bottom
+              Position.Y = 99.000000000000000000
+              Size.Width = 433.000000000000000000
+              Size.Height = 1.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = xFFD9D9D9
+            end
+          end
+        end
+      end
+    end
+  end
+  object LayoutTopo: TLayout
+    Align = Top
+    Size.Width = 433.000000000000000000
+    Size.Height = 225.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Rectangle1: TRectangle
+      Align = Client
+      Fill.Color = xFFEBECF1
+      Size.Width = 433.000000000000000000
+      Size.Height = 225.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      object Layout1: TLayout
+        Align = Top
+        Margins.Left = 16.000000000000000000
+        Margins.Top = 16.000000000000000000
+        Margins.Right = 16.000000000000000000
+        Position.X = 16.000000000000000000
+        Position.Y = 16.000000000000000000
+        Size.Width = 401.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object SpeedButton1: TSpeedButton
+          Align = Left
+          Size.Width = 48.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'arrowlefttoolbuttonbordered'
+          Text = 'SpeedButton1'
+          OnClick = SpeedButton1Click
+          object FillRGBEffect1: TFillRGBEffect
+            Color = claBlack
+          end
+        end
+      end
+      object Layout2: TLayout
+        Align = Center
+        Margins.Bottom = 36.000000000000000000
+        Size.Width = 90.000000000000000000
+        Size.Height = 140.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object SkSvg1: TSkSvg
+          Align = Top
+          Size.Width = 90.000000000000000000
+          Size.Height = 90.000000000000000000
+          Size.PlatformDefault = False
+          Svg.Source = 
+            '<svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmln' +
+            's="http://www.w3.org/2000/svg">'#13#10'<circle cx="29" cy="29" r="29" ' +
+            'fill="#DCDDE1"/>'#13#10'<path fill-rule="evenodd" clip-rule="evenodd" ' +
+            'd="M58 29C58 45.0161 45.0161 58 29 58C12.9837 58 0 45.0161 0 29C' +
+            '0 12.9837 12.9837 0 29 0C45.0161 0 58 12.9837 58 29ZM37.7 20.3C3' +
+            '7.7 25.105 33.805 29 29 29C24.195 29 20.3 25.105 20.3 20.3C20.3 ' +
+            '15.4951 24.195 11.6 29 11.6C33.805 11.6 37.7 15.4951 37.7 20.3ZM' +
+            '29 53.65C34.1736 53.65 38.9751 52.0562 42.94 49.3325C44.6913 48.' +
+            '1296 45.4395 45.838 44.4216 43.9733C42.311 40.1079 37.9616 37.7 ' +
+            '28.9997 37.7C20.0381 37.7 15.6889 40.1076 13.5782 43.9733C12.56 ' +
+            '45.838 13.3084 48.1293 15.0596 49.3322C19.0245 52.0559 23.8261 5' +
+            '3.65 29 53.65Z" fill="white"/>'#13#10'</svg>'
+        end
+        object Circle1: TCircle
+          Align = Top
+          Fill.Color = xFFC823F3
+          Margins.Top = -20.000000000000000000
+          Margins.Right = -50.000000000000000000
+          Position.Y = 70.000000000000000000
+          Size.Width = 140.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+          object SkSvg2: TSkSvg
+            Align = Client
+            Margins.Left = 2.000000000000000000
+            Margins.Top = 5.000000000000000000
+            Margins.Bottom = 5.000000000000000000
+            Size.Width = 138.000000000000000000
+            Size.Height = 20.000000000000000000
+            Size.PlatformDefault = False
+            Svg.OverrideColor = claWhite
+            Svg.Source = 
+              '<?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo' +
+              ', www.svgrepo.com, Generator: SVG Repo Mixer Tools -->'#13#10'<svg wid' +
+              'th="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns=' +
+              '"http://www.w3.org/2000/svg">'#13#10'<path d="M13 5H9.32843C8.79799 5 ' +
+              '8.28929 5.21071 7.91421 5.58579L7.08579 6.41421C6.71071 6.78929 ' +
+              '6.20201 7 5.67157 7H4C2.89543 7 2 7.89543 2 9L2 19C2 20.1046 2.8' +
+              '9543 21 4 21H18C19.1046 21 20 20.1046 20 19V12M17 5H23M20 8V2M11' +
+              ' 18C13.2091 18 15 16.2091 15 14C15 11.7909 13.2091 10 11 10C8.79' +
+              '086 10 7 11.7909 7 14C7 16.2091 8.79086 18 11 18Z" stroke="#0000' +
+              '00" stroke-width="2" stroke-linecap="round" stroke-linejoin="rou' +
+              'nd"/>'#13#10'</svg>'
+          end
+          object ShadowEffect1: TShadowEffect
+            Distance = 3.000000000000000000
+            Direction = 45.000000000000000000
+            Softness = 0.300000011920929000
+            Opacity = 0.600000023841857900
+            ShadowColor = claBlack
+          end
+        end
+      end
+    end
+  end
+end

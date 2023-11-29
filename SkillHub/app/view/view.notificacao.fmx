@@ -1,0 +1,187 @@
+object frmNotificacao: TfrmNotificacao
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 749
+  ClientWidth = 405
+  Fill.Color = xFFEBECF1
+  Fill.Kind = Solid
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnClose = FormClose
+  DesignerMasterStyle = 0
+  object LayoutTopo: TLayout
+    Align = Top
+    Margins.Left = 16.000000000000000000
+    Margins.Top = 16.000000000000000000
+    Margins.Right = 16.000000000000000000
+    Margins.Bottom = 16.000000000000000000
+    Position.X = 16.000000000000000000
+    Position.Y = 16.000000000000000000
+    Size.Width = 373.000000000000000000
+    Size.Height = 60.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object SpeedButton1: TSpeedButton
+      Align = Left
+      Size.Width = 48.000000000000000000
+      Size.Height = 60.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'arrowlefttoolbuttonbordered'
+      Text = 'SpeedButton1'
+      OnClick = SpeedButton1Click
+      object FillRGBEffect1: TFillRGBEffect
+        Color = claBlack
+      end
+    end
+  end
+  object LayoutBody: TLayout
+    Align = Client
+    Size.Width = 405.000000000000000000
+    Size.Height = 657.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object VertScrollBox1: TVertScrollBox
+      Align = Client
+      Size.Width = 405.000000000000000000
+      Size.Height = 657.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Viewport.Width = 405.000000000000000000
+      Viewport.Height = 657.000000000000000000
+      inline FrameNotificacao1: TFrameNotificacao
+        Align = Top
+        Size.Width = 405.000000000000000000
+        Size.Height = 90.000000000000000000
+        Size.PlatformDefault = False
+        inherited Layout1: TLayout
+          Size.Width = 373.000000000000000000
+          inherited Layout2: TLayout
+            Size.Width = 357.000000000000000000
+            inherited SkLabel2: TSkLabel
+              Size.Width = 222.000000000000000000
+            end
+          end
+          inherited Line1: TLine
+            Size.Width = 373.000000000000000000
+          end
+          inherited SkLabel3: TSkLabel
+            Size.Width = 373.000000000000000000
+          end
+        end
+      end
+      inline FrameNotificacao2: TFrameNotificacao
+        Align = Top
+        Position.Y = 450.000000000000000000
+        Size.Width = 405.000000000000000000
+        Size.Height = 90.000000000000000000
+        Size.PlatformDefault = False
+        inherited Layout1: TLayout
+          Size.Width = 373.000000000000000000
+          inherited Layout2: TLayout
+            Size.Width = 357.000000000000000000
+            inherited SkLabel2: TSkLabel
+              Size.Width = 222.000000000000000000
+            end
+          end
+          inherited Line1: TLine
+            Size.Width = 373.000000000000000000
+          end
+          inherited SkLabel3: TSkLabel
+            Size.Width = 373.000000000000000000
+          end
+        end
+      end
+      inline FrameNotificacao3: TFrameNotificacao
+        Align = Top
+        Position.Y = 360.000000000000000000
+        Size.Width = 405.000000000000000000
+        Size.Height = 90.000000000000000000
+        Size.PlatformDefault = False
+        inherited Layout1: TLayout
+          Size.Width = 373.000000000000000000
+          inherited Layout2: TLayout
+            Size.Width = 357.000000000000000000
+            inherited SkLabel2: TSkLabel
+              Size.Width = 222.000000000000000000
+            end
+          end
+          inherited Line1: TLine
+            Size.Width = 373.000000000000000000
+          end
+          inherited SkLabel3: TSkLabel
+            Size.Width = 373.000000000000000000
+          end
+        end
+      end
+      inline FrameNotificacao4: TFrameNotificacao
+        Align = Top
+        Position.Y = 270.000000000000000000
+        Size.Width = 405.000000000000000000
+        Size.Height = 90.000000000000000000
+        Size.PlatformDefault = False
+        inherited Layout1: TLayout
+          Size.Width = 373.000000000000000000
+          inherited Layout2: TLayout
+            Size.Width = 357.000000000000000000
+            inherited SkLabel2: TSkLabel
+              Size.Width = 222.000000000000000000
+            end
+          end
+          inherited Line1: TLine
+            Size.Width = 373.000000000000000000
+          end
+          inherited SkLabel3: TSkLabel
+            Size.Width = 373.000000000000000000
+          end
+        end
+      end
+      inline FrameNotificacao5: TFrameNotificacao
+        Align = Top
+        Position.Y = 180.000000000000000000
+        Size.Width = 405.000000000000000000
+        Size.Height = 90.000000000000000000
+        Size.PlatformDefault = False
+        inherited Layout1: TLayout
+          Size.Width = 373.000000000000000000
+          inherited Layout2: TLayout
+            Size.Width = 357.000000000000000000
+            inherited SkLabel2: TSkLabel
+              Size.Width = 222.000000000000000000
+            end
+          end
+          inherited Line1: TLine
+            Size.Width = 373.000000000000000000
+          end
+          inherited SkLabel3: TSkLabel
+            Size.Width = 373.000000000000000000
+          end
+        end
+      end
+      inline FrameNotificacao6: TFrameNotificacao
+        Align = Top
+        Position.Y = 90.000000000000000000
+        Size.Width = 405.000000000000000000
+        Size.Height = 90.000000000000000000
+        Size.PlatformDefault = False
+        inherited Layout1: TLayout
+          Size.Width = 373.000000000000000000
+          inherited Layout2: TLayout
+            Size.Width = 357.000000000000000000
+            inherited SkLabel2: TSkLabel
+              Size.Width = 222.000000000000000000
+            end
+          end
+          inherited Line1: TLine
+            Size.Width = 373.000000000000000000
+          end
+          inherited SkLabel3: TSkLabel
+            Size.Width = 373.000000000000000000
+          end
+        end
+      end
+    end
+  end
+end

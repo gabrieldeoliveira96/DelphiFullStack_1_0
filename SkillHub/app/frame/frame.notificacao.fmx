@@ -1,0 +1,90 @@
+object FrameNotificacao: TFrameNotificacao
+  Size.Width = 385.000000000000000000
+  Size.Height = 90.000000000000000000
+  Size.PlatformDefault = False
+  object Layout1: TLayout
+    Align = Client
+    Margins.Left = 16.000000000000000000
+    Margins.Right = 16.000000000000000000
+    Size.Width = 353.000000000000000000
+    Size.Height = 90.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Layout2: TLayout
+      Align = Top
+      Margins.Left = 8.000000000000000000
+      Margins.Top = 8.000000000000000000
+      Margins.Right = 8.000000000000000000
+      Margins.Bottom = 8.000000000000000000
+      Position.X = 8.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 337.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object Circle1: TCircle
+        Align = Left
+        Fill.Color = xFF7767DA
+        Margins.Left = 8.000000000000000000
+        Margins.Top = 6.000000000000000000
+        Margins.Bottom = 6.000000000000000000
+        Position.X = 8.000000000000000000
+        Position.Y = 6.000000000000000000
+        Size.Width = 15.000000000000000000
+        Size.Height = 13.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+      end
+      object SkLabel1: TSkLabel
+        Align = Left
+        Margins.Left = 16.000000000000000000
+        Position.X = 39.000000000000000000
+        Size.Width = 88.000000000000000000
+        Size.Height = 25.000000000000000000
+        Size.PlatformDefault = False
+        StyledSettings = [Family, Size]
+        TextSettings.Font.Weight = Bold
+        TextSettings.FontColor = xFF7767DA
+        Words = <
+          item
+            Text = 'Voc'#234' recebeu'
+          end>
+      end
+      object SkLabel2: TSkLabel
+        Align = Client
+        Margins.Left = 8.000000000000000000
+        Size.Width = 202.000000000000000000
+        Size.Height = 25.000000000000000000
+        Size.PlatformDefault = False
+        Words = <
+          item
+            Text = 'mensagem via Whatsapp'
+          end>
+      end
+    end
+    object Line1: TLine
+      Align = Bottom
+      LineType = Bottom
+      Position.Y = 89.000000000000000000
+      Size.Width = 353.000000000000000000
+      Size.Height = 1.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = xFFD9D9D9
+    end
+    object SkLabel3: TSkLabel
+      Align = Client
+      Margins.Bottom = 8.000000000000000000
+      Size.Width = 353.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      StyledSettings = [Family, Style]
+      TextSettings.Font.Size = 12.000000000000000000
+      TextSettings.FontColor = claGray
+      TextSettings.HorzAlign = Center
+      Words = <
+        item
+          Text = 'Ignorar a mensagem'
+        end>
+    end
+  end
+end

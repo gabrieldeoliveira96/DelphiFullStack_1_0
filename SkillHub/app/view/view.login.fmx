@@ -2,7 +2,7 @@ object frmLogin: TfrmLogin
   Left = 0
   Top = 0
   Caption = 'Form3'
-  ClientHeight = 700
+  ClientHeight = 820
   ClientWidth = 382
   Fill.Color = xFFEBECF1
   Fill.Kind = Solid
@@ -10,341 +10,1578 @@ object frmLogin: TfrmLogin
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
   DesignerMasterStyle = 0
-  object Layout1: TLayout
-    Align = Top
-    Margins.Left = 16.000000000000000000
-    Margins.Top = 40.000000000000000000
-    Margins.Right = 16.000000000000000000
-    Position.X = 16.000000000000000000
-    Position.Y = 40.000000000000000000
-    Size.Width = 350.000000000000000000
-    Size.Height = 153.000000000000000000
-    Size.PlatformDefault = False
-    TabOrder = 0
-    object SkSvg1: TSkSvg
-      Align = Left
-      Margins.Bottom = 32.000000000000000000
-      Size.Width = 57.000000000000000000
-      Size.Height = 45.000000000000000000
-      Size.PlatformDefault = False
-      Svg.Source = 
-        '<svg width="115" height="145" viewBox="0 0 115 145" fill="none" ' +
-        'xmlns="http://www.w3.org/2000/svg">'#13#10'<g clip-path="url(#clip0_70' +
-        '_81)">'#13#10'<path d="M68.5842 64.7859C71.6423 64.7859 74.1197 62.511' +
-        '2 74.1197 59.7057C74.1197 56.8992 71.6423 54.6245 68.5842 54.624' +
-        '5C68.1372 54.6245 67.706 54.687 67.2893 54.7789C67.6938 55.2979 ' +
-        '67.9441 55.9435 67.9441 56.6561C67.9441 58.3396 66.5921 59.7057 ' +
-        '64.9276 59.7057C64.2449 59.7057 63.6193 59.4678 63.1161 59.0811C' +
-        '63.088 59.2873 63.0466 59.4922 63.0466 59.7057C63.0466 62.5112 6' +
-        '5.524 64.7859 68.5842 64.7859Z" fill="black"/>'#13#10'<path d="M46.418' +
-        ' 64.7859C49.4765 64.7859 51.9557 62.5112 51.9557 59.7057C51.9557' +
-        ' 56.8992 49.4765 54.6245 46.418 54.6245C45.7643 54.6245 45.1484 ' +
-        '54.7466 44.567 54.9385C44.8973 55.4263 45.0933 56.0168 45.0933 5' +
-        '6.6561C45.0933 58.3396 43.7422 59.7057 42.0761 59.7057C41.6624 5' +
-        '9.7057 41.2654 59.6217 40.9065 59.4678C40.9026 59.5479 40.8801 5' +
-        '9.6251 40.8801 59.7057C40.8801 62.5112 43.3587 64.7859 46.418 64' +
-        '.7859Z" fill="black"/>'#13#10'<path d="M111.173 95.3021C111.173 85.409' +
-        '2 102.628 77.392 92.0887 77.392H88.0042C81.1514 88.262 70.2735 9' +
-        '6.3003 57.5 96.3661C44.7259 96.3003 33.8486 88.262 26.9958 77.39' +
-        '2H22.9118C12.3709 77.392 3.82789 85.4092 3.82789 95.3021L0 127.0' +
-        '9C0 136.98 8.54404 145 19.0839 145H79.6745V127.039C75.125 125.01' +
-        '8 71.9424 120.426 71.9424 115.077C71.9424 109.983 74.6455 105.69' +
-        '7 78.8491 103.541C79.4016 103.26 80.1788 103.672 79.7823 104.46C' +
-        '79.5162 105.088 79.3837 105.124 79.0333 106.064C78.684 107.006 7' +
-        '7.9821 111.063 78.4684 113.196C78.9591 115.329 81.8925 118.962 8' +
-        '5.0438 118.962C85.0864 118.962 85.1258 118.958 85.1674 118.955C8' +
-        '5.1674 118.955 85.2808 118.962 85.3234 118.962C88.4747 118.962 9' +
-        '1.4092 115.329 91.8989 113.196C92.3863 111.063 91.6843 107.006 9' +
-        '1.3351 106.064C90.9825 105.122 90.8545 105.086 90.5861 104.458C9' +
-        '0.1896 103.672 90.9656 103.259 91.5182 103.541C95.7229 105.695 9' +
-        '8.4249 109.983 98.4249 115.077C98.4249 120.329 95.3534 124.845 9' +
-        '0.9353 126.92V145H95.916C106.456 145 115 136.98 115 127.09L111.1' +
-        '73 95.3021Z" fill="black"/>'#13#10'<path d="M93.9832 39.4899C93.9832 3' +
-        '7.6223 92.8445 37.3123 92.2907 37.3123H90.5119C90.4119 36.1205 9' +
-        '0.2917 34.9106 90.2917 33.6841C90.2917 22.4803 82.9302 12.558 74' +
-        '.2984 6.43197C74.2928 6.6807 74.3019 6.92944 74.2906 7.17759C74.' +
-        '2513 8.04287 74.2097 8.90873 74.1681 9.77017C74.1086 10.6315 73.' +
-        '9941 11.4849 73.9053 12.3326C73.7526 14.0292 73.4247 15.6786 73.' +
-        '1271 17.2713C72.8126 18.8611 72.4084 20.3795 72.0119 21.8092C71.' +
-        '5683 23.2293 71.1517 24.5658 70.6665 25.7736C69.7546 28.1992 68.' +
-        '7449 30.1314 67.9858 31.4459C67.2266 32.7626 66.6808 33.4547 66.' +
-        '6808 33.4547C66.6808 33.4547 66.6943 33.2378 66.7145 32.8279C66.' +
-        '7504 32.4259 66.7504 31.8217 66.8167 31.0813C66.9054 29.6084 67.' +
-        '0357 27.5037 67.1884 24.9786C67.3647 22.4865 67.5343 19.6027 67.' +
-        '7207 16.5417C67.796 15.0121 67.8791 13.4325 67.9599 11.8284C68.0' +
-        '004 11.029 68.0396 10.2209 68.0813 9.41178C68.1015 8.60266 68.12' +
-        '28 7.7896 68.143 6.97653C68.2373 5.59902 68.2295 4.22499 68.2553' +
-        ' 2.85945C64.4953 1.06122 60.759 0.0437232 57.4999 0C54.2408 0.04' +
-        '37232 50.5044 1.06122 46.7445 2.85945C46.7703 4.22499 46.7625 5.' +
-        '59902 46.8568 6.97653C46.877 7.7896 46.8984 8.60266 46.9185 9.41' +
-        '178C46.9601 10.2209 46.9994 11.029 47.0398 11.8284C47.1207 13.43' +
-        '25 47.2038 15.0121 47.279 16.5417C47.4654 19.6027 47.6351 22.486' +
-        '5 47.8114 24.9786C47.9641 27.5037 48.0944 29.6084 48.1831 31.081' +
-        '3C48.2494 31.8217 48.2494 32.4259 48.2853 32.8279C48.3055 33.237' +
-        '8 48.319 33.4547 48.319 33.4547C48.319 33.4547 47.7732 32.7626 4' +
-        '7.014 31.4459C46.2548 30.1314 45.2453 28.1992 44.3333 25.7736C43' +
-        '.8481 24.5658 43.4315 23.2293 42.9879 21.8092C42.5914 20.3795 42' +
-        '.1872 18.8611 41.8727 17.2713C41.575 15.6786 41.2472 14.0292 41.' +
-        '0944 12.3326C41.0057 11.4849 40.8911 10.6315 40.8317 9.77017C40.' +
-        '79 8.90873 40.7485 8.04287 40.7092 7.17759C40.6979 6.92944 40.70' +
-        '7 6.6807 40.7014 6.43197C32.0696 12.558 24.7081 22.4803 24.7081 ' +
-        '33.6841C24.7081 34.9106 24.5879 36.1205 24.4879 37.3123H22.7091C' +
-        '22.1553 37.3123 21.0166 37.6223 21.0166 39.4899V48.7171H24.6002C' +
-        '24.5441 49.6483 24.5036 50.5829 24.5036 51.5306C24.5036 73.099 3' +
-        '8.9629 90.0177 57.4999 90.2761C76.0369 90.0177 90.4961 73.099 90' +
-        '.4961 51.5306C90.4961 50.5829 90.4557 49.6483 90.3996 48.7171H93' +
-        '.9832V39.4899ZM57.4999 86.5445C41.0315 86.2827 28.194 71.0015 28' +
-        '.194 51.5306C28.194 50.5817 28.24 49.6472 28.3007 48.7171H86.699' +
-        '1C86.7598 49.6472 86.8058 50.5817 86.8058 51.5306C86.8058 71.001' +
-        '5 73.9682 86.2827 57.4999 86.5445Z" fill="#5F49E5"/>'#13#10'</g>'#13#10'<def' +
-        's>'#13#10'<clipPath id="clip0_70_81">'#13#10'<rect width="115" height="145" ' +
-        'fill="white"/>'#13#10'</clipPath>'#13#10'</defs>'#13#10'</svg>'
-    end
-    object SkLabel1: TSkLabel
-      Align = Bottom
-      Position.Y = 77.000000000000000000
-      Size.Width = 350.000000000000000000
-      Size.Height = 76.000000000000000000
-      Size.PlatformDefault = False
-      StyledSettings = [Family, FontColor]
-      TextSettings.Font.Size = 28.000000000000000000
-      TextSettings.Font.Weight = UltraBlack
-      Words = <
-        item
-          Text = 'Seja '#13#10'Bem Vindo'
-        end>
-    end
-  end
-  object Layout2: TLayout
-    Align = VertCenter
-    Margins.Left = 16.000000000000000000
-    Margins.Right = 16.000000000000000000
-    Position.X = 16.000000000000000000
-    Position.Y = 268.000000000000000000
-    Size.Width = 350.000000000000000000
-    Size.Height = 158.000000000000000000
-    Size.PlatformDefault = False
-    TabOrder = 2
-    object Rectangle1: TRectangle
-      Align = Center
-      Fill.Color = claWhite
-      Size.Width = 300.000000000000000000
-      Size.Height = 132.000000000000000000
-      Size.PlatformDefault = False
-      Stroke.Kind = None
-      XRadius = 30.000000000000000000
-      YRadius = 30.000000000000000000
-      object Line1: TLine
-        Align = VertCenter
-        LineType = Bottom
-        Margins.Left = 8.000000000000000000
-        Margins.Right = 8.000000000000000000
-        Position.X = 8.000000000000000000
-        Position.Y = 65.000000000000000000
-        Size.Width = 284.000000000000000000
-        Size.Height = 1.000000000000000000
-        Size.PlatformDefault = False
-        Stroke.Color = xFFEDEDED
-      end
-      object Layout4: TLayout
-        Align = Top
-        Size.Width = 300.000000000000000000
-        Size.Height = 61.000000000000000000
-        Size.PlatformDefault = False
-        TabOrder = 2
-        object SkSvg2: TSkSvg
-          Align = Left
-          Margins.Left = 16.000000000000000000
-          Margins.Top = 20.000000000000000000
-          Margins.Bottom = 20.000000000000000000
-          Position.X = 16.000000000000000000
-          Position.Y = 20.000000000000000000
-          Size.Width = 21.000000000000000000
-          Size.Height = 21.000000000000000000
-          Size.PlatformDefault = False
-          Svg.OverrideColor = xFF8C8C8C
-          Svg.Source = 
-            '<?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo' +
-            ', www.svgrepo.com, Generator: SVG Repo Mixer Tools -->'#13#10'<svg wid' +
-            'th="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns=' +
-            '"http://www.w3.org/2000/svg">'#13#10'<path d="M16 7C16 9.20914 14.2091' +
-            ' 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2' +
-            '091 3 16 4.79086 16 7Z" stroke="#000000" stroke-width="2" stroke' +
-            '-linecap="round" stroke-linejoin="round"/>'#13#10'<path d="M12 14C8.13' +
-            '401 14 5 17.134 5 21H19C19 17.134 15.866 14 12 14Z" stroke="#000' +
-            '000" stroke-width="2" stroke-linecap="round" stroke-linejoin="ro' +
-            'und"/>'#13#10'</svg>'
-        end
-        object GosEditView1: TGosEditView
-          Touch.InteractiveGestures = [LongTap, DoubleTap]
-          Align = Client
-          Background.Border.Color.Default = xBFC0C0C0
-          Background.Border.Color.Pressed = claNull
-          Background.Border.Color.Focused = xFF0066CC
-          Background.Border.Color.Hovered = claSilver
-          Background.Border.Color.Selected = claNull
-          Background.Border.Color.Checked = claNull
-          Background.Border.Color.Enabled = claNull
-          Background.Border.Kind = None
-          ClipChildren = True
-          Padding.Left = 6.000000000000000000
-          Padding.Top = 2.000000000000000000
-          Padding.Right = 6.000000000000000000
-          Padding.Bottom = 2.000000000000000000
-          Margins.Left = 8.000000000000000000
-          Margins.Top = 8.000000000000000000
-          Margins.Right = 8.000000000000000000
-          Margins.Bottom = 8.000000000000000000
-          Size.Width = 247.000000000000000000
-          Size.Height = 45.000000000000000000
-          Size.PlatformDefault = False
-          TabOrder = 1
-          TextHint = 'Usu'#225'rio / E-mail'
-          TextSettings.Color.HintText = xFF8C8C8C
-          TextSettings.Font.Size = 15.000000000000000000
-          TextSettings.Gravity = CenterVertical
-          DisableFocusEffect = True
-        end
-      end
-      object Layout5: TLayout
-        Align = Bottom
-        Position.Y = 71.000000000000000000
-        Size.Width = 300.000000000000000000
-        Size.Height = 61.000000000000000000
-        Size.PlatformDefault = False
-        TabOrder = 1
-        object SkSvg3: TSkSvg
-          Align = Left
-          Margins.Left = 16.000000000000000000
-          Margins.Top = 20.000000000000000000
-          Margins.Bottom = 20.000000000000000000
-          Position.X = 16.000000000000000000
-          Position.Y = 20.000000000000000000
-          Size.Width = 21.000000000000000000
-          Size.Height = 21.000000000000000000
-          Size.PlatformDefault = False
-          Svg.Source = 
-            '<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmln' +
-            's="http://www.w3.org/2000/svg">'#13#10'<path d="M9 1.125C6.52588 1.125' +
-            ' 4.5 3.15088 4.5 5.625V7.875C3.25195 7.875 2.25 8.87695 2.25 10.' +
-            '125V15.75C2.25 16.374 2.75098 16.875 3.375 16.875H14.625C15.249 ' +
-            '16.875 15.75 16.374 15.75 15.75V10.125C15.75 8.87695 14.748 7.87' +
-            '5 13.5 7.875V5.625C13.5 3.15088 11.4741 1.125 9 1.125ZM9 3.375C1' +
-            '0.2656 3.375 11.25 4.35938 11.25 5.625V7.875H6.75V5.625C6.75 4.3' +
-            '5938 7.73438 3.375 9 3.375Z" fill="#7D7D7D"/>'#13#10'</svg>'
-        end
-        object GosEditView2: TGosEditView
-          Touch.InteractiveGestures = [LongTap, DoubleTap]
-          Align = Client
-          Background.Border.Color.Default = xBFC0C0C0
-          Background.Border.Color.Pressed = claNull
-          Background.Border.Color.Focused = xFF0066CC
-          Background.Border.Color.Hovered = claSilver
-          Background.Border.Color.Selected = claNull
-          Background.Border.Color.Checked = claNull
-          Background.Border.Color.Enabled = claNull
-          Background.Border.Kind = None
-          ClipChildren = True
-          Padding.Left = 6.000000000000000000
-          Padding.Top = 2.000000000000000000
-          Padding.Right = 6.000000000000000000
-          Padding.Bottom = 2.000000000000000000
-          Margins.Left = 8.000000000000000000
-          Margins.Top = 8.000000000000000000
-          Margins.Right = 8.000000000000000000
-          Margins.Bottom = 8.000000000000000000
-          Size.Width = 247.000000000000000000
-          Size.Height = 45.000000000000000000
-          Size.PlatformDefault = False
-          TabOrder = 1
-          TextHint = 'Senha'
-          TextSettings.Color.HintText = xFF8C8C8C
-          TextSettings.Font.Size = 15.000000000000000000
-          TextSettings.Gravity = CenterVertical
-          DisableFocusEffect = True
-        end
-      end
-    end
-    object SkLabel2: TSkLabel
-      Align = Bottom
-      Margins.Right = 32.000000000000000000
-      Position.Y = 139.000000000000000000
-      Size.Width = 318.000000000000000000
-      Size.Height = 19.000000000000000000
-      Size.PlatformDefault = False
-      StyledSettings = [Family, Size, FontColor]
-      TextSettings.Font.Weight = Bold
-      TextSettings.HorzAlign = Trailing
-      Words = <
-        item
-          Text = 'Esqueceu a senha?'
-        end>
-    end
-  end
-  object Layout3: TLayout
-    Align = Bottom
-    Position.Y = 501.000000000000000000
+  object TabControl1: TTabControl
+    Align = Contents
     Size.Width = 382.000000000000000000
-    Size.Height = 199.000000000000000000
+    Size.Height = 820.000000000000000000
     Size.PlatformDefault = False
-    TabOrder = 1
-    object GosButtonView1: TGosButtonView
-      Align = Top
-      Background.XRadius = 20.000000000000000000
-      Background.YRadius = 20.000000000000000000
-      Background.ItemDefault.Kind = Gradient
-      Background.ItemDefault.Gradient.Points = <
+    TabIndex = 0
+    TabOrder = 0
+    TabPosition = PlatformDefault
+    Sizes = (
+      382s
+      794s
+      382s
+      794s
+      382s
+      794s)
+    object tabLogin: TTabItem
+      CustomIcon = <
         item
-          Color = xFF5F49E5
-          Offset = 0.000000000000000000
-        end
-        item
-          Color = xFF9280E0
-          Offset = 1.000000000000000000
         end>
-      Background.ItemDefault.Gradient.StartPosition.X = 0.500000000000000000
-      Background.ItemDefault.Gradient.StopPosition.X = 0.499999970197677600
-      Background.Border.Kind = None
-      Margins.Left = 32.000000000000000000
-      Margins.Top = 16.000000000000000000
-      Margins.Right = 32.000000000000000000
-      Margins.Bottom = 16.000000000000000000
-      Size.Width = 318.000000000000000000
-      Size.Height = 57.000000000000000000
+      IsSelected = True
+      Size.Width = 67.000000000000000000
+      Size.Height = 26.000000000000000000
       Size.PlatformDefault = False
-      Position.X = 32.000000000000000000
-      Position.Y = 16.000000000000000000
-      TabOrder = 1
-      Text = 'Login'
-      TextSettings.Color.Default = claWhite
-      TextSettings.Color.Focused = claNull
-      TextSettings.Color.Selected = claNull
-      TextSettings.Color.Enabled = claNull
-      TextSettings.Font.Size = 16.000000000000000000
-      TextSettings.Gravity = Center
-    end
-    object GosButtonView2: TGosButtonView
-      Align = Top
-      Background.XRadius = 20.000000000000000000
-      Background.YRadius = 20.000000000000000000
-      Background.ItemDefault.Color = claBlack
-      Background.Border.Kind = None
-      Margins.Left = 32.000000000000000000
-      Margins.Right = 32.000000000000000000
-      Size.Width = 318.000000000000000000
-      Size.Height = 57.000000000000000000
-      Size.PlatformDefault = False
-      Position.X = 32.000000000000000000
-      Position.Y = 89.000000000000000000
+      StyleLookup = ''
       TabOrder = 0
-      Text = 'Nova Conta de Usu'#225'rio'
-      TextSettings.Color.Default = claWhite
-      TextSettings.Color.Focused = claNull
-      TextSettings.Color.Selected = claNull
-      TextSettings.Color.Enabled = claNull
-      TextSettings.Font.Size = 16.000000000000000000
-      TextSettings.Gravity = Center
+      Text = 'tabLogin'
+      ExplicitSize.cx = 67.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      object recbody: TRectangle
+        Align = Contents
+        Fill.Color = xFFEBECF1
+        Size.Width = 382.000000000000000000
+        Size.Height = 794.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        object Layout1: TLayout
+          Align = Top
+          Margins.Left = 16.000000000000000000
+          Margins.Top = 40.000000000000000000
+          Margins.Right = 16.000000000000000000
+          Position.X = 16.000000000000000000
+          Position.Y = 40.000000000000000000
+          Size.Width = 350.000000000000000000
+          Size.Height = 153.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object SkSvg1: TSkSvg
+            Align = Left
+            Margins.Bottom = 32.000000000000000000
+            Size.Width = 57.000000000000000000
+            Size.Height = 45.000000000000000000
+            Size.PlatformDefault = False
+            Svg.Source = 
+              '<svg width="115" height="145" viewBox="0 0 115 145" fill="none" ' +
+              'xmlns="http://www.w3.org/2000/svg">'#13#10'<g clip-path="url(#clip0_70' +
+              '_81)">'#13#10'<path d="M68.5842 64.7859C71.6423 64.7859 74.1197 62.511' +
+              '2 74.1197 59.7057C74.1197 56.8992 71.6423 54.6245 68.5842 54.624' +
+              '5C68.1372 54.6245 67.706 54.687 67.2893 54.7789C67.6938 55.2979 ' +
+              '67.9441 55.9435 67.9441 56.6561C67.9441 58.3396 66.5921 59.7057 ' +
+              '64.9276 59.7057C64.2449 59.7057 63.6193 59.4678 63.1161 59.0811C' +
+              '63.088 59.2873 63.0466 59.4922 63.0466 59.7057C63.0466 62.5112 6' +
+              '5.524 64.7859 68.5842 64.7859Z" fill="black"/>'#13#10'<path d="M46.418' +
+              ' 64.7859C49.4765 64.7859 51.9557 62.5112 51.9557 59.7057C51.9557' +
+              ' 56.8992 49.4765 54.6245 46.418 54.6245C45.7643 54.6245 45.1484 ' +
+              '54.7466 44.567 54.9385C44.8973 55.4263 45.0933 56.0168 45.0933 5' +
+              '6.6561C45.0933 58.3396 43.7422 59.7057 42.0761 59.7057C41.6624 5' +
+              '9.7057 41.2654 59.6217 40.9065 59.4678C40.9026 59.5479 40.8801 5' +
+              '9.6251 40.8801 59.7057C40.8801 62.5112 43.3587 64.7859 46.418 64' +
+              '.7859Z" fill="black"/>'#13#10'<path d="M111.173 95.3021C111.173 85.409' +
+              '2 102.628 77.392 92.0887 77.392H88.0042C81.1514 88.262 70.2735 9' +
+              '6.3003 57.5 96.3661C44.7259 96.3003 33.8486 88.262 26.9958 77.39' +
+              '2H22.9118C12.3709 77.392 3.82789 85.4092 3.82789 95.3021L0 127.0' +
+              '9C0 136.98 8.54404 145 19.0839 145H79.6745V127.039C75.125 125.01' +
+              '8 71.9424 120.426 71.9424 115.077C71.9424 109.983 74.6455 105.69' +
+              '7 78.8491 103.541C79.4016 103.26 80.1788 103.672 79.7823 104.46C' +
+              '79.5162 105.088 79.3837 105.124 79.0333 106.064C78.684 107.006 7' +
+              '7.9821 111.063 78.4684 113.196C78.9591 115.329 81.8925 118.962 8' +
+              '5.0438 118.962C85.0864 118.962 85.1258 118.958 85.1674 118.955C8' +
+              '5.1674 118.955 85.2808 118.962 85.3234 118.962C88.4747 118.962 9' +
+              '1.4092 115.329 91.8989 113.196C92.3863 111.063 91.6843 107.006 9' +
+              '1.3351 106.064C90.9825 105.122 90.8545 105.086 90.5861 104.458C9' +
+              '0.1896 103.672 90.9656 103.259 91.5182 103.541C95.7229 105.695 9' +
+              '8.4249 109.983 98.4249 115.077C98.4249 120.329 95.3534 124.845 9' +
+              '0.9353 126.92V145H95.916C106.456 145 115 136.98 115 127.09L111.1' +
+              '73 95.3021Z" fill="black"/>'#13#10'<path d="M93.9832 39.4899C93.9832 3' +
+              '7.6223 92.8445 37.3123 92.2907 37.3123H90.5119C90.4119 36.1205 9' +
+              '0.2917 34.9106 90.2917 33.6841C90.2917 22.4803 82.9302 12.558 74' +
+              '.2984 6.43197C74.2928 6.6807 74.3019 6.92944 74.2906 7.17759C74.' +
+              '2513 8.04287 74.2097 8.90873 74.1681 9.77017C74.1086 10.6315 73.' +
+              '9941 11.4849 73.9053 12.3326C73.7526 14.0292 73.4247 15.6786 73.' +
+              '1271 17.2713C72.8126 18.8611 72.4084 20.3795 72.0119 21.8092C71.' +
+              '5683 23.2293 71.1517 24.5658 70.6665 25.7736C69.7546 28.1992 68.' +
+              '7449 30.1314 67.9858 31.4459C67.2266 32.7626 66.6808 33.4547 66.' +
+              '6808 33.4547C66.6808 33.4547 66.6943 33.2378 66.7145 32.8279C66.' +
+              '7504 32.4259 66.7504 31.8217 66.8167 31.0813C66.9054 29.6084 67.' +
+              '0357 27.5037 67.1884 24.9786C67.3647 22.4865 67.5343 19.6027 67.' +
+              '7207 16.5417C67.796 15.0121 67.8791 13.4325 67.9599 11.8284C68.0' +
+              '004 11.029 68.0396 10.2209 68.0813 9.41178C68.1015 8.60266 68.12' +
+              '28 7.7896 68.143 6.97653C68.2373 5.59902 68.2295 4.22499 68.2553' +
+              ' 2.85945C64.4953 1.06122 60.759 0.0437232 57.4999 0C54.2408 0.04' +
+              '37232 50.5044 1.06122 46.7445 2.85945C46.7703 4.22499 46.7625 5.' +
+              '59902 46.8568 6.97653C46.877 7.7896 46.8984 8.60266 46.9185 9.41' +
+              '178C46.9601 10.2209 46.9994 11.029 47.0398 11.8284C47.1207 13.43' +
+              '25 47.2038 15.0121 47.279 16.5417C47.4654 19.6027 47.6351 22.486' +
+              '5 47.8114 24.9786C47.9641 27.5037 48.0944 29.6084 48.1831 31.081' +
+              '3C48.2494 31.8217 48.2494 32.4259 48.2853 32.8279C48.3055 33.237' +
+              '8 48.319 33.4547 48.319 33.4547C48.319 33.4547 47.7732 32.7626 4' +
+              '7.014 31.4459C46.2548 30.1314 45.2453 28.1992 44.3333 25.7736C43' +
+              '.8481 24.5658 43.4315 23.2293 42.9879 21.8092C42.5914 20.3795 42' +
+              '.1872 18.8611 41.8727 17.2713C41.575 15.6786 41.2472 14.0292 41.' +
+              '0944 12.3326C41.0057 11.4849 40.8911 10.6315 40.8317 9.77017C40.' +
+              '79 8.90873 40.7485 8.04287 40.7092 7.17759C40.6979 6.92944 40.70' +
+              '7 6.6807 40.7014 6.43197C32.0696 12.558 24.7081 22.4803 24.7081 ' +
+              '33.6841C24.7081 34.9106 24.5879 36.1205 24.4879 37.3123H22.7091C' +
+              '22.1553 37.3123 21.0166 37.6223 21.0166 39.4899V48.7171H24.6002C' +
+              '24.5441 49.6483 24.5036 50.5829 24.5036 51.5306C24.5036 73.099 3' +
+              '8.9629 90.0177 57.4999 90.2761C76.0369 90.0177 90.4961 73.099 90' +
+              '.4961 51.5306C90.4961 50.5829 90.4557 49.6483 90.3996 48.7171H93' +
+              '.9832V39.4899ZM57.4999 86.5445C41.0315 86.2827 28.194 71.0015 28' +
+              '.194 51.5306C28.194 50.5817 28.24 49.6472 28.3007 48.7171H86.699' +
+              '1C86.7598 49.6472 86.8058 50.5817 86.8058 51.5306C86.8058 71.001' +
+              '5 73.9682 86.2827 57.4999 86.5445Z" fill="#5F49E5"/>'#13#10'</g>'#13#10'<def' +
+              's>'#13#10'<clipPath id="clip0_70_81">'#13#10'<rect width="115" height="145" ' +
+              'fill="white"/>'#13#10'</clipPath>'#13#10'</defs>'#13#10'</svg>'
+          end
+          object SkLabel1: TSkLabel
+            Align = Bottom
+            Position.Y = 77.000000000000000000
+            Size.Width = 350.000000000000000000
+            Size.Height = 76.000000000000000000
+            Size.PlatformDefault = False
+            StyledSettings = [Family, FontColor]
+            TextSettings.Font.Size = 28.000000000000000000
+            TextSettings.Font.Weight = UltraBlack
+            Words = <
+              item
+                Text = 'Seja '#13#10'Bem Vindo'
+              end>
+          end
+        end
+        object Layout2: TLayout
+          Align = VertCenter
+          Margins.Left = 16.000000000000000000
+          Margins.Right = 16.000000000000000000
+          Position.X = 16.000000000000000000
+          Position.Y = 315.000000000000000000
+          Size.Width = 350.000000000000000000
+          Size.Height = 158.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          object Rectangle1: TRectangle
+            Align = Center
+            Fill.Color = claWhite
+            Size.Width = 300.000000000000000000
+            Size.Height = 132.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Kind = None
+            XRadius = 30.000000000000000000
+            YRadius = 30.000000000000000000
+            object Line1: TLine
+              Align = VertCenter
+              LineType = Bottom
+              Margins.Left = 8.000000000000000000
+              Margins.Right = 8.000000000000000000
+              Position.X = 8.000000000000000000
+              Position.Y = 65.000000000000000000
+              Size.Width = 284.000000000000000000
+              Size.Height = 1.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = xFFEDEDED
+            end
+            object Layout4: TLayout
+              Align = Top
+              Size.Width = 300.000000000000000000
+              Size.Height = 61.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 2
+              object SkSvg2: TSkSvg
+                Align = Left
+                Margins.Left = 16.000000000000000000
+                Margins.Top = 20.000000000000000000
+                Margins.Bottom = 20.000000000000000000
+                Position.X = 16.000000000000000000
+                Position.Y = 20.000000000000000000
+                Size.Width = 21.000000000000000000
+                Size.Height = 21.000000000000000000
+                Size.PlatformDefault = False
+                Svg.OverrideColor = xFF8C8C8C
+                Svg.Source = 
+                  '<?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo' +
+                  ', www.svgrepo.com, Generator: SVG Repo Mixer Tools -->'#13#10'<svg wid' +
+                  'th="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns=' +
+                  '"http://www.w3.org/2000/svg">'#13#10'<path d="M16 7C16 9.20914 14.2091' +
+                  ' 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2' +
+                  '091 3 16 4.79086 16 7Z" stroke="#000000" stroke-width="2" stroke' +
+                  '-linecap="round" stroke-linejoin="round"/>'#13#10'<path d="M12 14C8.13' +
+                  '401 14 5 17.134 5 21H19C19 17.134 15.866 14 12 14Z" stroke="#000' +
+                  '000" stroke-width="2" stroke-linecap="round" stroke-linejoin="ro' +
+                  'und"/>'#13#10'</svg>'
+              end
+              object GosEditView1: TGosEditView
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Client
+                Background.Border.Color.Default = xBFC0C0C0
+                Background.Border.Color.Pressed = claNull
+                Background.Border.Color.Focused = xFF0066CC
+                Background.Border.Color.Hovered = claSilver
+                Background.Border.Color.Selected = claNull
+                Background.Border.Color.Checked = claNull
+                Background.Border.Color.Enabled = claNull
+                Background.Border.Kind = None
+                ClipChildren = True
+                Padding.Left = 6.000000000000000000
+                Padding.Top = 2.000000000000000000
+                Padding.Right = 6.000000000000000000
+                Padding.Bottom = 2.000000000000000000
+                Margins.Left = 8.000000000000000000
+                Margins.Top = 8.000000000000000000
+                Margins.Right = 8.000000000000000000
+                Margins.Bottom = 8.000000000000000000
+                Size.Width = 247.000000000000000000
+                Size.Height = 45.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 1
+                TextHint = 'Usu'#225'rio / E-mail'
+                TextSettings.Color.HintText = xFF8C8C8C
+                TextSettings.Font.Size = 15.000000000000000000
+                TextSettings.Gravity = CenterVertical
+                DisableFocusEffect = True
+              end
+            end
+            object Layout5: TLayout
+              Align = Bottom
+              Position.Y = 71.000000000000000000
+              Size.Width = 300.000000000000000000
+              Size.Height = 61.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 1
+              object SkSvg3: TSkSvg
+                Align = Left
+                Margins.Left = 16.000000000000000000
+                Margins.Top = 20.000000000000000000
+                Margins.Bottom = 20.000000000000000000
+                Position.X = 16.000000000000000000
+                Position.Y = 20.000000000000000000
+                Size.Width = 21.000000000000000000
+                Size.Height = 21.000000000000000000
+                Size.PlatformDefault = False
+                Svg.Source = 
+                  '<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmln' +
+                  's="http://www.w3.org/2000/svg">'#13#10'<path d="M9 1.125C6.52588 1.125' +
+                  ' 4.5 3.15088 4.5 5.625V7.875C3.25195 7.875 2.25 8.87695 2.25 10.' +
+                  '125V15.75C2.25 16.374 2.75098 16.875 3.375 16.875H14.625C15.249 ' +
+                  '16.875 15.75 16.374 15.75 15.75V10.125C15.75 8.87695 14.748 7.87' +
+                  '5 13.5 7.875V5.625C13.5 3.15088 11.4741 1.125 9 1.125ZM9 3.375C1' +
+                  '0.2656 3.375 11.25 4.35938 11.25 5.625V7.875H6.75V5.625C6.75 4.3' +
+                  '5938 7.73438 3.375 9 3.375Z" fill="#7D7D7D"/>'#13#10'</svg>'
+              end
+              object GosEditView2: TGosEditView
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Client
+                Background.Border.Color.Default = xBFC0C0C0
+                Background.Border.Color.Pressed = claNull
+                Background.Border.Color.Focused = xFF0066CC
+                Background.Border.Color.Hovered = claSilver
+                Background.Border.Color.Selected = claNull
+                Background.Border.Color.Checked = claNull
+                Background.Border.Color.Enabled = claNull
+                Background.Border.Kind = None
+                ClipChildren = True
+                Padding.Left = 6.000000000000000000
+                Padding.Top = 2.000000000000000000
+                Padding.Right = 6.000000000000000000
+                Padding.Bottom = 2.000000000000000000
+                Margins.Left = 8.000000000000000000
+                Margins.Top = 8.000000000000000000
+                Margins.Right = 8.000000000000000000
+                Margins.Bottom = 8.000000000000000000
+                Size.Width = 247.000000000000000000
+                Size.Height = 45.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 1
+                TextHint = 'Senha'
+                TextSettings.Color.HintText = xFF8C8C8C
+                TextSettings.Font.Size = 15.000000000000000000
+                TextSettings.Gravity = CenterVertical
+                DisableFocusEffect = True
+              end
+            end
+          end
+          object SkLabel2: TSkLabel
+            Align = Bottom
+            Margins.Right = 32.000000000000000000
+            Position.Y = 139.000000000000000000
+            Size.Width = 318.000000000000000000
+            Size.Height = 19.000000000000000000
+            Size.PlatformDefault = False
+            StyledSettings = [Family, Size, FontColor]
+            TextSettings.Font.Weight = Bold
+            TextSettings.HorzAlign = Trailing
+            Words = <
+              item
+                Text = 'Esqueceu a senha?'
+              end>
+          end
+        end
+        object Layout3: TLayout
+          Align = Bottom
+          Position.Y = 595.000000000000000000
+          Size.Width = 382.000000000000000000
+          Size.Height = 199.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          object btnLogin: TGosButtonView
+            Align = Top
+            Background.XRadius = 20.000000000000000000
+            Background.YRadius = 20.000000000000000000
+            Background.ItemDefault.Kind = Gradient
+            Background.ItemDefault.Gradient.Points = <
+              item
+                Color = xFF5F49E5
+                Offset = 0.000000000000000000
+              end
+              item
+                Color = xFF9280E0
+                Offset = 1.000000000000000000
+              end>
+            Background.ItemDefault.Gradient.StartPosition.X = 0.500000000000000000
+            Background.ItemDefault.Gradient.StopPosition.X = 0.499999970197677600
+            Background.Border.Kind = None
+            Margins.Left = 32.000000000000000000
+            Margins.Top = 16.000000000000000000
+            Margins.Right = 32.000000000000000000
+            Margins.Bottom = 16.000000000000000000
+            Size.Width = 318.000000000000000000
+            Size.Height = 57.000000000000000000
+            Size.PlatformDefault = False
+            Position.X = 32.000000000000000000
+            Position.Y = 16.000000000000000000
+            TabOrder = 1
+            OnClick = btnLoginClick
+            Text = 'Login'
+            TextSettings.Color.Default = claWhite
+            TextSettings.Color.Focused = claNull
+            TextSettings.Color.Selected = claNull
+            TextSettings.Color.Enabled = claNull
+            TextSettings.Font.Size = 16.000000000000000000
+            TextSettings.Gravity = Center
+          end
+          object GosButtonView2: TGosButtonView
+            Align = Top
+            Background.XRadius = 20.000000000000000000
+            Background.YRadius = 20.000000000000000000
+            Background.ItemDefault.Color = claBlack
+            Background.Border.Kind = None
+            Margins.Left = 32.000000000000000000
+            Margins.Right = 32.000000000000000000
+            Size.Width = 318.000000000000000000
+            Size.Height = 57.000000000000000000
+            Size.PlatformDefault = False
+            Position.X = 32.000000000000000000
+            Position.Y = 89.000000000000000000
+            TabOrder = 0
+            OnClick = GosButtonView2Click
+            Text = 'Nova Conta de Usu'#225'rio'
+            TextSettings.Color.Default = claWhite
+            TextSettings.Color.Focused = claNull
+            TextSettings.Color.Selected = claNull
+            TextSettings.Color.Enabled = claNull
+            TextSettings.Font.Size = 16.000000000000000000
+            TextSettings.Gravity = Center
+          end
+        end
+      end
+    end
+    object tabCadastroClienteColaborador: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 188.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'tabCadastroClienteColaborador'
+      ExplicitSize.cx = 188.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      object recCliente: TRectangle
+        Align = Contents
+        Fill.Color = xFFEBECF1
+        Size.Width = 382.000000000000000000
+        Size.Height = 794.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        Visible = False
+        object Layout6: TLayout
+          Align = Top
+          Margins.Left = 16.000000000000000000
+          Margins.Top = 40.000000000000000000
+          Margins.Right = 16.000000000000000000
+          Position.X = 16.000000000000000000
+          Position.Y = 40.000000000000000000
+          Size.Width = 350.000000000000000000
+          Size.Height = 153.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object SkSvg4: TSkSvg
+            Align = HorzCenter
+            Margins.Top = 30.000000000000000000
+            Margins.Bottom = 30.000000000000000000
+            Position.X = 153.000000000000000000
+            Position.Y = 30.000000000000000000
+            Size.Width = 44.000000000000000000
+            Size.Height = 55.000000000000000000
+            Size.PlatformDefault = False
+            Svg.Source = 
+              '<svg width="44" height="55" viewBox="0 0 44 55" fill="none" xmln' +
+              's="http://www.w3.org/2000/svg">'#13#10'<g clip-path="url(#clip0_209_57' +
+              ')">'#13#10'<path d="M23.8829 40.8855L25.7365 52.9533H27.9568L31.4055 3' +
+              '5.0034C31.0663 34.9782 30.7292 34.9534 30.3842 34.9534H29.2724C2' +
+              '7.0994 36.0524 24.6275 36.6802 22.0003 36.6802C19.373 36.6802 16' +
+              '.9 36.0524 14.7287 34.9534H13.6169C13.2702 34.9534 12.9332 34.97' +
+              '82 12.5956 35.0034L16.0443 52.9533H18.2629L20.1165 40.8855H20.18' +
+              '14L18.3619 37.5724H25.6375L23.818 40.8855H23.8829Z" fill="white"' +
+              '/>'#13#10'<path d="M31.4056 35.0034L27.9568 52.9532H16.0444L12.5956 35' +
+              '.0034C5.55404 35.5228 0 41.3358 0 48.4503V55H44V48.4503C44 41.33' +
+              '58 38.4465 35.5228 31.4056 35.0034Z" fill="black"/>'#13#10'<path d="M1' +
+              '8.2629 52.9533H25.7366L23.883 40.8855H23.8181L25.6376 37.5724H18' +
+              '.362L20.1814 40.8855H20.1166L18.2629 52.9533Z" fill="#715CEE"/>'#13 +
+              #10'<path d="M3.01367 20.9035V22.0787C3.01367 24.0904 4.72896 25.72' +
+              '46 6.83704 25.7246H7.06189C8.21188 29.7214 11.0674 33.0488 14.83' +
+              '16 34.9534C17.0029 36.0524 19.4759 36.6802 22.1032 36.6802C24.73' +
+              '04 36.6802 27.2023 36.0524 29.3753 34.9534C33.1394 33.0488 35.99' +
+              '33 29.7214 37.1433 25.7246H37.3681C39.4763 25.7246 41.1915 24.09' +
+              '04 41.1915 22.0787V20.9035C41.1915 19.1617 39.9009 17.7092 38.18' +
+              '4 17.3497C38.2443 16.826 38.2859 16.2967 38.2859 15.755L38.2785 ' +
+              '15.6026C38.2813 15.2166 38.2682 14.8176 38.2164 14.389V14.3876C3' +
+              '7.9813 11.9021 37.108 9.60001 35.7599 7.64582C35.0654 6.63798 34' +
+              '.2365 5.72943 33.3125 4.92978C30.8424 2.78936 27.6406 1.46608 24' +
+              '.1225 1.38228L23.9448 1.24284C23.7934 1.07839 23.6277 1.04904 23' +
+              '.5156 1.04904C23.252 1.04904 23.067 1.22227 22.9173 1.36449H22.8' +
+              '689C22.0195 0.520817 21.3807 0 20.8331 0H20.8302C20.3082 0.03974' +
+              '94 17.8597 0.901164 17.078 1.48352C16.9038 1.61278 16.7097 1.778' +
+              '4 16.5042 1.96181C10.493 3.72103 6.10438 9.22758 6.10438 15.755C' +
+              '6.10438 15.8549 6.11178 15.9531 6.11348 16.0512C6.10549 16.4903 ' +
+              '6.1203 16.9231 6.16187 17.3497C4.37942 17.6567 3.01367 19.1166 3' +
+              '.01367 20.9035ZM37.778 19.4743C38.4458 19.6476 38.9434 20.2139 3' +
+              '8.9434 20.9035V22.0787C38.9434 22.8343 38.3536 23.4533 37.5919 2' +
+              '3.5591C37.6642 22.981 37.7114 22.3969 37.7114 21.8016C37.7114 21' +
+              '.2248 37.6579 20.6614 37.5856 20.1038C37.6523 19.8953 37.7205 19' +
+              '.6871 37.778 19.4743ZM8.90758 19.9015C8.95369 19.6123 9.01688 19' +
+              '.3304 9.08404 19.0475C10.9155 17.7577 13.2627 15.7476 14.161 14.' +
+              '1659C14.161 14.1659 28.9922 17.611 34.3948 18.0057C34.5496 18.01' +
+              '73 34.6964 18.0235 34.837 18.0246C35.0358 18.6352 35.1952 19.257' +
+              '1 35.2976 19.9015C35.3967 20.5234 35.4633 21.1543 35.4633 21.801' +
+              '6C35.4633 22.2637 35.4337 22.7186 35.383 23.1672C35.2976 23.9375' +
+              ' 35.1331 24.6815 34.9094 25.4036C33.2744 30.675 28.157 34.5369 2' +
+              '2.1032 34.5369C16.0493 34.5369 10.9297 30.6765 9.29583 25.4047C9' +
+              '.07151 24.6829 8.90758 23.9375 8.82329 23.1689C8.77152 22.7186 8' +
+              '.7419 22.2637 8.7419 21.8016C8.7419 21.1543 8.80848 20.5234 8.90' +
+              '758 19.9015ZM5.26184 20.9035C5.26184 20.1611 5.83453 19.5567 6.5' +
+              '7914 19.4394C6.58369 19.7255 6.59395 20.007 6.60018 20.2931C6.53' +
+              '816 20.7892 6.49374 21.2892 6.49374 21.8016C6.49374 22.3969 6.53' +
+              '932 22.981 6.6122 23.5591C5.85103 23.4533 5.26184 22.8343 5.2618' +
+              '4 22.0787V20.9035Z" fill="#616E7D"/>'#13#10'</g>'#13#10'<defs>'#13#10'<clipPath id' +
+              '="clip0_209_57">'#13#10'<rect width="44" height="55" fill="white"/>'#13#10'<' +
+              '/clipPath>'#13#10'</defs>'#13#10'</svg>'
+          end
+          object Layout11: TLayout
+            Align = Bottom
+            Position.Y = 115.000000000000000000
+            Size.Width = 350.000000000000000000
+            Size.Height = 38.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object SkLabel3: TSkLabel
+              Align = Client
+              Size.Width = 280.000000000000000000
+              Size.Height = 38.000000000000000000
+              Size.PlatformDefault = False
+              StyledSettings = [Family, FontColor]
+              TextSettings.Font.Size = 28.000000000000000000
+              TextSettings.Font.Weight = UltraBlack
+              Words = <
+                item
+                  Text = 'Ol'#225', Cliente'
+                end>
+            end
+            object GosRectangle1: TGosRectangle
+              Align = Right
+              Fill.Color = claWhite
+              Margins.Top = 4.000000000000000000
+              Margins.Bottom = 4.000000000000000000
+              Position.X = 280.000000000000000000
+              Position.Y = 4.000000000000000000
+              Size.Width = 70.000000000000000000
+              Size.Height = 30.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Kind = None
+              XRadius = 15.000000000000000000
+              YRadius = 15.000000000000000000
+              object switch: TGosSwitch
+                Align = Client
+                HitTest = True
+                Margins.Left = 8.000000000000000000
+                Margins.Top = 4.000000000000000000
+                Margins.Right = 8.000000000000000000
+                Margins.Bottom = 4.000000000000000000
+                Size.Width = 54.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 0
+                Thumb.Fill.Color = xFF5F49E5
+                Thumb.Size.Width = 22.000000000000000000
+                Thumb.Size.Height = 22.000000000000000000
+                Thumb.Size.PlatformDefault = False
+                Thumb.Stroke.Color = xFFD5D5D5
+                Thumb.XRadius = 11.000000000000000000
+                Thumb.YRadius = 11.000000000000000000
+                BackGround.Align = VertCenter
+                BackGround.Fill.Kind = None
+                BackGround.Position.X = 6.000000000000000000
+                BackGround.Position.Y = 4.000000000000000000
+                BackGround.Size.Width = 42.000000000000000000
+                BackGround.Size.Height = 14.000000000000000000
+                BackGround.Size.PlatformDefault = False
+                BackGround.Stroke.Kind = None
+                BackGround.XRadius = 7.000000000000000000
+                BackGround.YRadius = 7.000000000000000000
+                AnimationDuration = 0.200000002980232200
+                OnChange = switchChange
+              end
+              object ShadowEffect1: TShadowEffect
+                Distance = 3.000000000000000000
+                Direction = 45.000000000000000000
+                Softness = 0.300000011920929000
+                Opacity = 0.600000023841857900
+                ShadowColor = claSilver
+              end
+            end
+          end
+        end
+        object Layout7: TLayout
+          Align = VertCenter
+          Margins.Left = 16.000000000000000000
+          Margins.Right = 16.000000000000000000
+          Position.X = 16.000000000000000000
+          Position.Y = 262.000000000000000000
+          Size.Width = 350.000000000000000000
+          Size.Height = 263.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          object Rectangle3: TRectangle
+            Align = Center
+            Fill.Color = claWhite
+            Size.Width = 300.000000000000000000
+            Size.Height = 246.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Kind = None
+            XRadius = 30.000000000000000000
+            YRadius = 30.000000000000000000
+            object Line2: TLine
+              Align = Top
+              LineType = Bottom
+              Margins.Left = 8.000000000000000000
+              Margins.Right = 8.000000000000000000
+              Position.X = 8.000000000000000000
+              Position.Y = 123.000000000000000000
+              Size.Width = 284.000000000000000000
+              Size.Height = 1.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = xFFEDEDED
+            end
+            object Layout8: TLayout
+              Align = Top
+              Size.Width = 300.000000000000000000
+              Size.Height = 61.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 4
+              object SkSvg5: TSkSvg
+                Align = Left
+                Margins.Left = 16.000000000000000000
+                Margins.Top = 20.000000000000000000
+                Margins.Bottom = 20.000000000000000000
+                Position.X = 16.000000000000000000
+                Position.Y = 20.000000000000000000
+                Size.Width = 21.000000000000000000
+                Size.Height = 21.000000000000000000
+                Size.PlatformDefault = False
+                Svg.OverrideColor = xFF8C8C8C
+                Svg.Source = 
+                  '<?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo' +
+                  ', www.svgrepo.com, Generator: SVG Repo Mixer Tools -->'#13#10'<svg wid' +
+                  'th="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns=' +
+                  '"http://www.w3.org/2000/svg">'#13#10'<path d="M16 7C16 9.20914 14.2091' +
+                  ' 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2' +
+                  '091 3 16 4.79086 16 7Z" stroke="#000000" stroke-width="2" stroke' +
+                  '-linecap="round" stroke-linejoin="round"/>'#13#10'<path d="M12 14C8.13' +
+                  '401 14 5 17.134 5 21H19C19 17.134 15.866 14 12 14Z" stroke="#000' +
+                  '000" stroke-width="2" stroke-linecap="round" stroke-linejoin="ro' +
+                  'und"/>'#13#10'</svg>'
+              end
+              object GosEditView3: TGosEditView
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Client
+                Background.Border.Color.Default = xBFC0C0C0
+                Background.Border.Color.Pressed = claNull
+                Background.Border.Color.Focused = xFF0066CC
+                Background.Border.Color.Hovered = claSilver
+                Background.Border.Color.Selected = claNull
+                Background.Border.Color.Checked = claNull
+                Background.Border.Color.Enabled = claNull
+                Background.Border.Kind = None
+                ClipChildren = True
+                Padding.Left = 6.000000000000000000
+                Padding.Top = 2.000000000000000000
+                Padding.Right = 6.000000000000000000
+                Padding.Bottom = 2.000000000000000000
+                Margins.Left = 8.000000000000000000
+                Margins.Top = 8.000000000000000000
+                Margins.Right = 8.000000000000000000
+                Margins.Bottom = 8.000000000000000000
+                Size.Width = 247.000000000000000000
+                Size.Height = 45.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 1
+                TextHint = 'Nome Completo'
+                TextSettings.Color.HintText = xFF8C8C8C
+                TextSettings.Font.Size = 15.000000000000000000
+                TextSettings.Gravity = CenterVertical
+                DisableFocusEffect = True
+              end
+            end
+            object Layout9: TLayout
+              Align = Top
+              Position.Y = 62.000000000000000000
+              Size.Width = 300.000000000000000000
+              Size.Height = 61.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 1
+              object SkSvg6: TSkSvg
+                Align = Left
+                Margins.Left = 16.000000000000000000
+                Margins.Top = 20.000000000000000000
+                Margins.Bottom = 20.000000000000000000
+                Position.X = 16.000000000000000000
+                Position.Y = 20.000000000000000000
+                Size.Width = 21.000000000000000000
+                Size.Height = 21.000000000000000000
+                Size.PlatformDefault = False
+                Svg.OverrideColor = xFF8C8C8C
+                Svg.Source = 
+                  '<?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo' +
+                  ', www.svgrepo.com, Generator: SVG Repo Mixer Tools -->'#13#10'<svg wid' +
+                  'th="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns=' +
+                  '"http://www.w3.org/2000/svg">'#13#10'<path fill-rule="evenodd" clip-ru' +
+                  'le="evenodd" d="M3.75 5.25L3 6V18L3.75 18.75H20.25L21 18V6L20.25' +
+                  ' 5.25H3.75ZM4.5 7.6955V17.25H19.5V7.69525L11.9999 14.5136L4.5 7.' +
+                  '6955ZM18.3099 6.75H5.68986L11.9999 12.4864L18.3099 6.75Z" fill="' +
+                  '#080341"/>'#13#10'</svg>'
+              end
+              object GosEditView4: TGosEditView
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Client
+                Background.Border.Color.Default = xBFC0C0C0
+                Background.Border.Color.Pressed = claNull
+                Background.Border.Color.Focused = xFF0066CC
+                Background.Border.Color.Hovered = claSilver
+                Background.Border.Color.Selected = claNull
+                Background.Border.Color.Checked = claNull
+                Background.Border.Color.Enabled = claNull
+                Background.Border.Kind = None
+                ClipChildren = True
+                Padding.Left = 6.000000000000000000
+                Padding.Top = 2.000000000000000000
+                Padding.Right = 6.000000000000000000
+                Padding.Bottom = 2.000000000000000000
+                Margins.Left = 8.000000000000000000
+                Margins.Top = 8.000000000000000000
+                Margins.Right = 8.000000000000000000
+                Margins.Bottom = 8.000000000000000000
+                Size.Width = 247.000000000000000000
+                Size.Height = 45.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 1
+                TextHint = 'E-mail'
+                TextSettings.Color.HintText = xFF8C8C8C
+                TextSettings.Font.Size = 15.000000000000000000
+                TextSettings.Gravity = CenterVertical
+                DisableFocusEffect = True
+              end
+            end
+            object Layout12: TLayout
+              Align = Top
+              Position.Y = 124.000000000000000000
+              Size.Width = 300.000000000000000000
+              Size.Height = 61.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 3
+              object GosEditView5: TGosEditView
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Client
+                Background.Border.Color.Default = xBFC0C0C0
+                Background.Border.Color.Pressed = claNull
+                Background.Border.Color.Focused = xFF0066CC
+                Background.Border.Color.Hovered = claSilver
+                Background.Border.Color.Selected = claNull
+                Background.Border.Color.Checked = claNull
+                Background.Border.Color.Enabled = claNull
+                Background.Border.Kind = None
+                ClipChildren = True
+                Padding.Left = 6.000000000000000000
+                Padding.Top = 2.000000000000000000
+                Padding.Right = 6.000000000000000000
+                Padding.Bottom = 2.000000000000000000
+                Margins.Left = 8.000000000000000000
+                Margins.Top = 8.000000000000000000
+                Margins.Right = 8.000000000000000000
+                Margins.Bottom = 8.000000000000000000
+                Size.Width = 247.000000000000000000
+                Size.Height = 45.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 1
+                TextHint = 'Senha'
+                TextSettings.Color.HintText = xFF8C8C8C
+                TextSettings.Font.Size = 15.000000000000000000
+                TextSettings.Gravity = CenterVertical
+                DisableFocusEffect = True
+              end
+              object SkSvg9: TSkSvg
+                Align = Left
+                Margins.Left = 16.000000000000000000
+                Margins.Top = 20.000000000000000000
+                Margins.Bottom = 20.000000000000000000
+                Position.X = 16.000000000000000000
+                Position.Y = 20.000000000000000000
+                Size.Width = 21.000000000000000000
+                Size.Height = 21.000000000000000000
+                Size.PlatformDefault = False
+                Svg.Source = 
+                  '<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmln' +
+                  's="http://www.w3.org/2000/svg">'#13#10'<path d="M9 1.125C6.52588 1.125' +
+                  ' 4.5 3.15088 4.5 5.625V7.875C3.25195 7.875 2.25 8.87695 2.25 10.' +
+                  '125V15.75C2.25 16.374 2.75098 16.875 3.375 16.875H14.625C15.249 ' +
+                  '16.875 15.75 16.374 15.75 15.75V10.125C15.75 8.87695 14.748 7.87' +
+                  '5 13.5 7.875V5.625C13.5 3.15088 11.4741 1.125 9 1.125ZM9 3.375C1' +
+                  '0.2656 3.375 11.25 4.35938 11.25 5.625V7.875H6.75V5.625C6.75 4.3' +
+                  '5938 7.73438 3.375 9 3.375Z" fill="#7D7D7D"/>'#13#10'</svg>'
+              end
+            end
+            object Layout13: TLayout
+              Align = Top
+              Position.Y = 186.000000000000000000
+              Size.Width = 300.000000000000000000
+              Size.Height = 61.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 2
+              object GosEditView6: TGosEditView
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Client
+                Background.Border.Color.Default = xBFC0C0C0
+                Background.Border.Color.Pressed = claNull
+                Background.Border.Color.Focused = xFF0066CC
+                Background.Border.Color.Hovered = claSilver
+                Background.Border.Color.Selected = claNull
+                Background.Border.Color.Checked = claNull
+                Background.Border.Color.Enabled = claNull
+                Background.Border.Kind = None
+                ClipChildren = True
+                Padding.Left = 6.000000000000000000
+                Padding.Top = 2.000000000000000000
+                Padding.Right = 6.000000000000000000
+                Padding.Bottom = 2.000000000000000000
+                Margins.Left = 8.000000000000000000
+                Margins.Top = 8.000000000000000000
+                Margins.Right = 8.000000000000000000
+                Margins.Bottom = 8.000000000000000000
+                Size.Width = 247.000000000000000000
+                Size.Height = 45.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 1
+                TextHint = 'Repetir Senha'
+                TextSettings.Color.HintText = xFF8C8C8C
+                TextSettings.Font.Size = 15.000000000000000000
+                TextSettings.Gravity = CenterVertical
+                DisableFocusEffect = True
+              end
+              object SkSvg7: TSkSvg
+                Align = Left
+                Margins.Left = 16.000000000000000000
+                Margins.Top = 20.000000000000000000
+                Margins.Bottom = 20.000000000000000000
+                Position.X = 16.000000000000000000
+                Position.Y = 20.000000000000000000
+                Size.Width = 21.000000000000000000
+                Size.Height = 21.000000000000000000
+                Size.PlatformDefault = False
+                Svg.Source = 
+                  '<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmln' +
+                  's="http://www.w3.org/2000/svg">'#13#10'<path d="M9 1.125C6.52588 1.125' +
+                  ' 4.5 3.15088 4.5 5.625V7.875C3.25195 7.875 2.25 8.87695 2.25 10.' +
+                  '125V15.75C2.25 16.374 2.75098 16.875 3.375 16.875H14.625C15.249 ' +
+                  '16.875 15.75 16.374 15.75 15.75V10.125C15.75 8.87695 14.748 7.87' +
+                  '5 13.5 7.875V5.625C13.5 3.15088 11.4741 1.125 9 1.125ZM9 3.375C1' +
+                  '0.2656 3.375 11.25 4.35938 11.25 5.625V7.875H6.75V5.625C6.75 4.3' +
+                  '5938 7.73438 3.375 9 3.375Z" fill="#7D7D7D"/>'#13#10'</svg>'
+                object SkSvg8: TSkSvg
+                  Align = Contents
+                  Margins.Left = -10.000000000000000000
+                  Size.Width = 31.000000000000000000
+                  Size.Height = 21.000000000000000000
+                  Size.PlatformDefault = False
+                  Svg.OverrideColor = x967A7A7A
+                  Svg.Source = 
+                    '<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmln' +
+                    's="http://www.w3.org/2000/svg">'#13#10'<path d="M9 1.125C6.52588 1.125' +
+                    ' 4.5 3.15088 4.5 5.625V7.875C3.25195 7.875 2.25 8.87695 2.25 10.' +
+                    '125V15.75C2.25 16.374 2.75098 16.875 3.375 16.875H14.625C15.249 ' +
+                    '16.875 15.75 16.374 15.75 15.75V10.125C15.75 8.87695 14.748 7.87' +
+                    '5 13.5 7.875V5.625C13.5 3.15088 11.4741 1.125 9 1.125ZM9 3.375C1' +
+                    '0.2656 3.375 11.25 4.35938 11.25 5.625V7.875H6.75V5.625C6.75 4.3' +
+                    '5938 7.73438 3.375 9 3.375Z" fill="#7D7D7D"/>'#13#10'</svg>'
+                end
+              end
+            end
+            object Line4: TLine
+              Align = Top
+              LineType = Bottom
+              Margins.Left = 8.000000000000000000
+              Margins.Right = 8.000000000000000000
+              Position.X = 8.000000000000000000
+              Position.Y = 61.000000000000000000
+              Size.Width = 284.000000000000000000
+              Size.Height = 1.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = xFFEDEDED
+            end
+            object Line3: TLine
+              Align = Top
+              LineType = Bottom
+              Margins.Left = 8.000000000000000000
+              Margins.Right = 8.000000000000000000
+              Position.X = 8.000000000000000000
+              Position.Y = 185.000000000000000000
+              Size.Width = 284.000000000000000000
+              Size.Height = 1.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = xFFEDEDED
+            end
+          end
+        end
+        object Layout10: TLayout
+          Align = Bottom
+          Position.Y = 595.000000000000000000
+          Size.Width = 382.000000000000000000
+          Size.Height = 199.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          object GosButtonView3: TGosButtonView
+            Align = Top
+            Background.XRadius = 20.000000000000000000
+            Background.YRadius = 20.000000000000000000
+            Background.ItemDefault.Kind = Gradient
+            Background.ItemDefault.Gradient.Points = <
+              item
+                Color = xFF5F49E5
+                Offset = 0.000000000000000000
+              end
+              item
+                Color = xFF9280E0
+                Offset = 1.000000000000000000
+              end>
+            Background.ItemDefault.Gradient.StartPosition.X = 0.500000000000000000
+            Background.ItemDefault.Gradient.StopPosition.X = 0.499999970197677600
+            Background.Border.Kind = None
+            Margins.Left = 32.000000000000000000
+            Margins.Top = 16.000000000000000000
+            Margins.Right = 32.000000000000000000
+            Margins.Bottom = 16.000000000000000000
+            Size.Width = 318.000000000000000000
+            Size.Height = 57.000000000000000000
+            Size.PlatformDefault = False
+            Position.X = 32.000000000000000000
+            Position.Y = 16.000000000000000000
+            TabOrder = 1
+            OnClick = GosButtonView3Click
+            Text = 'Cadastrar'
+            TextSettings.Color.Default = claWhite
+            TextSettings.Color.Focused = claNull
+            TextSettings.Color.Selected = claNull
+            TextSettings.Color.Enabled = claNull
+            TextSettings.Font.Size = 16.000000000000000000
+            TextSettings.Gravity = Center
+          end
+          object GosButtonView4: TGosButtonView
+            Align = Top
+            Background.XRadius = 20.000000000000000000
+            Background.YRadius = 20.000000000000000000
+            Background.ItemDefault.Color = claBlack
+            Background.Border.Kind = None
+            Margins.Left = 32.000000000000000000
+            Margins.Right = 32.000000000000000000
+            Size.Width = 318.000000000000000000
+            Size.Height = 57.000000000000000000
+            Size.PlatformDefault = False
+            Position.X = 32.000000000000000000
+            Position.Y = 89.000000000000000000
+            TabOrder = 0
+            OnClick = GosButtonView4Click
+            Text = 'J'#225' tenho uma conta'
+            TextSettings.Color.Default = claWhite
+            TextSettings.Color.Focused = claNull
+            TextSettings.Color.Selected = claNull
+            TextSettings.Color.Enabled = claNull
+            TextSettings.Font.Size = 16.000000000000000000
+            TextSettings.Gravity = Center
+          end
+        end
+        object floatCliente: TFloatAnimation
+          Duration = 0.200000002980232200
+          OnFinish = floatClienteFinish
+          PropertyName = 'Opacity'
+          StartValue = 1.000000000000000000
+          StopValue = 0.000000000000000000
+        end
+      end
+      object recColaborador: TRectangle
+        Align = Contents
+        Fill.Color = xFFEBECF1
+        Size.Width = 382.000000000000000000
+        Size.Height = 794.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        object Layout14: TLayout
+          Align = Top
+          Margins.Left = 16.000000000000000000
+          Margins.Top = 40.000000000000000000
+          Margins.Right = 16.000000000000000000
+          Position.X = 16.000000000000000000
+          Position.Y = 40.000000000000000000
+          Size.Width = 350.000000000000000000
+          Size.Height = 153.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object SkSvg10: TSkSvg
+            Align = HorzCenter
+            Margins.Top = 30.000000000000000000
+            Margins.Bottom = 30.000000000000000000
+            Position.X = 153.000000000000000000
+            Position.Y = 30.000000000000000000
+            Size.Width = 44.000000000000000000
+            Size.Height = 55.000000000000000000
+            Size.PlatformDefault = False
+            Svg.Source = 
+              '<svg width="258" height="326" viewBox="0 0 258 326" fill="none" ' +
+              'xmlns="http://www.w3.org/2000/svg">'#13#10'<g clip-path="url(#clip0_70' +
+              '_88)">'#13#10'<path d="M159.002 135C165.63 135 171 134.552 171 134C171' +
+              ' 133.448 165.63 133 159.002 133C158.033 133 157.099 133.012 156.' +
+              '196 133.03C157.072 133.133 157.615 133.26 157.615 133.4C157.615 ' +
+              '133.731 154.684 134 151.077 134C149.597 134 148.241 133.953 147.' +
+              '151 133.877C147.09 133.918 147 133.958 147 134C147 134.552 152.3' +
+              '69 135 159.002 135Z" fill="black"/>'#13#10'<path d="M104.137 145.656C1' +
+              '10.999 145.656 116.561 140.542 116.561 134.235C116.561 127.925 1' +
+              '10.999 122.811 104.137 122.811C102.671 122.811 101.289 123.085 9' +
+              '9.9849 123.517C100.726 124.614 101.165 125.941 101.165 127.379C1' +
+              '01.165 131.163 98.1345 134.235 94.3966 134.235C93.4683 134.235 9' +
+              '2.5777 134.046 91.7725 133.7C91.7637 133.88 91.7134 134.054 91.7' +
+              '134 134.235C91.7134 140.542 97.2741 145.656 104.137 145.656Z" fi' +
+              'll="black"/>'#13#10'<path d="M249.413 214.265C249.413 192.024 230.245 ' +
+              '173.999 206.599 173.999H197.436C182.061 198.437 157.657 216.51 1' +
+              '29 216.658C100.342 216.51 75.9387 198.437 60.5645 173.999H51.402' +
+              '1C27.7538 173.999 8.58779 192.024 8.58779 214.265L0 285.733C0 30' +
+              '7.969 19.1684 326 42.8143 326H178.748V285.618C168.541 281.075 16' +
+              '1.401 270.751 161.401 258.726C161.401 247.272 167.465 237.635 17' +
+              '6.896 232.79C178.136 232.156 179.879 233.083 178.99 234.855C178.' +
+              '393 236.266 178.096 236.348 177.309 238.46C176.526 240.578 174.9' +
+              '51 249.7 176.042 254.496C177.143 259.291 183.724 267.46 190.794 ' +
+              '267.46C190.89 267.46 190.978 267.451 191.071 267.443C191.071 267' +
+              '.443 191.326 267.46 191.421 267.46C198.491 267.46 205.075 259.29' +
+              '1 206.173 254.496C207.267 249.7 205.692 240.578 204.908 238.46C2' +
+              '04.117 236.344 203.83 236.262 203.228 234.851C202.338 233.083 20' +
+              '4.079 232.154 205.319 232.79C214.752 237.632 220.814 247.272 220' +
+              '.814 258.726C220.814 270.534 213.923 280.686 204.011 285.351V326' +
+              'H215.185C238.831 326 258 307.969 258 285.733L249.413 214.265Z" f' +
+              'ill="black"/>'#13#10'<path d="M210.849 88.7841C210.849 84.5854 208.295' +
+              ' 83.8884 207.052 83.8884H203.062C202.837 81.2089 202.568 78.4886' +
+              ' 202.568 75.7312C202.568 50.5418 186.052 28.2338 166.687 14.4608' +
+              'C166.674 15.0201 166.695 15.5793 166.669 16.1372C166.581 18.0826' +
+              ' 166.488 20.0293 166.395 21.966C166.261 23.9025 166.004 25.8212 ' +
+              '165.805 27.7272C165.462 31.5416 164.727 35.2499 164.059 38.8306C' +
+              '163.354 42.405 162.447 45.8186 161.557 49.0331C160.562 52.2258 1' +
+              '59.627 55.2308 158.539 57.9461C156.493 63.3995 154.228 67.7436 1' +
+              '52.525 70.699C150.821 73.6592 149.597 75.2153 149.597 75.2153C14' +
+              '9.597 75.2153 149.627 74.7278 149.673 73.8062C149.753 72.9024 14' +
+              '9.753 71.5439 149.902 69.8793C150.101 66.5679 150.393 61.8358 15' +
+              '0.736 56.1589C151.131 50.5559 151.512 44.0722 151.93 37.1903C152' +
+              '.099 33.7513 152.285 30.1999 152.467 26.5935C152.558 24.7961 152' +
+              '.646 22.9794 152.739 21.1603C152.784 19.3412 152.832 17.5132 152' +
+              '.877 15.6852C153.089 12.5881 153.072 9.49895 153.129 6.42884C144' +
+              '.694 2.38591 136.312 0.0983019 129 0C121.688 0.0983019 113.306 2' +
+              '.38591 104.87 6.42884C104.928 9.49895 104.911 12.5881 105.122 15' +
+              '.6852C105.168 17.5132 105.216 19.3412 105.261 21.1603C105.354 22' +
+              '.9794 105.442 24.7961 105.533 26.5935C105.714 30.1999 105.901 33' +
+              '.7513 106.07 37.1903C106.488 44.0722 106.868 50.5559 107.264 56.' +
+              '1589C107.606 61.8358 107.899 66.5679 108.098 69.8793C108.247 71.' +
+              '5439 108.247 72.9024 108.327 73.8062C108.372 74.7278 108.403 75.' +
+              '2153 108.403 75.2153C108.403 75.2153 107.178 73.6592 105.475 70.' +
+              '699C103.772 67.7436 101.507 63.3995 99.4609 57.9461C98.3724 55.2' +
+              '308 97.4377 52.2258 96.4426 49.0331C95.553 45.8186 94.6461 42.40' +
+              '5 93.9405 38.8306C93.2728 35.2499 92.5372 31.5416 92.1946 27.727' +
+              '2C91.9954 25.8212 91.7385 23.9025 91.6051 21.966C91.5117 20.0293' +
+              ' 91.4185 18.0826 91.3303 16.1372C91.305 15.5793 91.3254 15.0201 ' +
+              '91.3128 14.4608C71.9475 28.2338 55.4322 50.5418 55.4322 75.7312C' +
+              '55.4322 78.4886 55.1626 81.2089 54.9381 83.8884H50.9474C49.7051 ' +
+              '83.8884 47.1504 84.5854 47.1504 88.7841V109.53H55.1902C55.0643 1' +
+              '11.623 54.9735 113.724 54.9735 115.855C54.9735 164.347 87.4126 2' +
+              '02.385 129 202.965C170.587 202.385 203.026 164.347 203.026 115.8' +
+              '55C203.026 113.724 202.935 111.623 202.81 109.53H210.849V88.7841' +
+              'ZM129 194.576C92.0535 193.987 63.2527 159.631 63.2527 115.855C63' +
+              '.2527 113.722 63.3559 111.621 63.4921 109.53H194.508C194.644 111' +
+              '.621 194.747 113.722 194.747 115.855C194.747 159.631 165.946 193' +
+              '.987 129 194.576Z" fill="#5F49E5"/>'#13#10'<path d="M98 163C120.178 17' +
+              '9.3 152.574 169.792 166 163" stroke="black" stroke-width="3" str' +
+              'oke-linecap="round"/>'#13#10'</g>'#13#10'<defs>'#13#10'<clipPath id="clip0_70_88">' +
+              #13#10'<rect width="258" height="326" fill="white"/>'#13#10'</clipPath>'#13#10'</' +
+              'defs>'#13#10'</svg>'
+          end
+          object Layout15: TLayout
+            Align = Bottom
+            Position.Y = 115.000000000000000000
+            Size.Width = 350.000000000000000000
+            Size.Height = 38.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object SkLabel4: TSkLabel
+              Align = Client
+              Size.Width = 280.000000000000000000
+              Size.Height = 38.000000000000000000
+              Size.PlatformDefault = False
+              StyledSettings = [Family, FontColor]
+              TextSettings.Font.Size = 28.000000000000000000
+              TextSettings.Font.Weight = UltraBlack
+              Words = <
+                item
+                  Text = 'Ol'#225', Colaborador'
+                end>
+            end
+            object GosRectangle2: TGosRectangle
+              Align = Right
+              Fill.Color = claWhite
+              Margins.Top = 4.000000000000000000
+              Margins.Bottom = 4.000000000000000000
+              Position.X = 280.000000000000000000
+              Position.Y = 4.000000000000000000
+              Size.Width = 70.000000000000000000
+              Size.Height = 30.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Kind = None
+              XRadius = 15.000000000000000000
+              YRadius = 15.000000000000000000
+              object ShadowEffect2: TShadowEffect
+                Distance = 3.000000000000000000
+                Direction = 45.000000000000000000
+                Softness = 0.300000011920929000
+                Opacity = 0.600000023841857900
+                ShadowColor = claSilver
+              end
+            end
+          end
+        end
+        object Layout16: TLayout
+          Align = VertCenter
+          Margins.Left = 16.000000000000000000
+          Margins.Right = 16.000000000000000000
+          Position.X = 16.000000000000000000
+          Position.Y = 221.000000000000000000
+          Size.Width = 350.000000000000000000
+          Size.Height = 345.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          object Rectangle4: TRectangle
+            Align = Center
+            Fill.Color = claWhite
+            Size.Width = 300.000000000000000000
+            Size.Height = 305.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Kind = None
+            XRadius = 30.000000000000000000
+            YRadius = 30.000000000000000000
+            object Line5: TLine
+              Align = Top
+              LineType = Bottom
+              Margins.Left = 8.000000000000000000
+              Margins.Right = 8.000000000000000000
+              Position.X = 8.000000000000000000
+              Position.Y = 123.000000000000000000
+              Size.Width = 284.000000000000000000
+              Size.Height = 1.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = xFFEDEDED
+            end
+            object Layout17: TLayout
+              Align = Top
+              Size.Width = 300.000000000000000000
+              Size.Height = 61.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 5
+              object SkSvg11: TSkSvg
+                Align = Left
+                Margins.Left = 16.000000000000000000
+                Margins.Top = 20.000000000000000000
+                Margins.Bottom = 20.000000000000000000
+                Position.X = 16.000000000000000000
+                Position.Y = 20.000000000000000000
+                Size.Width = 21.000000000000000000
+                Size.Height = 21.000000000000000000
+                Size.PlatformDefault = False
+                Svg.OverrideColor = xFF8C8C8C
+                Svg.Source = 
+                  '<?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo' +
+                  ', www.svgrepo.com, Generator: SVG Repo Mixer Tools -->'#13#10'<svg wid' +
+                  'th="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns=' +
+                  '"http://www.w3.org/2000/svg">'#13#10'<path d="M16 7C16 9.20914 14.2091' +
+                  ' 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2' +
+                  '091 3 16 4.79086 16 7Z" stroke="#000000" stroke-width="2" stroke' +
+                  '-linecap="round" stroke-linejoin="round"/>'#13#10'<path d="M12 14C8.13' +
+                  '401 14 5 17.134 5 21H19C19 17.134 15.866 14 12 14Z" stroke="#000' +
+                  '000" stroke-width="2" stroke-linecap="round" stroke-linejoin="ro' +
+                  'und"/>'#13#10'</svg>'
+              end
+              object GosEditView7: TGosEditView
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Client
+                Background.Border.Color.Default = xBFC0C0C0
+                Background.Border.Color.Pressed = claNull
+                Background.Border.Color.Focused = xFF0066CC
+                Background.Border.Color.Hovered = claSilver
+                Background.Border.Color.Selected = claNull
+                Background.Border.Color.Checked = claNull
+                Background.Border.Color.Enabled = claNull
+                Background.Border.Kind = None
+                ClipChildren = True
+                Padding.Left = 6.000000000000000000
+                Padding.Top = 2.000000000000000000
+                Padding.Right = 6.000000000000000000
+                Padding.Bottom = 2.000000000000000000
+                Margins.Left = 8.000000000000000000
+                Margins.Top = 8.000000000000000000
+                Margins.Right = 8.000000000000000000
+                Margins.Bottom = 8.000000000000000000
+                Size.Width = 247.000000000000000000
+                Size.Height = 45.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 1
+                TextHint = 'Nome Completo'
+                TextSettings.Color.HintText = xFF8C8C8C
+                TextSettings.Font.Size = 15.000000000000000000
+                TextSettings.Gravity = CenterVertical
+                DisableFocusEffect = True
+              end
+            end
+            object Layout18: TLayout
+              Align = Top
+              Position.Y = 62.000000000000000000
+              Size.Width = 300.000000000000000000
+              Size.Height = 61.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 1
+              object SkSvg12: TSkSvg
+                Align = Left
+                Margins.Left = 16.000000000000000000
+                Margins.Top = 20.000000000000000000
+                Margins.Bottom = 20.000000000000000000
+                Position.X = 16.000000000000000000
+                Position.Y = 20.000000000000000000
+                Size.Width = 21.000000000000000000
+                Size.Height = 21.000000000000000000
+                Size.PlatformDefault = False
+                Svg.OverrideColor = xFF8C8C8C
+                Svg.Source = 
+                  '<?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo' +
+                  ', www.svgrepo.com, Generator: SVG Repo Mixer Tools -->'#13#10'<svg wid' +
+                  'th="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns=' +
+                  '"http://www.w3.org/2000/svg">'#13#10'<path fill-rule="evenodd" clip-ru' +
+                  'le="evenodd" d="M3.75 5.25L3 6V18L3.75 18.75H20.25L21 18V6L20.25' +
+                  ' 5.25H3.75ZM4.5 7.6955V17.25H19.5V7.69525L11.9999 14.5136L4.5 7.' +
+                  '6955ZM18.3099 6.75H5.68986L11.9999 12.4864L18.3099 6.75Z" fill="' +
+                  '#080341"/>'#13#10'</svg>'
+              end
+              object GosEditView8: TGosEditView
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Client
+                Background.Border.Color.Default = xBFC0C0C0
+                Background.Border.Color.Pressed = claNull
+                Background.Border.Color.Focused = xFF0066CC
+                Background.Border.Color.Hovered = claSilver
+                Background.Border.Color.Selected = claNull
+                Background.Border.Color.Checked = claNull
+                Background.Border.Color.Enabled = claNull
+                Background.Border.Kind = None
+                ClipChildren = True
+                Padding.Left = 6.000000000000000000
+                Padding.Top = 2.000000000000000000
+                Padding.Right = 6.000000000000000000
+                Padding.Bottom = 2.000000000000000000
+                Margins.Left = 8.000000000000000000
+                Margins.Top = 8.000000000000000000
+                Margins.Right = 8.000000000000000000
+                Margins.Bottom = 8.000000000000000000
+                Size.Width = 247.000000000000000000
+                Size.Height = 45.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 1
+                TextHint = 'E-mail'
+                TextSettings.Color.HintText = xFF8C8C8C
+                TextSettings.Font.Size = 15.000000000000000000
+                TextSettings.Gravity = CenterVertical
+                DisableFocusEffect = True
+              end
+            end
+            object Layout19: TLayout
+              Align = Top
+              Position.Y = 124.000000000000000000
+              Size.Width = 300.000000000000000000
+              Size.Height = 61.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 4
+              object edtCpf: TGosEditView
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Client
+                Background.Border.Color.Default = xBFC0C0C0
+                Background.Border.Color.Pressed = claNull
+                Background.Border.Color.Focused = xFF0066CC
+                Background.Border.Color.Hovered = claSilver
+                Background.Border.Color.Selected = claNull
+                Background.Border.Color.Checked = claNull
+                Background.Border.Color.Enabled = claNull
+                Background.Border.Kind = None
+                ClipChildren = True
+                Padding.Left = 6.000000000000000000
+                Padding.Top = 2.000000000000000000
+                Padding.Right = 6.000000000000000000
+                Padding.Bottom = 2.000000000000000000
+                Margins.Left = 8.000000000000000000
+                Margins.Top = 8.000000000000000000
+                Margins.Right = 8.000000000000000000
+                Margins.Bottom = 8.000000000000000000
+                Size.Width = 247.000000000000000000
+                Size.Height = 45.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 1
+                TextHint = 'CPF'
+                TextSettings.Color.HintText = xFF8C8C8C
+                TextSettings.Font.Size = 15.000000000000000000
+                TextSettings.Gravity = CenterVertical
+                DisableFocusEffect = True
+              end
+              object SkSvg13: TSkSvg
+                Align = Left
+                Margins.Left = 16.000000000000000000
+                Margins.Top = 20.000000000000000000
+                Margins.Bottom = 20.000000000000000000
+                Position.X = 16.000000000000000000
+                Position.Y = 20.000000000000000000
+                Size.Width = 21.000000000000000000
+                Size.Height = 21.000000000000000000
+                Size.PlatformDefault = False
+                Svg.Source = 
+                  '<?xml version="1.0" encoding="utf-8"?>'#13#10#13#10'<!DOCTYPE svg PUBLIC "' +
+                  '-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD' +
+                  '/svg11.dtd">'#13#10'<!-- Uploaded to: SVG Repo, www.svgrepo.com, Gener' +
+                  'ator: SVG Repo Mixer Tools -->'#13#10'<svg version="1.1" id="Layer_1" ' +
+                  'xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.or' +
+                  'g/1999/xlink" '#13#10#9' width="800px" height="800px" viewBox="0 0 32 3' +
+                  '2" enable-background="new 0 0 32 32" xml:space="preserve">'#13#10'<g>'#13 +
+                  #10#9'<path fill="#808184" d="M21.5,12c0.276,0,0.5-0.224,0.5-0.5v-6C' +
+                  '22,5.224,21.776,5,21.5,5h-16C5.224,5,5,5.224,5,5.5v6'#13#10#9#9'C5,11.77' +
+                  '6,5.224,12,5.5,12H21.5z M6,6h15v5H6V6z"/>'#13#10#9'<path fill="#808184"' +
+                  ' d="M4.5,16.5C4.5,16.776,4.724,17,5,17h16c0.276,0,0.5-0.224,0.5-' +
+                  '0.5S21.276,16,21,16H5'#13#10#9#9'C4.724,16,4.5,16.224,4.5,16.5z"/>'#13#10#9'<pa' +
+                  'th fill="#808184" d="M5,22h16c0.276,0,0.5-0.224,0.5-0.5S21.276,2' +
+                  '1,21,21H5c-0.276,0-0.5,0.224-0.5,0.5S4.724,22,5,22z"/>'#13#10#9'<path f' +
+                  'ill="#808184" d="M5,26h16c0.276,0,0.5-0.224,0.5-0.5S21.276,25,21' +
+                  ',25H5c-0.276,0-0.5,0.224-0.5,0.5S4.724,26,5,26z"/>'#13#10#9'<path fill=' +
+                  '"#808184" d="M30.5,7h-2.104c-0.276,0-0.5,0.224-0.5,0.5S28.12,8,2' +
+                  '8.396,8H30.5C30.776,8,31,8.225,31,8.5v22'#13#10#9#9'c0,0.275-0.224,0.5-0' +
+                  '.5,0.5H26V1.5C26,0.673,25.327,0,24.5,0h-23C0.673,0,0,0.673,0,1.5' +
+                  'v28.359C0,31.04,0.96,32,2.141,32H21'#13#10#9#9'c0.276,0,0.5-0.224,0.5-0.' +
+                  '5S21.276,31,21,31H2.141C1.512,31,1,30.488,1,29.859V1.5C1,1.225,1' +
+                  '.224,1,1.5,1h23'#13#10#9#9'C24.776,1,25,1.225,25,1.5v30c0,0.276,0.224,0.' +
+                  '5,0.5,0.5h5c0.827,0,1.5-0.673,1.5-1.5v-22C32,7.673,31.327,7,30.5' +
+                  ',7z"/>'#13#10'</g>'#13#10'</svg>'
+              end
+            end
+            object Layout20: TLayout
+              Align = Top
+              Position.Y = 248.000000000000000000
+              Size.Width = 300.000000000000000000
+              Size.Height = 61.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 2
+              object GosEditView10: TGosEditView
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Client
+                Background.Border.Color.Default = xBFC0C0C0
+                Background.Border.Color.Pressed = claNull
+                Background.Border.Color.Focused = xFF0066CC
+                Background.Border.Color.Hovered = claSilver
+                Background.Border.Color.Selected = claNull
+                Background.Border.Color.Checked = claNull
+                Background.Border.Color.Enabled = claNull
+                Background.Border.Kind = None
+                ClipChildren = True
+                Padding.Left = 6.000000000000000000
+                Padding.Top = 2.000000000000000000
+                Padding.Right = 6.000000000000000000
+                Padding.Bottom = 2.000000000000000000
+                Margins.Left = 8.000000000000000000
+                Margins.Top = 8.000000000000000000
+                Margins.Right = 8.000000000000000000
+                Margins.Bottom = 8.000000000000000000
+                Size.Width = 247.000000000000000000
+                Size.Height = 45.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 1
+                TextHint = 'Repetir Senha'
+                TextSettings.Color.HintText = xFF8C8C8C
+                TextSettings.Font.Size = 15.000000000000000000
+                TextSettings.Gravity = CenterVertical
+                DisableFocusEffect = True
+              end
+              object SkSvg14: TSkSvg
+                Align = Left
+                Margins.Left = 16.000000000000000000
+                Margins.Top = 20.000000000000000000
+                Margins.Bottom = 20.000000000000000000
+                Position.X = 16.000000000000000000
+                Position.Y = 20.000000000000000000
+                Size.Width = 21.000000000000000000
+                Size.Height = 21.000000000000000000
+                Size.PlatformDefault = False
+                Svg.Source = 
+                  '<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmln' +
+                  's="http://www.w3.org/2000/svg">'#13#10'<path d="M9 1.125C6.52588 1.125' +
+                  ' 4.5 3.15088 4.5 5.625V7.875C3.25195 7.875 2.25 8.87695 2.25 10.' +
+                  '125V15.75C2.25 16.374 2.75098 16.875 3.375 16.875H14.625C15.249 ' +
+                  '16.875 15.75 16.374 15.75 15.75V10.125C15.75 8.87695 14.748 7.87' +
+                  '5 13.5 7.875V5.625C13.5 3.15088 11.4741 1.125 9 1.125ZM9 3.375C1' +
+                  '0.2656 3.375 11.25 4.35938 11.25 5.625V7.875H6.75V5.625C6.75 4.3' +
+                  '5938 7.73438 3.375 9 3.375Z" fill="#7D7D7D"/>'#13#10'</svg>'
+                object SkSvg15: TSkSvg
+                  Align = Contents
+                  Margins.Left = -10.000000000000000000
+                  Size.Width = 31.000000000000000000
+                  Size.Height = 21.000000000000000000
+                  Size.PlatformDefault = False
+                  Svg.OverrideColor = x967A7A7A
+                  Svg.Source = 
+                    '<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmln' +
+                    's="http://www.w3.org/2000/svg">'#13#10'<path d="M9 1.125C6.52588 1.125' +
+                    ' 4.5 3.15088 4.5 5.625V7.875C3.25195 7.875 2.25 8.87695 2.25 10.' +
+                    '125V15.75C2.25 16.374 2.75098 16.875 3.375 16.875H14.625C15.249 ' +
+                    '16.875 15.75 16.374 15.75 15.75V10.125C15.75 8.87695 14.748 7.87' +
+                    '5 13.5 7.875V5.625C13.5 3.15088 11.4741 1.125 9 1.125ZM9 3.375C1' +
+                    '0.2656 3.375 11.25 4.35938 11.25 5.625V7.875H6.75V5.625C6.75 4.3' +
+                    '5938 7.73438 3.375 9 3.375Z" fill="#7D7D7D"/>'#13#10'</svg>'
+                end
+              end
+            end
+            object Line6: TLine
+              Align = Top
+              LineType = Bottom
+              Margins.Left = 8.000000000000000000
+              Margins.Right = 8.000000000000000000
+              Position.X = 8.000000000000000000
+              Position.Y = 61.000000000000000000
+              Size.Width = 284.000000000000000000
+              Size.Height = 1.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = xFFEDEDED
+            end
+            object Line7: TLine
+              Align = Top
+              LineType = Bottom
+              Margins.Left = 8.000000000000000000
+              Margins.Right = 8.000000000000000000
+              Position.X = 8.000000000000000000
+              Position.Y = 247.000000000000000000
+              Size.Width = 284.000000000000000000
+              Size.Height = 1.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = xFFEDEDED
+            end
+            object Layout22: TLayout
+              Align = Top
+              Position.Y = 186.000000000000000000
+              Size.Width = 300.000000000000000000
+              Size.Height = 61.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 3
+              object GosEditView11: TGosEditView
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Client
+                Background.Border.Color.Default = xBFC0C0C0
+                Background.Border.Color.Pressed = claNull
+                Background.Border.Color.Focused = xFF0066CC
+                Background.Border.Color.Hovered = claSilver
+                Background.Border.Color.Selected = claNull
+                Background.Border.Color.Checked = claNull
+                Background.Border.Color.Enabled = claNull
+                Background.Border.Kind = None
+                ClipChildren = True
+                Padding.Left = 6.000000000000000000
+                Padding.Top = 2.000000000000000000
+                Padding.Right = 6.000000000000000000
+                Padding.Bottom = 2.000000000000000000
+                Margins.Left = 8.000000000000000000
+                Margins.Top = 8.000000000000000000
+                Margins.Right = 8.000000000000000000
+                Margins.Bottom = 8.000000000000000000
+                Size.Width = 247.000000000000000000
+                Size.Height = 45.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 1
+                TextHint = 'Senha'
+                TextSettings.Color.HintText = xFF8C8C8C
+                TextSettings.Font.Size = 15.000000000000000000
+                TextSettings.Gravity = CenterVertical
+                DisableFocusEffect = True
+              end
+              object SkSvg16: TSkSvg
+                Align = Left
+                Margins.Left = 16.000000000000000000
+                Margins.Top = 20.000000000000000000
+                Margins.Bottom = 20.000000000000000000
+                Position.X = 16.000000000000000000
+                Position.Y = 20.000000000000000000
+                Size.Width = 21.000000000000000000
+                Size.Height = 21.000000000000000000
+                Size.PlatformDefault = False
+                Svg.Source = 
+                  '<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmln' +
+                  's="http://www.w3.org/2000/svg">'#13#10'<path d="M9 1.125C6.52588 1.125' +
+                  ' 4.5 3.15088 4.5 5.625V7.875C3.25195 7.875 2.25 8.87695 2.25 10.' +
+                  '125V15.75C2.25 16.374 2.75098 16.875 3.375 16.875H14.625C15.249 ' +
+                  '16.875 15.75 16.374 15.75 15.75V10.125C15.75 8.87695 14.748 7.87' +
+                  '5 13.5 7.875V5.625C13.5 3.15088 11.4741 1.125 9 1.125ZM9 3.375C1' +
+                  '0.2656 3.375 11.25 4.35938 11.25 5.625V7.875H6.75V5.625C6.75 4.3' +
+                  '5938 7.73438 3.375 9 3.375Z" fill="#7D7D7D"/>'#13#10'</svg>'
+              end
+            end
+            object Line8: TLine
+              Align = Top
+              LineType = Bottom
+              Margins.Left = 8.000000000000000000
+              Margins.Right = 8.000000000000000000
+              Position.X = 8.000000000000000000
+              Position.Y = 185.000000000000000000
+              Size.Width = 284.000000000000000000
+              Size.Height = 1.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = xFFEDEDED
+            end
+          end
+        end
+        object Layout21: TLayout
+          Align = Bottom
+          Position.Y = 595.000000000000000000
+          Size.Width = 382.000000000000000000
+          Size.Height = 199.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          object GosButtonView5: TGosButtonView
+            Align = Top
+            Background.XRadius = 20.000000000000000000
+            Background.YRadius = 20.000000000000000000
+            Background.ItemDefault.Kind = Gradient
+            Background.ItemDefault.Gradient.Points = <
+              item
+                Color = xFF5F49E5
+                Offset = 0.000000000000000000
+              end
+              item
+                Color = xFF9280E0
+                Offset = 1.000000000000000000
+              end>
+            Background.ItemDefault.Gradient.StartPosition.X = 0.500000000000000000
+            Background.ItemDefault.Gradient.StopPosition.X = 0.499999970197677600
+            Background.Border.Kind = None
+            Margins.Left = 32.000000000000000000
+            Margins.Top = 16.000000000000000000
+            Margins.Right = 32.000000000000000000
+            Margins.Bottom = 16.000000000000000000
+            Size.Width = 318.000000000000000000
+            Size.Height = 57.000000000000000000
+            Size.PlatformDefault = False
+            Position.X = 32.000000000000000000
+            Position.Y = 16.000000000000000000
+            TabOrder = 1
+            OnClick = GosButtonView3Click
+            Text = 'Cadastrar'
+            TextSettings.Color.Default = claWhite
+            TextSettings.Color.Focused = claNull
+            TextSettings.Color.Selected = claNull
+            TextSettings.Color.Enabled = claNull
+            TextSettings.Font.Size = 16.000000000000000000
+            TextSettings.Gravity = Center
+          end
+          object GosButtonView6: TGosButtonView
+            Align = Top
+            Background.XRadius = 20.000000000000000000
+            Background.YRadius = 20.000000000000000000
+            Background.ItemDefault.Color = claBlack
+            Background.Border.Kind = None
+            Margins.Left = 32.000000000000000000
+            Margins.Right = 32.000000000000000000
+            Size.Width = 318.000000000000000000
+            Size.Height = 57.000000000000000000
+            Size.PlatformDefault = False
+            Position.X = 32.000000000000000000
+            Position.Y = 89.000000000000000000
+            TabOrder = 0
+            OnClick = GosButtonView4Click
+            Text = 'J'#225' tenho uma conta'
+            TextSettings.Color.Default = claWhite
+            TextSettings.Color.Focused = claNull
+            TextSettings.Color.Selected = claNull
+            TextSettings.Color.Enabled = claNull
+            TextSettings.Font.Size = 16.000000000000000000
+            TextSettings.Gravity = Center
+          end
+        end
+        object floatColaborador: TFloatAnimation
+          Duration = 0.200000002980232200
+          OnFinish = floatColaboradorFinish
+          PropertyName = 'Opacity'
+          StartValue = 0.000000000000000000
+          StopValue = 0.000000000000000000
+        end
+      end
+    end
+    object tabDocumentos: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 105.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'tabDocumentos'
+      ExplicitSize.cx = 105.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+    end
+  end
+  object ActionList1: TActionList
+    Left = 176
+    Top = 336
+    object ctaLogin: TChangeTabAction
+      Category = 'Tab'
+      Tab = tabLogin
+    end
+    object ctaCliente: TChangeTabAction
+      Category = 'Tab'
+      Tab = tabCadastroClienteColaborador
+    end
+    object ctaColaborador: TChangeTabAction
+      Category = 'Tab'
     end
   end
 end
