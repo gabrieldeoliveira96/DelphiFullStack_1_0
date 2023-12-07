@@ -8,7 +8,7 @@ uses
   FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys,
   FireDAC.Phys.MySQL, FireDAC.Phys.MySQLDef, FireDAC.ConsoleUI.Wait, Data.DB,
   FireDAC.Comp.Client, FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf,
-  FireDAC.DApt, FireDAC.Comp.DataSet, System.JSON, controller.log;
+  FireDAC.DApt, FireDAC.Comp.DataSet, System.JSON, controller.log, DataSet.Serialize;
 
 type
   TDmUsuario = class(TDmCon)
@@ -20,11 +20,22 @@ type
     qryInsereUsuarioCPF: TStringField;
     qryInsereUsuarioTIPO_USUARIO: TStringField;
     qryInsereUsuarioFOTO: TBlobField;
+    qryObterUsuario: TFDQuery;
+    qryObterUsuarioCOD: TFDAutoIncField;
+    qryObterUsuarioNOME: TStringField;
+    qryObterUsuarioEMAIL: TStringField;
+    qryObterUsuarioCPF: TStringField;
+    qryObterUsuarioFOTO: TBlobField;
+    qryObterUsuarioTIPO_USUARIO: TStringField;
+    qryEditarSenha: TFDQuery;
   private
     { Private declarations }
   public
     { Public declarations }
     function PostUsuario(Ajson: Tjsonobject): TJSONObject;
+    function ObterUsuario(ACodUsuario: integer): TJSONObject;
+
+    procedure EditarSenha(Asenha: string; ACod: integer);
   end;
 
 implementation
@@ -34,6 +45,25 @@ implementation
 {$R *.dfm}
 
 { TDmUsuario }
+
+procedure TDmUsuario.EditarSenha(Asenha: string; ACod: integer);
+begin
+  qryEditarSenha.Close;
+  qryEditarSenha.ParamByName('SENHA').AsString := Asenha;
+  qryEditarSenha.ParamByName('COD').AsInteger := ACod;
+  qryEditarSenha.ExecSQL;
+end;
+
+function TDmUsuario.ObterUsuario(ACodUsuario: integer): TJSONObject;
+begin
+  qryObterUsuario.Close;
+  qryObterUsuario.ParamByName('COD').AsInteger := ACodUsuario;
+  qryObterUsuario.Open;
+
+  Result := qryObterUsuario.ToJSONObject;
+
+  Log('Rertono: ' + result.ToString);
+end;
 
 function TDmUsuario.PostUsuario(Ajson: Tjsonobject): TJSONObject;
 var
