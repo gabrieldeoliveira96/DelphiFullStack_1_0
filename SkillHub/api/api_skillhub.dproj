@@ -203,6 +203,31 @@
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <DCCReference Include="src\controller\controllers.login.pas"/>
+        <DCCReference Include="src\model\model.categoria.pas">
+            <Form>DmCategoria</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="src\controller\controllers.categoria.pas"/>
+        <DCCReference Include="src\model\model.profissao.pas">
+            <Form>DmProfissao</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="src\controller\controllers.profissao.pas"/>
+        <DCCReference Include="src\model\model.subcategoria.pas">
+            <Form>DmSubCategoria</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="src\controller\controllers.subcategoria.pas"/>
+        <DCCReference Include="src\model\model.servico.pas">
+            <Form>DmServico</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="src\controller\controllers.servico.pas"/>
+        <DCCReference Include="src\controller\controller.log.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

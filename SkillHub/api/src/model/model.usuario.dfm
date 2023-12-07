@@ -21,6 +21,7 @@ inherited DmUsuario: TDmUsuario
       FieldName = 'COD'
       Origin = 'COD'
       ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
     end
     object qryInsereUsuarioNOME: TStringField
       AutoGenerateValue = arDefault

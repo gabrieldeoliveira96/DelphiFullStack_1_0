@@ -8,7 +8,7 @@ uses
   FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys,
   FireDAC.Phys.MySQL, FireDAC.Phys.MySQLDef, FireDAC.ConsoleUI.Wait, Data.DB,
   FireDAC.Comp.Client, FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf,
-  FireDAC.DApt, FireDAC.Comp.DataSet, System.JSON;
+  FireDAC.DApt, FireDAC.Comp.DataSet, System.JSON, controller.log;
 
 type
   TDmUsuario = class(TDmCon)
@@ -54,6 +54,8 @@ begin
   Ljo := TJSONObject.Create;
   Ljo.AddPair('sucesso', 'Usuario Cadastrado!');
   Result := Ljo;
+
+  Log('Retorno: ' + Ajson.ToString);
 end;
 
 end.

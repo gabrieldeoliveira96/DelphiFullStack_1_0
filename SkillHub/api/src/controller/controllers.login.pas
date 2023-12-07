@@ -2,7 +2,7 @@ unit controllers.login;
 
 interface
 
-uses Horse, System.JSON, model.login;
+uses Horse, System.JSON, model.login, controller.log;
 
 procedure Login;
 procedure ValidaLogin(Req: THorseRequest; Res: THorseResponse);
@@ -22,6 +22,7 @@ var
   LdmLogin: TDmLogin;
 begin
   try
+    Log('Efetuando Login');
     LdmLogin := TDmLogin.Create(nil);
     try
       Res.Send<Tjsonobject>(LdmLogin.ValidaLogin(Req.Body<TJSONObject>));
@@ -32,6 +33,7 @@ begin
 
   except on E: Exception do
     begin
+      Log('Erro Login ' + E.Message);
       Res.Send(e.Message).Status(400);
       freeAndNil(LdmLogin);
     end;

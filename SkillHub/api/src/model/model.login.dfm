@@ -30,6 +30,7 @@ inherited DmLogin: TDmLogin
       FieldName = 'COD'
       Origin = 'COD'
       ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
     end
     object qryValidaLoginNOME: TStringField
       AutoGenerateValue = arDefault
