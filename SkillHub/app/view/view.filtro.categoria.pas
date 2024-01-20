@@ -6,7 +6,8 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Layouts,
   FMX.Effects, FMX.Filter.Effects, FMX.Controls.Presentation, FMX.StdCtrls,
-  System.Skia, FMX.Skia, FMX.Objects, frame.servico;
+  System.Skia, FMX.Skia, FMX.Objects, frame.servico, System.JSON, System.Generics.Collections,
+  frame.subcategoria;
 
 type
   TTipoFiltro = (ReformasEReparos, ServicosDomesticos, DesignETecnologia,
@@ -62,14 +63,23 @@ type
     frameServico3: TframeServico;
     frameServico4: TframeServico;
     frameServico5: TframeServico;
+    VertScrollBox2: TVertScrollBox;
     procedure SpeedButton1Click(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnPesquisaClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
   private
+    FCod:integer;
+    FListCategoria: TObjectList<TframeServico>;
+    FListCheckSubCategoria: TObjectList<TframeSubCategoria>;
+    procedure CarregaServico(ACategoria:integer);
+    procedure CarregaSubCategoria(ACategoria: integer);
+    procedure FiltraCategoria(Sender: TObject);
     { Private declarations }
   public
     { Public declarations }
-    procedure CarregaTela(AFiltro:TTipoFiltro; ASvg, AText:string);
+    procedure CarregaTela(AFiltro:TTipoFiltro; ASvg, AText:string; ACod:integer);
   end;
 
 var
@@ -79,7 +89,7 @@ implementation
 
 {$R *.fmx}
 
-uses view.pesquisa.servico;
+uses view.pesquisa.servico, uConnection, uUrl, controller.imagens;
 
 procedure TfrmFiltroCategoria.btnPesquisaClick(Sender: TObject);
 begin
@@ -92,12 +102,13 @@ begin
 
 end;
 
-procedure TfrmFiltroCategoria.CarregaTela(AFiltro:TTipoFiltro; ASvg, AText:string);
+procedure TfrmFiltroCategoria.CarregaTela(AFiltro:TTipoFiltro; ASvg, AText:string; ACod:integer);
 var
  LRectFiltro:TRectangle;
  LSvg:TSkSvg;
  LLabel:TSkLabel;
 begin
+  FCod:= ACod;
 
   LRectFiltro:= TRectangle.Create(self);
   LRectFiltro.Height:= 124;
@@ -130,8 +141,8 @@ begin
 
   LayoutCategoria.AddObject(LRectFiltro);
 
-
-
+  CarregaServico(FCod);
+  CarregaSubCategoria(FCod);
 
   case AFiltro of
     ReformasEReparos: ;
@@ -150,9 +161,176 @@ begin
   frmFiltroCategoria:= nil;
 end;
 
+procedure TfrmFiltroCategoria.FormCreate(Sender: TObject);
+begin
+  FListCategoria:= TObjectList<TframeServico>.Create;
+  FListCheckSubCategoria:= TObjectList<TframeSubCategoria>.Create;
+end;
+
+procedure TfrmFiltroCategoria.FormDestroy(Sender: TObject);
+begin
+  FreeAndNil(FListCategoria);
+  FreeAndNil(FListCheckSubCategoria);
+end;
+
 procedure TfrmFiltroCategoria.SpeedButton1Click(Sender: TObject);
 begin
   close;
+end;
+
+procedure TfrmFiltroCategoria.CarregaServico(ACategoria:integer);
+var
+ LCon:TConnection;
+ LResult:string;
+ LJa:TJSONArray;
+ LFrame:TframeServico;
+ LBitmap:TBitmap;
+ LHeader:TParameter;
+ LList:TList<TParameter>;
+begin
+
+  try
+    LList:= TList<TParameter>.Create;
+    LHeader.key:= 'categoria';
+    LHeader.Value:= ACategoria.ToString;
+
+    LList.Add(LHeader);
+
+    LCon:= TConnection.Create;
+    if not LCon.Get(UrlListaServico,LList,LResult) then
+      exit;
+
+    LJa:= TJSONObject.ParseJSONValue(LResult) as TJSONArray;
+
+    TThread.Synchronize(nil,
+    procedure
+    begin
+       VertScrollBox1.BeginUpdate;
+    end);
+
+    for var Ljv in LJa do
+    begin
+
+      LFrame:= TframeServico.Create(self);
+      LFrame.Align:= TAlignLayout.Top;
+      LFrame.Margins.Left:= 16;
+      LFrame.Margins.Right:= 16;
+      LFrame.Margins.Top:= 16;
+      LFrame.Name:= 'Frame_'+ Ljv.GetValue<string>('cod')+FormatDateTime('hhmmsszzz',now);
+
+      LFrame.lblTexto.Text:= Ljv.GetValue<string>('titulo');
+      LFrame.lblkm.Text:= Ljv.GetValue<string>('km') + ' km';
+      LFrame.Tag := Ljv.GetValue<integer>('cod');
+      LFrame.TagString := Ljv.GetValue<string>('subcategoria');
+
+      LBitmap:= controller.imagens.BitmapFromBase64(Ljv.GetValue<string>('foto'));
+      LFrame.recImg.Fill.Bitmap.Bitmap:= LBitmap;
+
+      VertScrollBox1.AddObject(LFrame);
+      FListCategoria.Add(LFrame);
+
+    end;
+
+    TThread.Synchronize(nil,
+    procedure
+    begin
+      VertScrollBox1.EndUpdate;
+    end);
+
+
+  finally
+    FreeAndNil(LCon);
+    FreeAndNil(LList);
+  end;
+end;
+
+procedure TfrmFiltroCategoria.CarregaSubCategoria(ACategoria:integer);
+var
+ LCon:TConnection;
+ LResult:string;
+ LJa:TJSONArray;
+ LFrame:TframeSubCategoria;
+ LHeight:single;
+begin
+
+  try
+    LCon:= TConnection.Create;
+    if not LCon.Get(UrlListaSubCategoria,[ACategoria.ToString],LResult) then
+      exit;
+
+    LJa:= TJSONObject.ParseJSONValue(LResult) as TJSONArray;
+
+    TThread.Synchronize(nil,
+    procedure
+    begin
+       VertScrollBox2.BeginUpdate;
+    end);
+
+    LHeight:= 0;
+    for var Ljv in LJa do
+    begin
+
+      LFrame:= TframeSubCategoria.Create(self);
+      LFrame.Align:= TAlignLayout.Top;
+      LFrame.Name:= 'Frame_'+ Ljv.GetValue<string>('codSubcategoria')+FormatDateTime('hhmmsszzz',now);
+
+      LFrame.lbl.Text:= Ljv.GetValue<string>('descricaoSubcategoria');
+      LFrame.CheckBox.OnChange:= FiltraCategoria;
+      LFrame.CheckBox.Tag:= Ljv.GetValue<integer>('codSubcategoria');
+
+
+      VertScrollBox2.AddObject(LFrame);
+      LHeight:= LHeight + LFrame.Height;
+
+      FListCheckSubCategoria.Add(LFrame);
+
+    end;
+
+    TThread.Synchronize(nil,
+    procedure
+    begin
+      VertScrollBox2.EndUpdate;
+    end);
+
+
+    LHeight:= LHeight + 24;
+
+    Rectangle1.Height:= LHeight;
+
+  finally
+    FreeAndNil(LCon);
+  end;
+end;
+
+procedure TfrmFiltroCategoria.FiltraCategoria(Sender:TObject);
+begin
+
+  if TCheckBox(Sender).IsChecked then
+  begin
+    for var LFrame in FListCheckSubCategoria do
+      if TCheckBox(Sender) <> LFrame.CheckBox then
+        LFrame.CheckBox.IsChecked:= false;
+  end;
+
+  if not TCheckBox(Sender).IsChecked then
+  begin
+    for var LFrame in FListCategoria do
+      LFrame.Visible:= true;
+
+    exit;
+  end;
+
+
+  for var LFrame in FListCategoria do
+  begin
+    if LFrame.TagString.ToInteger = TCheckBox(Sender).Tag then
+      LFrame.Visible:= true
+    else
+    LFrame.Visible:= false;
+
+  end;
+
+
 end;
 
 end.

@@ -2,8 +2,8 @@ object frmServicoInesistente: TfrmServicoInesistente
   Left = 0
   Top = 0
   Caption = 'Form1'
-  ClientHeight = 706
-  ClientWidth = 392
+  ClientHeight = 708
+  ClientWidth = 428
   Fill.Color = xFFEBECF1
   Fill.Kind = Solid
   Position = ScreenCenter
@@ -14,19 +14,19 @@ object frmServicoInesistente: TfrmServicoInesistente
   DesignerMasterStyle = 0
   object VertScrollBox1: TVertScrollBox
     Align = Contents
-    Size.Width = 392.000000000000000000
-    Size.Height = 706.000000000000000000
+    Size.Width = 428.000000000000000000
+    Size.Height = 708.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
-    Viewport.Width = 376.000000000000000000
-    Viewport.Height = 706.000000000000000000
+    Viewport.Width = 412.000000000000000000
+    Viewport.Height = 708.000000000000000000
     object LayoutFiltro: TLayout
       Align = Top
       Margins.Left = 16.000000000000000000
       Margins.Right = 16.000000000000000000
       Position.X = 16.000000000000000000
       Position.Y = 201.000000000000000000
-      Size.Width = 344.000000000000000000
+      Size.Width = 380.000000000000000000
       Size.Height = 304.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 1
@@ -35,6 +35,7 @@ object frmServicoInesistente: TfrmServicoInesistente
         Size.Width = 344.000000000000000000
         Size.Height = 152.000000000000000000
         Size.PlatformDefault = False
+        Visible = False
         TabOrder = 0
         object Layout4: TLayout
           Align = Scale
@@ -72,9 +73,9 @@ object frmServicoInesistente: TfrmServicoInesistente
               Align = Bottom
               Locked = True
               Margins.Bottom = 16.000000000000000000
-              Position.Y = 66.000000000000000000
+              Position.Y = 65.599998474121090000
               Size.Width = 100.000000000000000000
-              Size.Height = 38.000000000000000000
+              Size.Height = 38.400001525878910000
               Size.PlatformDefault = False
               StyledSettings = [Family, Size]
               TextSettings.Font.Weight = Semibold
@@ -93,7 +94,7 @@ object frmServicoInesistente: TfrmServicoInesistente
               Margins.Right = 8.000000000000000000
               Margins.Bottom = 8.000000000000000000
               Size.Width = 84.000000000000000000
-              Size.Height = 50.000000000000000000
+              Size.Height = 49.599998474121090000
               Size.PlatformDefault = False
               Svg.OverrideColor = claWhite
               Svg.Source = 
@@ -146,9 +147,9 @@ object frmServicoInesistente: TfrmServicoInesistente
               Align = Bottom
               Locked = True
               Margins.Bottom = 16.000000000000000000
-              Position.Y = 66.000000000000000000
+              Position.Y = 65.599998474121090000
               Size.Width = 100.000000000000000000
-              Size.Height = 38.000000000000000000
+              Size.Height = 38.400001525878910000
               Size.PlatformDefault = False
               StyledSettings = [Family, Size]
               TextSettings.Font.Weight = Semibold
@@ -168,7 +169,7 @@ object frmServicoInesistente: TfrmServicoInesistente
               Margins.Bottom = 4.000000000000000000
               RotationAngle = -50.000000000000000000
               Size.Width = 92.000000000000000000
-              Size.Height = 58.000000000000000000
+              Size.Height = 57.599998474121090000
               Size.PlatformDefault = False
               Svg.OverrideColor = claWhite
               Svg.Source = 
@@ -225,9 +226,9 @@ object frmServicoInesistente: TfrmServicoInesistente
               Align = Bottom
               Locked = True
               Margins.Bottom = 16.000000000000000000
-              Position.Y = 85.000000000000000000
+              Position.Y = 84.800003051757810000
               Size.Width = 100.000000000000000000
-              Size.Height = 19.000000000000000000
+              Size.Height = 19.200000762939450000
               Size.PlatformDefault = False
               StyledSettings = [Family, Size]
               TextSettings.Font.Weight = Semibold
@@ -246,7 +247,7 @@ object frmServicoInesistente: TfrmServicoInesistente
               Margins.Right = 8.000000000000000000
               Margins.Bottom = 27.000000000000000000
               Size.Width = 84.000000000000000000
-              Size.Height = 50.000000000000000000
+              Size.Height = 49.800003051757810000
               Size.PlatformDefault = False
               Svg.OverrideColor = claWhite
               Svg.Source = 
@@ -268,10 +269,10 @@ object frmServicoInesistente: TfrmServicoInesistente
       end
       object Layout7: TLayout
         Align = Top
-        Position.Y = 152.000000000000000000
         Size.Width = 344.000000000000000000
         Size.Height = 152.000000000000000000
         Size.PlatformDefault = False
+        Visible = False
         TabOrder = 1
         object Layout8: TLayout
           Align = Scale
@@ -309,9 +310,9 @@ object frmServicoInesistente: TfrmServicoInesistente
               Align = Bottom
               Locked = True
               Margins.Bottom = 16.000000000000000000
-              Position.Y = 85.000000000000000000
+              Position.Y = 84.800003051757810000
               Size.Width = 100.000000000000000000
-              Size.Height = 19.000000000000000000
+              Size.Height = 19.200000762939450000
               Size.PlatformDefault = False
               StyledSettings = [Family, Size]
               TextSettings.Font.Weight = Semibold
@@ -330,7 +331,7 @@ object frmServicoInesistente: TfrmServicoInesistente
               Margins.Right = 8.000000000000000000
               Margins.Bottom = 27.000000000000000000
               Size.Width = 84.000000000000000000
-              Size.Height = 50.000000000000000000
+              Size.Height = 49.800003051757810000
               Size.PlatformDefault = False
               Svg.OverrideColor = claWhite
               Svg.Source = 
@@ -388,9 +389,9 @@ object frmServicoInesistente: TfrmServicoInesistente
               Align = Bottom
               Locked = True
               Margins.Bottom = 16.000000000000000000
-              Position.Y = 70.000000000000000000
+              Position.Y = 69.599998474121090000
               Size.Width = 100.000000000000000000
-              Size.Height = 38.000000000000000000
+              Size.Height = 38.400001525878910000
               Size.PlatformDefault = False
               StyledSettings = [Family, Size]
               TextSettings.Font.Weight = Semibold
@@ -409,7 +410,7 @@ object frmServicoInesistente: TfrmServicoInesistente
               Margins.Right = 8.000000000000000000
               Margins.Bottom = 8.000000000000000000
               Size.Width = 84.000000000000000000
-              Size.Height = 54.000000000000000000
+              Size.Height = 53.599998474121090000
               Size.PlatformDefault = False
               Svg.OverrideColor = claWhite
               Svg.Source = 
@@ -463,9 +464,9 @@ object frmServicoInesistente: TfrmServicoInesistente
               Align = Bottom
               Locked = True
               Margins.Bottom = 16.000000000000000000
-              Position.Y = 85.000000000000000000
+              Position.Y = 84.800003051757810000
               Size.Width = 100.000000000000000000
-              Size.Height = 19.000000000000000000
+              Size.Height = 19.200000762939450000
               Size.PlatformDefault = False
               StyledSettings = [Family, Size]
               TextSettings.Font.Weight = Semibold
@@ -484,7 +485,7 @@ object frmServicoInesistente: TfrmServicoInesistente
               Margins.Right = 8.000000000000000000
               Margins.Bottom = 27.000000000000000000
               Size.Width = 84.000000000000000000
-              Size.Height = 50.000000000000000000
+              Size.Height = 49.800003051757810000
               Size.PlatformDefault = False
               Svg.OverrideColor = claWhite
               Svg.Source = 
@@ -510,6 +511,22 @@ object frmServicoInesistente: TfrmServicoInesistente
           end
         end
       end
+      object lbFiltro: TListBox
+        Align = Client
+        Size.Width = 380.000000000000000000
+        Size.Height = 304.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'transparentlistboxstyle'
+        TabOrder = 2
+        ShowScrollBars = False
+        Columns = 3
+        DisableFocusEffect = True
+        DefaultItemStyles.ItemStyle = ''
+        DefaultItemStyles.GroupHeaderStyle = ''
+        DefaultItemStyles.GroupFooterStyle = ''
+        Viewport.Width = 380.000000000000000000
+        Viewport.Height = 304.000000000000000000
+      end
     end
     object LayoutTopo: TLayout
       Align = Top
@@ -518,19 +535,19 @@ object frmServicoInesistente: TfrmServicoInesistente
       Margins.Right = 16.000000000000000000
       Position.X = 16.000000000000000000
       Position.Y = 16.000000000000000000
-      Size.Width = 344.000000000000000000
+      Size.Width = 380.000000000000000000
       Size.Height = 185.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
       object Layout1: TLayout
         Align = Top
-        Size.Width = 344.000000000000000000
+        Size.Width = 380.000000000000000000
         Size.Height = 50.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
         object Layout2: TLayout
           Align = Contents
-          Size.Width = 344.000000000000000000
+          Size.Width = 380.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 1
@@ -564,8 +581,8 @@ object frmServicoInesistente: TfrmServicoInesistente
         Align = Top
         Margins.Top = 16.000000000000000000
         Position.Y = 66.000000000000000000
-        Size.Width = 344.000000000000000000
-        Size.Height = 37.000000000000000000
+        Size.Width = 380.000000000000000000
+        Size.Height = 37.599998474121090000
         Size.PlatformDefault = False
         StyledSettings = [Family, FontColor]
         TextSettings.Font.Size = 28.000000000000000000
@@ -577,9 +594,9 @@ object frmServicoInesistente: TfrmServicoInesistente
       end
       object SkLabel2: TSkLabel
         Align = Top
-        Position.Y = 103.000000000000000000
-        Size.Width = 344.000000000000000000
-        Size.Height = 37.000000000000000000
+        Position.Y = 103.599998474121100000
+        Size.Width = 380.000000000000000000
+        Size.Height = 37.599998474121090000
         Size.PlatformDefault = False
         StyledSettings = [Family, FontColor]
         TextSettings.Font.Size = 28.000000000000000000
@@ -592,9 +609,9 @@ object frmServicoInesistente: TfrmServicoInesistente
       object SkLabel3: TSkLabel
         Align = Top
         Margins.Top = 16.000000000000000000
-        Position.Y = 156.000000000000000000
-        Size.Width = 344.000000000000000000
-        Size.Height = 19.000000000000000000
+        Position.Y = 157.199996948242200000
+        Size.Width = 380.000000000000000000
+        Size.Height = 19.200000762939450000
         Size.PlatformDefault = False
         StyledSettings = [Family]
         TextSettings.FontColor = xFF646262
@@ -611,8 +628,8 @@ object frmServicoInesistente: TfrmServicoInesistente
       Margins.Right = 16.000000000000000000
       Position.X = 16.000000000000000000
       Position.Y = 521.000000000000000000
-      Size.Width = 344.000000000000000000
-      Size.Height = 19.000000000000000000
+      Size.Width = 380.000000000000000000
+      Size.Height = 19.200000762939450000
       Size.PlatformDefault = False
       StyledSettings = [Family]
       TextSettings.FontColor = xFF646262
@@ -627,16 +644,18 @@ object frmServicoInesistente: TfrmServicoInesistente
       Margins.Top = 16.000000000000000000
       Margins.Right = 16.000000000000000000
       Position.X = 16.000000000000000000
-      Position.Y = 1236.000000000000000000
-      Size.Width = 344.000000000000000000
+      Position.Y = 556.200012207031300000
+      Size.Width = 380.000000000000000000
       Size.Height = 154.000000000000000000
       Size.PlatformDefault = False
       inherited recImg: TRectangle
-        Size.Width = 344.000000000000000000
+        Size.Width = 380.000000000000000000
+        Size.Height = 154.000000000000000000
         inherited Rectangle2: TRectangle
-          Size.Width = 344.000000000000000000
+          Position.Y = 104.000000000000000000
+          Size.Width = 380.000000000000000000
           inherited lblTexto: TSkLabel
-            Size.Width = 320.000000000000000000
+            Size.Width = 356.000000000000000000
           end
         end
       end
@@ -647,16 +666,18 @@ object frmServicoInesistente: TfrmServicoInesistente
       Margins.Top = 16.000000000000000000
       Margins.Right = 16.000000000000000000
       Position.X = 16.000000000000000000
-      Position.Y = 1066.000000000000000000
-      Size.Width = 344.000000000000000000
-      Size.Height = 154.000000000000000000
+      Position.Y = 896.200012207031300000
+      Size.Width = 380.000000000000000000
+      Size.Height = 153.999938964843800000
       Size.PlatformDefault = False
       inherited recImg: TRectangle
-        Size.Width = 344.000000000000000000
+        Size.Width = 380.000000000000000000
+        Size.Height = 153.999938964843800000
         inherited Rectangle2: TRectangle
-          Size.Width = 344.000000000000000000
+          Position.Y = 104.000000000000000000
+          Size.Width = 380.000000000000000000
           inherited lblTexto: TSkLabel
-            Size.Width = 320.000000000000000000
+            Size.Width = 356.000000000000000000
           end
         end
       end
@@ -667,16 +688,18 @@ object frmServicoInesistente: TfrmServicoInesistente
       Margins.Top = 16.000000000000000000
       Margins.Right = 16.000000000000000000
       Position.X = 16.000000000000000000
-      Position.Y = 896.000000000000000000
-      Size.Width = 344.000000000000000000
+      Position.Y = 1236.199951171875000000
+      Size.Width = 380.000000000000000000
       Size.Height = 154.000000000000000000
       Size.PlatformDefault = False
       inherited recImg: TRectangle
-        Size.Width = 344.000000000000000000
+        Size.Width = 380.000000000000000000
+        Size.Height = 154.000000000000000000
         inherited Rectangle2: TRectangle
-          Size.Width = 344.000000000000000000
+          Position.Y = 104.000000000000000000
+          Size.Width = 380.000000000000000000
           inherited lblTexto: TSkLabel
-            Size.Width = 320.000000000000000000
+            Size.Width = 356.000000000000000000
           end
         end
       end
@@ -687,16 +710,18 @@ object frmServicoInesistente: TfrmServicoInesistente
       Margins.Top = 16.000000000000000000
       Margins.Right = 16.000000000000000000
       Position.X = 16.000000000000000000
-      Position.Y = 726.000000000000000000
-      Size.Width = 344.000000000000000000
+      Position.Y = 1066.199951171875000000
+      Size.Width = 380.000000000000000000
       Size.Height = 154.000000000000000000
       Size.PlatformDefault = False
       inherited recImg: TRectangle
-        Size.Width = 344.000000000000000000
+        Size.Width = 380.000000000000000000
+        Size.Height = 154.000000000000000000
         inherited Rectangle2: TRectangle
-          Size.Width = 344.000000000000000000
+          Position.Y = 104.000000000000000000
+          Size.Width = 380.000000000000000000
           inherited lblTexto: TSkLabel
-            Size.Width = 320.000000000000000000
+            Size.Width = 356.000000000000000000
           end
         end
       end
@@ -707,16 +732,18 @@ object frmServicoInesistente: TfrmServicoInesistente
       Margins.Top = 16.000000000000000000
       Margins.Right = 16.000000000000000000
       Position.X = 16.000000000000000000
-      Position.Y = 556.000000000000000000
-      Size.Width = 344.000000000000000000
+      Position.Y = 726.200012207031300000
+      Size.Width = 380.000000000000000000
       Size.Height = 154.000000000000000000
       Size.PlatformDefault = False
       inherited recImg: TRectangle
-        Size.Width = 344.000000000000000000
+        Size.Width = 380.000000000000000000
+        Size.Height = 154.000000000000000000
         inherited Rectangle2: TRectangle
-          Size.Width = 344.000000000000000000
+          Position.Y = 104.000000000000000000
+          Size.Width = 380.000000000000000000
           inherited lblTexto: TSkLabel
-            Size.Width = 320.000000000000000000
+            Size.Width = 356.000000000000000000
           end
         end
       end

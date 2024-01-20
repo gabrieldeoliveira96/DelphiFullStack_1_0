@@ -6,7 +6,8 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Objects,
   FMX.Layouts, uGosBase, uGosEdit, System.Skia, FMX.Skia, uGosObjects, FMX.Ani,
-  frame.Servico, ksTabControl, frame.solicitacao, uGosStandard;
+  frame.Servico, ksTabControl, frame.solicitacao, uGosStandard, System.JSON, System.NetEncoding,
+  DataSet.Serialize, System.Generics.Collections, frame.categoria;
 
 type
   TfrmPrincipal = class(TForm)
@@ -17,25 +18,7 @@ type
     Layout2: TLayout;
     btnUsuario: TSkSvg;
     layoutCategoria: TLayout;
-    HorzScrollBox1: THorzScrollBox;
-    lblReformasReparos: TSkLabel;
-    imgReformasReparos: TSkSvg;
-    btnReformaseReparos: TGosRectangle;
-    btnServicosDomesticos: TGosRectangle;
-    lblServicoDomestico: TSkLabel;
-    imgServicoDomestico: TSkSvg;
-    btnDesignETecnoligia: TGosRectangle;
-    SkLabel3: TSkLabel;
-    SkSvg5: TSkSvg;
-    btnAssistencia: TGosRectangle;
-    SkLabel4: TSkLabel;
-    SkSvg6: TSkSvg;
-    btnVeiculo: TGosRectangle;
-    SkLabel5: TSkLabel;
-    SkSvg7: TSkSvg;
-    btnConsultoria: TGosRectangle;
-    SkLabel6: TSkLabel;
-    SkSvg8: TSkSvg;
+    horizontalCategoria: THorzScrollBox;
     SkLabel7: TSkLabel;
     CalloutRectangle1: TCalloutRectangle;
     LayoutSolicitar: TLayout;
@@ -50,7 +33,7 @@ type
     floatOpacidadeServicoInesistente: TFloatAnimation;
     floatAnimacaoLosango: TFloatAnimation;
     layoutProfissoes: TLayout;
-    HorzScrollBox2: THorzScrollBox;
+    horizontalProfissao: THorzScrollBox;
     GosRectangle1: TGosRectangle;
     SkLabel10: TSkLabel;
     SkSvg9: TSkSvg;
@@ -109,18 +92,28 @@ type
       const ContentSizeChanged: Boolean);
     procedure btnUsuarioClick(Sender: TObject);
     procedure GosEditView1Click(Sender: TObject);
-    procedure btnReformaseReparosClick(Sender: TObject);
-    procedure btnServicosDomesticosClick(Sender: TObject);
     procedure btnPedreiroClick(Sender: TObject);
     procedure frameServico1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure btnAnuncioServicoClick(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
   private
+    FListCategoria:TObjectList<TframeCategoria>;
     procedure AbrirAnimacaoServicoInesistente;
     procedure FecharAnimacaoServicoInesistente;
+
+    procedure CarregaCategoria;
+    procedure CarregaProfissao;
+    procedure CarregaServico;
+    {$IFDEF MSWINDOWS}
+    procedure AbrirCategoria(Sender: TObject);
+    {$ELSE}
+    procedure AbrirCategoria(Sender: TObject; const Point: TPointF);
+    {$ENDIF}
     { Private declarations }
   public
     { Public declarations }
+    procedure CarregaTela;
   end;
 
 var
@@ -132,15 +125,34 @@ implementation
 
 uses view.Servico.Inesistente, view.usuario, view.pesquisa.servico,
   view.filtro.categoria, view.pesquisa.profissoes, view.descricao.servico,
-  view.anuncio.servico;
+  view.anuncio.servico, uConnection, uLoading, uFancyDialog, uUrl,
+  frame.profissao, controller.imagens, model.servico;
 
 procedure TfrmPrincipal.floatAnimacaoServicoInesistenteFinish(Sender: TObject);
+var
+ LListCategoria:TObjectList<TframeCategoria>;
+ LframeCategoria:TframeCategoria;
 begin
+
   if floatAnimacaoServicoInesistente.Inverse then
     exit;
 
   if not Assigned(frmServicoInesistente) then
     Application.CreateForm(TfrmServicoInesistente, frmServicoInesistente);
+
+  LListCategoria:= TObjectList<TframeCategoria>.Create;
+
+  for var LFrame in FListCategoria do
+  begin
+    LframeCategoria:= TframeCategoria.Create(nil);
+    LframeCategoria.Clone(LFrame);
+
+    LListCategoria.Add(LframeCategoria);
+  end;
+
+
+  frmServicoInesistente.CarregaTela(LListCategoria);
+
   frmServicoInesistente.ShowModal(
   procedure(ModalResult:TModalResult)
   begin
@@ -154,6 +166,12 @@ end;
 procedure TfrmPrincipal.FormCreate(Sender: TObject);
 begin
   tabcontrol.TabIndex:= 0;
+  FListCategoria:= TObjectList<TframeCategoria>.Create;
+end;
+
+procedure TfrmPrincipal.FormDestroy(Sender: TObject);
+begin
+  FreeAndNil(FListCategoria);
 end;
 
 procedure TfrmPrincipal.frameServico1Click(Sender: TObject);
@@ -239,27 +257,6 @@ begin
 
 end;
 
-procedure TfrmPrincipal.btnReformaseReparosClick(Sender: TObject);
-begin
-  if not Assigned(frmFiltroCategoria) then
-    Application.CreateForm(TfrmFiltroCategoria, frmFiltroCategoria);
-
-  frmFiltroCategoria.CarregaTela(TTipoFiltro.ReformasEReparos, imgReformasReparos.Svg.Source, lblReformasReparos.Text);
-  frmFiltroCategoria.Show;
-
-end;
-
-procedure TfrmPrincipal.btnServicosDomesticosClick(Sender: TObject);
-begin
-  if not Assigned(frmFiltroCategoria) then
-    Application.CreateForm(TfrmFiltroCategoria, frmFiltroCategoria);
-
-  frmFiltroCategoria.CarregaTela(TTipoFiltro.ReformasEReparos, imgServicoDomestico.Svg.Source, lblServicoDomestico.Text);
-  frmFiltroCategoria.Show;
-
-
-end;
-
 procedure TfrmPrincipal.btnUsuarioClick(Sender: TObject);
 begin
 
@@ -267,6 +264,180 @@ begin
     Application.CreateForm(TfrmUsuario, frmUsuario);
   frmUsuario.Show;
 
+end;
+
+procedure TfrmPrincipal.CarregaTela;
+begin
+
+  CarregaCategoria;
+
+  CarregaProfissao;
+
+  CarregaServico;
+end;
+
+procedure TfrmPrincipal.CarregaCategoria;
+
+var
+ LCon:TConnection;
+ LResult:string;
+ LJa:TJSONArray;
+ LFrame:TframeCategoria;
+begin
+
+  try
+    LCon:= TConnection.Create;
+    if not LCon.Get(UrlListaCategoria,[],LResult) then
+      exit;
+
+    LJa:= TJSONObject.ParseJSONValue(LResult) as TJSONArray;
+
+    TThread.Synchronize(nil,
+    procedure
+    begin
+      horizontalCategoria.BeginUpdate;
+    end);
+
+    for var Ljv in LJa do
+    begin
+
+      LFrame:= TframeCategoria.Create(self);
+      LFrame.Align:= TAlignLayout.Left;
+      LFrame.Name:= 'Frame_'+ Ljv.GetValue<string>('cod')+FormatDateTime('hhmmsszzz',now);
+
+      LFrame.lbl.Text:= Ljv.GetValue<string>('descricao');
+      LFrame.img.Svg.Source:= TNetEncoding.Base64.Decode(Ljv.GetValue<string>('figurinha'));
+
+      LFrame.Tag:= Ljv.GetValue<integer>('cod');
+
+      {$IFDEF MSWINDOWS}
+      LFrame.OnClick:= AbrirCategoria;
+      {$ELSE}
+      LFrame.OnTap:= AbrirCategoria;
+      {$ENDIF}
+
+      horizontalCategoria.AddObject(LFrame);
+
+      FListCategoria.Add(Lframe);
+
+    end;
+
+    TThread.Synchronize(nil,
+    procedure
+    begin
+      horizontalCategoria.EndUpdate;
+    end);
+
+
+
+  finally
+    FreeAndNil(LCon);
+  end;
+end;
+
+procedure TfrmPrincipal.CarregaProfissao;
+var
+ LCon:TConnection;
+ LResult:string;
+ LJa:TJSONArray;
+ LFrame:TframeProfissao;
+begin
+
+  try
+    LCon:= TConnection.Create;
+    if not LCon.Get(UrlListaProfissao,[],LResult) then
+      exit;
+
+    LJa:= TJSONObject.ParseJSONValue(LResult) as TJSONArray;
+
+    TThread.Synchronize(nil,
+    procedure
+    begin
+      horizontalProfissao.BeginUpdate;
+    end);
+
+    for var Ljv in LJa do
+    begin
+
+      LFrame:= TframeProfissao.Create(self);
+      LFrame.Align:= TAlignLayout.Left;
+      LFrame.Name:= 'Frame_'+ Ljv.GetValue<string>('cod')+FormatDateTime('hhmmsszzz',now);
+
+      LFrame.lbl.Text:= Ljv.GetValue<string>('descricao');
+      LFrame.img.Svg.Source:= TNetEncoding.Base64.Decode(Ljv.GetValue<string>('figurinha'));
+
+      horizontalProfissao.AddObject(LFrame);
+
+    end;
+
+    TThread.Synchronize(nil,
+    procedure
+    begin
+      horizontalProfissao.EndUpdate;
+    end);
+
+
+  finally
+    FreeAndNil(LCon);
+  end;
+end;
+
+procedure TfrmPrincipal.CarregaServico;
+var
+ LCon:TConnection;
+ LResult:string;
+ LJa:TJSONArray;
+ LJaMemtable:TJSONArray;
+ LFrame:TframeServico;
+ LBitmap:TBitmap;
+begin
+
+  try
+    LCon:= TConnection.Create;
+    if not LCon.Get(UrlListaServico,[],LResult) then
+      exit;
+
+    LJa:= TJSONObject.ParseJSONValue(LResult) as TJSONArray;
+    LJaMemtable:= TJSONObject.ParseJSONValue(LResult) as TJSONArray;
+
+    dmservico.memServico.LoadFromJSON(LJaMemtable);
+    TThread.Synchronize(nil,
+    procedure
+    begin
+      scrolBody.BeginUpdate;
+    end);
+
+    for var Ljv in LJa do
+    begin
+
+      LFrame:= TframeServico.Create(self);
+      LFrame.Align:= TAlignLayout.Top;
+      LFrame.Margins.Left:= 16;
+      LFrame.Margins.Right:= 16;
+      LFrame.Margins.Top:= 16;
+      LFrame.Name:= 'Frame_'+ Ljv.GetValue<string>('cod')+FormatDateTime('hhmmsszzz',now);
+
+      LFrame.lblTexto.Text:= Ljv.GetValue<string>('titulo');
+      LFrame.lblkm.Text:= Ljv.GetValue<string>('km') + ' km';
+      LFrame.Tag:= Ljv.GetValue<integer>('cod');
+
+      LBitmap:= controller.imagens.BitmapFromBase64(Ljv.GetValue<string>('foto'));
+      LFrame.recImg.Fill.Bitmap.Bitmap:= LBitmap;
+
+      scrolBody.AddObject(LFrame);
+
+    end;
+
+    TThread.Synchronize(nil,
+    procedure
+    begin
+      scrolBody.EndUpdate;
+    end);
+
+
+  finally
+    FreeAndNil(LCon);
+  end;
 end;
 
 procedure TfrmPrincipal.FecharAnimacaoServicoInesistente;
@@ -281,6 +452,28 @@ begin
   floatAnimacaoLosango.Start;
 
 end;
+
+
+{$IFDEF MSWINDOWS}
+procedure TfrmPrincipal.AbrirCategoria(Sender: TObject);
+{$ELSE}
+procedure TfrmPrincipal.AbrirCategoria(Sender: TObject; const Point: TPointF);
+{$ENDIF}
+var
+ LFrame:TframeCategoria;
+begin
+
+  LFrame:= TframeCategoria(Sender);
+
+  if not Assigned(frmFiltroCategoria) then
+    Application.CreateForm(TfrmFiltroCategoria, frmFiltroCategoria);
+
+  frmFiltroCategoria.CarregaTela(TTipoFiltro.ReformasEReparos,
+    LFrame.img.Svg.Source, LFrame.lbl.Text, LFrame.Tag);
+  frmFiltroCategoria.Show;
+
+end;
+
 
 
 end.

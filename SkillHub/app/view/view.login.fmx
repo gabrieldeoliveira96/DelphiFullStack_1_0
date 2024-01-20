@@ -11,6 +11,7 @@ object frmLogin: TfrmLogin
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
   OnCreate = FormCreate
+  OnDestroy = FormDestroy
   DesignerMasterStyle = 0
   object TabControl1: TTabControl
     Align = Contents
@@ -212,7 +213,7 @@ object frmLogin: TfrmLogin
                   '000" stroke-width="2" stroke-linecap="round" stroke-linejoin="ro' +
                   'und"/>'#13#10'</svg>'
               end
-              object GosEditView1: TGosEditView
+              object edtEmail: TGosEditView
                 Touch.InteractiveGestures = [LongTap, DoubleTap]
                 Align = Client
                 Background.Border.Color.Default = xBFC0C0C0
@@ -236,6 +237,7 @@ object frmLogin: TfrmLogin
                 Size.Height = 45.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 1
+                Text = 'pedropaulo@gmail.com'
                 TextHint = 'Usu'#225'rio / E-mail'
                 TextSettings.Color.HintText = xFF8C8C8C
                 TextSettings.Font.Size = 15.000000000000000000
@@ -270,7 +272,7 @@ object frmLogin: TfrmLogin
                   '0.2656 3.375 11.25 4.35938 11.25 5.625V7.875H6.75V5.625C6.75 4.3' +
                   '5938 7.73438 3.375 9 3.375Z" fill="#7D7D7D"/>'#13#10'</svg>'
               end
-              object GosEditView2: TGosEditView
+              object edtSenha: TGosEditView
                 Touch.InteractiveGestures = [LongTap, DoubleTap]
                 Align = Client
                 Background.Border.Color.Default = xBFC0C0C0
@@ -294,6 +296,7 @@ object frmLogin: TfrmLogin
                 Size.Height = 45.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 1
+                Text = '321'
                 TextHint = 'Senha'
                 TextSettings.Color.HintText = xFF8C8C8C
                 TextSettings.Font.Size = 15.000000000000000000
@@ -407,7 +410,6 @@ object frmLogin: TfrmLogin
         Size.Height = 794.000000000000000000
         Size.PlatformDefault = False
         Stroke.Kind = None
-        Visible = False
         object Layout6: TLayout
           Align = Top
           Margins.Left = 16.000000000000000000
@@ -615,7 +617,7 @@ object frmLogin: TfrmLogin
                   '000" stroke-width="2" stroke-linecap="round" stroke-linejoin="ro' +
                   'und"/>'#13#10'</svg>'
               end
-              object GosEditView3: TGosEditView
+              object edtNomeCliente: TGosEditView
                 Touch.InteractiveGestures = [LongTap, DoubleTap]
                 Align = Client
                 Background.Border.Color.Default = xBFC0C0C0
@@ -674,7 +676,7 @@ object frmLogin: TfrmLogin
                   '6955ZM18.3099 6.75H5.68986L11.9999 12.4864L18.3099 6.75Z" fill="' +
                   '#080341"/>'#13#10'</svg>'
               end
-              object GosEditView4: TGosEditView
+              object edtEmailCliente: TGosEditView
                 Touch.InteractiveGestures = [LongTap, DoubleTap]
                 Align = Client
                 Background.Border.Color.Default = xBFC0C0C0
@@ -712,7 +714,7 @@ object frmLogin: TfrmLogin
               Size.Height = 61.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 3
-              object GosEditView5: TGosEditView
+              object edtSenhaCliente: TGosEditView
                 Touch.InteractiveGestures = [LongTap, DoubleTap]
                 Align = Client
                 Background.Border.Color.Default = xBFC0C0C0
@@ -770,7 +772,7 @@ object frmLogin: TfrmLogin
               Size.Height = 61.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 2
-              object GosEditView6: TGosEditView
+              object edtSenhaValidacaoCliente: TGosEditView
                 Touch.InteractiveGestures = [LongTap, DoubleTap]
                 Align = Client
                 Background.Border.Color.Default = xBFC0C0C0
@@ -946,6 +948,7 @@ object frmLogin: TfrmLogin
         Size.Height = 794.000000000000000000
         Size.PlatformDefault = False
         Stroke.Kind = None
+        Visible = False
         object Layout14: TLayout
           Align = Top
           Margins.Left = 16.000000000000000000
@@ -1143,7 +1146,7 @@ object frmLogin: TfrmLogin
                   '000" stroke-width="2" stroke-linecap="round" stroke-linejoin="ro' +
                   'und"/>'#13#10'</svg>'
               end
-              object GosEditView7: TGosEditView
+              object edtNomeColaborador: TGosEditView
                 Touch.InteractiveGestures = [LongTap, DoubleTap]
                 Align = Client
                 Background.Border.Color.Default = xBFC0C0C0
@@ -1202,7 +1205,7 @@ object frmLogin: TfrmLogin
                   '6955ZM18.3099 6.75H5.68986L11.9999 12.4864L18.3099 6.75Z" fill="' +
                   '#080341"/>'#13#10'</svg>'
               end
-              object GosEditView8: TGosEditView
+              object edtEmailCadastroColaborador: TGosEditView
                 Touch.InteractiveGestures = [LongTap, DoubleTap]
                 Align = Client
                 Background.Border.Color.Default = xBFC0C0C0
@@ -1240,7 +1243,7 @@ object frmLogin: TfrmLogin
               Size.Height = 61.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 4
-              object edtCpf: TGosEditView
+              object edtCpfColaborador: TGosEditView
                 Touch.InteractiveGestures = [LongTap, DoubleTap]
                 Align = Client
                 Background.Border.Color.Default = xBFC0C0C0
@@ -1314,7 +1317,7 @@ object frmLogin: TfrmLogin
               Size.Height = 61.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 2
-              object GosEditView10: TGosEditView
+              object edtSenhaCadastroValidacaoColaborador: TGosEditView
                 Touch.InteractiveGestures = [LongTap, DoubleTap]
                 Align = Client
                 Background.Border.Color.Default = xBFC0C0C0
@@ -1413,7 +1416,7 @@ object frmLogin: TfrmLogin
               Size.Height = 61.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 3
-              object GosEditView11: TGosEditView
+              object edtSenhaCadastroColaborador: TGosEditView
                 Touch.InteractiveGestures = [LongTap, DoubleTap]
                 Align = Client
                 Background.Border.Color.Default = xBFC0C0C0

@@ -34,7 +34,7 @@ type
     { Private declarations }
   public
     { Public declarations }
-    procedure CarregaTela(ABitmap:TBitmap);
+    procedure CarregaTela(ACod:integer; ABitmap:TBitmap);
   end;
 
 var
@@ -44,8 +44,20 @@ implementation
 
 {$R *.fmx}
 
-procedure TfrmDescricaoServico.CarregaTela(ABitmap: TBitmap);
+uses model.servico, Data.DB;
+
+procedure TfrmDescricaoServico.CarregaTela(ACod:integer; ABitmap:TBitmap);
 begin
+  Image1.Bitmap:= ABitmap;
+
+  lblTitulo.Text:= dmServico.memServicoTITULO.AsString;
+  SkLabel2.Text:= dmServico.memServicoDESCRICAO.AsString;
+  SkLabel1.Text:= dmServico.memServicoKM.AsString + ' Km';
+  lblPrestador.Text:= dmServico.memServicoNOME.AsString;
+  SkLabel3.Text:= dmServico.memServicoENDERECO.AsString;
+
+  GosButtonView1.Text:= 'R$ '+dmServico.memServicoVALOR.AsString;
+
 
 end;
 

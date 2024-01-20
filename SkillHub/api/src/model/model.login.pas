@@ -46,7 +46,7 @@ begin
 
   Result := qryValidaLogin.ToJSONObject;
 
-  Log('Retorno: Usuario Logado: '+ qryValidaLoginEMAIL.AsString);
+//  Log('Retorno: Usuario Logado: '+ qryValidaLoginEMAIL.AsString);
 //  if qryValidaLogin.RecordCount > 0 then
 //    Result := qryValidaLogin.ToJSONObject
 //  else

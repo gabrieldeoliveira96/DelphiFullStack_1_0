@@ -54,6 +54,10 @@ begin
     Log('Listando servico');
     LdmServico := TDmServico.Create(nil);
     try
+      if req.Headers.ContainsKey('categoria') then
+        Res.Send<TJSONArray>(
+          LdmServico.GetServicoCategoria(req.Headers.Items['categoria'].ToInteger))
+      else
       Res.Send<TJSONArray>(LdmServico.GetServico);
     finally
       Res.Status(200);

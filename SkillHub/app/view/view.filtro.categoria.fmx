@@ -11,47 +11,50 @@ object frmFiltroCategoria: TfrmFiltroCategoria
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
   OnClose = FormClose
+  OnDestroy = FormDestroy
   DesignerMasterStyle = 0
   object VertScrollBox1: TVertScrollBox
     Align = Contents
+    Padding.Bottom = 16.000000000000000000
     Size.Width = 392.000000000000000000
     Size.Height = 856.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
-    Viewport.Width = 376.000000000000000000
+    Viewport.Width = 392.000000000000000000
     Viewport.Height = 856.000000000000000000
     object LayoutCategoria: TLayout
-      Align = Top
+      Align = MostTop
       Margins.Left = 16.000000000000000000
       Margins.Right = 16.000000000000000000
       Position.X = 16.000000000000000000
       Position.Y = 201.000000000000000000
-      Size.Width = 344.000000000000000000
+      Size.Width = 360.000000000000000000
       Size.Height = 156.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 2
     end
     object LayoutTopo: TLayout
-      Align = Top
+      Align = MostTop
       Margins.Left = 16.000000000000000000
       Margins.Top = 16.000000000000000000
       Margins.Right = 16.000000000000000000
       Position.X = 16.000000000000000000
       Position.Y = 16.000000000000000000
-      Size.Width = 344.000000000000000000
+      Size.Width = 360.000000000000000000
       Size.Height = 185.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
       object Layout1: TLayout
         Align = Top
-        Size.Width = 344.000000000000000000
+        Size.Width = 360.000000000000000000
         Size.Height = 50.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
         object Layout2: TLayout
           Align = Contents
-          Size.Width = 344.000000000000000000
+          Size.Width = 360.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 1
@@ -85,8 +88,8 @@ object frmFiltroCategoria: TfrmFiltroCategoria
         Align = Top
         Margins.Top = 16.000000000000000000
         Position.Y = 66.000000000000000000
-        Size.Width = 344.000000000000000000
-        Size.Height = 37.000000000000000000
+        Size.Width = 360.000000000000000000
+        Size.Height = 37.599998474121090000
         Size.PlatformDefault = False
         StyledSettings = [Family, FontColor]
         TextSettings.Font.Size = 28.000000000000000000
@@ -98,9 +101,9 @@ object frmFiltroCategoria: TfrmFiltroCategoria
       end
       object SkLabel2: TSkLabel
         Align = Top
-        Position.Y = 103.000000000000000000
-        Size.Width = 344.000000000000000000
-        Size.Height = 37.000000000000000000
+        Position.Y = 103.599998474121100000
+        Size.Width = 360.000000000000000000
+        Size.Height = 37.599998474121090000
         Size.PlatformDefault = False
         StyledSettings = [Family, FontColor]
         TextSettings.Font.Size = 28.000000000000000000
@@ -113,9 +116,9 @@ object frmFiltroCategoria: TfrmFiltroCategoria
       object SkLabel3: TSkLabel
         Align = Top
         Margins.Top = 16.000000000000000000
-        Position.Y = 156.000000000000000000
-        Size.Width = 344.000000000000000000
-        Size.Height = 19.000000000000000000
+        Position.Y = 157.199996948242200000
+        Size.Width = 360.000000000000000000
+        Size.Height = 19.200000762939450000
         Size.PlatformDefault = False
         StyledSettings = [Family]
         TextSettings.FontColor = xFF646262
@@ -126,12 +129,12 @@ object frmFiltroCategoria: TfrmFiltroCategoria
       end
     end
     object LayoutFiltros: TLayout
-      Align = Top
+      Align = MostTop
       Margins.Left = 16.000000000000000000
       Margins.Right = 16.000000000000000000
       Position.X = 16.000000000000000000
       Position.Y = 357.000000000000000000
-      Size.Width = 344.000000000000000000
+      Size.Width = 360.000000000000000000
       Size.Height = 404.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 1
@@ -153,6 +156,7 @@ object frmFiltroCategoria: TfrmFiltroCategoria
           Size.Width = 287.000000000000000000
           Size.Height = 331.000000000000000000
           Size.PlatformDefault = False
+          Visible = False
           TabOrder = 0
           object Layout4: TLayout
             Align = Top
@@ -161,6 +165,7 @@ object frmFiltroCategoria: TfrmFiltroCategoria
             Size.Width = 287.000000000000000000
             Size.Height = 35.000000000000000000
             Size.PlatformDefault = False
+            Visible = False
             TabOrder = 18
             object CheckBox1: TCheckBox
               Align = Left
@@ -205,10 +210,11 @@ object frmFiltroCategoria: TfrmFiltroCategoria
           object Layout5: TLayout
             Align = Top
             Margins.Top = 8.000000000000000000
-            Position.Y = 51.000000000000000000
+            Position.Y = 8.000000000000000000
             Size.Width = 287.000000000000000000
             Size.Height = 35.000000000000000000
             Size.PlatformDefault = False
+            Visible = False
             TabOrder = 17
             object CheckBox2: TCheckBox
               Align = Left
@@ -253,10 +259,11 @@ object frmFiltroCategoria: TfrmFiltroCategoria
           object Layout6: TLayout
             Align = Top
             Margins.Top = 8.000000000000000000
-            Position.Y = 94.000000000000000000
+            Position.Y = 8.000000000000000000
             Size.Width = 287.000000000000000000
             Size.Height = 35.000000000000000000
             Size.PlatformDefault = False
+            Visible = False
             TabOrder = 16
             object CheckBox3: TCheckBox
               Align = Left
@@ -301,10 +308,11 @@ object frmFiltroCategoria: TfrmFiltroCategoria
           object Layout7: TLayout
             Align = Top
             Margins.Top = 8.000000000000000000
-            Position.Y = 137.000000000000000000
+            Position.Y = 8.000000000000000000
             Size.Width = 287.000000000000000000
             Size.Height = 35.000000000000000000
             Size.PlatformDefault = False
+            Visible = False
             TabOrder = 15
             object CheckBox4: TCheckBox
               Align = Left
@@ -349,10 +357,11 @@ object frmFiltroCategoria: TfrmFiltroCategoria
           object Layout8: TLayout
             Align = Top
             Margins.Top = 8.000000000000000000
-            Position.Y = 180.000000000000000000
+            Position.Y = 8.000000000000000000
             Size.Width = 287.000000000000000000
             Size.Height = 35.000000000000000000
             Size.PlatformDefault = False
+            Visible = False
             TabOrder = 14
             object CheckBox5: TCheckBox
               Align = Left
@@ -397,10 +406,11 @@ object frmFiltroCategoria: TfrmFiltroCategoria
           object Layout9: TLayout
             Align = Top
             Margins.Top = 8.000000000000000000
-            Position.Y = 223.000000000000000000
+            Position.Y = 8.000000000000000000
             Size.Width = 287.000000000000000000
             Size.Height = 35.000000000000000000
             Size.PlatformDefault = False
+            Visible = False
             TabOrder = 13
             object CheckBox6: TCheckBox
               Align = Left
@@ -449,6 +459,7 @@ object frmFiltroCategoria: TfrmFiltroCategoria
             Size.Width = 287.000000000000000000
             Size.Height = 35.000000000000000000
             Size.PlatformDefault = False
+            Visible = False
             TabOrder = 12
             object CheckBox7: TCheckBox
               Align = Left
@@ -491,6 +502,19 @@ object frmFiltroCategoria: TfrmFiltroCategoria
             end
           end
         end
+        object VertScrollBox2: TVertScrollBox
+          Align = Client
+          Margins.Left = 8.000000000000000000
+          Margins.Top = 8.000000000000000000
+          Margins.Right = 8.000000000000000000
+          Margins.Bottom = 8.000000000000000000
+          Size.Width = 303.000000000000000000
+          Size.Height = 347.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Viewport.Width = 303.000000000000000000
+          Viewport.Height = 347.000000000000000000
+        end
       end
     end
     inline frameServico1: TframeServico
@@ -499,14 +523,17 @@ object frmFiltroCategoria: TfrmFiltroCategoria
       Margins.Top = 16.000000000000000000
       Margins.Right = 16.000000000000000000
       Position.X = 16.000000000000000000
-      Position.Y = 1457.000000000000000000
+      Position.Y = 777.000000000000000000
       Size.Width = 344.000000000000000000
       Size.Height = 154.000000000000000000
       Size.PlatformDefault = False
+      Visible = False
       inherited recImg: TRectangle
         Locked = True
         Size.Width = 344.000000000000000000
+        Size.Height = 154.000000000000000000
         inherited Rectangle2: TRectangle
+          Position.Y = 104.000000000000000000
           Size.Width = 344.000000000000000000
           inherited lblTexto: TSkLabel
             Size.Width = 320.000000000000000000
@@ -523,14 +550,17 @@ object frmFiltroCategoria: TfrmFiltroCategoria
       Margins.Top = 16.000000000000000000
       Margins.Right = 16.000000000000000000
       Position.X = 16.000000000000000000
-      Position.Y = 1287.000000000000000000
+      Position.Y = 947.000000000000000000
       Size.Width = 344.000000000000000000
       Size.Height = 154.000000000000000000
       Size.PlatformDefault = False
+      Visible = False
       inherited recImg: TRectangle
         Locked = True
         Size.Width = 344.000000000000000000
+        Size.Height = 154.000000000000000000
         inherited Rectangle2: TRectangle
+          Position.Y = 104.000000000000000000
           Size.Width = 344.000000000000000000
           inherited lblTexto: TSkLabel
             Size.Width = 320.000000000000000000
@@ -551,10 +581,13 @@ object frmFiltroCategoria: TfrmFiltroCategoria
       Size.Width = 344.000000000000000000
       Size.Height = 154.000000000000000000
       Size.PlatformDefault = False
+      Visible = False
       inherited recImg: TRectangle
         Locked = True
         Size.Width = 344.000000000000000000
+        Size.Height = 154.000000000000000000
         inherited Rectangle2: TRectangle
+          Position.Y = 104.000000000000000000
           Size.Width = 344.000000000000000000
           inherited lblTexto: TSkLabel
             Size.Width = 320.000000000000000000
@@ -575,10 +608,13 @@ object frmFiltroCategoria: TfrmFiltroCategoria
       Size.Width = 344.000000000000000000
       Size.Height = 154.000000000000000000
       Size.PlatformDefault = False
+      Visible = False
       inherited recImg: TRectangle
         Locked = True
         Size.Width = 344.000000000000000000
+        Size.Height = 154.000000000000000000
         inherited Rectangle2: TRectangle
+          Position.Y = 104.000000000000000000
           Size.Width = 344.000000000000000000
           inherited lblTexto: TSkLabel
             Size.Width = 320.000000000000000000
@@ -599,10 +635,13 @@ object frmFiltroCategoria: TfrmFiltroCategoria
       Size.Width = 344.000000000000000000
       Size.Height = 154.000000000000000000
       Size.PlatformDefault = False
+      Visible = False
       inherited recImg: TRectangle
         Locked = True
         Size.Width = 344.000000000000000000
+        Size.Height = 154.000000000000000000
         inherited Rectangle2: TRectangle
+          Position.Y = 104.000000000000000000
           Size.Width = 344.000000000000000000
           inherited lblTexto: TSkLabel
             Size.Width = 320.000000000000000000

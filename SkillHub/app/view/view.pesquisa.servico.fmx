@@ -2,19 +2,21 @@ object frmPesquisaServico: TfrmPesquisaServico
   Left = 0
   Top = 0
   Caption = 'Form1'
-  ClientHeight = 729
-  ClientWidth = 398
+  ClientHeight = 728
+  ClientWidth = 400
   Fill.Color = xFFEBECF1
   Fill.Kind = Solid
   Position = ScreenCenter
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
   OnClose = FormClose
+  OnDestroy = FormDestroy
   DesignerMasterStyle = 0
   object layoutTopo: TLayout
     Align = Top
-    Size.Width = 398.000000000000000000
+    Size.Width = 400.000000000000000000
     Size.Height = 161.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
@@ -22,7 +24,7 @@ object frmPesquisaServico: TfrmPesquisaServico
       Align = Contents
       Fill.Color = xFFEBECF1
       Opacity = 0.899999976158142100
-      Size.Width = 398.000000000000000000
+      Size.Width = 400.000000000000000000
       Size.Height = 161.000000000000000000
       Size.PlatformDefault = False
       Stroke.Kind = None
@@ -50,7 +52,7 @@ object frmPesquisaServico: TfrmPesquisaServico
       Margins.Top = 8.000000000000000000
       Margins.Right = 16.000000000000000000
       Margins.Bottom = 8.000000000000000000
-      Size.Width = 366.000000000000000000
+      Size.Width = 368.000000000000000000
       Size.Height = 49.000000000000000000
       Size.PlatformDefault = False
       Position.X = 16.000000000000000000
@@ -63,17 +65,28 @@ object frmPesquisaServico: TfrmPesquisaServico
       Drawable.SizeWidth = 24
       Drawable.SizeHeight = 24
       Drawable.Padding = 16
-      Drawable.ItemDefault.Kind = AccessoryBitmap
+      Drawable.ItemDefault.Kind = Solid
       Drawable.ItemDefault.Accessory.Accessory = Search
       Drawable.ItemDefault.Accessory.Color = xFF3B3B3B
       DisableFocusEffect = True
+      object btnPesquisa: TSpeedButton
+        Align = Left
+        Position.X = 12.000000000000000000
+        Position.Y = 2.000000000000000000
+        Size.Width = 36.000000000000000000
+        Size.Height = 45.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'searchtoolbuttonbordered'
+        Text = 'btnPesquisa'
+        OnClick = btnPesquisaClick
+      end
     end
     object Layout2: TLayout
       Align = Top
       Padding.Left = 16.000000000000000000
       Padding.Top = 16.000000000000000000
       Padding.Right = 16.000000000000000000
-      Size.Width = 398.000000000000000000
+      Size.Width = 400.000000000000000000
       Size.Height = 81.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 2
@@ -95,18 +108,18 @@ object frmPesquisaServico: TfrmPesquisaServico
   end
   object LayoutBody: TLayout
     Align = Client
-    Size.Width = 398.000000000000000000
-    Size.Height = 568.000000000000000000
+    Size.Width = 400.000000000000000000
+    Size.Height = 567.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 1
     object VertScrollBox1: TVertScrollBox
       Align = Client
-      Size.Width = 398.000000000000000000
-      Size.Height = 568.000000000000000000
+      Size.Width = 400.000000000000000000
+      Size.Height = 567.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
-      Viewport.Width = 398.000000000000000000
-      Viewport.Height = 568.000000000000000000
+      Viewport.Width = 400.000000000000000000
+      Viewport.Height = 567.000000000000000000
     end
   end
 end

@@ -19,7 +19,18 @@ uses
   view.pesquisa.profissoes in 'view\view.pesquisa.profissoes.pas' {frmPesquisaProfissoes},
   view.descricao.servico in 'view\view.descricao.servico.pas' {frmDescricaoServico},
   frame.solicitacao in 'frame\frame.solicitacao.pas' {FrameSolicitacao: TFrame},
-  view.anuncio.servico in 'view\view.anuncio.servico.pas' {frmAnuncioServico};
+  view.anuncio.servico in 'view\view.anuncio.servico.pas' {frmAnuncioServico},
+  uConnection in 'features\uConnection.pas',
+  uLoading in 'features\uLoading.pas',
+  uUrl in 'features\uUrl.pas',
+  uFancyDialog in 'features\uFancyDialog.pas',
+  frame.categoria in 'frame\frame.categoria.pas' {frameCategoria: TFrame},
+  controller.imagens in 'features\controller.imagens.pas',
+  frame.profissao in 'frame\frame.profissao.pas' {frameProfissao: TFrame},
+  frame.subcategoria in 'frame\frame.subcategoria.pas' {frameSubCategoria: TFrame},
+  model.con in 'model\model.con.pas' {dmCon: TDataModule},
+  model.servico in 'model\model.servico.pas' {dmServico: TDataModule},
+  uOwnerForm in 'features\uOwnerForm.pas';
 
 {$R *.res}
 
@@ -31,5 +42,7 @@ begin
   Application.CreateForm(TfrmPesquisaProfissoes, frmPesquisaProfissoes);
   Application.CreateForm(TfrmDescricaoServico, frmDescricaoServico);
   Application.CreateForm(TfrmAnuncioServico, frmAnuncioServico);
+  Application.CreateForm(TdmCon, dmCon);
+  Application.CreateForm(TdmServico, dmServico);
   Application.Run;
 end.

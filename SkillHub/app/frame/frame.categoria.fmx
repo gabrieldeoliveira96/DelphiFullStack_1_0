@@ -1,0 +1,63 @@
+object frameCategoria: TframeCategoria
+  Size.Width = 136.000000000000000000
+  Size.Height = 164.000000000000000000
+  Size.PlatformDefault = False
+  object btn: TGosRectangle
+    Align = Client
+    Fill.Kind = Gradient
+    Fill.Gradient.Points = <
+      item
+        Color = xFF7767DA
+        Offset = 0.000000000000000000
+      end
+      item
+        Color = xFF8274DD
+        Offset = 1.000000000000000000
+      end>
+    Fill.Gradient.StartPosition.Y = 0.500000000000000000
+    Fill.Gradient.StopPosition.X = 1.000000000000000000
+    Fill.Gradient.StopPosition.Y = 0.500000000000000000
+    HitTest = False
+    Margins.Left = 16.000000000000000000
+    Margins.Top = 16.000000000000000000
+    Margins.Right = 16.000000000000000000
+    Margins.Bottom = 16.000000000000000000
+    Size.Width = 104.000000000000000000
+    Size.Height = 132.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Kind = None
+    XRadius = 25.000000000000000000
+    YRadius = 25.000000000000000000
+    object lbl: TSkLabel
+      Align = Bottom
+      Locked = True
+      Margins.Bottom = 16.000000000000000000
+      Position.Y = 97.000000000000000000
+      Size.Width = 104.000000000000000000
+      Size.Height = 19.200000762939450000
+      Size.PlatformDefault = False
+      StyledSettings = [Family, Size]
+      TextSettings.Font.Weight = Semibold
+      TextSettings.FontColor = claWhite
+      TextSettings.HorzAlign = Center
+      Words = <
+        item
+          Text = 'Categoria'
+        end>
+    end
+    object img: TSkSvg
+      Align = Top
+      Locked = True
+      Margins.Left = 8.000000000000000000
+      Margins.Top = 8.000000000000000000
+      Margins.Right = 8.000000000000000000
+      Margins.Bottom = 8.000000000000000000
+      Position.X = 8.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 88.000000000000000000
+      Size.Height = 60.000000000000000000
+      Size.PlatformDefault = False
+      Svg.OverrideColor = claWhite
+    end
+  end
+end

@@ -1,0 +1,58 @@
+object frameProfissao: TframeProfissao
+  Size.Width = 121.000000000000000000
+  Size.Height = 147.000000000000000000
+  Size.PlatformDefault = False
+  object btn: TLayout
+    Align = Left
+    HitTest = True
+    Margins.Left = 16.000000000000000000
+    Margins.Top = 16.000000000000000000
+    Margins.Right = 16.000000000000000000
+    Margins.Bottom = 16.000000000000000000
+    Position.X = 16.000000000000000000
+    Position.Y = 16.000000000000000000
+    Size.Width = 92.000000000000000000
+    Size.Height = 115.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object GosRectangle2: TGosRectangle
+      Align = Client
+      Fill.Color = claWhite
+      Locked = True
+      HitTest = False
+      Size.Width = 92.000000000000000000
+      Size.Height = 88.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      XRadius = 15.000000000000000000
+      YRadius = 15.000000000000000000
+      object img: TSkSvg
+        Align = Client
+        Locked = True
+        Margins.Left = 16.000000000000000000
+        Margins.Top = 16.000000000000000000
+        Margins.Right = 16.000000000000000000
+        Margins.Bottom = 16.000000000000000000
+        Size.Width = 60.000000000000000000
+        Size.Height = 56.000000000000000000
+        Size.PlatformDefault = False
+        Svg.OverrideColor = claBlack
+      end
+    end
+    object lbl: TSkLabel
+      Align = Bottom
+      Locked = True
+      Margins.Top = 8.000000000000000000
+      Position.Y = 96.000000000000000000
+      Size.Width = 92.000000000000000000
+      Size.Height = 19.000000000000000000
+      Size.PlatformDefault = False
+      StyledSettings = [Family, Size]
+      TextSettings.HorzAlign = Center
+      Words = <
+        item
+          Text = 'Profissao'
+        end>
+    end
+  end
+end

@@ -6,7 +6,8 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs,
   FMX.Controls.Presentation, FMX.StdCtrls, System.Skia, FMX.Skia, FMX.Effects,
-  FMX.Filter.Effects, FMX.Layouts, FMX.Objects, uGosObjects, frame.servico;
+  FMX.Filter.Effects, FMX.Layouts, FMX.Objects, uGosObjects, frame.servico,
+  frame.categoria, FMX.ListBox, System.Generics.Collections;
 
 type
   TfrmServicoInesistente = class(TForm)
@@ -54,6 +55,7 @@ type
     frameServico3: TframeServico;
     frameServico4: TframeServico;
     frameServico5: TframeServico;
+    lbFiltro: TListBox;
     procedure Button1Click(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
@@ -62,6 +64,7 @@ type
     { Private declarations }
   public
     { Public declarations }
+    procedure CarregaTela(ACategoria:TObjectList<TframeCategoria>);
   end;
 
 var
@@ -93,6 +96,32 @@ end;
 procedure TfrmServicoInesistente.Button1Click(Sender: TObject);
 begin
   close;
+end;
+
+procedure TfrmServicoInesistente.CarregaTela(
+  ACategoria: TObjectList<TframeCategoria>);
+var
+ LListBoxItem:TListBoxItem;
+begin
+
+  for var LFrame in ACategoria do
+  begin
+    LListBoxItem:= TListBoxItem.Create(nil);
+    LListBoxItem.Height:= 150;
+    LListBoxItem.Text:= EmptyStr;
+
+
+
+
+
+    LListBoxItem.AddObject(LFrame);
+
+
+    lbFiltro.AddObject(LListBoxItem);
+
+  end;
+
+
 end;
 
 procedure TfrmServicoInesistente.FormClose(Sender: TObject;

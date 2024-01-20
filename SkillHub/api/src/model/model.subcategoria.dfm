@@ -1,7 +1,14 @@
 inherited DmSubCategoria: TDmSubCategoria
-  PixelsPerInch = 120
+  Height = 317
+  Width = 416
   inherited Conexao: TFDConnection
     Connected = True
+    Left = 51
+    Top = 36
+  end
+  inherited FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink
+    Left = 154
+    Top = 115
   end
   object qryGetSubCategoria: TFDQuery
     Connection = Conexao
@@ -14,8 +21,8 @@ inherited DmSubCategoria: TDmSubCategoria
       ' C.DESCRICAO AS DESCRICAO_CATEGORIA'
       'FROM SUBCATEGORIA SC'
       'JOIN CATEGORIA C ON C.COD = SC.COD_CATEGORIA')
-    Left = 80
-    Top = 160
+    Left = 56
+    Top = 152
     object qryGetSubCategoriaCOD: TFDAutoIncField
       FieldName = 'COD'
       Origin = 'COD'
@@ -56,8 +63,8 @@ inherited DmSubCategoria: TDmSubCategoria
       'FROM CATEGORIA C'
       'JOIN SUBCATEGORIA SC ON SC.COD_CATEGORIA = C.COD'
       'WHERE C.COD = :COD')
-    Left = 80
-    Top = 248
+    Left = 232
+    Top = 214
     ParamData = <
       item
         Name = 'COD'
@@ -67,6 +74,7 @@ inherited DmSubCategoria: TDmSubCategoria
       FieldName = 'COD'
       Origin = 'COD'
       ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
     end
     object qryGetObterSubCategoriaDESCRICAO_CATEGORIA: TStringField
       AutoGenerateValue = arDefault

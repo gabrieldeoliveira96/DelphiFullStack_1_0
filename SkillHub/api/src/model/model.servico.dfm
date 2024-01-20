@@ -1,14 +1,21 @@
 inherited DmServico: TDmServico
-  PixelsPerInch = 120
+  Height = 341
+  Width = 433
   inherited Conexao: TFDConnection
     Connected = True
+    Left = 51
+    Top = 36
+  end
+  inherited FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink
+    Left = 298
+    Top = 91
   end
   object qryPostServico: TFDQuery
     Connection = Conexao
     SQL.Strings = (
       'select * from servico')
-    Left = 88
-    Top = 152
+    Left = 70
+    Top = 122
     object qryPostServicoCOD: TFDAutoIncField
       FieldName = 'COD'
       Origin = 'COD'
@@ -100,7 +107,8 @@ inherited DmServico: TDmServico
       ' S.NUMERO,'
       ' S.COMPLEMENTO,'
       ' S.BAIRRO,'
-      ' S.CATEGORIA,'
+      ' S.CATEGORIA,  '
+      ' S.KM,'
       ' C.DESCRICAO AS DESCRICAO_CATEGORIA,'
       ' S.SUBCATEGORIA,'
       ' SC.DESCRICAO AS DESCRICAO_SUBCATEGORIA,'
@@ -109,130 +117,21 @@ inherited DmServico: TDmServico
       ' S.FOTO,'
       ' S.COD_USUARIO,'
       ' U.NOME,'
-      ' S.DATA_INGRESSO'
+      ' S.DATA_INGRESSO,'
+      ' S.VALOR'
       'FROM SERVICO S'
-      'JOIN CATEGORIA C ON C.COD = S.COD'
+      'JOIN CATEGORIA C ON C.COD = S.CATEGORIA'
       'JOIN SUBCATEGORIA SC ON SC.COD = S.SUBCATEGORIA'
       'JOIN PROFISSAO P ON P.COD = S.PROFISSAO'
       'JOIN USUARIO U ON U.COD = S.COD_USUARIO'
       '&FILTER')
-    Left = 80
-    Top = 240
+    Left = 248
+    Top = 208
     MacroData = <
       item
         Value = Null
         Name = 'FILTER'
         DataType = mdIdentifier
       end>
-    object qryGetServicoCOD: TFDAutoIncField
-      FieldName = 'COD'
-      Origin = 'COD'
-      ProviderFlags = [pfInWhere, pfInKey]
-      ReadOnly = True
-    end
-    object qryGetServicoTITULO: TStringField
-      AutoGenerateValue = arDefault
-      FieldName = 'TITULO'
-      Origin = 'TITULO'
-      Size = 50
-    end
-    object qryGetServicoDESCRICAO: TStringField
-      AutoGenerateValue = arDefault
-      FieldName = 'DESCRICAO'
-      Origin = 'DESCRICAO'
-      Size = 255
-    end
-    object qryGetServicoCEP: TStringField
-      AutoGenerateValue = arDefault
-      FieldName = 'CEP'
-      Origin = 'CEP'
-      Size = 12
-    end
-    object qryGetServicoENDERECO: TStringField
-      AutoGenerateValue = arDefault
-      FieldName = 'ENDERECO'
-      Origin = 'ENDERECO'
-      Size = 255
-    end
-    object qryGetServicoNUMERO: TStringField
-      AutoGenerateValue = arDefault
-      FieldName = 'NUMERO'
-      Origin = 'NUMERO'
-      Size = 10
-    end
-    object qryGetServicoCOMPLEMENTO: TStringField
-      AutoGenerateValue = arDefault
-      FieldName = 'COMPLEMENTO'
-      Origin = 'COMPLEMENTO'
-      Size = 255
-    end
-    object qryGetServicoBAIRRO: TStringField
-      AutoGenerateValue = arDefault
-      FieldName = 'BAIRRO'
-      Origin = 'BAIRRO'
-      Size = 80
-    end
-    object qryGetServicoCATEGORIA: TIntegerField
-      AutoGenerateValue = arDefault
-      FieldName = 'CATEGORIA'
-      Origin = 'CATEGORIA'
-    end
-    object qryGetServicoDESCRICAO_CATEGORIA: TStringField
-      AutoGenerateValue = arDefault
-      FieldName = 'DESCRICAO_CATEGORIA'
-      Origin = 'DESCRICAO'
-      ProviderFlags = []
-      ReadOnly = True
-      Size = 50
-    end
-    object qryGetServicoSUBCATEGORIA: TIntegerField
-      AutoGenerateValue = arDefault
-      FieldName = 'SUBCATEGORIA'
-      Origin = 'SUBCATEGORIA'
-    end
-    object qryGetServicoDESCRICAO_SUBCATEGORIA: TStringField
-      AutoGenerateValue = arDefault
-      FieldName = 'DESCRICAO_SUBCATEGORIA'
-      Origin = 'DESCRICAO'
-      ProviderFlags = []
-      ReadOnly = True
-      Size = 50
-    end
-    object qryGetServicoPROFISSAO: TIntegerField
-      AutoGenerateValue = arDefault
-      FieldName = 'PROFISSAO'
-      Origin = 'PROFISSAO'
-    end
-    object qryGetServicoDESCRICAO_PROFISSAO: TStringField
-      AutoGenerateValue = arDefault
-      FieldName = 'DESCRICAO_PROFISSAO'
-      Origin = 'DESCRICAO'
-      ProviderFlags = []
-      ReadOnly = True
-      Size = 50
-    end
-    object qryGetServicoFOTO: TBlobField
-      AutoGenerateValue = arDefault
-      FieldName = 'FOTO'
-      Origin = 'FOTO'
-    end
-    object qryGetServicoCOD_USUARIO: TIntegerField
-      AutoGenerateValue = arDefault
-      FieldName = 'COD_USUARIO'
-      Origin = 'COD_USUARIO'
-    end
-    object qryGetServicoNOME: TStringField
-      AutoGenerateValue = arDefault
-      FieldName = 'NOME'
-      Origin = 'NOME'
-      ProviderFlags = []
-      ReadOnly = True
-      Size = 80
-    end
-    object qryGetServicoDATA_INGRESSO: TDateField
-      AutoGenerateValue = arDefault
-      FieldName = 'DATA_INGRESSO'
-      Origin = 'DATA_INGRESSO'
-    end
   end
 end

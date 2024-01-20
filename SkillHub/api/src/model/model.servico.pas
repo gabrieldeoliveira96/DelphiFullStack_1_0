@@ -28,25 +28,7 @@ type
     qryPostServicoFOTO: TBlobField;
     qryPostServicoCOD_USUARIO: TIntegerField;
     qryGetServico: TFDQuery;
-    qryGetServicoCOD: TFDAutoIncField;
-    qryGetServicoTITULO: TStringField;
-    qryGetServicoDESCRICAO: TStringField;
-    qryGetServicoCEP: TStringField;
-    qryGetServicoENDERECO: TStringField;
-    qryGetServicoNUMERO: TStringField;
-    qryGetServicoCOMPLEMENTO: TStringField;
-    qryGetServicoBAIRRO: TStringField;
-    qryGetServicoCATEGORIA: TIntegerField;
-    qryGetServicoDESCRICAO_CATEGORIA: TStringField;
-    qryGetServicoSUBCATEGORIA: TIntegerField;
-    qryGetServicoDESCRICAO_SUBCATEGORIA: TStringField;
-    qryGetServicoPROFISSAO: TIntegerField;
-    qryGetServicoDESCRICAO_PROFISSAO: TStringField;
-    qryGetServicoFOTO: TBlobField;
-    qryGetServicoCOD_USUARIO: TIntegerField;
-    qryGetServicoNOME: TStringField;
     qryPostServicoDATA_INGRESSO: TDateField;
-    qryGetServicoDATA_INGRESSO: TDateField;
   private
     { Private declarations }
   public
@@ -54,6 +36,7 @@ type
     function PostServico(Ajson: TJSONObject): TJSONObject;
     function GetServico: TJSONArray; overload;
     function GetServico(AcodServico: integer): TJSONObject; overload;
+    function GetServicoCategoria(AcodCategoria: integer): TJSONArray;
     function GetServicoUsuario(AcodUsuario: integer): TJSONArray;
   end;
 
@@ -81,6 +64,18 @@ begin
   qryGetServico.MacroByName('FILTER').AsRaw := 'where s.cod = ' + inttostr(AcodServico);
   qryGetServico.Open;
   Result := qryGetServico.ToJSONObject;
+
+  qryGetServico.Close;
+
+  Log('Retorno: ' + Result.ToString);
+end;
+
+function TDmServico.GetServicoCategoria(AcodCategoria: integer): TJSONArray;
+begin
+  qryGetServico.MacroByName('FILTER').Clear;
+  qryGetServico.MacroByName('FILTER').AsRaw := 'where s.categoria = ' + inttostr(AcodCategoria);
+  qryGetServico.Open;
+  Result := qryGetServico.ToJSONArray;
 
   qryGetServico.Close;
 

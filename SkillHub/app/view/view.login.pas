@@ -7,9 +7,10 @@ uses
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, Skia, FMX.Skia,
   FMX.Layouts, FMX.Objects, uGosBase, uGosEdit, uGosStandard, uGosObjects,
   uGosEditTitle, uGosDrawerComponents, FMX.TabControl, FMX.Effects,
-  uGosFmxStdCtrls, System.Actions, FMX.ActnList, FMX.Ani;
+  uGosFmxStdCtrls, System.Actions, FMX.ActnList, FMX.Ani, uFancyDialog;
 
 type
+  TTipo = (tColaborador, tCliente);
   TfrmLogin = class(TForm)
     Layout1: TLayout;
     SkSvg1: TSkSvg;
@@ -22,8 +23,8 @@ type
     Layout5: TLayout;
     SkSvg2: TSkSvg;
     SkSvg3: TSkSvg;
-    GosEditView1: TGosEditView;
-    GosEditView2: TGosEditView;
+    edtEmail: TGosEditView;
+    edtSenha: TGosEditView;
     SkLabel2: TSkLabel;
     btnLogin: TGosButtonView;
     GosButtonView2: TGosButtonView;
@@ -40,10 +41,10 @@ type
     Line2: TLine;
     Layout8: TLayout;
     SkSvg5: TSkSvg;
-    GosEditView3: TGosEditView;
+    edtNomeCliente: TGosEditView;
     Layout9: TLayout;
     SkSvg6: TSkSvg;
-    GosEditView4: TGosEditView;
+    edtEmailCliente: TGosEditView;
     Layout10: TLayout;
     GosButtonView3: TGosButtonView;
     GosButtonView4: TGosButtonView;
@@ -52,9 +53,9 @@ type
     GosRectangle1: TGosRectangle;
     ShadowEffect1: TShadowEffect;
     Layout12: TLayout;
-    GosEditView5: TGosEditView;
+    edtSenhaCliente: TGosEditView;
     Layout13: TLayout;
-    GosEditView6: TGosEditView;
+    edtSenhaValidacaoCliente: TGosEditView;
     Line3: TLine;
     Line4: TLine;
     SkSvg9: TSkSvg;
@@ -76,15 +77,15 @@ type
     Line5: TLine;
     Layout17: TLayout;
     SkSvg11: TSkSvg;
-    GosEditView7: TGosEditView;
+    edtNomeColaborador: TGosEditView;
     Layout18: TLayout;
     SkSvg12: TSkSvg;
-    GosEditView8: TGosEditView;
+    edtEmailCadastroColaborador: TGosEditView;
     Layout19: TLayout;
-    edtCpf: TGosEditView;
+    edtCpfColaborador: TGosEditView;
     SkSvg13: TSkSvg;
     Layout20: TLayout;
-    GosEditView10: TGosEditView;
+    edtSenhaCadastroValidacaoColaborador: TGosEditView;
     SkSvg14: TSkSvg;
     SkSvg15: TSkSvg;
     Line6: TLine;
@@ -93,7 +94,7 @@ type
     GosButtonView5: TGosButtonView;
     GosButtonView6: TGosButtonView;
     Layout22: TLayout;
-    GosEditView11: TGosEditView;
+    edtSenhaCadastroColaborador: TGosEditView;
     SkSvg16: TSkSvg;
     Line8: TLine;
     tabDocumentos: TTabItem;
@@ -107,8 +108,11 @@ type
     procedure floatClienteFinish(Sender: TObject);
     procedure floatColaboradorFinish(Sender: TObject);
     procedure btnLoginClick(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
   private
     { Private declarations }
+    FMsg:TFancyDialog;
+    FTipoCadastro: TTipo;
   public
     { Public declarations }
   end;
@@ -120,16 +124,40 @@ implementation
 
 {$R *.fmx}
 
-uses view.principal;
+uses view.principal, uLoading, uConnection, uUrl, System.JSON;
 
 procedure TfrmLogin.btnLoginClick(Sender: TObject);
+var
+  LCon:TConnection;
 begin
 
-  //mensagem de aguarde
+  TLoading.Show(self,'Aguarde');
+
   TThread.CreateAnonymousThread(
   procedure
+  var
+   LJo:TJSONObject;
+   LResult:string;
   begin
     try
+      LCon:= TConnection.Create;
+      LJo:= TJSONObject.Create;
+
+      LJo.AddPair('email',edtEmail.Text);
+      LJo.AddPair('senha',edtSenha.Text);
+      LCon.Post(UrlValidarLogin,[],LJo,LResult);
+
+      if LResult.Equals('{}') then
+      begin
+        TThread.Synchronize(nil,
+        procedure
+        begin
+          FMsg.Show(TIconDialog.Error,'Erro ao validar login','Usuário ou senha incorretos');
+        end);
+
+        exit;
+      end;
+
       TThread.Synchronize(nil,
       procedure
       begin
@@ -137,7 +165,7 @@ begin
           Application.CreateForm(TfrmPrincipal, frmPrincipal);
       end);
 
-      //CarreTela - processo de consultas para abertura da tela principal
+      frmPrincipal.CarregaTela;
 
       TThread.Synchronize(nil,
       procedure
@@ -151,7 +179,9 @@ begin
       TThread.Synchronize(nil,
       procedure
       begin
-       //finalizo o aguarde
+        FreeAndNil(LCon);
+        FreeAndNil(LJo);
+        TLoading.Hide;
       end);
 
     end;
@@ -178,6 +208,13 @@ begin
   TabControl1.ActiveTab:= tabLogin;
   recCliente.Visible:= true;
   recColaborador.Visible:= false;
+  FMsg:= TFancyDialog.Create(self);
+  FTipoCadastro:= tCliente;
+end;
+
+procedure TfrmLogin.FormDestroy(Sender: TObject);
+begin
+  FreeAndNil(FMsg);
 end;
 
 procedure TfrmLogin.GosButtonView2Click(Sender: TObject);
@@ -186,8 +223,74 @@ begin
 end;
 
 procedure TfrmLogin.GosButtonView3Click(Sender: TObject);
+var
+ LCon:TConnection;
 begin
-  ctaLogin.Execute;
+
+  TLoading.Show(self,'Aguarde, enviando cadastro');
+
+  TThread.CreateAnonymousThread(
+  procedure
+  var
+    Ljo:TJSONObject;
+    LResult:string;
+  begin
+
+    try
+      LCon:= TConnection.Create;
+
+      Ljo:= TJSONObject.Create;
+
+      if FTipoCadastro = tCliente then
+      begin
+
+        Ljo.AddPair('nome', edtNomeCliente.Text);
+        Ljo.AddPair('email', edtEmailCliente.Text);
+        Ljo.AddPair('senha', edtSenhaCliente.Text);
+        Ljo.AddPair('tipo_usuario', 'cliente');
+        Ljo.AddPair('cpf', '');
+
+      end;
+
+      if FTipoCadastro = tColaborador then
+      begin
+
+        Ljo.AddPair('nome', edtNomeColaborador.Text);
+        Ljo.AddPair('email', edtEmailCadastroColaborador.Text);
+        Ljo.AddPair('senha', edtSenhaCadastroColaborador.Text);
+        Ljo.AddPair('tipo_usuario', 'colaborador');
+        Ljo.AddPair('cpf', edtCpfColaborador.Text);
+
+      end;
+
+      Ljo.AddPair('foto', '');
+
+      if not LCon.Post(UrlCadastrarUsuario,[], Ljo, LResult) then
+      begin
+        FMsg.Show(TIconDialog.Error,'Erro ao cadastrar usuário','Tente novamente');
+        exit;
+      end;
+
+      ctaLogin.Execute;
+
+    finally
+
+      TThread.Synchronize(nil,
+      procedure
+      begin
+
+        FreeAndNil(LCon);
+        FreeAndNil(Ljo);
+        TLoading.Hide;
+
+
+      end);
+
+    end;
+
+  end).Start;
+
+
 end;
 
 procedure TfrmLogin.GosButtonView4Click(Sender: TObject);
@@ -199,6 +302,7 @@ procedure TfrmLogin.switchChange(Sender: TObject);
 begin
   if recCliente.Visible then
   begin
+    FTipoCadastro:= tColaborador;
     floatCliente.Inverse:= false;
     floatCliente.StartValue:= 1;
     floatCliente.StopValue:= 0;
@@ -219,6 +323,7 @@ begin
   if recColaborador.Visible then
   begin
 
+    FTipoCadastro:= tCliente;
     recCliente.Visible:= true;
     floatCliente.Inverse:= true;
     floatCliente.Start;

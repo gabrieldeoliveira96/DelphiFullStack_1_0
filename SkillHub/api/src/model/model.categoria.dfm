@@ -1,7 +1,14 @@
 inherited DmCategoria: TDmCategoria
-  PixelsPerInch = 120
+  Height = 250
+  Width = 335
   inherited Conexao: TFDConnection
     Connected = True
+    Left = 51
+    Top = 36
+  end
+  inherited FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink
+    Left = 154
+    Top = 115
   end
   object qryGetCategoria: TFDQuery
     Connection = Conexao
@@ -11,8 +18,8 @@ inherited DmCategoria: TDmCategoria
       ' DESCRICAO,'
       ' FIGURINHA'
       'FROM CATEGORIA')
-    Left = 80
-    Top = 160
+    Left = 64
+    Top = 128
     object qryGetCategoriaCOD: TFDAutoIncField
       FieldName = 'COD'
       Origin = 'COD'

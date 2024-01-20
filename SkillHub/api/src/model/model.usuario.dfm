@@ -1,7 +1,13 @@
 inherited DmUsuario: TDmUsuario
-  PixelsPerInch = 120
+  Height = 250
+  Width = 335
   inherited Conexao: TFDConnection
-    Connected = True
+    Left = 51
+    Top = 36
+  end
+  inherited FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink
+    Left = 164
+    Top = 36
   end
   object qryInsereUsuario: TFDQuery
     Connection = Conexao
@@ -15,8 +21,8 @@ inherited DmUsuario: TDmUsuario
       ' TIPO_USUARIO,'
       ' FOTO'
       'FROM USUARIO')
-    Left = 80
-    Top = 168
+    Left = 64
+    Top = 134
     object qryInsereUsuarioCOD: TFDAutoIncField
       FieldName = 'COD'
       Origin = 'COD'
@@ -71,8 +77,8 @@ inherited DmUsuario: TDmUsuario
       ' TIPO_USUARIO'
       'FROM USUARIO'
       'WHERE COD = :COD')
-    Left = 88
-    Top = 256
+    Left = 70
+    Top = 205
     ParamData = <
       item
         Name = 'COD'
@@ -82,6 +88,7 @@ inherited DmUsuario: TDmUsuario
       FieldName = 'COD'
       Origin = 'COD'
       ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
     end
     object qryObterUsuarioNOME: TStringField
       AutoGenerateValue = arDefault
@@ -118,8 +125,8 @@ inherited DmUsuario: TDmUsuario
     SQL.Strings = (
       'update usuario set senha = :senha'
       'where cod = :cod')
-    Left = 232
-    Top = 160
+    Left = 186
+    Top = 128
     ParamData = <
       item
         Name = 'SENHA'

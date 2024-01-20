@@ -98,6 +98,7 @@
         <Icns_MainIcns>$(BDS)\bin\delphi_PROJECTICNS.icns</Icns_MainIcns>
         <SanitizedProjectName>SkillHub</SanitizedProjectName>
         <DCC_Define>SKIA;$(DCC_Define)</DCC_Define>
+        <DCC_UnitSearchPath>modules\.dcp;modules\.dcu;modules;modules\dataset-serialize\src;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Android)'!=''">
         <DCC_UsePackage>FireDACIBDriver;fmx;DbxCommonDriver;bindengine;IndyIPCommon;FMX_FlexCel_Components;IndyProtocols;Skia.Package.RTL;dbxcds;FmxTeeUI;FlexCel_Pdf;FireDACSqliteDriver;DbxClientDriver;soapmidas;dbexpress;inet;FMX_FlexCel_Core;CustomIPTransport;IndySystem;AndoridVoiceComponents;ibxbindings;FlexCel_Render;FireDACCommon;bindcompdbx;rtl;DBXSqliteDriver;FireDAC;xmlrtl;ibxpress;dsnap;GosComponents;fgx;FlexCel_Report;WindowsToast;FireDACCommonDriver;IndyIPClient;bindcompfmx;ibmonitor;fmxFireDAC;fmxase;dbrtl;Skia.Package.FMX;FlexCel_XlsAdapter;DBXInterBaseDriver;GridSystem;MaterialDesign;FlexCel_Core;bindcomp;IndyCore;RESTBackendComponents;RESTComponents;IndyIPServer;dsnapxml;tethering;CloudService;FMXTee;soaprtl;soapserver;$(DCC_UsePackage)</DCC_UsePackage>
@@ -302,6 +303,37 @@
             <Form>frmAnuncioServico</Form>
             <FormType>fmx</FormType>
         </DCCReference>
+        <DCCReference Include="features\uConnection.pas"/>
+        <DCCReference Include="features\uLoading.pas"/>
+        <DCCReference Include="features\uUrl.pas"/>
+        <DCCReference Include="features\uFancyDialog.pas"/>
+        <DCCReference Include="frame\frame.categoria.pas">
+            <Form>frameCategoria</Form>
+            <FormType>fmx</FormType>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="features\controller.imagens.pas"/>
+        <DCCReference Include="frame\frame.profissao.pas">
+            <Form>frameProfissao</Form>
+            <FormType>fmx</FormType>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="frame\frame.subcategoria.pas">
+            <Form>frameSubCategoria</Form>
+            <FormType>fmx</FormType>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="model\model.con.pas">
+            <Form>dmCon</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="model\model.servico.pas">
+            <Form>dmServico</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="features\uOwnerForm.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
