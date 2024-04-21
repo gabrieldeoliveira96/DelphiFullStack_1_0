@@ -38,6 +38,7 @@ type
     function GetServico(AcodServico: integer): TJSONObject; overload;
     function GetServicoCategoria(AcodCategoria: integer): TJSONArray;
     function GetServicoUsuario(AcodUsuario: integer): TJSONArray;
+    function GetServicoProfissao(AcodProfissao: integer): TJSONArray;
   end;
 
 implementation
@@ -123,6 +124,18 @@ begin
   Result := Ljo;
 
   Log('Json recebido: ' + Ajson.ToString);
+end;
+
+function TDmServico.GetServicoProfissao(AcodProfissao: integer): TJSONArray;
+begin
+  qryGetServico.MacroByName('FILTER').Clear;
+  qryGetServico.MacroByName('FILTER').AsRaw := 'where s.profissao = ' + inttostr(AcodProfissao);
+  qryGetServico.Open;
+  Result := qryGetServico.ToJSONArray;
+
+  qryGetServico.Close;
+
+  Log('Retorno: ' + Result.ToString);
 end;
 
 end.

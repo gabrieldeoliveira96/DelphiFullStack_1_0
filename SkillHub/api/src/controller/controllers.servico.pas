@@ -58,7 +58,10 @@ begin
         Res.Send<TJSONArray>(
           LdmServico.GetServicoCategoria(req.Headers.Items['categoria'].ToInteger))
       else
-      Res.Send<TJSONArray>(LdmServico.GetServico);
+        if req.Headers.ContainsKey('profissao') then
+          Res.Send<TJSONArray>(LdmServico.GetServicoProfissao(req.Headers.Items['profissao'].ToInteger))
+        else
+         Res.Send<TJSONArray>(LdmServico.GetServico);
     finally
       Res.Status(200);
       freeAndNil(LdmServico);
