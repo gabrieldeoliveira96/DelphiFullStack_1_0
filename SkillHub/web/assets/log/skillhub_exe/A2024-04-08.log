@@ -1,0 +1,2 @@
+SkillHub.exe: 000010B8: 14:34:33 [127.0.0.1]:Exception raised while destroying session: Access violation at address 0029C6CD in module 'SkillHub.exe'. Read of address 00000004
+SkillHub.exe: 000010B8: 14:34:33 [127.0.0.1]:EAccessViolation : Access violation at address 0029C6CD in module 'SkillHub.exe'. Read of address 00000004 : Addr: $0029C6CD

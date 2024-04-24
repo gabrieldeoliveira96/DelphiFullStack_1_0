@@ -1,0 +1,5 @@
+SkillHub.exe: 00001710: 22:43:31 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: Wf8OpMTQS810E6B4359 ) : Addr: $00683B39
+SkillHub.exe: 000033F4: 22:43:31 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: Wf8OpMTQS810E6B4359 ) : Addr: $00683B39
+SkillHub.exe: 000032D0: 22:43:36 [HandleFileRequest[127.0.0.1]]:Access denied: C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\css\bootstrap.css.map.
+SkillHub.exe: 00002694: 22:43:38 [HandleFileRequest[127.0.0.1]]:Access denied: C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\js\bootstrap.js.map.
+SkillHub.exe: 00002964: 22:43:45 [HandleFileRequest[127.0.0.1]]:Access denied: C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\js\bootstrap.js.map.

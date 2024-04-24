@@ -1,0 +1,7 @@
+SkillHub.exe: 00002968: 00:11:20 []:>--------------------------------------------------------------<
+SkillHub.exe: 00002968: 00:11:20 [TUniServerModule]:Server First Init.
+SkillHub.exe: 00002968: 00:11:20 [TUniServerModule]:Start Path = C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\
+SkillHub.exe: 00002968: 00:11:20 [TUniServerModule]:Debug Mode = ON
+SkillHub.exe: 00002968: 00:11:20 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+SkillHub.exe: 00002968: 00:11:24 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+SkillHub.exe: 00002968: 00:11:29 [TUniServerModule]:HTTP Server Started on Port: 8077

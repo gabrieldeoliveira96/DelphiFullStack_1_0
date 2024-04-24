@@ -1,0 +1,298 @@
+SkillHub.exe: 00001DC0: 00:07:04 []:>--------------------------------------------------------------<
+SkillHub.exe: 00001DC0: 00:07:04 [TUniServerModule]:Server First Init.
+SkillHub.exe: 00001DC0: 00:07:04 [TUniServerModule]:Start Path = C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\
+SkillHub.exe: 00001DC0: 00:07:04 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+SkillHub.exe: 00001DC0: 00:07:05 [TUniServerModule]:HTTP Server Started on Port: 8077
+SkillHub.exe: 00001DC0: 00:08:30 [TUniServerModule]:Shutting Down Server.
+SkillHub.exe: 00001DC0: 00:08:30 [TUniServerModule]:Stopping HTTP Server.
+SkillHub.exe: 00001DC0: 00:08:32 [TUniServerModule]:HTTP Server Stopped.
+SkillHub.exe: 00001DC0: 00:08:32 [TUniGUISessionManager]:Terminating Session manager.
+SkillHub.exe: 00001DC0: 00:08:32 [TUniGUISessionManager]:Stopping Cache Eraser...
+SkillHub.exe: 00001DC0: 00:08:32 [TUniGUISessionManager]:Cache Eraser Stopped.
+SkillHub.exe: 00001DC0: 00:08:32 [TUniGUISessionManager]:Destroying Worker Threads.
+SkillHub.exe: 00001DC0: 00:08:32 [TUniGUISessionManager]:Session manager terminated.
+SkillHub.exe: 00001DC0: 00:08:32 [TUniWebSocketStack]:Terminating...
+SkillHub.exe: 00001DC0: 00:08:32 [TUniGUIMessageQ]:Terminated.
+SkillHub.exe: 00001DC0: 00:08:32 [TUniWebSocketStack]:Terminated.
+SkillHub.exe: 00001DC0: 00:08:33 [TUniServerModule]:Server Shutdown Completed.
+SkillHub.exe: 00001DC0: 00:08:33 []:<-------------------------------------------------------------->
+SkillHub.exe: 00001DC0: 00:08:33 [Terminated]:Exit Code: 0
+SkillHub.exe: 000011C0: 00:56:46 []:>--------------------------------------------------------------<
+SkillHub.exe: 000011C0: 00:56:46 [TUniServerModule]:Server First Init.
+SkillHub.exe: 000011C0: 00:56:46 [TUniServerModule]:Start Path = C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\
+SkillHub.exe: 000011C0: 00:56:46 [TUniServerModule]:Debug Mode = ON
+SkillHub.exe: 000011C0: 00:56:47 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+SkillHub.exe: 000011C0: 00:56:47 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+SkillHub.exe: 000011C0: 00:56:48 [TUniServerModule]:HTTP Server Started on Port: 8077
+SkillHub.exe: 000013B0: 00:56:50 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: wdfgm2SHKV10E5AD302 ) : Addr: $008713D9
+SkillHub.exe: 00001250: 00:56:51 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: wdfgm2SHKV10E5AD302 ) : Addr: $008713D9
+SkillHub.exe: 00001DC0: 00:56:59 [Form Owner must be UniApplication-127.0.0.1]:Exception : Form Owner must be UniApplication : Addr: $0080CB89
+SkillHub.exe: 00001F88: 00:57:22 [Form Owner must be UniApplication-127.0.0.1]:Exception : Form Owner must be UniApplication : Addr: $0080CB89
+SkillHub.exe: 00000ABC: 00:57:51 []:>--------------------------------------------------------------<
+SkillHub.exe: 00000ABC: 00:57:51 [TUniServerModule]:Server First Init.
+SkillHub.exe: 00000ABC: 00:57:51 [TUniServerModule]:Start Path = C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\
+SkillHub.exe: 00000ABC: 00:57:51 [TUniServerModule]:Debug Mode = ON
+SkillHub.exe: 00000ABC: 00:57:51 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+SkillHub.exe: 00000ABC: 00:57:51 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+SkillHub.exe: 00000ABC: 00:57:51 [TUniServerModule]:HTTP Server Started on Port: 8077
+SkillHub.exe: 00001E18: 00:57:52 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: zTR7hp9ueW10E5AE047 ) : Addr: $006B13D9
+SkillHub.exe: 00001D1C: 00:58:04 [Form Owner must be UniApplication-127.0.0.1]:Exception : Form Owner must be UniApplication : Addr: $0064CB89
+SkillHub.exe: 000005B0: 00:58:25 []:>--------------------------------------------------------------<
+SkillHub.exe: 000005B0: 00:58:25 [TUniServerModule]:Server First Init.
+SkillHub.exe: 000005B0: 00:58:25 [TUniServerModule]:Start Path = C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\
+SkillHub.exe: 000005B0: 00:58:25 [TUniServerModule]:Debug Mode = ON
+SkillHub.exe: 000005B0: 00:58:25 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+SkillHub.exe: 000005B0: 00:58:25 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+SkillHub.exe: 000005B0: 00:58:25 [TUniServerModule]:HTTP Server Started on Port: 8077
+SkillHub.exe: 00000460: 00:58:34 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: JKQAuvZsnm10E5AE076 ) : Addr: $005D13D9
+SkillHub.exe: 00001B00: 00:58:34 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: JKQAuvZsnm10E5AE076 ) : Addr: $005D13D9
+SkillHub.exe: 00001328: 01:06:14 []:>--------------------------------------------------------------<
+SkillHub.exe: 00001328: 01:06:14 [TUniServerModule]:Server First Init.
+SkillHub.exe: 00001328: 01:06:14 [TUniServerModule]:Start Path = C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\
+SkillHub.exe: 00001328: 01:06:14 [TUniServerModule]:Debug Mode = ON
+SkillHub.exe: 00001328: 01:06:14 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+SkillHub.exe: 00001328: 01:06:14 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+SkillHub.exe: 00001328: 01:06:14 [TUniServerModule]:HTTP Server Started on Port: 8077
+SkillHub.exe: 000007A8: 01:06:19 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: j325dB5qMq10E5AE0A7 ) : Addr: $005E13D9
+SkillHub.exe: 00001F70: 01:06:56 [HandleFileRequest[127.0.0.1]]:Access denied: C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\css\bootstrap.css.map.
+SkillHub.exe: 00000EDC: 01:06:57 [HandleFileRequest[127.0.0.1]]:Access denied: C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\js\bootstrap.js.map.
+SkillHub.exe: 00000688: 01:27:44 []:>--------------------------------------------------------------<
+SkillHub.exe: 00000688: 01:27:44 [TUniServerModule]:Server First Init.
+SkillHub.exe: 00000688: 01:27:44 [TUniServerModule]:Start Path = C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\
+SkillHub.exe: 00000688: 01:27:44 [TUniServerModule]:Debug Mode = ON
+SkillHub.exe: 00000688: 01:27:44 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+SkillHub.exe: 00000688: 01:27:44 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+SkillHub.exe: 00000688: 01:27:45 [TUniServerModule]:HTTP Server Started on Port: 8077
+SkillHub.exe: 00001B70: 01:33:22 []:>--------------------------------------------------------------<
+SkillHub.exe: 00001B70: 01:33:22 [TUniServerModule]:Server First Init.
+SkillHub.exe: 00001B70: 01:33:22 [TUniServerModule]:Start Path = C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\
+SkillHub.exe: 00001B70: 01:33:22 [TUniServerModule]:Debug Mode = ON
+SkillHub.exe: 00001B70: 01:33:22 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+SkillHub.exe: 00001B70: 01:33:23 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+SkillHub.exe: 00001B70: 01:33:23 [TUniServerModule]:HTTP Server Started on Port: 8077
+SkillHub.exe: 000018A8: 01:34:26 [HandleFileRequest[127.0.0.1]]:Access denied: C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\css\bootstrap.css.map.
+SkillHub.exe: 000019A8: 01:34:28 [HandleFileRequest[127.0.0.1]]:Access denied: C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\js\bootstrap.js.map.
+SkillHub.exe: 00000964: 01:42:09 []:>--------------------------------------------------------------<
+SkillHub.exe: 00000964: 01:42:09 [TUniServerModule]:Server First Init.
+SkillHub.exe: 00000964: 01:42:09 [TUniServerModule]:Start Path = C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\
+SkillHub.exe: 00000964: 01:42:09 [TUniServerModule]:Debug Mode = ON
+SkillHub.exe: 00000964: 01:42:09 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+SkillHub.exe: 00000964: 01:42:09 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+SkillHub.exe: 00000964: 01:42:09 [TUniServerModule]:HTTP Server Started on Port: 8077
+SkillHub.exe: 000002B8: 01:42:18 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: jmjj6D9Afg10E5AEA1D ) : Addr: $013313D9
+SkillHub.exe: 00001CBC: 19:34:59 []:>--------------------------------------------------------------<
+SkillHub.exe: 00001CBC: 19:34:59 [TUniServerModule]:Server First Init.
+SkillHub.exe: 00001CBC: 19:34:59 [TUniServerModule]:Start Path = C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\
+SkillHub.exe: 00001CBC: 19:34:59 [TUniServerModule]:Debug Mode = ON
+SkillHub.exe: 00001CBC: 19:34:59 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+SkillHub.exe: 00001CBC: 19:35:00 [TUniServerModule]:HTTP Server Started on Port: 8077
+SkillHub.exe: 000022C4: 19:42:57 []:>--------------------------------------------------------------<
+SkillHub.exe: 000022C4: 19:42:57 [TUniServerModule]:Server First Init.
+SkillHub.exe: 000022C4: 19:42:57 [TUniServerModule]:Start Path = C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\
+SkillHub.exe: 000022C4: 19:42:57 [TUniServerModule]:Debug Mode = ON
+SkillHub.exe: 000022C4: 19:42:57 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+SkillHub.exe: 000022C4: 19:42:58 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+SkillHub.exe: 000022C4: 19:42:58 [TUniServerModule]:HTTP Server Started on Port: 8077
+SkillHub.exe: 00001BFC: 19:43:52 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: 3Kcc6WDLZ110E5C0F8D ) : Addr: $00891489
+SkillHub.exe: 00002064: 19:44:55 []:>--------------------------------------------------------------<
+SkillHub.exe: 00002064: 19:44:55 [TUniServerModule]:Server First Init.
+SkillHub.exe: 00002064: 19:44:55 [TUniServerModule]:Start Path = C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\
+SkillHub.exe: 00002064: 19:44:55 [TUniServerModule]:Debug Mode = ON
+SkillHub.exe: 00002064: 19:44:55 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+SkillHub.exe: 00002064: 19:44:56 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+SkillHub.exe: 00002064: 19:44:56 [TUniServerModule]:HTTP Server Started on Port: 8077
+SkillHub.exe: 000004B4: 19:46:48 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: LlD6bkn5AG10E5C11E6 ) : Addr: $00751489
+SkillHub.exe: 00001970: 19:59:01 []:>--------------------------------------------------------------<
+SkillHub.exe: 00001970: 19:59:01 [TUniServerModule]:Server First Init.
+SkillHub.exe: 00001970: 19:59:01 [TUniServerModule]:Start Path = C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\
+SkillHub.exe: 00001970: 19:59:01 [TUniServerModule]:Debug Mode = ON
+SkillHub.exe: 00001970: 19:59:01 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+SkillHub.exe: 00001970: 19:59:06 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+SkillHub.exe: 00001970: 19:59:07 [TUniServerModule]:HTTP Server Started on Port: 8077
+SkillHub.exe: 00000D88: 20:00:56 []:>--------------------------------------------------------------<
+SkillHub.exe: 00000D88: 20:00:56 [TUniServerModule]:Server First Init.
+SkillHub.exe: 00000D88: 20:00:56 [TUniServerModule]:Start Path = C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\
+SkillHub.exe: 00000D88: 20:00:56 [TUniServerModule]:Debug Mode = ON
+SkillHub.exe: 00000D88: 20:00:56 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+SkillHub.exe: 00000D88: 20:00:57 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+SkillHub.exe: 00000D88: 20:00:57 [TUniServerModule]:HTTP Server Started on Port: 8077
+SkillHub.exe: 00000594: 20:01:02 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: gbIU74Ti7610E5C162B ) : Addr: $00781499
+SkillHub.exe: 00002034: 20:01:02 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: gbIU74Ti7610E5C162B ) : Addr: $00781499
+SkillHub.exe: 00001218: 20:02:08 []:>--------------------------------------------------------------<
+SkillHub.exe: 00001218: 20:02:08 [TUniServerModule]:Server First Init.
+SkillHub.exe: 00001218: 20:02:08 [TUniServerModule]:Start Path = C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\
+SkillHub.exe: 00001218: 20:02:09 [TUniServerModule]:Debug Mode = ON
+SkillHub.exe: 00001218: 20:02:09 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+SkillHub.exe: 00001218: 20:02:09 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+SkillHub.exe: 00001218: 20:02:09 [TUniServerModule]:HTTP Server Started on Port: 8077
+SkillHub.exe: 0000209C: 20:02:19 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: FKNcbbFoMX10E5C1688 ) : Addr: $01261499
+SkillHub.exe: 00001F8C: 20:05:26 []:>--------------------------------------------------------------<
+SkillHub.exe: 00001F8C: 20:05:26 [TUniServerModule]:Server First Init.
+SkillHub.exe: 00001F8C: 20:05:26 [TUniServerModule]:Start Path = C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\
+SkillHub.exe: 00001F8C: 20:05:26 [TUniServerModule]:Debug Mode = ON
+SkillHub.exe: 00001F8C: 20:05:26 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+SkillHub.exe: 00001F8C: 20:05:26 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+SkillHub.exe: 00001F8C: 20:05:27 [TUniServerModule]:HTTP Server Started on Port: 8077
+SkillHub.exe: 00001738: 20:05:47 [HandleFileRequest[127.0.0.1]]:Access denied: C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\css\bootstrap.css.map.
+SkillHub.exe: 00001C24: 20:05:51 [HandleFileRequest[127.0.0.1]]:Access denied: C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\js\bootstrap.js.map.
+SkillHub.exe: 0000204C: 20:11:01 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: KG8jrPZ9n810E5C17C6 ) : Addr: $01261499
+SkillHub.exe: 00000CB0: 20:11:01 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: KG8jrPZ9n810E5C17C6 ) : Addr: $01261499
+SkillHub.exe: 0000200C: 20:11:09 [HandleFileRequest[127.0.0.1]]:Access denied: C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\js\bootstrap.js.map.
+SkillHub.exe: 00001B28: 20:15:51 [HandleFileRequest[127.0.0.1]]:Access denied: C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\js\bootstrap.js.map.
+SkillHub.exe: 00000338: 20:15:52 [HandleFileRequest[127.0.0.1]]:Access denied: C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\css\bootstrap.css.map.
+SkillHub.exe: 00000204: 20:16:07 [HandleFileRequest[127.0.0.1]]:Access denied: C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\css\bootstrap.css.map.
+SkillHub.exe: 00001E54: 20:16:08 [HandleFileRequest[127.0.0.1]]:Access denied: C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\js\bootstrap.js.map.
+SkillHub.exe: 0000090C: 20:22:01 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: mTsFcFHQ2s10E5C1A8D ) : Addr: $01261499
+SkillHub.exe: 000007AC: 20:22:01 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: mTsFcFHQ2s10E5C1A8D ) : Addr: $01261499
+SkillHub.exe: 000013CC: 20:22:12 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: mTsFcFHQ2s10E5C1A8D ) : Addr: $01261499
+SkillHub.exe: 00001D88: 20:22:12 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: mTsFcFHQ2s10E5C1A8D ) : Addr: $01261499
+SkillHub.exe: 000019A8: 20:22:12 [HandleFileRequest[127.0.0.1]]:Access denied: C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\css\bootstrap.css.map.
+SkillHub.exe: 00002034: 20:22:12 [HandleFileRequest[127.0.0.1]]:Access denied: C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\js\bootstrap.js.map.
+SkillHub.exe: 00001DAC: 20:22:13 [HandleFileRequest[127.0.0.1]]:Access denied: C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\css\bootstrap.css.map.
+SkillHub.exe: 00001C2C: 20:22:13 [HandleFileRequest[127.0.0.1]]:Access denied: C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\js\bootstrap.js.map.
+SkillHub.exe: 00000E0C: 20:32:19 []:>--------------------------------------------------------------<
+SkillHub.exe: 00000E0C: 20:32:19 [TUniServerModule]:Server First Init.
+SkillHub.exe: 00000E0C: 20:32:19 [TUniServerModule]:Start Path = C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\
+SkillHub.exe: 00000E0C: 20:32:19 [TUniServerModule]:Debug Mode = ON
+SkillHub.exe: 00000E0C: 20:32:20 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+SkillHub.exe: 00000E0C: 20:32:20 [TUniServerModule]:HTTP Server Started on Port: 8077
+SkillHub.exe: 0000160C: 20:35:19 []:>--------------------------------------------------------------<
+SkillHub.exe: 0000160C: 20:35:19 [TUniServerModule]:Server First Init.
+SkillHub.exe: 0000160C: 20:35:19 [TUniServerModule]:Start Path = C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\
+SkillHub.exe: 0000160C: 20:35:19 [TUniServerModule]:Debug Mode = ON
+SkillHub.exe: 0000160C: 20:35:19 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+SkillHub.exe: 0000160C: 20:35:19 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+SkillHub.exe: 0000160C: 20:35:20 [TUniServerModule]:HTTP Server Started on Port: 8077
+SkillHub.exe: 000018A0: 20:35:37 [HandleFileRequest[127.0.0.1]]:Access denied: C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\css\bootstrap.css.map.
+SkillHub.exe: 00001C48: 20:35:40 [HandleFileRequest[127.0.0.1]]:Access denied: C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\js\bootstrap.js.map.
+SkillHub.exe: 00001EFC: 20:40:39 []:>--------------------------------------------------------------<
+SkillHub.exe: 00001EFC: 20:40:39 [TUniServerModule]:Server First Init.
+SkillHub.exe: 00001EFC: 20:40:39 [TUniServerModule]:Start Path = C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\
+SkillHub.exe: 00001EFC: 20:40:39 [TUniServerModule]:Debug Mode = ON
+SkillHub.exe: 00001EFC: 20:40:39 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+SkillHub.exe: 00001EFC: 20:40:39 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+SkillHub.exe: 00001EFC: 20:40:39 [TUniServerModule]:HTTP Server Started on Port: 8077
+SkillHub.exe: 000009B4: 20:40:57 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: NnRpFUsQOB10E5C1FDC ) : Addr: $01021489
+SkillHub.exe: 00002250: 20:40:58 [HandleFileRequest[127.0.0.1]]:Access denied: C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\css\bootstrap.css.map.
+SkillHub.exe: 00001E5C: 20:41:07 [HandleFileRequest[127.0.0.1]]:Access denied: C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\js\bootstrap.js.map.
+SkillHub.exe: 00000BD0: 20:41:08 [HandleFileRequest[127.0.0.1]]:Access denied: C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\css\bootstrap.css.map.
+SkillHub.exe: 00001FBC: 20:41:09 [HandleFileRequest[127.0.0.1]]:Access denied: C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\js\bootstrap.js.map.
+SkillHub.exe: 00001F60: 20:43:57 []:>--------------------------------------------------------------<
+SkillHub.exe: 00001F60: 20:43:57 [TUniServerModule]:Server First Init.
+SkillHub.exe: 00001F60: 20:43:57 [TUniServerModule]:Start Path = C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\
+SkillHub.exe: 00001F60: 20:43:57 [TUniServerModule]:Debug Mode = ON
+SkillHub.exe: 00001F60: 20:43:57 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+SkillHub.exe: 00001F60: 20:43:57 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+SkillHub.exe: 00001F60: 20:43:57 [TUniServerModule]:HTTP Server Started on Port: 8077
+SkillHub.exe: 00001DB4: 20:45:04 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: KdBrmF8AjC10E5C2161 ) : Addr: $01311489
+SkillHub.exe: 000009B4: 20:45:05 [HandleFileRequest[127.0.0.1]]:Access denied: C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\css\bootstrap.css.map.
+SkillHub.exe: 00002348: 20:45:14 [HandleFileRequest[127.0.0.1]]:Access denied: C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\js\bootstrap.js.map.
+SkillHub.exe: 0000238C: 20:45:14 [HandleFileRequest[127.0.0.1]]:Access denied: C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\css\bootstrap.css.map.
+SkillHub.exe: 00001D90: 20:45:14 [HandleFileRequest[127.0.0.1]]:Access denied: C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\js\bootstrap.js.map.
+SkillHub.exe: 0000124C: 20:45:51 []:>--------------------------------------------------------------<
+SkillHub.exe: 0000124C: 20:45:51 [TUniServerModule]:Server First Init.
+SkillHub.exe: 0000124C: 20:45:51 [TUniServerModule]:Start Path = C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\
+SkillHub.exe: 0000124C: 20:45:51 [TUniServerModule]:Debug Mode = ON
+SkillHub.exe: 0000124C: 20:45:51 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+SkillHub.exe: 0000124C: 20:45:52 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+SkillHub.exe: 0000124C: 20:45:52 [TUniServerModule]:HTTP Server Started on Port: 8077
+SkillHub.exe: 000007B8: 20:46:07 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: Q6XYwlUngH10E5C2281 ) : Addr: $00511489
+SkillHub.exe: 0000225C: 20:47:52 []:>--------------------------------------------------------------<
+SkillHub.exe: 0000225C: 20:47:52 [TUniServerModule]:Server First Init.
+SkillHub.exe: 0000225C: 20:47:52 [TUniServerModule]:Start Path = C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\
+SkillHub.exe: 0000225C: 20:47:53 [TUniServerModule]:Debug Mode = ON
+SkillHub.exe: 0000225C: 20:47:53 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+SkillHub.exe: 0000225C: 20:47:53 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+SkillHub.exe: 0000225C: 20:47:53 [TUniServerModule]:HTTP Server Started on Port: 8077
+SkillHub.exe: 00001998: 20:48:03 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: 5pBAf782xQ10E5C22C8 ) : Addr: $010D1489
+SkillHub.exe: 00000750: 20:50:02 []:>--------------------------------------------------------------<
+SkillHub.exe: 00000750: 20:50:02 [TUniServerModule]:Server First Init.
+SkillHub.exe: 00000750: 20:50:02 [TUniServerModule]:Start Path = C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\
+SkillHub.exe: 00000750: 20:50:02 [TUniServerModule]:Debug Mode = ON
+SkillHub.exe: 00000750: 20:50:02 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+SkillHub.exe: 00000750: 20:50:02 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+SkillHub.exe: 00000750: 20:50:02 [TUniServerModule]:HTTP Server Started on Port: 8077
+SkillHub.exe: 00002198: 20:50:27 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: 7ft8GOdwDA10E5C234E ) : Addr: $00F41489
+SkillHub.exe: 000010CC: 20:51:31 []:>--------------------------------------------------------------<
+SkillHub.exe: 000010CC: 20:51:31 [TUniServerModule]:Server First Init.
+SkillHub.exe: 000010CC: 20:51:31 [TUniServerModule]:Start Path = C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\
+SkillHub.exe: 000010CC: 20:51:31 [TUniServerModule]:Debug Mode = ON
+SkillHub.exe: 000010CC: 20:51:31 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+SkillHub.exe: 000010CC: 20:51:32 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+SkillHub.exe: 000010CC: 20:51:32 [TUniServerModule]:HTTP Server Started on Port: 8077
+SkillHub.exe: 0000121C: 20:51:45 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: dNmWDn5M1110E5C23F5 ) : Addr: $00C11489
+SkillHub.exe: 000018D8: 20:54:33 []:>--------------------------------------------------------------<
+SkillHub.exe: 000018D8: 20:54:33 [TUniServerModule]:Server First Init.
+SkillHub.exe: 000018D8: 20:54:33 [TUniServerModule]:Start Path = C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\
+SkillHub.exe: 000018D8: 20:54:33 [TUniServerModule]:Debug Mode = ON
+SkillHub.exe: 000018D8: 20:54:33 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+SkillHub.exe: 000018D8: 20:54:33 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+SkillHub.exe: 000018D8: 20:54:33 [TUniServerModule]:HTTP Server Started on Port: 8077
+SkillHub.exe: 00001D7C: 20:55:14 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: LSx947YLp910E5C2450 ) : Addr: $00F71489
+SkillHub.exe: 000018E8: 20:56:09 []:>--------------------------------------------------------------<
+SkillHub.exe: 000018E8: 20:56:09 [TUniServerModule]:Server First Init.
+SkillHub.exe: 000018E8: 20:56:09 [TUniServerModule]:Start Path = C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\
+SkillHub.exe: 000018E8: 20:56:10 [TUniServerModule]:Debug Mode = ON
+SkillHub.exe: 000018E8: 20:56:10 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+SkillHub.exe: 000018E8: 20:56:10 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+SkillHub.exe: 000018E8: 20:56:10 [TUniServerModule]:HTTP Server Started on Port: 8077
+SkillHub.exe: 00000880: 20:56:53 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: RPlHoB7W3z10E5C2542 ) : Addr: $012B1489
+SkillHub.exe: 00001D98: 20:57:48 []:>--------------------------------------------------------------<
+SkillHub.exe: 00001D98: 20:57:48 [TUniServerModule]:Server First Init.
+SkillHub.exe: 00001D98: 20:57:48 [TUniServerModule]:Start Path = C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\
+SkillHub.exe: 00001D98: 20:57:49 [TUniServerModule]:Debug Mode = ON
+SkillHub.exe: 00001D98: 20:57:49 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+SkillHub.exe: 00001D98: 20:57:49 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+SkillHub.exe: 00001D98: 20:57:49 [TUniServerModule]:HTTP Server Started on Port: 8077
+SkillHub.exe: 000021AC: 20:58:01 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: lGu7Msywyq10E5C25B4 ) : Addr: $00E21489
+SkillHub.exe: 00000FD8: 21:00:43 []:>--------------------------------------------------------------<
+SkillHub.exe: 00000FD8: 21:00:43 [TUniServerModule]:Server First Init.
+SkillHub.exe: 00000FD8: 21:00:56 [TUniServerModule]:Start Path = C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\
+SkillHub.exe: 00000FD8: 21:00:57 [TUniServerModule]:Debug Mode = ON
+SkillHub.exe: 00000FD8: 21:00:58 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+SkillHub.exe: 00000FD8: 21:01:00 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+SkillHub.exe: 00000FD8: 21:01:01 [TUniServerModule]:HTTP Server Started on Port: 8077
+SkillHub.exe: 000026A4: 21:01:46 []:>--------------------------------------------------------------<
+SkillHub.exe: 000026A4: 21:01:46 [TUniServerModule]:Server First Init.
+SkillHub.exe: 000026A4: 21:01:47 [TUniServerModule]:Start Path = C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\
+SkillHub.exe: 000026A4: 21:01:47 [TUniServerModule]:Debug Mode = ON
+SkillHub.exe: 000026A4: 21:01:47 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+SkillHub.exe: 000026A4: 21:01:47 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+SkillHub.exe: 000026A4: 21:01:48 [TUniServerModule]:HTTP Server Started on Port: 8077
+SkillHub.exe: 00000FE0: 21:02:55 []:>--------------------------------------------------------------<
+SkillHub.exe: 00000FE0: 21:02:55 [TUniServerModule]:Server First Init.
+SkillHub.exe: 00000FE0: 21:02:55 [TUniServerModule]:Start Path = C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\
+SkillHub.exe: 00000FE0: 21:02:55 [TUniServerModule]:Debug Mode = ON
+SkillHub.exe: 00000FE0: 21:02:56 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+SkillHub.exe: 00000FE0: 21:02:56 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+SkillHub.exe: 00000FE0: 21:02:56 [TUniServerModule]:HTTP Server Started on Port: 8077
+SkillHub.exe: 00000F30: 21:03:01 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: zgXFn3zYJo10E5C2709 ) : Addr: $00D21489
+SkillHub.exe: 000007AC: 21:04:13 []:>--------------------------------------------------------------<
+SkillHub.exe: 000007AC: 21:04:13 [TUniServerModule]:Server First Init.
+SkillHub.exe: 000007AC: 21:04:13 [TUniServerModule]:Start Path = C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\
+SkillHub.exe: 000007AC: 21:04:13 [TUniServerModule]:Debug Mode = ON
+SkillHub.exe: 000007AC: 21:04:13 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+SkillHub.exe: 000007AC: 21:04:14 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+SkillHub.exe: 000007AC: 21:04:14 [TUniServerModule]:HTTP Server Started on Port: 8077
+SkillHub.exe: 00001ED8: 21:06:06 []:>--------------------------------------------------------------<
+SkillHub.exe: 00001ED8: 21:06:06 [TUniServerModule]:Server First Init.
+SkillHub.exe: 00001ED8: 21:06:06 [TUniServerModule]:Start Path = C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\
+SkillHub.exe: 00001ED8: 21:06:06 [TUniServerModule]:Debug Mode = ON
+SkillHub.exe: 00001ED8: 21:06:07 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+SkillHub.exe: 00001ED8: 21:06:07 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+SkillHub.exe: 00001ED8: 21:06:07 [TUniServerModule]:HTTP Server Started on Port: 8077
+SkillHub.exe: 00002734: 21:06:16 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: 1aCHsDUyih10E5C27B8 ) : Addr: $00961489
+SkillHub.exe: 00002194: 21:07:22 []:>--------------------------------------------------------------<
+SkillHub.exe: 00002194: 21:07:22 [TUniServerModule]:Server First Init.
+SkillHub.exe: 00002194: 21:07:22 [TUniServerModule]:Start Path = C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\
+SkillHub.exe: 00002194: 21:07:22 [TUniServerModule]:Debug Mode = ON
+SkillHub.exe: 00002194: 21:07:22 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+SkillHub.exe: 00002194: 21:07:22 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+SkillHub.exe: 00002194: 21:07:23 [TUniServerModule]:HTTP Server Started on Port: 8077
+SkillHub.exe: 000024C8: 21:10:02 []:>--------------------------------------------------------------<
+SkillHub.exe: 000024C8: 21:10:02 [TUniServerModule]:Server First Init.
+SkillHub.exe: 000024C8: 21:10:02 [TUniServerModule]:Start Path = C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\
+SkillHub.exe: 000024C8: 21:10:02 [TUniServerModule]:Debug Mode = ON
+SkillHub.exe: 000024C8: 21:10:02 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+SkillHub.exe: 000024C8: 21:10:03 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+SkillHub.exe: 000024C8: 21:10:03 [TUniServerModule]:HTTP Server Started on Port: 8077

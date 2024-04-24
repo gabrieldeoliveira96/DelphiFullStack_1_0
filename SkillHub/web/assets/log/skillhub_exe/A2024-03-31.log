@@ -1,0 +1,23 @@
+SkillHub.exe: 00001964: 19:45:47 []:>--------------------------------------------------------------<
+SkillHub.exe: 00001964: 19:45:47 [TUniServerModule]:Server First Init.
+SkillHub.exe: 00001964: 19:45:47 [TUniServerModule]:Start Path = C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\
+SkillHub.exe: 00001964: 19:45:47 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+SkillHub.exe: 00001964: 19:45:48 [TUniServerModule]:HTTP Server Started on Port: 8077
+SkillHub.exe: 00000B3C: 19:48:13 [127.0.0.1]:Exception raised while destroying session: Access violation at address 0029C6CD in module 'SkillHub.exe'. Read of address 00000004
+SkillHub.exe: 00000B3C: 19:48:13 [127.0.0.1]:EAccessViolation : Access violation at address 0029C6CD in module 'SkillHub.exe'. Read of address 00000004 : Addr: $0029C6CD
+SkillHub.exe: 00001964: 19:48:19 [TUniServerModule]:Shutting Down Server.
+SkillHub.exe: 00001964: 19:48:19 [TUniServerModule]:Stopping HTTP Server.
+SkillHub.exe: 00001964: 19:48:20 [TUniServerModule]:HTTP Server Stopped.
+SkillHub.exe: 00001964: 19:48:20 [TUniGUISessionManager]:Terminating Session manager.
+SkillHub.exe: 00001964: 19:48:20 [TUniGUISessionManager]:Stopping Cache Eraser...
+SkillHub.exe: 00001964: 19:48:20 [TUniGUISessionManager]:Cache Eraser Stopped.
+SkillHub.exe: 00001964: 19:48:20 [127.0.0.1]:Exception raised while destroying session: Access violation at address 0029C6CD in module 'SkillHub.exe'. Read of address 00000004
+SkillHub.exe: 00001964: 19:48:20 [127.0.0.1]:EAccessViolation : Access violation at address 0029C6CD in module 'SkillHub.exe'. Read of address 00000004 : Addr: $0029C6CD
+SkillHub.exe: 00001964: 19:48:20 [TUniGUISessionManager]:Destroying Worker Threads.
+SkillHub.exe: 00001964: 19:48:20 [TUniGUISessionManager]:Session manager terminated.
+SkillHub.exe: 00001964: 19:48:20 [TUniWebSocketStack]:Terminating...
+SkillHub.exe: 00001964: 19:48:20 [TUniGUIMessageQ]:Terminated.
+SkillHub.exe: 00001964: 19:48:20 [TUniWebSocketStack]:Terminated.
+SkillHub.exe: 00001964: 19:48:20 [TUniServerModule]:Server Shutdown Completed.
+SkillHub.exe: 00001964: 19:48:20 []:<-------------------------------------------------------------->
+SkillHub.exe: 00001964: 19:48:20 [Terminated]:Exit Code: 0

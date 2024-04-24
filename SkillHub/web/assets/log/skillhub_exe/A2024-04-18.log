@@ -1,0 +1,18 @@
+SkillHub.exe: 000010C0: 22:40:21 []:>--------------------------------------------------------------<
+SkillHub.exe: 000010C0: 22:40:21 [TUniServerModule]:Server First Init.
+SkillHub.exe: 000010C0: 22:40:21 [TUniServerModule]:Start Path = C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\
+SkillHub.exe: 000010C0: 22:40:21 [TUniServerModule]:Debug Mode = ON
+SkillHub.exe: 000010C0: 22:40:22 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+SkillHub.exe: 000010C0: 22:40:22 [TUniServerModule]:HTTP Server Started on Port: 8077
+SkillHub.exe: 00001AAC: 22:41:07 [127.0.0.1]:Exception : Form Owner must be UniApplication : Addr: $0130F2E9
+SkillHub.exe: 00001108: 22:41:49 []:>--------------------------------------------------------------<
+SkillHub.exe: 00001108: 22:41:49 [TUniServerModule]:Server First Init.
+SkillHub.exe: 00001108: 22:41:49 [TUniServerModule]:Start Path = C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\
+SkillHub.exe: 00001108: 22:41:49 [TUniServerModule]:Debug Mode = ON
+SkillHub.exe: 00001108: 22:41:49 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+SkillHub.exe: 00001108: 22:41:50 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+SkillHub.exe: 00001108: 22:41:50 [TUniServerModule]:HTTP Server Started on Port: 8077
+SkillHub.exe: 00001E28: 22:41:53 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: aogH3lXvWa10E9C580F ) : Addr: $00453BD1
+SkillHub.exe: 0000246C: 22:43:46 [127.0.0.1]:EInvalidPointer : Invalid pointer operation : Addr: $0001A411
+SkillHub.exe: 000012D0: 22:43:46 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: WiKWuhj3G810E9C586F ) : Addr: $00453BD1
+SkillHub.exe: 00000F60: 22:43:47 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: WiKWuhj3G810E9C586F ) : Addr: $00453BD1

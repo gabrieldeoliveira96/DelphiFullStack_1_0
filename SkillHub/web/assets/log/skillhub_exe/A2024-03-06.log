@@ -1,0 +1,14 @@
+SkillHub.exe: 000025D4: 20:56:09 [TUniServerModule]:Shutting Down Server.
+SkillHub.exe: 000025D4: 20:56:09 [TUniServerModule]:Stopping HTTP Server.
+SkillHub.exe: 000025D4: 20:56:13 [TUniServerModule]:HTTP Server Stopped.
+SkillHub.exe: 000025D4: 20:56:13 [TUniGUISessionManager]:Terminating Session manager.
+SkillHub.exe: 000025D4: 20:56:13 [TUniGUISessionManager]:Stopping Cache Eraser...
+SkillHub.exe: 000025D4: 20:56:14 [TUniGUISessionManager]:Cache Eraser Stopped.
+SkillHub.exe: 000025D4: 20:56:14 [TUniGUISessionManager]:Destroying Worker Threads.
+SkillHub.exe: 000025D4: 20:56:14 [TUniGUISessionManager]:Session manager terminated.
+SkillHub.exe: 000025D4: 20:56:14 [TUniWebSocketStack]:Terminating...
+SkillHub.exe: 000025D4: 20:56:14 [TUniGUIMessageQ]:Terminated.
+SkillHub.exe: 000025D4: 20:56:14 [TUniWebSocketStack]:Terminated.
+SkillHub.exe: 000025D4: 20:56:14 [TUniServerModule]:Server Shutdown Completed.
+SkillHub.exe: 000025D4: 20:56:14 []:<-------------------------------------------------------------->
+SkillHub.exe: 000025D4: 20:56:14 [Terminated]:Exit Code: 0

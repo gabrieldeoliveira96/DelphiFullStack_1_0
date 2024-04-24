@@ -1,0 +1,105 @@
+SkillHub.exe: 00004140: 21:27:20 [127.0.0.1]:Failed Sequence Recovery: SeqId: 7, Event: click
+SkillHub.exe: 00004140: 21:27:22 [127.0.0.1]:Failed Sequence Recovery : TDiff:2016, Event: click, Expected: 0, Received: 7, [pkYHZWeclv10E77A537]
+SkillHub.exe: 00004140: 21:27:22 [127.0.0.1]:Failed Sequence Reset to: 0
+SkillHub.exe: 00004140: 21:27:23 [127.0.0.1]:Processed: Id: 7, Evt: click, [pkYHZWeclv10E77A537]
+SkillHub.exe: 00001774: 21:27:30 [127.0.0.1]:Failed Sequence Recovery: SeqId: 7, Event: click
+SkillHub.exe: 00001774: 21:27:32 [127.0.0.1]:Failed Sequence Recovery : TDiff:2031, Event: click, Expected: 0, Received: 7, [u1MAF2emmO10E77A542]
+SkillHub.exe: 00001774: 21:27:32 [127.0.0.1]:Failed Sequence Reset to: 0
+SkillHub.exe: 00001774: 21:27:32 [127.0.0.1]:Processed: Id: 7, Evt: click, [u1MAF2emmO10E77A542]
+SkillHub.exe: 00004988: 21:27:32 [127.0.0.1]:Failed Sequence Recovery: SeqId: 7, Event: click
+SkillHub.exe: 00004988: 21:27:34 [127.0.0.1]:Failed Sequence Recovery : TDiff:2015, Event: click, Expected: 0, Received: 7, [GIsNKuBRAc10E77A545]
+SkillHub.exe: 00004988: 21:27:42 [127.0.0.1]:Failed Sequence Reset to: 0
+SkillHub.exe: 00004988: 21:27:42 [127.0.0.1]:Processed: Id: 7, Evt: click, [GIsNKuBRAc10E77A545]
+SkillHub.exe: 000048F0: 21:27:43 [127.0.0.1]:Failed Sequence Recovery: SeqId: 7, Event: click
+SkillHub.exe: 000048F0: 21:27:45 [127.0.0.1]:Failed Sequence Recovery : TDiff:2047, Event: click, Expected: 0, Received: 7, [3X5zrZuFiU10E77A551]
+SkillHub.exe: 000048F0: 21:27:45 [127.0.0.1]:Failed Sequence Reset to: 0
+SkillHub.exe: 000048F0: 21:27:45 [127.0.0.1]:Processed: Id: 7, Evt: click, [3X5zrZuFiU10E77A551]
+SkillHub.exe: 00002DCC: 21:27:45 [127.0.0.1]:Failed Sequence Recovery: SeqId: 7, Event: click
+SkillHub.exe: 00002DCC: 21:27:47 [127.0.0.1]:Failed Sequence Recovery : TDiff:2063, Event: click, Expected: 0, Received: 7, [9fcWIVQWWa10E77A554]
+SkillHub.exe: 00002DCC: 21:27:47 [127.0.0.1]:Failed Sequence Reset to: 0
+SkillHub.exe: 00002DCC: 21:27:47 [127.0.0.1]:Processed: Id: 7, Evt: click, [9fcWIVQWWa10E77A554]
+SkillHub.exe: 00004070: 21:27:48 [127.0.0.1]:Failed Sequence Recovery: SeqId: 7, Event: click
+SkillHub.exe: 00004070: 21:27:50 [127.0.0.1]:Failed Sequence Recovery : TDiff:2031, Event: click, Expected: 0, Received: 7, [fdss9JCPKp10E77A557]
+SkillHub.exe: 00004070: 21:27:50 [127.0.0.1]:Failed Sequence Reset to: 0
+SkillHub.exe: 00004070: 21:27:50 [127.0.0.1]:Processed: Id: 7, Evt: click, [fdss9JCPKp10E77A557]
+SkillHub.exe: 00004468: 21:27:50 [127.0.0.1]:Failed Sequence Recovery: SeqId: 7, Event: click
+SkillHub.exe: 00004468: 21:27:52 [127.0.0.1]:Failed Sequence Recovery : TDiff:2016, Event: click, Expected: 0, Received: 7, [5Hgv74RmsJ10E77A559]
+SkillHub.exe: 00004468: 21:27:52 [127.0.0.1]:Failed Sequence Reset to: 0
+SkillHub.exe: 00004468: 21:27:52 [127.0.0.1]:Processed: Id: 7, Evt: click, [5Hgv74RmsJ10E77A559]
+SkillHub.exe: 0000317C: 21:27:53 [127.0.0.1]:Failed Sequence Recovery: SeqId: 7, Event: click
+SkillHub.exe: 0000317C: 21:27:55 [127.0.0.1]:Failed Sequence Recovery : TDiff:2031, Event: click, Expected: 0, Received: 7, [UnAWmRig1H10E77A55D]
+SkillHub.exe: 0000317C: 21:27:55 [127.0.0.1]:Failed Sequence Reset to: 0
+SkillHub.exe: 0000317C: 21:27:55 [127.0.0.1]:Processed: Id: 7, Evt: click, [UnAWmRig1H10E77A55D]
+SkillHub.exe: 000038AC: 21:27:58 [127.0.0.1]:Failed Sequence Recovery: SeqId: 7, Event: click
+SkillHub.exe: 000038AC: 21:28:00 [127.0.0.1]:Failed Sequence Recovery : TDiff:2046, Event: click, Expected: 0, Received: 7, [rsv4gMJCD810E77A563]
+SkillHub.exe: 000038AC: 21:28:00 [127.0.0.1]:Failed Sequence Reset to: 0
+SkillHub.exe: 000038AC: 21:28:00 [127.0.0.1]:Processed: Id: 7, Evt: click, [rsv4gMJCD810E77A563]
+SkillHub.exe: 00000A48: 21:28:01 [127.0.0.1]:Failed Sequence Recovery: SeqId: 7, Event: click
+SkillHub.exe: 00000A48: 21:28:03 [127.0.0.1]:Failed Sequence Recovery : TDiff:2047, Event: click, Expected: 0, Received: 7, [F5wFRJy3nn10E77A566]
+SkillHub.exe: 00000A48: 21:28:03 [127.0.0.1]:Failed Sequence Reset to: 0
+SkillHub.exe: 00000A48: 21:28:03 [127.0.0.1]:Processed: Id: 7, Evt: click, [F5wFRJy3nn10E77A566]
+SkillHub.exe: 00002D8C: 21:28:03 [127.0.0.1]:Failed Sequence Recovery: SeqId: 7, Event: click
+SkillHub.exe: 00002D8C: 21:28:05 [127.0.0.1]:Failed Sequence Recovery : TDiff:2016, Event: click, Expected: 0, Received: 7, [Y8WtUEckyg10E77A568]
+SkillHub.exe: 00002D8C: 21:28:05 [127.0.0.1]:Failed Sequence Reset to: 0
+SkillHub.exe: 00002D8C: 21:28:05 [127.0.0.1]:Processed: Id: 7, Evt: click, [Y8WtUEckyg10E77A568]
+SkillHub.exe: 000040D8: 21:28:06 [127.0.0.1]:Failed Sequence Recovery: SeqId: 7, Event: click
+SkillHub.exe: 000040D8: 21:28:08 [127.0.0.1]:Failed Sequence Recovery : TDiff:2015, Event: click, Expected: 0, Received: 7, [AlYEd24g1i10E77A56B]
+SkillHub.exe: 000040D8: 21:28:08 [127.0.0.1]:Failed Sequence Reset to: 0
+SkillHub.exe: 000040D8: 21:28:08 [127.0.0.1]:Processed: Id: 7, Evt: click, [AlYEd24g1i10E77A56B]
+SkillHub.exe: 00000DFC: 21:28:09 [127.0.0.1]:Failed Sequence Recovery: SeqId: 7, Event: click
+SkillHub.exe: 00000DFC: 21:28:11 [127.0.0.1]:Failed Sequence Recovery : TDiff:2015, Event: click, Expected: 0, Received: 7, [JhokFNPgMI10E77A56F]
+SkillHub.exe: 00000DFC: 21:28:11 [127.0.0.1]:Failed Sequence Reset to: 0
+SkillHub.exe: 00000DFC: 21:28:11 [127.0.0.1]:Processed: Id: 7, Evt: click, [JhokFNPgMI10E77A56F]
+SkillHub.exe: 0000212C: 21:28:14 [127.0.0.1]:Failed Sequence Recovery: SeqId: 7, Event: click
+SkillHub.exe: 0000212C: 21:28:16 [127.0.0.1]:Failed Sequence Recovery : TDiff:2031, Event: click, Expected: 0, Received: 7, [nTFuC1whzQ10E77A575]
+SkillHub.exe: 0000212C: 21:28:16 [127.0.0.1]:Failed Sequence Reset to: 0
+SkillHub.exe: 0000212C: 21:28:16 [127.0.0.1]:Processed: Id: 7, Evt: click, [nTFuC1whzQ10E77A575]
+SkillHub.exe: 0000455C: 21:28:19 [127.0.0.1]:Failed Sequence Recovery: SeqId: 7, Event: click
+SkillHub.exe: 0000455C: 21:28:21 [127.0.0.1]:Failed Sequence Recovery : TDiff:2016, Event: click, Expected: 0, Received: 7, [d7DpHUUezT10E77A57C]
+SkillHub.exe: 0000455C: 21:28:21 [127.0.0.1]:Failed Sequence Reset to: 0
+SkillHub.exe: 0000455C: 21:28:22 [127.0.0.1]:Processed: Id: 7, Evt: click, [d7DpHUUezT10E77A57C]
+SkillHub.exe: 00001B24: 21:28:22 [127.0.0.1]:Failed Sequence Recovery: SeqId: 7, Event: click
+SkillHub.exe: 00001B24: 21:28:24 [127.0.0.1]:Failed Sequence Recovery : TDiff:2047, Event: click, Expected: 0, Received: 7, [UBh8yHJJMZ10E77A57E]
+SkillHub.exe: 00001B24: 21:28:24 [127.0.0.1]:Failed Sequence Reset to: 0
+SkillHub.exe: 00001B24: 21:28:24 [127.0.0.1]:Processed: Id: 7, Evt: click, [UBh8yHJJMZ10E77A57E]
+SkillHub.exe: 00003CAC: 21:28:24 [127.0.0.1]:Failed Sequence Recovery: SeqId: 7, Event: click
+SkillHub.exe: 00003CAC: 21:28:26 [127.0.0.1]:Failed Sequence Recovery : TDiff:2032, Event: click, Expected: 0, Received: 7, [ezU7qS9zkU10E77A581]
+SkillHub.exe: 00003CAC: 21:28:26 [127.0.0.1]:Failed Sequence Reset to: 0
+SkillHub.exe: 00003CAC: 21:28:26 [127.0.0.1]:Processed: Id: 7, Evt: click, [ezU7qS9zkU10E77A581]
+SkillHub.exe: 00004968: 21:28:27 [127.0.0.1]:Failed Sequence Recovery: SeqId: 7, Event: click
+SkillHub.exe: 00004968: 21:28:29 [127.0.0.1]:Failed Sequence Recovery : TDiff:2016, Event: click, Expected: 0, Received: 7, [BQ9dQfgfk510E77A584]
+SkillHub.exe: 00004968: 21:28:29 [127.0.0.1]:Failed Sequence Reset to: 0
+SkillHub.exe: 00004968: 21:28:29 [127.0.0.1]:Processed: Id: 7, Evt: click, [BQ9dQfgfk510E77A584]
+SkillHub.exe: 00003E7C: 21:28:30 [127.0.0.1]:Failed Sequence Recovery: SeqId: 7, Event: click
+SkillHub.exe: 00003E7C: 21:28:32 [127.0.0.1]:Failed Sequence Recovery : TDiff:2031, Event: click, Expected: 0, Received: 7, [YjbufMa8Vj10E77A587]
+SkillHub.exe: 00003E7C: 21:28:32 [127.0.0.1]:Failed Sequence Reset to: 0
+SkillHub.exe: 00003E7C: 21:28:32 [127.0.0.1]:Processed: Id: 7, Evt: click, [YjbufMa8Vj10E77A587]
+SkillHub.exe: 000017FC: 21:28:43 [127.0.0.1]:Failed Sequence Recovery: SeqId: 7, Event: click
+SkillHub.exe: 000017FC: 21:28:49 [127.0.0.1]:Failed Sequence Recovery : TDiff:6594, Event: click, Expected: 0, Received: 7, [pbypml45i910E77A596]
+SkillHub.exe: 000017FC: 21:28:49 [127.0.0.1]:Failed Sequence Reset to: 0
+SkillHub.exe: 000017FC: 21:28:49 [127.0.0.1]:Processed: Id: 7, Evt: click, [pbypml45i910E77A596]
+SkillHub.exe: 00003BE8: 21:52:23 [127.0.0.1]:Failed Sequence Recovery: SeqId: 6, Event: click
+SkillHub.exe: 00003BE8: 21:52:23 [127.0.0.1]:Sequence sent from cache:  SeqId: 6
+SkillHub.exe: 00003BE8: 21:52:23 [127.0.0.1]:Processed: Id: 6, Evt: click, [RqlB57DcVW10E77AB78]
+SkillHub.exe: 0000430C: 21:56:12 [127.0.0.1]:Failed Sequence Recovery: SeqId: 6, Event: click
+SkillHub.exe: 00002A80: 22:00:34 [127.0.0.1]:Failed Sequence Recovery: SeqId: 6, Event: click
+SkillHub.exe: 00002A80: 22:00:34 [127.0.0.1]:Sequence sent from cache:  SeqId: 6
+SkillHub.exe: 00002A80: 22:00:34 [127.0.0.1]:Processed: Id: 6, Evt: click, [JutOOXlkZB10E77ADAA]
+SkillHub.exe: 00004134: 22:00:35 [127.0.0.1]:Failed Sequence Recovery: SeqId: 6, Event: click
+SkillHub.exe: 00004134: 22:00:35 [127.0.0.1]:Sequence sent from cache:  SeqId: 6
+SkillHub.exe: 00004134: 22:00:35 [127.0.0.1]:Processed: Id: 6, Evt: click, [JutOOXlkZB10E77ADAA]
+SkillHub.exe: 000038D0: 22:02:44 [127.0.0.1]:Failed Sequence Recovery: SeqId: 6, Event: click
+SkillHub.exe: 000038D0: 22:02:48 [127.0.0.1]:Sequence sent from cache:  SeqId: 6
+SkillHub.exe: 000038D0: 22:02:48 [127.0.0.1]:Processed: Id: 6, Evt: click, [bnQPxTU9hv10E77AE7C]
+SkillHub.exe: 00004884: 22:06:33 [127.0.0.1]:Failed Sequence Recovery: SeqId: 6, Event: click
+SkillHub.exe: 00004884: 22:06:33 [127.0.0.1]:Sequence sent from cache:  SeqId: 6
+SkillHub.exe: 00004884: 22:06:33 [127.0.0.1]:Processed: Id: 6, Evt: click, [YREIRVreoE10E77AF53]
+SkillHub.exe: 00004218: 22:06:33 [127.0.0.1]:Failed Sequence Recovery: SeqId: 6, Event: click
+SkillHub.exe: 00004218: 22:06:33 [127.0.0.1]:Sequence sent from cache:  SeqId: 6
+SkillHub.exe: 00004218: 22:06:33 [127.0.0.1]:Processed: Id: 6, Evt: click, [YREIRVreoE10E77AF53]
+SkillHub.exe: 00004B48: 22:12:50 [127.0.0.1]:Failed Sequence Recovery: SeqId: 6, Event: click
+SkillHub.exe: 00004B48: 22:12:50 [127.0.0.1]:Sequence sent from cache:  SeqId: 6
+SkillHub.exe: 00004B48: 22:12:50 [127.0.0.1]:Processed: Id: 6, Evt: click, [VJExLoaQg310E77B0F9]
+SkillHub.exe: 000039E4: 22:12:57 [127.0.0.1]:Failed Sequence Recovery: SeqId: 6, Event: click
+SkillHub.exe: 000039E4: 22:12:57 [127.0.0.1]:Sequence sent from cache:  SeqId: 6
+SkillHub.exe: 000039E4: 22:12:57 [127.0.0.1]:Processed: Id: 6, Evt: click, [VJExLoaQg310E77B0F9]
