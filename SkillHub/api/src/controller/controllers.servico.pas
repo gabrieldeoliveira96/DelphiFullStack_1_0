@@ -13,7 +13,7 @@ procedure GetServicoUsuario(Req: THorseRequest; Res: THorseResponse);
 implementation
 
 uses
-  System.SysUtils;
+  System.SysUtils, StrUtils;
 
 procedure Servico;
 begin
@@ -54,14 +54,19 @@ begin
     Log('Listando servico');
     LdmServico := TDmServico.Create(nil);
     try
-      if req.Headers.ContainsKey('categoria') then
-        Res.Send<TJSONArray>(
-          LdmServico.GetServicoCategoria(req.Headers.Items['categoria'].ToInteger))
-      else
-        if req.Headers.ContainsKey('profissao') then
-          Res.Send<TJSONArray>(LdmServico.GetServicoProfissao(req.Headers.Items['profissao'].ToInteger))
+      var header := req.Headers.Content;
+      //Pega o ultimo parametro, que é o informado pelo client;
+      var parametro :=  Copy(header[pred(header.count)],0,pos('=',header[pred(header.count)])-1);
+
+      Case AnsiIndexStr(parametro , ['categoria', 'profissao', 'descricaoServico']) of
+        0: Res.Send<TJSONArray>(LdmServico.GetServicoCategoria(req.Headers.Items['categoria'].ToInteger));
+        1: Res.Send<TJSONArray>(LdmServico.GetServicoProfissao(req.Headers.Items['profissao'].ToInteger));
+        2: Res.Send<TJSONArray>(LdmServico.GetServico(req.Headers.Items['descricaoServico']));
         else
-         Res.Send<TJSONArray>(LdmServico.GetServico);
+          Res.Send<TJSONArray>(LdmServico.GetServico);
+      End;
+
+
     finally
       Res.Status(200);
       freeAndNil(LdmServico);
