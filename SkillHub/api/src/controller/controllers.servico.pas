@@ -54,14 +54,22 @@ begin
     Log('Listando servico');
     LdmServico := TDmServico.Create(nil);
     try
-      var header := req.Headers.Content;
-      //Pega o ultimo parametro, que é o informado pelo client;
-      var parametro :=  Copy(header[pred(header.count)],0,pos('=',header[pred(header.count)])-1);
+      var parametro :='';
 
-      Case AnsiIndexStr(parametro , ['categoria', 'profissao', 'descricaoServico']) of
-        0: Res.Send<TJSONArray>(LdmServico.GetServicoCategoria(req.Headers.Items['categoria'].ToInteger));
-        1: Res.Send<TJSONArray>(LdmServico.GetServicoProfissao(req.Headers.Items['profissao'].ToInteger));
-        2: Res.Send<TJSONArray>(LdmServico.GetServico(req.Headers.Items['descricaoServico']));
+      if req.Headers.ContainsKey('categoria') then
+         parametro := 'categoria';
+      if req.Headers.ContainsKey('profissao') then
+         parametro := 'profissao';
+      if req.Headers.ContainsKey('descricaoServico') then
+         parametro := 'descricaoServico';
+      if req.Headers.ContainsKey('subcategoria') then
+         parametro := 'subcategoria';
+
+      Case AnsiIndexStr(parametro , ['categoria', 'profissao', 'descricaoServico','subcategoria']) of
+        0: Res.Send<TJSONArray>(LdmServico.GetServicoCategoria(req.Headers.Items[parametro].ToInteger));
+        1: Res.Send<TJSONArray>(LdmServico.GetServicoProfissao(req.Headers.Items[parametro].ToInteger));
+        2: Res.Send<TJSONArray>(LdmServico.GetServico(req.Headers.Items[parametro]));
+        3: Res.Send<TJSONArray>(LdmServico.GetServicoSubCategoria(req.Headers.Items[parametro].ToInteger));
         else
           Res.Send<TJSONArray>(LdmServico.GetServico);
       End;

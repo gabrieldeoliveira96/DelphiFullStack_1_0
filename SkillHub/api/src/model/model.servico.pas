@@ -38,6 +38,7 @@ type
     function GetServico(AcodServico: integer): TJSONObject; overload;
     function GetServico(ADescricaoServico: string): TJSONArray; overload;
     function GetServicoCategoria(AcodCategoria: integer): TJSONArray;
+    function GetServicoSubCategoria(AcodSubCategoriaCategoria: integer): TJSONArray;
     function GetServicoUsuario(AcodUsuario: integer): TJSONArray;
     function GetServicoProfissao(AcodProfissao: integer): TJSONArray;
   end;
@@ -108,6 +109,18 @@ begin
   Log('Retorno: ' + Result.ToString);
 end;
 
+
+function TDmServico.GetServicoSubCategoria(AcodSubCategoriaCategoria: integer): TJSONArray;
+begin
+  qryGetServico.MacroByName('FILTER').Clear;
+  qryGetServico.MacroByName('FILTER').AsRaw := 'where  S.SUBCATEGORIA = ' + inttostr(AcodSubCategoriaCategoria);
+  qryGetServico.Open;
+  Result := qryGetServico.ToJSONArray;
+
+  qryGetServico.Close;
+
+  Log('Retorno: ' + Result.ToString);
+end;
 
 function TDmServico.GetServicoUsuario(AcodUsuario: integer): TJSONArray;
 begin
