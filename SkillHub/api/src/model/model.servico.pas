@@ -36,7 +36,9 @@ type
     function PostServico(Ajson: TJSONObject): TJSONObject;
     function GetServico: TJSONArray; overload;
     function GetServico(AcodServico: integer): TJSONObject; overload;
+    function GetServico(ADescricaoServico: string): TJSONArray; overload;
     function GetServicoCategoria(AcodCategoria: integer): TJSONArray;
+    function GetServicoSubCategoria(AcodSubCategoriaCategoria: integer): TJSONArray;
     function GetServicoUsuario(AcodUsuario: integer): TJSONArray;
     function GetServicoProfissao(AcodProfissao: integer): TJSONArray;
   end;
@@ -71,10 +73,47 @@ begin
   Log('Retorno: ' + Result.ToString);
 end;
 
+function TDmServico.GetServico(ADescricaoServico: string): TJSONArray;
+begin
+  qryGetServico.MacroByName('FILTER').Clear;
+  qryGetServico.MacroByName('FILTER').AsRaw := ' where S.DESCRICAO like  '+ QuotedStr('%'+ADescricaoServico+'%')+'  ';
+  qryGetServico.Open;
+  Result := qryGetServico.ToJSONArray;
+
+  qryGetServico.Close;
+
+  Log('Retorno: ' + Result.ToString);
+end;
+
 function TDmServico.GetServicoCategoria(AcodCategoria: integer): TJSONArray;
 begin
   qryGetServico.MacroByName('FILTER').Clear;
   qryGetServico.MacroByName('FILTER').AsRaw := 'where s.categoria = ' + inttostr(AcodCategoria);
+  qryGetServico.Open;
+  Result := qryGetServico.ToJSONArray;
+
+  qryGetServico.Close;
+
+  Log('Retorno: ' + Result.ToString);
+end;
+
+function TDmServico.GetServicoProfissao(AcodProfissao: integer): TJSONArray;
+begin
+  qryGetServico.MacroByName('FILTER').Clear;
+  qryGetServico.MacroByName('FILTER').AsRaw := 'where s.profissao = ' + inttostr(AcodProfissao);
+  qryGetServico.Open;
+  Result := qryGetServico.ToJSONArray;
+
+  qryGetServico.Close;
+
+  Log('Retorno: ' + Result.ToString);
+end;
+
+
+function TDmServico.GetServicoSubCategoria(AcodSubCategoriaCategoria: integer): TJSONArray;
+begin
+  qryGetServico.MacroByName('FILTER').Clear;
+  qryGetServico.MacroByName('FILTER').AsRaw := 'where  S.SUBCATEGORIA = ' + inttostr(AcodSubCategoriaCategoria);
   qryGetServico.Open;
   Result := qryGetServico.ToJSONArray;
 
@@ -124,18 +163,6 @@ begin
   Result := Ljo;
 
   Log('Json recebido: ' + Ajson.ToString);
-end;
-
-function TDmServico.GetServicoProfissao(AcodProfissao: integer): TJSONArray;
-begin
-  qryGetServico.MacroByName('FILTER').Clear;
-  qryGetServico.MacroByName('FILTER').AsRaw := 'where s.profissao = ' + inttostr(AcodProfissao);
-  qryGetServico.Open;
-  Result := qryGetServico.ToJSONArray;
-
-  qryGetServico.Close;
-
-  Log('Retorno: ' + Result.ToString);
 end;
 
 end.

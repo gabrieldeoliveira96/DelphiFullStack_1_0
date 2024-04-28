@@ -13,7 +13,7 @@ procedure GetServicoUsuario(Req: THorseRequest; Res: THorseResponse);
 implementation
 
 uses
-  System.SysUtils;
+  System.SysUtils, StrUtils;
 
 procedure Servico;
 begin
@@ -54,14 +54,27 @@ begin
     Log('Listando servico');
     LdmServico := TDmServico.Create(nil);
     try
+      var parametro :='';
+
       if req.Headers.ContainsKey('categoria') then
-        Res.Send<TJSONArray>(
-          LdmServico.GetServicoCategoria(req.Headers.Items['categoria'].ToInteger))
-      else
-        if req.Headers.ContainsKey('profissao') then
-          Res.Send<TJSONArray>(LdmServico.GetServicoProfissao(req.Headers.Items['profissao'].ToInteger))
+         parametro := 'categoria';
+      if req.Headers.ContainsKey('profissao') then
+         parametro := 'profissao';
+      if req.Headers.ContainsKey('descricaoServico') then
+         parametro := 'descricaoServico';
+      if req.Headers.ContainsKey('subcategoria') then
+         parametro := 'subcategoria';
+
+      Case AnsiIndexStr(parametro , ['categoria', 'profissao', 'descricaoServico','subcategoria']) of
+        0: Res.Send<TJSONArray>(LdmServico.GetServicoCategoria(req.Headers.Items[parametro].ToInteger));
+        1: Res.Send<TJSONArray>(LdmServico.GetServicoProfissao(req.Headers.Items[parametro].ToInteger));
+        2: Res.Send<TJSONArray>(LdmServico.GetServico(req.Headers.Items[parametro]));
+        3: Res.Send<TJSONArray>(LdmServico.GetServicoSubCategoria(req.Headers.Items[parametro].ToInteger));
         else
-         Res.Send<TJSONArray>(LdmServico.GetServico);
+          Res.Send<TJSONArray>(LdmServico.GetServico);
+      End;
+
+
     finally
       Res.Status(200);
       freeAndNil(LdmServico);
