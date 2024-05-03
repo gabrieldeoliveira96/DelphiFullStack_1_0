@@ -18,12 +18,16 @@ type
     RESTServicos: TRESTClient;
     RequestServicos: TRESTRequest;
     ResponseServicos: TRESTResponse;
+    RESTPutFavorito: TRESTClient;
+    RequestPutFavorito: TRESTRequest;
+    ResponsePutFavorito: TRESTResponse;
     procedure DataModuleDestroy(Sender: TObject);
     procedure UniGUIMainModuleCreate(Sender: TObject);
   private
     FModelImagens: TImagensWSModel;
     FModelImagensServicos: TImagemServicoModel;
   public
+    procedure FavoritarServico(ACodServico, AFavoritado: String);
     Function getListaCategorias: TImagensWSModel;
     Function getListaProfissoes: TImagensWSModel;
     Function getListaServicos(AKeyHeader: string = ''; AKeyValue: string ='' ): TImagemServicoModel;
@@ -68,6 +72,16 @@ begin
    Result := FModelImagensServicos.GetListaImagensModel(RequestServicos.Response.JSONText);
 end;
 
+procedure TImagensServices.FavoritarServico(ACodServico:string; AFavoritado:String);
+begin
+   var json := '{'+
+               '  "cod": "'+ACodServico+'",'+
+               '  "favoritado":  "'+AFavoritado+'"'+
+               '}';
+     RequestPutFavorito.Params[0].Value := json;
+     RequestPutFavorito.Execute;
+
+end;
 procedure TImagensServices.UniGUIMainModuleCreate(Sender: TObject);
 begin
    FModelImagens         := TImagensWSModel.Create;

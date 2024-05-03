@@ -5,6 +5,7 @@ interface
 uses Horse, System.JSON, model.servico, controller.log;
 
 procedure Servico;
+procedure PutServico(Req: THorseRequest; Res: THorseResponse);
 procedure PostServico(Req: THorseRequest; Res: THorseResponse);
 procedure GetServico(Req: THorseRequest; Res: THorseResponse);
 procedure GetObterServico(Req: THorseRequest; Res: THorseResponse);
@@ -17,10 +18,32 @@ uses
 
 procedure Servico;
 begin
+  THorse.Put('favoritar/servico', PutServico);
   THorse.Post('cadastrar/servico', PostServico);
   THorse.Get('listar/servico', GetServico);
   THorse.Get('listar/servico/:cod', GetObterServico);
   THorse.Get('listar/servico/usuario/:cod', GetServicoUsuario);
+end;
+
+procedure PutServico(Req: THorseRequest; Res: THorseResponse);
+begin
+  var LdmServico := TDmServico.Create(nil);
+  try
+    Log('Atualizando favorito');
+    try
+      Res.Send<TJSONObject>(LdmServico.PutFavoritarServico(req.Body<TJSONObject>));
+    finally
+      Res.Status(200);
+      freeAndNil(LdmServico);
+    end;
+
+  except on E: Exception do
+    begin
+      Log('Erro atualizar favorito ' + E.Message);
+      Res.Send(e.Message).Status(400);
+      freeAndNil(LdmServico);
+    end;
+  end;
 end;
 
 procedure PostServico(Req: THorseRequest; Res: THorseResponse);
@@ -64,12 +87,15 @@ begin
          parametro := 'descricaoServico';
       if req.Headers.ContainsKey('subcategoria') then
          parametro := 'subcategoria';
+      if req.Headers.ContainsKey('codUsuarioFavoritos') then
+         parametro := 'codUsuarioFavoritos';
 
-      Case AnsiIndexStr(parametro , ['categoria', 'profissao', 'descricaoServico','subcategoria']) of
+      Case AnsiIndexStr(parametro , ['categoria', 'profissao', 'descricaoServico','subcategoria','codUsuarioFavoritos']) of
         0: Res.Send<TJSONArray>(LdmServico.GetServicoCategoria(req.Headers.Items[parametro].ToInteger));
         1: Res.Send<TJSONArray>(LdmServico.GetServicoProfissao(req.Headers.Items[parametro].ToInteger));
         2: Res.Send<TJSONArray>(LdmServico.GetServico(req.Headers.Items[parametro]));
         3: Res.Send<TJSONArray>(LdmServico.GetServicoSubCategoria(req.Headers.Items[parametro].ToInteger));
+        4: Res.Send<TJSONArray>(LdmServico.GetServicosFavoritados(req.Headers.Items[parametro].ToInteger));
         else
           Res.Send<TJSONArray>(LdmServico.GetServico);
       End;

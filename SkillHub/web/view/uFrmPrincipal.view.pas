@@ -13,14 +13,13 @@ uses
 type
   TFrPrincipal = class(TMainForm)
     pnlTop: TUniPanel;
-    UniLabel2: TUniLabel;
     UniLabel3: TUniLabel;
     UniImage1: TUniImage;
     btnCategoria: TUniFSButton;
     pnlCategoria: TUniPanel;
     sbCategoria: TUniScrollBox;
     pnlPesquisa: TUniPanel;
-    UniFSEdit1: TUniFSEdit;
+    edtPesqServicos: TUniFSEdit;
     UniImage2: TUniImage;
     pnlProfissoes: TUniPanel;
     UniLabel5: TUniLabel;
@@ -28,29 +27,32 @@ type
     pnlBottom: TUniPanel;
     sbCardsServicos: TUniScrollBox;
     UniLabel4: TUniLabel;
-    UniPanel2: TUniPanel;
-    UniLabel10: TUniLabel;
     UniPanel1: TUniPanel;
     procedure UniFormShow(Sender: TObject);
     procedure UniFormCreate(Sender: TObject);
     procedure btnCategoriaClick(Sender: TObject);
     procedure UniFormDestroy(Sender: TObject);
     procedure AbrirPesquisa(sender: TObject);
+    procedure edtPesqServicosKeyUp(Sender: TObject; var Key: Word;
+      Shift: TShiftState);
+    procedure AbrirServico(Sender: TObject);
+    procedure UniImage1Click(Sender: TObject);
   private
    const
     TopCategoria  = 180;
     TopPesquisa   = 435;
     TopProfissoes = 506;
     TopBottom     = 800;
+
    var
     FModelImagens : TImagensWSModel;
     FModelServicos: TImagemServicoModel;
     FController: TControllerPrincipal;
-    procedure CarregarServicos;
+    procedure CarregarServicos(AKey:string =''; AValue:String = '');
     procedure CarregarCategorias;
     procedure CarregarProfissoes;
     procedure AjustaPnlPesquisa;
-
+    procedure LimparServicos;
 
   public
     { Public declarations }
@@ -97,9 +99,9 @@ begin
   inherited;
 end;
 
-procedure TFrPrincipal.CarregarServicos;
+procedure TFrPrincipal.CarregarServicos(AKey:string =''; AValue:String = '');
 begin
- FModelServicos := FController.getListaServicos;
+ FModelServicos := FController.getListaServicos(AKey,AValue);
 
  const inicialLeft =15;
 
@@ -119,7 +121,10 @@ begin
      pnl.Parent := sbCardsServicos;
      pnl.Height := 300;
      pnl.Width  := 300;
-
+     pnl.ScreenMask.WaitData := true;
+     pnl.ScreenMask.Enabled := true;
+     pnl.ScreenMask.ShowMessage := false;
+     pnl.ScreenMask.Color := $00DA6777;
 
      if i > 0 then
         posLeft := leftAtual + pnl.Width + 100;
@@ -139,8 +144,9 @@ begin
      pnl.ShowCaption := false;
      pnl.BorderStyle := ubsNone;
      pnl.Font.Name := TFontName('Roboto');
-     pnl.Name := 'pnl_Servico_'+FModelServicos.Items[i].Cod.ToString;
+     pnl.Name := 'pnl_Servico_'+FModelServicos.Items[i].Cod.ToString+'_index_'+i.tostring;
      inc(count);
+     pnl.OnClick:= AbrirServico;
 
    var imgHTML: TUniLabel := TUniLabel.Create(pnl);
       imgHTML.Parent := pnl;
@@ -206,6 +212,14 @@ begin
  end;
 end;
 
+procedure TFrPrincipal.AbrirServico(Sender: TObject);
+begin
+  var index: string := TUniPanel(Sender).Name;
+  index := copy(index, pos('index_',index)+6);
+
+  FController.getTelaContrataServico(self, FModelServicos.Items[index.ToInteger]);
+end;
+
 procedure TFrPrincipal.CarregarCategorias;
 begin
  FModelImagens := FController.getListaCategorias;
@@ -245,6 +259,10 @@ begin
      pnl.ShowCaption := false;
      pnl.BorderStyle := ubsNone;
      pnl.Name := 'pnl_categoria_'+FModelImagens.Items[i].Cod.ToString;
+     pnl.ScreenMask.WaitData := true;
+     pnl.ScreenMask.Enabled := true;
+     pnl.ScreenMask.ShowMessage := false;
+     pnl.ScreenMask.Color := $00DA6777;
      inc(count);
 
    var DivPanel: TUniLabel := TUniLabel.Create(pnl);
@@ -315,6 +333,10 @@ begin
      pnl.Height := 150;
      pnl.Width  := 160;
      pnl.OnClick := AbrirPesquisa;
+     pnl.ScreenMask.WaitData := true;
+     pnl.ScreenMask.Enabled := true;
+     pnl.ScreenMask.ShowMessage := false;
+     pnl.ScreenMask.Color := $00DA6777;
 
      if i > 0 then
         posLeft := leftAtual + pnl.Width + 2;
@@ -383,7 +405,31 @@ begin
   AjustaPnlPesquisa;
   CarregarCategorias;
   CarregarProfissoes;
-  CarregarServicos;
+  CarregarServicos('codUsuarioFavoritos', FController.getDadosUsuarioLogado.cod);
+end;
+
+procedure TFrPrincipal.UniImage1Click(Sender: TObject);
+begin
+  inherited;
+  FController.getTelaMenuLateral(self);
+end;
+
+procedure TFrPrincipal.edtPesqServicosKeyUp(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  inherited;
+  if key = VK_RETURN then
+  begin
+    LimparServicos;
+    CarregarServicos('descricaoServico',edtPesqServicos.Text);
+  end;
+
+end;
+
+procedure TFrPrincipal.LimparServicos;
+begin
+   while sbCardsServicos.ComponentCount > 0 do
+     FreeAndNil(sbCardsServicos.Components[0]);
 end;
 
 end.

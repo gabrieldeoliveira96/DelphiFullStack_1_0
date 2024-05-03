@@ -39,7 +39,7 @@ implementation
 function getSvgCheck: string;
 begin
  var FSvgCheck :=
-    '<svg height="49px" width="44px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-66.56 -66.56 645.12 645.12" xml:space="preserve" fill="#000000">';
+    '<svg height="45px" width="40px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-66.56 -66.56 645.12 645.12" xml:space="preserve" fill="#000000">';
   FSvgCheck := FSvgCheck +
     '<g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path style="fill:#D7EBFF;"';
   FSvgCheck := FSvgCheck +

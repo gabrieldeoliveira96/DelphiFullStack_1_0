@@ -46,16 +46,16 @@ begin
 
   Result := qryValidaLogin.ToJSONObject;
 
-//  Log('Retorno: Usuario Logado: '+ qryValidaLoginEMAIL.AsString);
-//  if qryValidaLogin.RecordCount > 0 then
-//    Result := qryValidaLogin.ToJSONObject
-//  else
-//  begin
-//    Ljo := TJSONObject.Create;
-//    Ljo.AddPair('mensagem', 'Usuário não encontrado');
-//
-//    result := Ljo;
-//  end;
+  Log('Retorno: Usuario Logado: '+ qryValidaLoginEMAIL.AsString);
+  if qryValidaLogin.RecordCount > 0 then
+    Result := qryValidaLogin.ToJSONObject
+  else
+  begin
+    Ljo := TJSONObject.Create;
+    Ljo.AddPair('mensagem', 'Usuário não encontrado');
+
+    result := Ljo;
+  end;
 
 end;
 

@@ -24,7 +24,7 @@ type
       [JSONName('nome')]
       FNome: string;
 
-      [JSONName('tipo_usuario')]
+      [JSONName('tipoUsuario')]
       FTipoUsuario: string;
     protected
       procedure PopularObjeto(AJsonString: string);

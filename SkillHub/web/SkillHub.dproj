@@ -187,6 +187,30 @@
             <FormType>dfm</FormType>
             <DesignClass>TUniForm</DesignClass>
         </DCCReference>
+        <DCCReference Include="services\uSubCategorias.Services.pas">
+            <Form>SubCategoriasServices</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="model\uSubCategorias.Model.pas"/>
+        <DCCReference Include="controller\uSubCategorias.Controller.pas"/>
+        <DCCReference Include="view\uContrataServicos.View.pas">
+            <Form>frContrataServico</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TUniForm</DesignClass>
+        </DCCReference>
+        <DCCReference Include="view\uMenu.View.pas">
+            <Form>frMenuLateral</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TUniForm</DesignClass>
+        </DCCReference>
+        <DCCReference Include="model\uPrivacidade.Model.pas"/>
+        <DCCReference Include="services\uPrivacidade.Services.pas">
+            <Form>dmPrivacidadeServices</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="controller\uPrivacidade.Controller.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

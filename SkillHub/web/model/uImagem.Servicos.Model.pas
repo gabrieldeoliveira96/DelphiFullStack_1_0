@@ -31,6 +31,7 @@ type
     FSubcategoria: Integer;
     FTitulo: string;
     FValor: Double;
+    FFavoritado: string;
   published
     property Bairro: string read FBairro write FBairro;
     property Categoria: Integer read FCategoria write FCategoria;
@@ -52,6 +53,7 @@ type
     property Subcategoria: Integer read FSubcategoria write FSubcategoria;
     property Titulo: string read FTitulo write FTitulo;
     property Valor: Double read FValor write FValor;
+    property Favoritado: string read FFavoritado write FFavoritado;
   end;
 
   TImagemServicoModel = class(TJsonDTO)

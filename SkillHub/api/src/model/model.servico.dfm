@@ -1,21 +1,21 @@
 inherited DmServico: TDmServico
-  Height = 341
-  Width = 433
+  Height = 273
+  Width = 346
   inherited Conexao: TFDConnection
     Connected = True
-    Left = 51
-    Top = 36
+    Left = 41
+    Top = 29
   end
   inherited FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink
-    Left = 298
-    Top = 91
+    Left = 238
+    Top = 73
   end
   object qryPostServico: TFDQuery
     Connection = Conexao
     SQL.Strings = (
       'select * from servico')
-    Left = 70
-    Top = 122
+    Left = 56
+    Top = 98
     object qryPostServicoCOD: TFDAutoIncField
       FieldName = 'COD'
       Origin = 'COD'
@@ -94,6 +94,25 @@ inherited DmServico: TDmServico
       FieldName = 'DATA_INGRESSO'
       Origin = 'DATA_INGRESSO'
     end
+    object qryPostServicoKM: TFloatField
+      AutoGenerateValue = arDefault
+      FieldName = 'KM'
+      Origin = 'KM'
+    end
+    object qryPostServicoVALOR: TBCDField
+      AutoGenerateValue = arDefault
+      FieldName = 'VALOR'
+      Origin = 'VALOR'
+      Precision = 10
+      Size = 2
+    end
+    object qryPostServicoFAVORITADO: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'FAVORITADO'
+      Origin = 'FAVORITADO'
+      FixedChar = True
+      Size = 1
+    end
   end
   object qryGetServico: TFDQuery
     Connection = Conexao
@@ -118,15 +137,16 @@ inherited DmServico: TDmServico
       ' S.COD_USUARIO,'
       ' U.NOME,'
       ' S.DATA_INGRESSO,'
-      ' S.VALOR'
+      ' S.VALOR,'
+      ' S.FAVORITADO'
       'FROM SERVICO S'
       'JOIN CATEGORIA C ON C.COD = S.CATEGORIA'
       'JOIN SUBCATEGORIA SC ON SC.COD = S.SUBCATEGORIA'
       'JOIN PROFISSAO P ON P.COD = S.PROFISSAO'
       'JOIN USUARIO U ON U.COD = S.COD_USUARIO'
       '&FILTER')
-    Left = 248
-    Top = 208
+    Left = 198
+    Top = 166
     MacroData = <
       item
         Value = Null

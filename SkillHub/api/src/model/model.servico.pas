@@ -29,16 +29,21 @@ type
     qryPostServicoCOD_USUARIO: TIntegerField;
     qryGetServico: TFDQuery;
     qryPostServicoDATA_INGRESSO: TDateField;
+    qryPostServicoKM: TFloatField;
+    qryPostServicoVALOR: TBCDField;
+    qryPostServicoFAVORITADO: TStringField;
   private
     { Private declarations }
   public
     { Public declarations }
+    function PutFavoritarServico(Ajson: TJSONObject): TJSONObject;
     function PostServico(Ajson: TJSONObject): TJSONObject;
     function GetServico: TJSONArray; overload;
     function GetServico(AcodServico: integer): TJSONObject; overload;
     function GetServico(ADescricaoServico: string): TJSONArray; overload;
     function GetServicoCategoria(AcodCategoria: integer): TJSONArray;
     function GetServicoSubCategoria(AcodSubCategoriaCategoria: integer): TJSONArray;
+    function GetServicosFavoritados(ACodUsuario: integer): TJSONArray;
     function GetServicoUsuario(AcodUsuario: integer): TJSONArray;
     function GetServicoProfissao(AcodProfissao: integer): TJSONArray;
   end;
@@ -110,6 +115,18 @@ begin
 end;
 
 
+function TDmServico.GetServicosFavoritados(ACodUsuario: integer): TJSONArray;
+begin
+  qryGetServico.MacroByName('FILTER').Clear;
+  qryGetServico.MacroByName('FILTER').AsRaw := 'where s.favoritado = ''S''  and s.cod_usuario = ' + inttostr(AcodUsuario);
+  qryGetServico.Open;
+  Result := qryGetServico.ToJSONArray;
+
+  qryGetServico.Close;
+
+  Log('Retorno: ' + Result.ToString);
+end;
+
 function TDmServico.GetServicoSubCategoria(AcodSubCategoriaCategoria: integer): TJSONArray;
 begin
   qryGetServico.MacroByName('FILTER').Clear;
@@ -154,7 +171,9 @@ begin
   qryPostServicoFOTO.AsString := Ajson.GetValue<string>('foto');
   qryPostServicoCOD_USUARIO.AsString := Ajson.GetValue<string>('cod_usuario');
   qryPostServicoDATA_INGRESSO.AsDateTime := date;
-
+  qryPostServicoKM.AsInteger   :=  Ajson.GetValue<integer>('km');
+  qryPostServicoVALOR.AsFloat  :=  Ajson.GetValue<double>('valor');
+  qryPostServicoFAVORITADO.AsString := Ajson.GetValue<string>('favoritado');
   qryPostServico.Post;
 
   Ljo := TJSONObject.Create;
@@ -163,6 +182,28 @@ begin
   Result := Ljo;
 
   Log('Json recebido: ' + Ajson.ToString);
+end;
+
+function TDmServico.PutFavoritarServico(Ajson: TJSONObject): TJSONObject;
+begin
+    var sql := qryPostServico.SQL.Text;
+    var Ljo := TJSONObject.Create;
+    try
+      qryPostServico.SQL.Text := sql + ' WHERE cod = '+ Ajson.GetValue<string>('cod');
+      qryPostServico.Open;
+
+      if  Ajson.GetValue<string>('favoritado').Contains('S') or  Ajson.GetValue<string>('favoritado').Contains('N') then
+      begin
+        qryPostServico.Edit;
+        qryPostServicoFAVORITADO.AsString :=  Ajson.GetValue<string>('favoritado');
+        qryPostServico.Post;
+
+        Ljo.AddPair('mensagem', 'Favorito editado para o valor: '+Ajson.GetValue<string>('favoritado'));
+      end else
+        Ljo.AddPair('mensagem', 'Valor informado é invalido: '+Ajson.GetValue<string>('favoritado'));
+    finally
+      qryPostServico.Close;
+    end;
 end;
 
 end.

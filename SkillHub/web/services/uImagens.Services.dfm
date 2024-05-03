@@ -87,4 +87,31 @@ object ImagensServices: TImagensServices
     Left = 296
     Top = 184
   end
+  object RESTPutFavorito: TRESTClient
+    BaseURL = 'http://localhost:9000/favoritar/servico'
+    Params = <>
+    SynchronizedEvents = False
+    Left = 72
+    Top = 272
+  end
+  object RequestPutFavorito: TRESTRequest
+    AssignedValues = [rvConnectTimeout, rvReadTimeout]
+    Client = RESTPutFavorito
+    Method = rmPUT
+    Params = <
+      item
+        Kind = pkREQUESTBODY
+        Name = 'bodyDA66DF1A2BCF454A80D4802981026B57'
+        Value = '{'#13#10'  "cod":"1",'#13#10'  "favoritado": "N"'#13#10'}'
+        ContentTypeStr = 'application/json'
+      end>
+    Response = ResponsePutFavorito
+    SynchronizedEvents = False
+    Left = 176
+    Top = 272
+  end
+  object ResponsePutFavorito: TRESTResponse
+    Left = 304
+    Top = 272
+  end
 end
