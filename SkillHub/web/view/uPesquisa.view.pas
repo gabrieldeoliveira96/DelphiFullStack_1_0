@@ -4,11 +4,11 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
-  System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, uMain.view, uniLabel,
-  Vcl.Imaging.pngimage, uniImage, uniPanel, uniGUIBaseClasses, uniGUIClasses,
-  uniScrollBox, uniEdit, UniFSEdit, uniGUITypes, uniButton, uniBitBtn,
-  UniFSButton, uniCheckBox, uniRadioButton;
+  System.Classes, Vcl.Graphics,  uImagem.Servicos.Model, uPrincipal.Controller,
+  uMain.view, uniButton, uniBitBtn, UniFSButton, uniGUIClasses, uniEdit,
+  UniFSEdit, uniLabel, Vcl.Imaging.pngimage, uniImage, uniPanel, Vcl.Controls,
+  Vcl.Forms, uniGUIBaseClasses, uniScrollBox, Vcl.Dialogs, uniGUITypes,
+  uniRadioButton;
 
 type
   TfrPesquisa = class(TMainForm)
@@ -16,7 +16,7 @@ type
     sbServicos: TUniScrollBox;
     pnlPesquisa: TUniPanel;
     lblDivPesquisa: TUniLabel;
-    UniFSEdit1: TUniFSEdit;
+    edtPesqServico: TUniFSEdit;
     UniImage2: TUniImage;
     UniFSButton1: TUniFSButton;
     PnlSubCategorias: TUniPanel;
@@ -24,11 +24,19 @@ type
     LblDescFiltroSubCategoria: TUniLabel;
     procedure UniFormShow(Sender: TObject);
     procedure UniFSButton1Click(Sender: TObject);
+    procedure OnFilterServicoPorSubCategorias(Sender: TObject);
+    procedure edtPesqServicoKeyUp(Sender: TObject; var Key: Word;
+      Shift: TShiftState);
+    procedure UniFormClose(Sender: TObject; var Action: TCloseAction);
+    procedure AbrirServico(Sender: TObject);
   private
+    FModel: TImagemServicoModel;
+    FController: TControllerPrincipal;
     procedure AjustaPnlPesquisa;
     procedure RenderizaPainelPesquisado;
-    procedure CarregarServicos;
+    procedure CarregarServicos(AKey: String = ''; AValue: string = '');
     procedure getListaSubCategorias;
+    procedure LimparServicos;
   public
     PanelAtualClicado: TUniPanel;
   end;
@@ -37,12 +45,19 @@ implementation
 
 {$R *.dfm}
 
-uses uConstsHTML, uPrincipal.Controller, uImagem.Servicos.Model,
-     uSubCategorias.Controller, uSubCategorias.Model;
+uses uConstsHTML,uSubCategorias.Model, uSubCategorias.Controller;
+
+procedure TfrPesquisa.UniFormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  inherited;
+  FreeAndNil(FModel);
+  FreeAndNil(FController);
+end;
 
 procedure TfrPesquisa.UniFormShow(Sender: TObject);
 begin
   // inherited;
+  FController := TControllerPrincipal.Create;
   CarregarServicos;
   RenderizaPainelPesquisado;
   AjustaPnlPesquisa;
@@ -55,17 +70,39 @@ begin
  Close;
 end;
 
-procedure TfrPesquisa.CarregarServicos;
+procedure TfrPesquisa.edtPesqServicoKeyUp(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
 begin
-  var
-  Controller := TControllerPrincipal.Create;
+  inherited;
+  if Key = VK_RETURN then
+  begin
+    LimparServicos;
+    CarregarServicos('descricaoServico',edtPesqServico.Text);
+  end;
+
+end;
+
+procedure TfrPesquisa.CarregarServicos(AKey: String = ''; AValue: string = '');
+begin
   try
-    var
-      KeyHeader: string := PanelAtualClicado.Name;
-      // pnl_categoria_1
-    KeyHeader := KeyHeader.Replace('pnl_', '');
-    var
-    Model := Controller.getListaServicos(Copy(KeyHeader,0, pos('_', KeyHeader) - 1), Copy(KeyHeader, pos('_', KeyHeader) + 1));
+    var KeyHeader:  string;
+    var KeyValue:   string;
+
+    if  (AKey.Trim.IsEmpty or AValue.Trim.IsEmpty) then
+    begin
+
+     var lHeader:string := PanelAtualClicado.Name;
+     lHeader := lHeader.Replace('pnl_', '');
+     KeyHeader := Copy(lHeader,0, pos('_', lHeader) - 1);
+
+     KeyValue := Copy(lHeader, pos('_', lHeader) + 1);
+    end else
+    begin
+      KeyHeader := AKey;
+      KeyValue := AValue;
+    end;
+
+    FModel := FController.getListaServicos(KeyHeader, KeyValue);
     try
       const
         inicialLeft = 15;
@@ -77,9 +114,9 @@ begin
       var
         count: integer := 0;
 
-      for var I := 0 to Model.Items.count - 1 do
+      for var I := 0 to FModel.Items.count - 1 do
       begin
-        if Model.Items[I].Foto.IsEmpty then
+        if FModel.Items[I].Foto.IsEmpty then
           Continue;
 
         var
@@ -87,11 +124,17 @@ begin
         pnl.Parent := sbServicos;
         pnl.Height := 180;
         pnl.Width  := 650;
+        pnl.OnClick := AbrirServico;
+        pnl.ScreenMask.WaitData := true;
+        pnl.ScreenMask.Enabled := true;
+        pnl.ScreenMask.ShowMessage := false;
+        pnl.ScreenMask.Color := $00DA6777;
+
 
         if count = 1 then
         begin
           count := 0;
-          posTop := pnl.Height + TopAtual + 50;
+          posTop := pnl.Height + TopAtual + 10;
         end;
 
         TopAtual := posTop;
@@ -101,7 +144,7 @@ begin
         pnl.ShowCaption := false;
         pnl.BorderStyle := ubsNone;
         pnl.Font.Name := TFontName('Roboto');
-        pnl.Name := 'pnl_Servico_' + Model.Items[I].Cod.ToString;
+        pnl.Name := 'pnl_Servico_' + FModel.Items[I].Cod.ToString + '_index_'+i.tostring;
         inc(count);
 
         var
@@ -113,8 +156,8 @@ begin
         imgHTML.TextConversion := txtHTML;
 
         imgHTML.Text := ImgServicos.Replace('[base64foto]',
-          Model.Items[I].Foto).Replace('[nome]',
-          Model.Items[I].Descricao);
+          FModel.Items[I].Foto).Replace('[nome]',
+          FModel.Items[I].Descricao);
         imgHTML.SendToBack;
 
         var
@@ -129,6 +172,17 @@ begin
                                     (pnl.Height -12).ToString);
         DivPanelDescricao.BringToFront;
 
+        if FModel.Items[I].Favoritado = 'S' then
+        begin
+          var
+            imgCheck: TUniLabel := TUniLabel.Create(pnl);
+          imgCheck.Parent := pnl;
+          imgCheck.Top := 8;
+          imgCheck.Left := 260;
+          imgCheck.TextConversion := txtHTML;
+          imgCheck.Text :=  getSvgCheck;
+        end;
+
         var
           DivPanelKM: TUniLabel := TUniLabel.Create(pnl);
         DivPanelKM.Parent := pnl;
@@ -137,16 +191,27 @@ begin
         DivPanelKM.Cursor := crHandPoint;
         DivPanelKM.TextConversion := txtHTML;
         DivPanelKM.Text := DivHtmlPadraoComValor.Replace('[wdt]', '60')
-          .Replace('[hgh]', '30').Replace('[valor]', '<br> &nbsp&nbsp&nbsp' +
-          Model.Items[I].Km.ToString + ' KM');
+          .Replace('[hgh]', '30').Replace('[valor]', '');
         DivPanelKM.BringToFront;
+
+
+         var
+          lblKmValor: TUniLabel := TUniLabel.Create(pnl);
+        lblKmValor.Parent := pnl;
+        lblKmValor.Top := 120;
+        lblKmValor.Left := 476;
+        lblKmValor.Text := FModel.Items[I].Km.ToString + ' KM';
+        lblKmValor.Font.Color := clWhite;
+        lblKmValor.Font.Height := 16;
+        lblKmValor.Font.Style := [fsBold];
+        lblKmValor.BringToFront;
 
         var
           lblDescricao: TUniLabel := TUniLabel.Create(pnl);
         lblDescricao.Parent := pnl;
         lblDescricao.Top  := 50;
         lblDescricao.Left := 280;
-        lblDescricao.Text := Model.Items[I].Descricao;
+        lblDescricao.Text := FModel.Items[I].Titulo;
         lblDescricao.Font.Height := 18;
         lblDescricao.Font.Style := [fsBold];
         lblDescricao.BringToFront;
@@ -156,7 +221,7 @@ begin
         lblNome.Parent := pnl;
         lblNome.Top := 85;
         lblNome.Left := 280;
-        lblNome.Text := '👷 '+Model.Items[I].Nome;
+        lblNome.Text := '👷 '+FModel.Items[I].Nome;
         lblNome.Font.Color := clGray;
         lblNome.Font.Height := 16;
         lblNome.Font.Style := [fsBold];
@@ -167,7 +232,7 @@ begin
         lblLocalizacao.Parent := pnl;
         lblLocalizacao.Top := 120;
         lblLocalizacao.Left := 280;
-        lblLocalizacao.Text := '📌 '+Model.Items[I].Endereco;
+        lblLocalizacao.Text := '📌 '+FModel.Items[I].Endereco;
         lblLocalizacao.Font.Color := clGray;
         lblLocalizacao.Font.Height := 14;
         lblLocalizacao.Font.Style := [fsBold];
@@ -178,26 +243,18 @@ begin
         lblPreco.Parent := pnl;
         lblPreco.Top := 120;
         lblPreco.Left := 550;
-        lblPreco.Text := FormatFloat('R$ 0,.00',Model.Items[I].Valor);
+        lblPreco.Text := FormatFloat('R$ 0,.00',FModel.Items[I].Valor);
         lblPreco.Font.Color := $00DA6777;
         lblPreco.Font.Height := 16;
         lblPreco.Font.Style := [fsBold];
         lblPreco.BringToFront;
-
-//        var
-//          imgCheck: TUniLabel := TUniLabel.Create(pnl);
-//        imgCheck.Parent := pnl;
-//        imgCheck.Top := 230;
-//        imgCheck.Left := 250;
-//        imgCheck.TextConversion := txtHTML;
-//        imgCheck.Text :=  getSvgCheck;
       end;
 
     finally
-      FreeAndNil(Model);
+//      FreeAndNil(Model);
     end;
   finally
-    FreeAndNil(Controller);
+  //  FreeAndNil(FController);
   end;
 end;
 
@@ -220,6 +277,14 @@ begin
     end;
 
   end;
+end;
+
+procedure TfrPesquisa.AbrirServico(Sender: TObject);
+begin
+  var index: string := TUniPanel(Sender).Name;
+  index := copy(index, pos('index_',index)+6);
+
+  FController.getTelaContrataServico(self, FModel.Items[index.ToInteger]);
 end;
 
 procedure TfrPesquisa.AjustaPnlPesquisa;
@@ -253,15 +318,19 @@ begin
 
       var ckSubCategorias :=   TUniRadioButton.Create(PnlSubCategorias);
       ckSubCategorias.Parent := PnlSubCategorias;
-      ckSubCategorias.Name := 'chk_subcategorias_'+Model.Items[i].CodSubcategoria.ToString();
+      ckSubCategorias.Name := 'rb_subcategorias_'+Model.Items[i].CodSubcategoria.ToString();
       ckSubCategorias.font.Color := $009D9D9D;
       ckSubCategorias.Color := clWhite;
       ckSubCategorias.font.Size := 9;
-      ckSubCategorias.Height := 20;
-      ckSubCategorias.Width  := 100;
+      ckSubCategorias.Height := 22;
+      ckSubCategorias.Width  := 115;
       ckSubCategorias.Caption := Model.Items[i].DescricaoSubcategoria;
-
+      ckSubCategorias.OnClick := OnFilterServicoPorSubCategorias;
       ckSubCategorias.Top := 20;
+      ckSubCategorias.ScreenMask.WaitData := true;
+      ckSubCategorias.ScreenMask.Enabled := true;
+      ckSubCategorias.ScreenMask.ShowMessage := false;
+      ckSubCategorias.ScreenMask.Color := $00DA6777;
 
       if i = 0 then
         ckSubCategorias.Left := leftCk
@@ -278,6 +347,30 @@ begin
    if Assigned(Model) then
      FreeAndNil(Model);
   end;
+end;
+
+procedure TfrPesquisa.OnFilterServicoPorSubCategorias(Sender: TObject);
+begin
+  var rbLocal := Sender as TUniRadioButton;
+  try
+    if rbLocal.Checked then
+    begin
+     var
+      KeyValue: string := rbLocal.Name;
+      KeyValue    :=  KeyValue.Replace('rb_', '');
+      KeyValue    := Copy(KeyValue, pos('_', KeyValue) + 1);
+      LimparServicos;
+      CarregarServicos('subcategoria', KeyValue);
+    end;
+  finally
+
+  end;
+end;
+
+procedure TfrPesquisa.LimparServicos;
+begin
+   while sbServicos.ComponentCount > 0 do
+     FreeAndNil(sbServicos.Components[0]);
 end;
 
 end.

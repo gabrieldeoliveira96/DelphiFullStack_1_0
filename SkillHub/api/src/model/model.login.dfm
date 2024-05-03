@@ -1,14 +1,14 @@
 inherited DmLogin: TDmLogin
-  Height = 250
-  Width = 335
+  Height = 200
+  Width = 268
   inherited Conexao: TFDConnection
     Connected = True
-    Left = 51
-    Top = 36
+    Left = 41
+    Top = 29
   end
   inherited FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink
-    Left = 154
-    Top = 115
+    Left = 123
+    Top = 92
   end
   object qryValidaLogin: TFDQuery
     Connection = Conexao
@@ -22,8 +22,8 @@ inherited DmLogin: TDmLogin
       ' FOTO'
       'FROM USUARIO'
       'WHERE EMAIL = :EMAIL AND SENHA = :SENHA')
-    Left = 64
-    Top = 134
+    Left = 51
+    Top = 107
     ParamData = <
       item
         Name = 'EMAIL'

@@ -1,0 +1,9 @@
+CREATE TABLE `privacidade` (
+  `cod_user` int(11) DEFAULT NULL,
+  `dados` char(1) DEFAULT 'N',
+  `acesso` char(1) DEFAULT 'N',
+  `perfil` char(1) DEFAULT 'N',
+  `notificacoes` char(1) DEFAULT 'N',
+  `conta` char(1) DEFAULT 'N',
+  `compartilhamento_dados` char(1) DEFAULT 'N'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;

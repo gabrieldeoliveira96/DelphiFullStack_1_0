@@ -7,6 +7,7 @@ inherited FrPrincipal: TFrPrincipal
   PageMode = True
   OnCreate = UniFormCreate
   OnDestroy = UniFormDestroy
+  ExplicitLeft = -45
   TextHeight = 14
   inherited UniScrollBox2: TUniScrollBox
     ScrollDirection = sdVertical
@@ -21,30 +22,7 @@ inherited FrPrincipal: TFrPrincipal
       DesignSize = (
         799
         963)
-      inherited imgSer1: TUniImage
-        Left = 388
-        Top = -24
-        Width = 0
-        Height = 123
-        Anchors = [akLeft, akTop, akRight, akBottom]
-        ExplicitLeft = 388
-        ExplicitTop = -24
-        ExplicitWidth = 0
-        ExplicitHeight = 123
-      end
-      inherited imgServ2: TUniImage
-        Left = 5
-        Top = 287
-        ExplicitLeft = 5
-        ExplicitTop = 287
-      end
-      inherited imgServ3: TUniImage
-        Left = 665
-        Top = 803
-        ExplicitLeft = 665
-        ExplicitTop = 803
-      end
-      object pnlBottom: TUniPanel [3]
+      object pnlBottom: TUniPanel [0]
         Left = 11
         Top = 747
         Width = 777
@@ -66,30 +44,9 @@ inherited FrPrincipal: TFrPrincipal
           Color = 16772848
           TabOrder = 1
           ScrollDirection = sdVertical
-          ScrollHeight = 154
-          ScrollWidth = 1045
-          object UniPanel2: TUniPanel
-            Left = 842
-            Top = 28
-            Width = 203
-            Height = 126
-            Hint = ''
-            TabOrder = 0
-            Caption = 'UniPanel1'
-            object UniLabel10: TUniLabel
-              Left = 1
-              Top = 1
-              Width = 51
-              Height = 13
-              Hint = ''
-              Caption = 'UniLabel4'
-              Align = alClient
-              TabOrder = 1
-            end
-          end
         end
       end
-      object pnlCategoria: TUniPanel [4]
+      object pnlCategoria: TUniPanel [1]
         Left = 11
         Top = 151
         Width = 777
@@ -112,7 +69,7 @@ inherited FrPrincipal: TFrPrincipal
           ScrollDirection = sdVertical
         end
       end
-      object pnlPesquisa: TUniPanel [5]
+      object pnlPesquisa: TUniPanel [2]
         Left = 16
         Top = 408
         Width = 777
@@ -137,10 +94,10 @@ inherited FrPrincipal: TFrPrincipal
           Caption = 'DIV'
           TabOrder = 3
         end
-        object UniFSEdit1: TUniFSEdit
+        object edtPesqServicos: TUniFSEdit
           Left = 39
           Top = 5
-          Width = 708
+          Width = 626
           Height = 46
           Hint = ''
           PasswordStrong.MinChars = 6
@@ -162,6 +119,11 @@ inherited FrPrincipal: TFrPrincipal
           TabOrder = 1
           Color = clWhite
           EmptyText = 'Pesquisar Servi'#231'os'
+          ScreenMask.Enabled = True
+          ScreenMask.WaitData = True
+          ScreenMask.ShowMessage = False
+          ScreenMask.Color = 14313335
+          OnKeyUp = edtPesqServicosKeyUp
         end
         object UniImage2: TUniImage
           Left = 4
@@ -201,7 +163,7 @@ inherited FrPrincipal: TFrPrincipal
           Proportional = True
         end
       end
-      object pnlProfissoes: TUniPanel [6]
+      object pnlProfissoes: TUniPanel [3]
         Left = 11
         Top = 472
         Width = 795
@@ -240,7 +202,59 @@ inherited FrPrincipal: TFrPrincipal
           ScrollDirection = sdHorizontal
         end
       end
-      object pnlTop: TUniPanel [7]
+      inherited imgSer1: TUniImage
+        Left = 388
+        Top = -24
+        Width = 0
+        Height = 123
+        Anchors = [akLeft, akTop, akRight, akBottom]
+        ExplicitLeft = 388
+        ExplicitTop = -24
+        ExplicitWidth = 0
+        ExplicitHeight = 123
+      end
+      inherited imgServ2: TUniImage
+        Left = 5
+        Top = 287
+        ExplicitLeft = 5
+        ExplicitTop = 287
+      end
+      inherited imgServ3: TUniImage
+        Left = 665
+        Top = 803
+        ExplicitLeft = 665
+        ExplicitTop = 803
+      end
+      inherited UniLabel1: TUniLabel
+        Left = 16
+        Top = 41
+        AutoSize = False
+        Anchors = [akTop]
+        ExplicitLeft = 16
+        ExplicitTop = 41
+      end
+      object btnCategoria: TUniFSButton
+        Left = 20
+        Top = 106
+        Width = 105
+        Height = 38
+        Hint = ''
+        StyleButton = GoogleSilverRound
+        BadgeText.Text = '0'
+        BadgeText.TextColor = '#FFFFFF'
+        BadgeText.TextSize = 10
+        BadgeText.TextStyle = 'bold'
+        BadgeText.BackgroundColor = '#D50000'
+        Caption = 'Categorias '
+        TabOrder = 5
+        ScreenMask.Enabled = True
+        ScreenMask.WaitData = True
+        ScreenMask.ShowMessage = False
+        ScreenMask.Color = 14313335
+        ScreenMask.Opacity = 0.200000002980232200
+        OnClick = btnCategoriaClick
+      end
+      object pnlTop: TUniPanel
         Left = 451
         Top = 25
         Width = 345
@@ -256,36 +270,6 @@ inherited FrPrincipal: TFrPrincipal
         DesignSize = (
           345
           54)
-        object UniLabel2: TUniLabel
-          Left = 101
-          Top = 24
-          Width = 52
-          Height = 15
-          Cursor = crHandPoint
-          Hint = ''
-          Caption = 'Favoritos'
-          Anchors = [akLeft, akTop, akRight, akBottom]
-          ParentFont = False
-          Font.Color = 14313335
-          Font.Height = 15
-          Font.Name = 'Roboto'
-          TabOrder = 1
-        end
-        object UniLabel3: TUniLabel
-          Left = 190
-          Top = 24
-          Width = 72
-          Height = 15
-          Cursor = crHandPoint
-          Hint = ''
-          Caption = 'Notifica'#231#245'es'
-          Anchors = [akLeft, akTop, akRight, akBottom]
-          ParentFont = False
-          Font.Color = 14313335
-          Font.Height = 15
-          Font.Name = 'Roboto'
-          TabOrder = 2
-        end
         object UniImage1: TUniImage
           Left = 283
           Top = 0
@@ -508,6 +492,22 @@ inherited FrPrincipal: TFrPrincipal
           Proportional = True
           Align = alRight
           LayoutConfig.Padding = '0'
+          OnClick = UniImage1Click
+        end
+        object UniLabel3: TUniLabel
+          Left = 190
+          Top = 24
+          Width = 72
+          Height = 15
+          Cursor = crHandPoint
+          Hint = ''
+          Caption = 'Notifica'#231#245'es'
+          Anchors = [akLeft, akTop, akRight, akBottom]
+          ParentFont = False
+          Font.Color = 14313335
+          Font.Height = 15
+          Font.Name = 'Roboto'
+          TabOrder = 1
         end
         object UniPanel1: TUniPanel
           Left = 328
@@ -516,41 +516,12 @@ inherited FrPrincipal: TFrPrincipal
           Height = 54
           Hint = ''
           Align = alRight
-          TabOrder = 4
+          TabOrder = 3
           BorderStyle = ubsNone
           ShowCaption = False
           Caption = ''
           Color = 16772848
         end
-      end
-      object btnCategoria: TUniFSButton [8]
-        Left = 20
-        Top = 106
-        Width = 105
-        Height = 38
-        Hint = ''
-        StyleButton = GoogleSilverRound
-        BadgeText.Text = '0'
-        BadgeText.TextColor = '#FFFFFF'
-        BadgeText.TextSize = 10
-        BadgeText.TextStyle = 'bold'
-        BadgeText.BackgroundColor = '#D50000'
-        Caption = 'Categorias '
-        TabOrder = 5
-        ScreenMask.Enabled = True
-        ScreenMask.WaitData = True
-        ScreenMask.ShowMessage = False
-        ScreenMask.Color = 14313335
-        ScreenMask.Opacity = 0.200000002980232200
-        OnClick = btnCategoriaClick
-      end
-      inherited UniLabel1: TUniLabel
-        Left = 16
-        Top = 41
-        AutoSize = False
-        Anchors = [akTop]
-        ExplicitLeft = 16
-        ExplicitTop = 41
       end
     end
   end

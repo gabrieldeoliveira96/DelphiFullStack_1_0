@@ -3,6 +3,7 @@ inherited frPesquisa: TfrPesquisa
   ClientWidth = 690
   Caption = 'Pesquisa'
   FormStyle = fsStayOnTop
+  OnClose = UniFormClose
   Visible = True
   PageMode = True
   Layout = 'anchor'
@@ -12,22 +13,22 @@ inherited frPesquisa: TfrPesquisa
   inherited UniScrollBox2: TUniScrollBox
     Width = 690
     Height = 608
-    ExplicitWidth = 674
-    ExplicitHeight = 696
+    ExplicitWidth = 690
+    ExplicitHeight = 608
     inherited pnlMain: TUniPanel
       Width = 688
       Height = 606
-      ExplicitWidth = 672
-      ExplicitHeight = 694
+      ExplicitWidth = 688
+      ExplicitHeight = 606
       inherited imgSer1: TUniImage
         Left = 328
-        ExplicitLeft = 312
+        ExplicitLeft = 328
       end
       inherited imgServ3: TUniImage
         Left = 545
         Top = 475
-        ExplicitLeft = 529
-        ExplicitTop = 563
+        ExplicitLeft = 545
+        ExplicitTop = 475
       end
       inherited UniLabel1: TUniLabel
         Visible = False
@@ -36,7 +37,7 @@ inherited frPesquisa: TfrPesquisa
         Left = 220
         Top = 10
         Width = 268
-        Height = 128
+        Height = 101
         Hint = ''
         Anchors = [akLeft, akTop, akRight]
         TabOrder = 5
@@ -46,9 +47,9 @@ inherited frPesquisa: TfrPesquisa
       end
       object sbServicos: TUniScrollBox
         Left = 3
-        Top = 272
+        Top = 265
         Width = 674
-        Height = 297
+        Height = 304
         Hint = ''
         Anchors = [akLeft, akTop, akRight, akBottom]
         TabOrder = 6
@@ -56,7 +57,7 @@ inherited frPesquisa: TfrPesquisa
       end
       object pnlPesquisa: TUniPanel
         Left = 0
-        Top = 144
+        Top = 112
         Width = 685
         Height = 58
         Hint = ''
@@ -79,7 +80,7 @@ inherited frPesquisa: TfrPesquisa
           Caption = 'DIV'
           TabOrder = 3
         end
-        object UniFSEdit1: TUniFSEdit
+        object edtPesqServico: TUniFSEdit
           Left = 39
           Top = 5
           Width = 630
@@ -104,7 +105,11 @@ inherited frPesquisa: TfrPesquisa
           TabOrder = 1
           Color = clWhite
           EmptyText = 'Pesquisar Servi'#231'os'
-          ExplicitWidth = 610
+          ScreenMask.Enabled = True
+          ScreenMask.WaitData = True
+          ScreenMask.ShowMessage = False
+          ScreenMask.Color = 14313335
+          OnKeyUp = edtPesqServicoKeyUp
         end
         object UniImage2: TUniImage
           Left = 4
@@ -166,9 +171,9 @@ inherited frPesquisa: TfrPesquisa
       end
       object PnlSubCategorias: TUniPanel
         Left = 3
-        Top = 208
+        Top = 176
         Width = 682
-        Height = 54
+        Height = 73
         Hint = ''
         Anchors = [akLeft, akTop, akRight]
         TabOrder = 9
@@ -186,15 +191,12 @@ inherited frPesquisa: TfrPesquisa
           Caption = ''
           Align = alClient
           TabOrder = 1
-          ExplicitLeft = 3
-          ExplicitTop = 3
-          ExplicitWidth = 49
         end
         object LblDescFiltroSubCategoria: TUniLabel
           Left = 18
           Top = 5
-          Width = 124
-          Height = 14
+          Width = 115
+          Height = 13
           Hint = ''
           Visible = False
           Caption = 'Filtro de subcategorias'

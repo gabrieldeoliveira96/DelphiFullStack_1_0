@@ -18,7 +18,15 @@ uses
   uImagens.Services in 'services\uImagens.Services.pas' {ImagensServices: TDataModule},
   uPrincipal.Controller in 'controller\uPrincipal.Controller.pas',
   uImagem.Servicos.Model in 'model\uImagem.Servicos.Model.pas',
-  uPesquisa.view in 'view\uPesquisa.view.pas' {frPesquisa: TUniForm};
+  uPesquisa.view in 'view\uPesquisa.view.pas' {frPesquisa: TUniForm},
+  uSubCategorias.Services in 'services\uSubCategorias.Services.pas' {SubCategoriasServices: TDataModule},
+  uSubCategorias.Model in 'model\uSubCategorias.Model.pas',
+  uSubCategorias.Controller in 'controller\uSubCategorias.Controller.pas',
+  uContrataServicos.View in 'view\uContrataServicos.View.pas' {frContrataServico: TUniForm},
+  uMenu.View in 'view\uMenu.View.pas' {frMenuLateral: TUniForm},
+  uPrivacidade.Model in 'model\uPrivacidade.Model.pas',
+  uPrivacidade.Services in 'services\uPrivacidade.Services.pas' {dmPrivacidadeServices: TDataModule},
+  uPrivacidade.Controller in 'controller\uPrivacidade.Controller.pas';
 
 {$R *.res}
 

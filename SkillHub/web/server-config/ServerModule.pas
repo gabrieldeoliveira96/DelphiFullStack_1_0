@@ -34,6 +34,7 @@ end;
 procedure TUniServerModule.FirstInit;
 begin
   InitServerModule(Self);
+  self.Title := 'Skill Hub';
 end;
 
 procedure TUniServerModule.UniGUIServerModuleCreate(Sender: TObject);

@@ -21,7 +21,11 @@ uses
   controllers.subcategoria in 'src\controller\controllers.subcategoria.pas',
   model.servico in 'src\model\model.servico.pas' {DmServico: TDataModule},
   controllers.servico in 'src\controller\controllers.servico.pas',
-  controller.log in 'src\controller\controller.log.pas';
+  controller.log in 'src\controller\controller.log.pas',
+  controllers.notificacao in 'src\controller\controllers.notificacao.pas',
+  model.notificacao in 'src\model\model.notificacao.pas' {DmNotificacao: TDataModule},
+  model.privacidade in 'src\model\model.privacidade.pas' {dmPrivacidade: TDataModule},
+  controllers.privacidade in 'src\controller\controllers.privacidade.pas';
 
 begin
   THorse.Use(Jhonson);
@@ -31,6 +35,8 @@ begin
   controllers.profissao.Profissao;
   controllers.subcategoria.SubCategoria;
   controllers.servico.Servico;
+  controllers.notificacao.Notificacao;
+  controllers.privacidade.privacidade;
 
   THorse.Get('/ping',
     procedure(Req: THorseRequest; Res: THorseResponse)

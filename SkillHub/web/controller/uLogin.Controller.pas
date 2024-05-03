@@ -13,6 +13,7 @@ type
       procedure getTelaPrincipal(Owner : TComponent);
       procedure getTelaCadastroNovoUsuarioLogin(AOwner: TComponent; AParent: TWinControl);
       function  ValidarLogin(AUsuario, ASenha: String): boolean;
+      function  AlterarSenha(AUsuario, ASenha: String): boolean;
       function  CadastrarNovoUsuario(AEmail, ASenha, ANome, ATipoUsuario, ACpf, AFoto: String): boolean;
       
   end;
@@ -29,6 +30,16 @@ begin
    Result := False;
    try
      Result := LoginServices.ValidarLogin(AUsuario, ASenha);
+   except
+     Result := False;
+   end;
+end;
+
+function TLoginController.AlterarSenha(AUsuario, ASenha: String): boolean;
+begin
+    Result := False;
+   try
+     Result := LoginServices.AlterarSenha(AUsuario, ASenha);
    except
      Result := False;
    end;

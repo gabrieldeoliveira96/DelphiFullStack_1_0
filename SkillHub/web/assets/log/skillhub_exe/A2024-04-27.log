@@ -1,0 +1,22 @@
+SkillHub.exe: 000003C4: 00:28:16 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: yqVLe958c410EA89BAA ) : Addr: $01353BD1
+SkillHub.exe: 00001F38: 00:50:50 []:>--------------------------------------------------------------<
+SkillHub.exe: 00001F38: 00:50:50 [TUniServerModule]:Server First Init.
+SkillHub.exe: 00001F38: 00:50:51 [TUniServerModule]:Start Path = C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\
+SkillHub.exe: 00001F38: 00:50:51 [TUniServerModule]:Debug Mode = ON
+SkillHub.exe: 00001F38: 00:50:51 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+SkillHub.exe: 00001F38: 00:50:51 [TUniServerModule]:HTTP Server Started on Port: 8077
+SkillHub.exe: 0000094C: 00:58:13 []:>--------------------------------------------------------------<
+SkillHub.exe: 0000094C: 00:58:13 [TUniServerModule]:Server First Init.
+SkillHub.exe: 0000094C: 00:58:14 [TUniServerModule]:Start Path = C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\
+SkillHub.exe: 0000094C: 00:58:14 [TUniServerModule]:Debug Mode = ON
+SkillHub.exe: 0000094C: 00:58:15 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+SkillHub.exe: 0000094C: 00:58:15 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+SkillHub.exe: 0000094C: 00:58:15 [TUniServerModule]:HTTP Server Started on Port: 8077
+SkillHub.exe: 00002BB4: 01:00:44 []:>--------------------------------------------------------------<
+SkillHub.exe: 00002BB4: 01:00:44 [TUniServerModule]:Server First Init.
+SkillHub.exe: 00002BB4: 01:00:45 [TUniServerModule]:Start Path = C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\
+SkillHub.exe: 00002BB4: 01:00:45 [TUniServerModule]:Debug Mode = ON
+SkillHub.exe: 00002BB4: 01:00:45 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+SkillHub.exe: 00002BB4: 01:00:45 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+SkillHub.exe: 00002BB4: 01:00:46 [TUniServerModule]:HTTP Server Started on Port: 8077
+SkillHub.exe: 0000139C: 01:01:05 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: KrcragmYAD10EA8B277 ) : Addr: $00FE3BD1
