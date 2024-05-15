@@ -33,10 +33,10 @@ type
     procedure UniFSButton2Click(Sender: TObject);
     procedure btnFavoritarClick(Sender: TObject);
   private
-    FModel: TItems;
+    FModel: TItemsImgServicosModel;
     procedure Favoritar;
   public
-    property Mode: TItems read FModel write FModel;
+    property Mode: TItemsImgServicosModel read FModel write FModel;
   end;
 
 var

@@ -8,13 +8,14 @@ uses
 {$M+}
 
 type
-  TItems = class
+  TItemsImgServicosModel = class
   private
     FBairro: string;
     FCategoria: Integer;
     FCep: string;
     FCod: Integer;
     FCodUsuario: Integer;
+    FCod_usuario: Integer;
     FComplemento: string;
     [SuppressZero]
     FDataIngresso: TDateTime;
@@ -38,6 +39,7 @@ type
     property Cep: string read FCep write FCep;
     property Cod: Integer read FCod write FCod;
     property CodUsuario: Integer read FCodUsuario write FCodUsuario;
+    property Cod_usuario: Integer read FCod_Usuario write FCod_Usuario;
     property Complemento: string read FComplemento write FComplemento;
     property DataIngresso: TDateTime read FDataIngresso write FDataIngresso;
     property Descricao: string read FDescricao write FDescricao;
@@ -59,14 +61,14 @@ type
   TImagemServicoModel = class(TJsonDTO)
   private
     [JSONName('Items'), JSONMarshalled(False)]
-    FItemsArray: TArray<TItems>;
+    FItemsArray: TArray<TItemsImgServicosModel>;
     [GenericListReflect]
-    FItems: TObjectList<TItems>;
-    function GetItems: TObjectList<TItems>;
+    FItems: TObjectList<TItemsImgServicosModel>;
+    function GetItems: TObjectList<TItemsImgServicosModel>;
   protected
     function GetAsJson: string; override;
   published
-    property Items: TObjectList<TItems> read GetItems;
+    property Items: TObjectList<TItemsImgServicosModel> read GetItems;
   public
     destructor Destroy; override;
     function GetListaImagensModel(AJsonString: String): TImagemServicoModel;
@@ -82,9 +84,9 @@ begin
   inherited;
 end;
 
-function TImagemServicoModel.GetItems: TObjectList<TItems>;
+function TImagemServicoModel.GetItems: TObjectList<TItemsImgServicosModel>;
 begin
-  Result := ObjectList<TItems>(FItems, FItemsArray);
+  Result := ObjectList<TItemsImgServicosModel>(FItems, FItemsArray);
 end;
 
 Function TImagemServicoModel.GetListaImagensModel(AJsonString: String): TImagemServicoModel;
@@ -100,7 +102,7 @@ end;
 
 function TImagemServicoModel.GetAsJson: string;
 begin
-  RefreshArray<TItems>(FItems, FItemsArray);
+  RefreshArray<TItemsImgServicosModel>(FItems, FItemsArray);
   Result := inherited;
 end;
 

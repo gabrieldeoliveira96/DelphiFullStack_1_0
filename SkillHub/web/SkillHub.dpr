@@ -1,6 +1,15 @@
-program SkillHub;
+{$define UNIGUI_VCL} // Comment out this line to turn this project into an ISAPI module'
+
+{$ifndef UNIGUI_VCL}
+library
+{$else}
+program
+{$endif}
+  SkillHub;
+
 
 uses
+  uniGUIISAPI,
   Forms,
   ServerModule in 'server-config\ServerModule.pas' {UniServerModule: TUniGUIServerModule},
   ulogin.Services in 'services\ulogin.Services.pas' {LoginServices: TUniGUIMainModule},
@@ -26,13 +35,26 @@ uses
   uMenu.View in 'view\uMenu.View.pas' {frMenuLateral: TUniForm},
   uPrivacidade.Model in 'model\uPrivacidade.Model.pas',
   uPrivacidade.Services in 'services\uPrivacidade.Services.pas' {dmPrivacidadeServices: TDataModule},
-  uPrivacidade.Controller in 'controller\uPrivacidade.Controller.pas';
+  uPrivacidade.Controller in 'controller\uPrivacidade.Controller.pas',
+  uNotificacao.Model in 'model\uNotificacao.Model.pas',
+  uNotificacao.Services in 'services\uNotificacao.Services.pas' {dmNotificacaoServices: TDataModule},
+  uNotificacao.View in 'view\uNotificacao.View.pas' {frNotificacao: TUniForm},
+  uCadastroServico.view in 'view\uCadastroServico.view.pas' {frCadastraServico: TUniForm};
 
 {$R *.res}
 
+{$ifndef UNIGUI_VCL}
+exports
+  GetExtensionVersion,
+  HttpExtensionProc,
+  TerminateExtension;
+{$endif}
+
 begin
+{$ifdef UNIGUI_VCL}
   ReportMemoryLeaksOnShutdown := false;
   Application.Initialize;
   TUniServerModule.Create(Application);
   Application.Run;
+{$endif}
 end.

@@ -53,6 +53,7 @@ implementation
 {%CLASSGROUP 'System.Classes.TPersistent'}
 
 {$R *.dfm}
+uses System.RegularExpressions, IdCoderMIME;
 
 { TDmServico }
 
@@ -154,6 +155,10 @@ end;
 function TDmServico.PostServico(Ajson: TJSONObject): TJSONObject;
 var
   Ljo: TJSONObject;
+function IsBase64(const S: string): Boolean;
+begin
+  Result := TRegEx.IsMatch(S, '^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$');
+end;
 begin
   qryPostServico.Open;
   qryPostServico.Append;
@@ -168,12 +173,25 @@ begin
   qryPostServicoCATEGORIA.AsString := Ajson.GetValue<string>('categoria');
   qryPostServicoSUBCATEGORIA.AsString := Ajson.GetValue<string>('subcategoria');
   qryPostServicoPROFISSAO.AsString := Ajson.GetValue<string>('profissao');
-  qryPostServicoFOTO.AsString := Ajson.GetValue<string>('foto');
   qryPostServicoCOD_USUARIO.AsString := Ajson.GetValue<string>('cod_usuario');
   qryPostServicoDATA_INGRESSO.AsDateTime := date;
   qryPostServicoKM.AsInteger   :=  Ajson.GetValue<integer>('km');
   qryPostServicoVALOR.AsFloat  :=  Ajson.GetValue<double>('valor');
   qryPostServicoFAVORITADO.AsString := Ajson.GetValue<string>('favoritado');
+
+  if IsBase64(Copy(Ajson.GetValue<string>('foto'),0,200)) then
+  begin
+    var Decoder := TIdDecoderMIME.create(nil);
+    var Stream := TMemoryStream.create;
+
+     Decoder.DecodeBegin(Stream);
+     Decoder.Decode(Ajson.GetValue<string>('foto'));
+     Decoder.DecodeEnd;
+
+    TBlobField(qryPostServicoFOTO).LoadFromStream(Stream);
+  end else
+      qryPostServicoFOTO.AsString := Ajson.GetValue<string>('foto');
+
   qryPostServico.Post;
 
   Ljo := TJSONObject.Create;
