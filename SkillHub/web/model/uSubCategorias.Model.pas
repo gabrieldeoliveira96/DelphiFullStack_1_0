@@ -8,13 +8,14 @@ uses
 {$M+}
 
 type
-  TItems = class
+  TItemsSubCategoriasModel = class
   private
     FCod: Integer;
     FCodCategoria: Integer;
     FCodSubcategoria: Integer;
     FDescricaoCategoria: string;
     FDescricaoSubcategoria: string;
+    FDescricao: string;
     FFigurinha: string;
   published
     property Cod: Integer read FCod write FCod;
@@ -22,20 +23,21 @@ type
     property CodSubcategoria: Integer read FCodSubcategoria write FCodSubcategoria;
     property DescricaoCategoria: string read FDescricaoCategoria write FDescricaoCategoria;
     property DescricaoSubcategoria: string read FDescricaoSubcategoria write FDescricaoSubcategoria;
+    property Descricao: string read FDescricao write FDescricao;
     property Figurinha: string read FFigurinha write FFigurinha;
   end;
 
   TSubCategoriaModel = class(TJsonDTO)
   private
     [JSONName('Items'), JSONMarshalled(False)]
-    FItemsArray: TArray<TItems>;
+    FItemsArray: TArray<TItemsSubCategoriasModel>;
     [GenericListReflect]
-    FItems: TObjectList<TItems>;
-    function GetItems: TObjectList<TItems>;
+    FItems: TObjectList<TItemsSubCategoriasModel>;
+    function GetItems: TObjectList<TItemsSubCategoriasModel>;
   protected
     function GetAsJson: string; override;
   published
-    property Items: TObjectList<TItems> read GetItems;
+    property Items: TObjectList<TItemsSubCategoriasModel> read GetItems;
   public
     destructor Destroy; override;
     Function GetListaSubCategoriasModel(AJsonString: String): TSubCategoriaModel;
@@ -51,9 +53,9 @@ begin
   inherited;
 end;
 
-function TSubCategoriaModel.GetItems: TObjectList<TItems>;
+function TSubCategoriaModel.GetItems: TObjectList<TItemsSubCategoriasModel>;
 begin
-  Result := ObjectList<TItems>(FItems, FItemsArray);
+  Result := ObjectList<TItemsSubCategoriasModel>(FItems, FItemsArray);
 end;
 
 function TSubCategoriaModel.GetListaSubCategoriasModel(AJsonString: String): TSubCategoriaModel;
@@ -69,7 +71,7 @@ end;
 
 function TSubCategoriaModel.GetAsJson: string;
 begin
- RefreshArray<TItems>(FItems, FItemsArray);
+ RefreshArray<TItemsSubCategoriasModel>(FItems, FItemsArray);
   Result := inherited;
 end;
 

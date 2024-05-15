@@ -4,7 +4,7 @@
         <ProjectVersion>19.5</ProjectVersion>
         <FrameworkType>VCL</FrameworkType>
         <Base>True</Base>
-        <Config Condition="'$(Config)'==''">Debug</Config>
+        <Config Condition="'$(Config)'==''">Release</Config>
         <Platform Condition="'$(Platform)'==''">Win32</Platform>
         <TargetedPlatforms>1</TargetedPlatforms>
         <AppType>Application</AppType>
@@ -77,6 +77,7 @@
         <Icon_MainIcon>$(BDS)\bin\delphi_PROJECTICON.ico</Icon_MainIcon>
         <Icns_MainIcns>$(BDS)\bin\delphi_PROJECTICNS.icns</Icns_MainIcns>
         <SanitizedProjectName>SkillHub</SanitizedProjectName>
+        <DCC_Define>SKIA;$(DCC_Define)</DCC_Define>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Android)'!=''">
         <DCC_UsePackage>soapserver;IndySystem;fmx;DbxCommonDriver;bindengine;IndyIPCommon;FireDACCommonDriver;IndyProtocols;Skia.Package.RTL;IndyIPClient;dbxcds;bindcomp;FireDACCommon;IndyCore;RESTBackendComponents;bindcompfmx;bindcompdbx;rtl;FireDACSqliteDriver;DbxClientDriver;RESTComponents;soapmidas;DBXSqliteDriver;IndyIPServer;dsnapxml;fmxFireDAC;dbexpress;inet;GosDrawerButtons;FireDAC;fmxase;xmlrtl;tethering;dbrtl;dsnap;Skia.Package.FMX;CloudService;GosComponents;CustomIPTransport;GosDrawerComponents;soaprtl;DBXInterBaseDriver;FireDACIBDriver;$(DCC_UsePackage)</DCC_UsePackage>
@@ -136,81 +137,81 @@
         </DelphiCompile>
         <DCCReference Include="server-config\ServerModule.pas">
             <Form>UniServerModule</Form>
-            <FormType>dfm</FormType>
             <DesignClass>TUniGUIServerModule</DesignClass>
         </DCCReference>
         <DCCReference Include="services\ulogin.Services.pas">
             <Form>LoginServices</Form>
-            <FormType>dfm</FormType>
             <DesignClass>TUniGUIMainModule</DesignClass>
         </DCCReference>
         <DCCReference Include="view\uMain.view.pas">
             <Form>MainForm</Form>
-            <FormType>dfm</FormType>
             <DesignClass>TUniForm</DesignClass>
         </DCCReference>
         <DCCReference Include="utils\uConstsHtml.pas"/>
         <DCCReference Include="view\uFrLogin.view.pas">
             <Form>FrLogin</Form>
-            <FormType>dfm</FormType>
             <DesignClass>TUniFrame</DesignClass>
         </DCCReference>
         <DCCReference Include="controller\uLogin.Controller.pas"/>
         <DCCReference Include="controller\uMain.Controller.pas"/>
         <DCCReference Include="services\uMain.Services.pas">
             <Form>MainServices</Form>
-            <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <DCCReference Include="model\uLogin.Model.pas"/>
         <DCCReference Include="view\uCadastroUsuarioLogin.View.pas">
             <Form>FrCadUsuarioLogin</Form>
-            <FormType>dfm</FormType>
             <DesignClass>TUniFrame</DesignClass>
         </DCCReference>
         <DCCReference Include="helpers\uHelpersFrames.pas"/>
         <DCCReference Include="view\uFrmPrincipal.view.pas">
             <Form>FrPrincipal</Form>
-            <FormType>dfm</FormType>
             <DesignClass>TUniForm</DesignClass>
         </DCCReference>
         <DCCReference Include="model\uImagens.Model.pas"/>
         <DCCReference Include="services\uImagens.Services.pas">
             <Form>ImagensServices</Form>
-            <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <DCCReference Include="controller\uPrincipal.Controller.pas"/>
         <DCCReference Include="model\uImagem.Servicos.Model.pas"/>
         <DCCReference Include="view\uPesquisa.view.pas">
             <Form>frPesquisa</Form>
-            <FormType>dfm</FormType>
             <DesignClass>TUniForm</DesignClass>
         </DCCReference>
         <DCCReference Include="services\uSubCategorias.Services.pas">
             <Form>SubCategoriasServices</Form>
-            <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <DCCReference Include="model\uSubCategorias.Model.pas"/>
         <DCCReference Include="controller\uSubCategorias.Controller.pas"/>
         <DCCReference Include="view\uContrataServicos.View.pas">
             <Form>frContrataServico</Form>
-            <FormType>dfm</FormType>
             <DesignClass>TUniForm</DesignClass>
         </DCCReference>
         <DCCReference Include="view\uMenu.View.pas">
             <Form>frMenuLateral</Form>
-            <FormType>dfm</FormType>
             <DesignClass>TUniForm</DesignClass>
         </DCCReference>
         <DCCReference Include="model\uPrivacidade.Model.pas"/>
         <DCCReference Include="services\uPrivacidade.Services.pas">
             <Form>dmPrivacidadeServices</Form>
-            <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <DCCReference Include="controller\uPrivacidade.Controller.pas"/>
+        <DCCReference Include="model\uNotificacao.Model.pas"/>
+        <DCCReference Include="services\uNotificacao.Services.pas">
+            <Form>dmNotificacaoServices</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="view\uNotificacao.View.pas">
+            <Form>frNotificacao</Form>
+            <DesignClass>TUniForm</DesignClass>
+        </DCCReference>
+        <DCCReference Include="view\uCadastroServico.view.pas">
+            <Form>frCadastraServico</Form>
+            <DesignClass>TUniForm</DesignClass>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -237,6 +238,166 @@
                 </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="4">
+                <DeployFile Condition="'$(SKIADIR)'==''" Required="true" LocalName="$(BDS)\bin64\sk4d.dll" Configuration="Debug" Class="Skia">
+                    <Platform Name="Win64">
+                        <RemoteDir>.\</RemoteDir>
+                        <Operation>0</Operation>
+                        <RemoteName>sk4d.dll</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile Condition="'$(SKIADIR)'==''" Required="true" LocalName="$(BDS)\bin64\sk4d.dll" Configuration="Release" Class="Skia">
+                    <Platform Name="Win64">
+                        <RemoteDir>.\</RemoteDir>
+                        <Operation>0</Operation>
+                        <RemoteName>sk4d.dll</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile Condition="'$(SKIADIR)'==''" Required="true" LocalName="$(BDS)\bin\sk4d.dll" Configuration="Debug" Class="Skia">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Operation>0</Operation>
+                        <RemoteName>sk4d.dll</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile Condition="'$(SKIADIR)'==''" Required="true" LocalName="$(BDS)\bin\sk4d.dll" Configuration="Release" Class="Skia">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Operation>0</Operation>
+                        <RemoteName>sk4d.dll</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile Condition="'$(SKIADIR)'==''" Required="true" LocalName="$(BDS)\binandroid32\libsk4d.so" Configuration="Debug" Class="Skia">
+                    <Platform Name="Android">
+                        <RemoteDir>library\lib\armeabi-v7a\</RemoteDir>
+                        <Operation>1</Operation>
+                        <RemoteName>libsk4d.so</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile Condition="'$(SKIADIR)'=='' and '$(AndroidAppBundle)'=='true'" Required="true" LocalName="$(BDS)\binandroid32\libsk4d.so" Configuration="Debug" Class="Skia">
+                    <Platform Name="Android64">
+                        <RemoteDir>library\lib\armeabi-v7a\</RemoteDir>
+                        <Operation>1</Operation>
+                        <RemoteName>libsk4d.so</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile Condition="'$(SKIADIR)'==''" Required="true" LocalName="$(BDS)\binandroid32\libsk4d.so" Configuration="Release" Class="Skia">
+                    <Platform Name="Android">
+                        <RemoteDir>library\lib\armeabi-v7a\</RemoteDir>
+                        <Operation>1</Operation>
+                        <RemoteName>libsk4d.so</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile Condition="'$(SKIADIR)'=='' and '$(AndroidAppBundle)'=='true'" Required="true" LocalName="$(BDS)\binandroid32\libsk4d.so" Configuration="Release" Class="Skia">
+                    <Platform Name="Android64">
+                        <RemoteDir>library\lib\armeabi-v7a\</RemoteDir>
+                        <Operation>1</Operation>
+                        <RemoteName>libsk4d.so</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile Condition="'$(SKIADIR)'==''" Required="true" LocalName="$(BDS)\binandroid64\libsk4d.so" Configuration="Debug" Class="Skia">
+                    <Platform Name="Android64">
+                        <RemoteDir>library\lib\arm64-v8a\</RemoteDir>
+                        <Operation>1</Operation>
+                        <RemoteName>libsk4d.so</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile Condition="'$(SKIADIR)'==''" Required="true" LocalName="$(BDS)\binandroid64\libsk4d.so" Configuration="Release" Class="Skia">
+                    <Platform Name="Android64">
+                        <RemoteDir>library\lib\arm64-v8a\</RemoteDir>
+                        <Operation>1</Operation>
+                        <RemoteName>libsk4d.so</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile Condition="'$(SKIADIR)'!=''" Required="true" LocalName="$(SKIADIR)\Binary\Shared\Android64\libsk4d.so" Configuration="Debug" Class="Skia">
+                    <Platform Name="Android64">
+                        <RemoteDir>library\lib\arm64-v8a\</RemoteDir>
+                        <Operation>1</Operation>
+                        <RemoteName>libsk4d.so</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile Condition="'$(SKIADIR)'!=''" Required="true" LocalName="$(SKIADIR)\Binary\Shared\Android64\libsk4d.so" Configuration="Release" Class="Skia">
+                    <Platform Name="Android64">
+                        <RemoteDir>library\lib\arm64-v8a\</RemoteDir>
+                        <Operation>1</Operation>
+                        <RemoteName>libsk4d.so</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile Condition="'$(SKIADIR)'!=''" Required="true" LocalName="$(SKIADIR)\Binary\Shared\Android\libsk4d.so" Configuration="Debug" Class="Skia">
+                    <Platform Name="Android">
+                        <RemoteDir>library\lib\armeabi-v7a\</RemoteDir>
+                        <Operation>1</Operation>
+                        <RemoteName>libsk4d.so</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile Condition="'$(SKIADIR)'!='' and '$(AndroidAppBundle)'=='true'" Required="true" LocalName="$(SKIADIR)\Binary\Shared\Android\libsk4d.so" Configuration="Debug" Class="Skia">
+                    <Platform Name="Android64">
+                        <RemoteDir>library\lib\armeabi-v7a\</RemoteDir>
+                        <Operation>1</Operation>
+                        <RemoteName>libsk4d.so</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile Condition="'$(SKIADIR)'!=''" Required="true" LocalName="$(SKIADIR)\Binary\Shared\Android\libsk4d.so" Configuration="Release" Class="Skia">
+                    <Platform Name="Android">
+                        <RemoteDir>library\lib\armeabi-v7a\</RemoteDir>
+                        <Operation>1</Operation>
+                        <RemoteName>libsk4d.so</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile Condition="'$(SKIADIR)'!='' and '$(AndroidAppBundle)'=='true'" Required="true" LocalName="$(SKIADIR)\Binary\Shared\Android\libsk4d.so" Configuration="Release" Class="Skia">
+                    <Platform Name="Android64">
+                        <RemoteDir>library\lib\armeabi-v7a\</RemoteDir>
+                        <Operation>1</Operation>
+                        <RemoteName>libsk4d.so</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile Condition="'$(SKIADIR)'!=''" Required="true" LocalName="$(SKIADIR)\Binary\Shared\Win32\sk4d.dll" Configuration="Debug" Class="Skia">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Operation>0</Operation>
+                        <RemoteName>sk4d.dll</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile Condition="'$(SKIADIR)'!=''" Required="true" LocalName="$(SKIADIR)\Binary\Shared\Win32\sk4d.dll" Configuration="Release" Class="Skia">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Operation>0</Operation>
+                        <RemoteName>sk4d.dll</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile Condition="'$(SKIADIR)'!=''" Required="true" LocalName="$(SKIADIR)\Binary\Shared\Win64\sk4d.dll" Configuration="Debug" Class="Skia">
+                    <Platform Name="Win64">
+                        <RemoteDir>.\</RemoteDir>
+                        <Operation>0</Operation>
+                        <RemoteName>sk4d.dll</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile Condition="'$(SKIADIR)'!=''" Required="true" LocalName="$(SKIADIR)\Binary\Shared\Win64\sk4d.dll" Configuration="Release" Class="Skia">
+                    <Platform Name="Win64">
+                        <RemoteDir>.\</RemoteDir>
+                        <Operation>0</Operation>
+                        <RemoteName>sk4d.dll</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile LocalName="assets\SkillHub.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>SkillHub.exe</RemoteName>

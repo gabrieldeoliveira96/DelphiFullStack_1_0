@@ -2181,6 +2181,10 @@ object UniServerModule: TUniServerModule
     '  border-color: #aaa;'
     '  box-sizing: border-box;'
     '  width: 100%;'
+    '}'
+    ''
+    '.NewImgServ {'
+    '    object-fit: contain;'
     '}')
   SSL.SSLOptions.RootCertFile = 'root.pem'
   SSL.SSLOptions.CertFile = 'cert.pem'

@@ -21,6 +21,8 @@ type
     RESTPutFavorito: TRESTClient;
     RequestPutFavorito: TRESTRequest;
     ResponsePutFavorito: TRESTResponse;
+    RESTCadServico: TRESTClient;
+    RequestCadServico: TRESTRequest;
     procedure DataModuleDestroy(Sender: TObject);
     procedure UniGUIMainModuleCreate(Sender: TObject);
   private
@@ -28,6 +30,7 @@ type
     FModelImagensServicos: TImagemServicoModel;
   public
     procedure FavoritarServico(ACodServico, AFavoritado: String);
+    procedure CadastrarNovoServico(AModel: TItemsImgServicosModel);
     Function getListaCategorias: TImagensWSModel;
     Function getListaProfissoes: TImagensWSModel;
     Function getListaServicos(AKeyHeader: string = ''; AKeyValue: string ='' ): TImagemServicoModel;
@@ -41,6 +44,13 @@ implementation
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
 {$R *.dfm}
+uses REST.Json;
+
+procedure TImagensServices.CadastrarNovoServico(AModel: TItemsImgServicosModel);
+begin
+     RequestCadServico.Params[0].Value := Tjson.ObjectToJsonString(AModel);
+     RequestCadServico.Execute;
+end;
 
 procedure TImagensServices.DataModuleDestroy(Sender: TObject);
 begin

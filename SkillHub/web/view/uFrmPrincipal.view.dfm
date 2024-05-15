@@ -7,7 +7,6 @@ inherited FrPrincipal: TFrPrincipal
   PageMode = True
   OnCreate = UniFormCreate
   OnDestroy = UniFormDestroy
-  ExplicitLeft = -45
   TextHeight = 14
   inherited UniScrollBox2: TUniScrollBox
     ScrollDirection = sdVertical
@@ -275,6 +274,7 @@ inherited FrPrincipal: TFrPrincipal
           Top = 0
           Width = 45
           Height = 54
+          Cursor = crHandPoint
           Hint = ''
           Margins.Right = 10
           Picture.Data = {
@@ -494,8 +494,8 @@ inherited FrPrincipal: TFrPrincipal
           LayoutConfig.Padding = '0'
           OnClick = UniImage1Click
         end
-        object UniLabel3: TUniLabel
-          Left = 190
+        object lblNotificacao: TUniLabel
+          Left = 170
           Top = 24
           Width = 72
           Height = 15
@@ -508,6 +508,10 @@ inherited FrPrincipal: TFrPrincipal
           Font.Height = 15
           Font.Name = 'Roboto'
           TabOrder = 1
+          ScreenMask.Enabled = True
+          ScreenMask.WaitData = True
+          ScreenMask.ShowMessage = False
+          OnClick = lblNotificacaoClick
         end
         object UniPanel1: TUniPanel
           Left = 328
@@ -522,7 +526,85 @@ inherited FrPrincipal: TFrPrincipal
           Caption = ''
           Color = 16772848
         end
+        object pnlQtdNotific: TUniPanel
+          Left = 240
+          Top = 18
+          Width = 20
+          Height = 20
+          Hint = ''
+          TabOrder = 4
+          BorderStyle = ubsNone
+          Caption = ''
+          ParentBackground = True
+          Color = 16772848
+          object lbldivNotifi: TUniLabel
+            Left = 0
+            Top = 0
+            Width = 13
+            Height = 15
+            Cursor = crHandPoint
+            Hint = ''
+            TextConversion = txtHTML
+            Caption = '<>'
+            Align = alClient
+            ParentFont = False
+            Font.Color = 14313335
+            Font.Height = 15
+            Font.Name = 'Roboto'
+            ParentColor = False
+            Color = 16772851
+            TabOrder = 1
+          end
+          object lblQtdNotific: TUniLabel
+            Left = 4
+            Top = 3
+            Width = 7
+            Height = 15
+            Cursor = crHandPoint
+            Hint = ''
+            TextConversion = txtHTML
+            Caption = '0'
+            ParentFont = False
+            Font.Color = clWhite
+            Font.Height = 15
+            Font.Name = 'Roboto'
+            ParentColor = False
+            Color = 16772851
+            TabOrder = 2
+          end
+        end
+        object lblCadServico: TUniLabel
+          Left = 10
+          Top = 24
+          Width = 129
+          Height = 15
+          Cursor = crHandPoint
+          Hint = ''
+          Visible = False
+          Caption = 'Cadastrar novo servi'#231'o'
+          Anchors = [akLeft, akTop, akRight, akBottom]
+          ParentFont = False
+          Font.Color = 14313335
+          Font.Height = 15
+          Font.Name = 'Roboto'
+          TabOrder = 5
+          ScreenMask.Enabled = True
+          ScreenMask.WaitData = True
+          ScreenMask.ShowMessage = False
+          OnClick = lblCadServicoClick
+        end
       end
     end
+  end
+  object UniTimer1: TUniTimer
+    Interval = 150000
+    ClientEvent.Strings = (
+      'function(sender)'
+      '{'
+      ' '
+      '}')
+    OnTimer = UniTimer1Timer
+    Left = 667
+    Top = 73
   end
 end

@@ -1,34 +1,34 @@
 inherited frContrataServico: TfrContrataServico
-  ClientHeight = 406
-  ClientWidth = 730
+  ClientHeight = 435
+  ClientWidth = 735
   Caption = 'frContrataServico'
   FormStyle = fsMDIChild
   Position = poOwnerFormCenter
   Visible = True
   LayoutConfig.Padding = '5'
   LayoutConfig.BodyPadding = '5'
-  ExplicitWidth = 746
-  ExplicitHeight = 445
+  ExplicitWidth = 735
+  ExplicitHeight = 435
   TextHeight = 14
   inherited UniScrollBox2: TUniScrollBox
-    Width = 730
-    Height = 406
-    ExplicitWidth = 730
-    ExplicitHeight = 406
+    Width = 735
+    Height = 435
+    ExplicitWidth = 698
+    ExplicitHeight = 328
     inherited pnlMain: TUniPanel
-      Width = 728
-      Height = 404
-      ExplicitWidth = 728
-      ExplicitHeight = 404
+      Width = 733
+      Height = 433
+      ExplicitWidth = 696
+      ExplicitHeight = 326
       inherited imgSer1: TUniImage
-        Left = 368
-        ExplicitLeft = 368
+        Left = 373
+        ExplicitLeft = 336
       end
       inherited imgServ3: TUniImage
-        Left = 585
-        Top = 273
-        ExplicitLeft = 585
-        ExplicitTop = 273
+        Left = 590
+        Top = 302
+        ExplicitLeft = 553
+        ExplicitTop = 195
       end
       inherited UniLabel1: TUniLabel
         Visible = False
@@ -59,7 +59,7 @@ inherited frContrataServico: TfrContrataServico
       object PnlDiv: TUniPanel
         Left = 336
         Top = 64
-        Width = 377
+        Width = 382
         Height = 297
         Hint = ''
         Anchors = [akLeft, akTop, akRight]
@@ -68,6 +68,7 @@ inherited frContrataServico: TfrContrataServico
         ShowCaption = False
         Caption = ''
         Color = 16772848
+        ExplicitWidth = 345
         object lblDivPrincipal: TUniLabel
           Left = 0
           Top = 0
@@ -288,7 +289,7 @@ inherited frContrataServico: TfrContrataServico
         OnClick = UniFSButton2Click
       end
       object UniFSButton3: TUniFSButton
-        Left = 684
+        Left = 689
         Top = 3
         Width = 29
         Height = 28
@@ -306,6 +307,7 @@ inherited frContrataServico: TfrContrataServico
         Font.Name = 'Roboto'
         TabOrder = 9
         OnClick = UniFSButton3Click
+        ExplicitLeft = 652
       end
     end
   end

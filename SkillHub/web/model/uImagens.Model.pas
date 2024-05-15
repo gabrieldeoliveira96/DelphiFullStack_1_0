@@ -9,7 +9,7 @@ uses
 {$M+}
 
 type
-  TItems = class
+  TItemsImagensModel = class
   private
     [JSONName('cod')]
     FCod: Integer;
@@ -26,14 +26,14 @@ type
   TImagensWSModel = class(TJsonDTO)
   private
     [JSONName('Items'), JSONMarshalled(False)]
-    FItemsArray: TArray<TItems>;
+    FItemsArray: TArray<TItemsImagensModel>;
     [GenericListReflect]
-    FItems: TObjectList<TItems>;
-    function GetItems: TObjectList<TItems>;
+    FItems: TObjectList<TItemsImagensModel>;
+    function GetItems: TObjectList<TItemsImagensModel>;
   protected
     function GetAsJson: string; override;
   published
-    property Items: TObjectList<TItems> read GetItems;
+    property Items: TObjectList<TItemsImagensModel> read GetItems;
   public
     destructor Destroy; override;
     Function GetListaImagensModel(AJsonString: String): TImagensWSModel;
@@ -49,9 +49,9 @@ begin
   inherited;
 end;
 
-function TImagensWSModel.GetItems: TObjectList<TItems>;
+function TImagensWSModel.GetItems: TObjectList<TItemsImagensModel>;
 begin
-  Result := ObjectList<TItems>(FItems, FItemsArray);
+  Result := ObjectList<TItemsImagensModel>(FItems, FItemsArray);
 end;
 
 Function TImagensWSModel.GetListaImagensModel(AJsonString: String): TImagensWSModel;
@@ -67,7 +67,7 @@ end;
 
 function TImagensWSModel.GetAsJson: string;
 begin
-  RefreshArray<TItems>(FItems, FItemsArray);
+  RefreshArray<TItemsImagensModel>(FItems, FItemsArray);
   Result := inherited;
 end;
 

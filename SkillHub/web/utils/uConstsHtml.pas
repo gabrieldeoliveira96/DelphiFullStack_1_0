@@ -32,6 +32,9 @@ Const
   ImgServicos =
     '<img src=" data:image/png;base64, [base64foto]" alt="[nome]" height="240" width="260" />';
 
+  NewImgServicos =
+    '<img class="NewImgServ" src=" data:image/png;base64, [base64foto]" alt="[nome]" height="280" width="100%" />';
+
    function getSvgCheck: string;
 
 implementation

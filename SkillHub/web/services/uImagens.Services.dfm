@@ -114,4 +114,33 @@ object ImagensServices: TImagensServices
     Left = 304
     Top = 272
   end
+  object RESTCadServico: TRESTClient
+    BaseURL = 'http://localhost:9000/cadastrar/servico'
+    Params = <>
+    SynchronizedEvents = False
+    Left = 56
+    Top = 344
+  end
+  object RequestCadServico: TRESTRequest
+    AssignedValues = [rvConnectTimeout, rvReadTimeout]
+    Client = RESTCadServico
+    Method = rmPOST
+    Params = <
+      item
+        Kind = pkREQUESTBODY
+        Name = 'body340AE3516B614F77891D4944F53F1409'
+        Value = 
+          '{'#13#10'    "titulo":"Problema com impressora",'#13#10'    "descricao":"min' +
+          'ha impressora nao esta imprindo",'#13#10'    "cep":"29902400",'#13#10'    "e' +
+          'ndereco":"avenida presinte cafe filho",'#13#10'    "numero":"100",'#13#10'  ' +
+          '  "bairro":"bnh",'#13#10'    "complemento":"proximo ao supermecado",'#13#10 +
+          '    "categoria":"3",'#13#10'    "subcategoria":"4",'#13#10'    "profissao":"' +
+          '7",'#13#10'    "foto":"",'#13#10'    "cod_usuario":"11",'#13#10'    "km": 1,'#13#10'    ' +
+          '"valor": 100,'#13#10'    "favoritado": "N"'#13#10'}'
+        ContentTypeStr = 'application/json'
+      end>
+    SynchronizedEvents = False
+    Left = 176
+    Top = 344
+  end
 end

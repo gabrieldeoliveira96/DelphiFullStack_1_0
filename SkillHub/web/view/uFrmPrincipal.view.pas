@@ -4,16 +4,15 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, uMain.view, uniLabel,  uPrincipal.Controller,
-  uImagens.Model, uImagem.Servicos.Model,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, uMain.view, uniLabel,  uPrincipal.Controller,  uImagens.Model, uImagem.Servicos.Model,
   Vcl.Imaging.pngimage, uniImage, uniGUIBaseClasses, uniGUIClasses, uniPanel,
   uniScrollBox, uniButton, uniBitBtn, UniFSButton, uniEdit, UniFSEdit,
-  uniGUITypes;
+  uniGUITypes, uniThreadTimer, uniScreenMask, uniTimer, uniFileUpload;
 
 type
   TFrPrincipal = class(TMainForm)
     pnlTop: TUniPanel;
-    UniLabel3: TUniLabel;
+    lblNotificacao: TUniLabel;
     UniImage1: TUniImage;
     btnCategoria: TUniFSButton;
     pnlCategoria: TUniPanel;
@@ -28,6 +27,11 @@ type
     sbCardsServicos: TUniScrollBox;
     UniLabel4: TUniLabel;
     UniPanel1: TUniPanel;
+    pnlQtdNotific: TUniPanel;
+    lbldivNotifi: TUniLabel;
+    lblQtdNotific: TUniLabel;
+    UniTimer1: TUniTimer;
+    lblCadServico: TUniLabel;
     procedure UniFormShow(Sender: TObject);
     procedure UniFormCreate(Sender: TObject);
     procedure btnCategoriaClick(Sender: TObject);
@@ -37,12 +41,16 @@ type
       Shift: TShiftState);
     procedure AbrirServico(Sender: TObject);
     procedure UniImage1Click(Sender: TObject);
+    procedure lblNotificacaoClick(Sender: TObject);
+    procedure UniTimer1Timer(Sender: TObject);
+    procedure lblCadServicoClick(Sender: TObject);
   private
    const
     TopCategoria  = 180;
     TopPesquisa   = 435;
     TopProfissoes = 506;
     TopBottom     = 800;
+    procedure AjustaLatoutNotificacoes;
 
    var
     FModelImagens : TImagensWSModel;
@@ -399,9 +407,18 @@ begin
                                 .Replace('[hgh]',(pnlPesquisa.Height-5).ToString);
 end;
 
+procedure TFrPrincipal.AjustaLatoutNotificacoes;
+begin
+  lbldivNotifi.text := DivHtmlPadraoComValor
+                                       .Replace('[wdt]', (pnlQtdNotific.Width - 1).toString)
+                                       .Replace('[hgh]',  (pnlQtdNotific.Height -1).toString)
+                                       .Replace('[valor]','');
+end;
 
 procedure TFrPrincipal.UniFormShow(Sender: TObject);
 begin
+  lblCadServico.Visible := FController.getDadosUsuarioLogado.TipoUsuario = 'colaborador';
+  AjustaLatoutNotificacoes;
   AjustaPnlPesquisa;
   CarregarCategorias;
   CarregarProfissoes;
@@ -414,6 +431,17 @@ begin
   FController.getTelaMenuLateral(self);
 end;
 
+procedure TFrPrincipal.UniTimer1Timer(Sender: TObject);
+begin
+  inherited;
+   var model := FController.getNotificacoes;
+   try
+     lblQtdNotific.text := Model.Items.Count.toString;
+   finally
+     Model.free;
+   end;
+end;
+
 procedure TFrPrincipal.edtPesqServicosKeyUp(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
@@ -424,6 +452,18 @@ begin
     CarregarServicos('descricaoServico',edtPesqServicos.Text);
   end;
 
+end;
+
+procedure TFrPrincipal.lblCadServicoClick(Sender: TObject);
+begin
+  inherited;
+  FController.getTelaCadastroServico(self);
+end;
+
+procedure TFrPrincipal.lblNotificacaoClick(Sender: TObject);
+begin
+  inherited;
+  FController.getTelaNotificacoes(self);
 end;
 
 procedure TFrPrincipal.LimparServicos;
