@@ -1,0 +1,54 @@
+SkillHub.exe: 00001C28: 23:09:55 []:>--------------------------------------------------------------<
+SkillHub.exe: 00001C28: 23:09:55 [TUniServerModule]:Server First Init.
+SkillHub.exe: 00001C28: 23:09:55 [TUniServerModule]:Start Path = C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\
+SkillHub.exe: 00001C28: 23:09:55 [TUniServerModule]:Debug Mode = ON
+SkillHub.exe: 00001C28: 23:09:55 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+SkillHub.exe: 00001C28: 23:09:57 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+SkillHub.exe: 00001C28: 23:09:59 [TUniServerModule]:HTTP Server Started on Port: 8077
+SkillHub.exe: 00001664: 23:11:00 [HandleFileRequest[127.0.0.1]]:File not found: C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\.js
+SkillHub.exe: 00000958: 23:12:49 []:>--------------------------------------------------------------<
+SkillHub.exe: 00000958: 23:12:49 [TUniServerModule]:Server First Init.
+SkillHub.exe: 00000958: 23:12:49 [TUniServerModule]:Start Path = C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\
+SkillHub.exe: 00000958: 23:12:49 [TUniServerModule]:Debug Mode = ON
+SkillHub.exe: 00000958: 23:12:49 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+SkillHub.exe: 00000958: 23:12:50 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+SkillHub.exe: 00000958: 23:12:51 [TUniServerModule]:HTTP Server Started on Port: 8077
+SkillHub.exe: 00001FE8: 23:12:56 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: YXMV3z2bHl10E65719C ) : Addr: $006C37A1
+SkillHub.exe: 00001C18: 23:14:28 [HandleFileRequest[127.0.0.1]]:File not found: C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\.js
+SkillHub.exe: 000003C0: 23:15:27 []:>--------------------------------------------------------------<
+SkillHub.exe: 000003C0: 23:15:27 [TUniServerModule]:Server First Init.
+SkillHub.exe: 000003C0: 23:15:27 [TUniServerModule]:Start Path = C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\
+SkillHub.exe: 000003C0: 23:15:27 [TUniServerModule]:Debug Mode = ON
+SkillHub.exe: 000003C0: 23:15:27 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+SkillHub.exe: 000003C0: 23:15:27 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+SkillHub.exe: 000003C0: 23:15:28 [TUniServerModule]:HTTP Server Started on Port: 8077
+SkillHub.exe: 000023BC: 23:16:02 [Cannot focus a disabled or invisible window-127.0.0.1]:EInvalidOperation : Cannot focus a disabled or invisible window : Addr: $011960A3
+SkillHub.exe: 0000168C: 23:16:03 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: ePHS7mmZn510E65725C ) : Addr: $013937A1
+SkillHub.exe: 00001DB8: 23:16:27 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: ePHS7mmZn510E65725C ) : Addr: $013937A1
+SkillHub.exe: 000017B0: 23:17:27 [HandleFileRequest[127.0.0.1]]:File not found: C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\.js
+SkillHub.exe: 000019BC: 23:24:12 []:>--------------------------------------------------------------<
+SkillHub.exe: 000019BC: 23:24:12 [TUniServerModule]:Server First Init.
+SkillHub.exe: 000019BC: 23:24:12 [TUniServerModule]:Start Path = C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\
+SkillHub.exe: 000019BC: 23:24:12 [TUniServerModule]:Debug Mode = ON
+SkillHub.exe: 000019BC: 23:24:12 [TUniGUISessionManager]:Cache erase job created, Folder count: [1]
+SkillHub.exe: 000019BC: 23:24:13 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+SkillHub.exe: 000019BC: 23:24:14 [TUniServerModule]:HTTP Server Started on Port: 8077
+SkillHub.exe: 00001654: 23:24:31 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: pNHqTrIbHa10E65731C ) : Addr: $005437A1
+SkillHub.exe: 000007D0: 23:25:49 [HandleFileRequest[127.0.0.1]]:File not found: C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\.js
+SkillHub.exe: 00001A0C: 23:26:13 [HandleFileRequest[127.0.0.1]]:Access denied: C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\js\bootstrap.js.map.
+SkillHub.exe: 0000159C: 23:26:36 [HandleFileRequest[127.0.0.1]]:Access denied: C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\css\bootstrap.css.map.
+SkillHub.exe: 00000D34: 23:27:18 [HandleFileRequest[127.0.0.1]]:Access denied: C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\js\bootstrap.js.map.
+SkillHub.exe: 00000580: 23:27:18 [HandleFileRequest[127.0.0.1]]:File not found: C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\.js
+SkillHub.exe: 0000022C: 23:27:19 [HandleFileRequest[127.0.0.1]]:Access denied: C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\css\bootstrap.css.map.
+SkillHub.exe: 0000038C: 23:28:16 [HandleFileRequest[127.0.0.1]]:File not found: C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\.js
+SkillHub.exe: 00001D30: 23:28:49 [HandleFileRequest[127.0.0.1]]:Access denied: C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\js\bootstrap.js.map.
+SkillHub.exe: 000023BC: 23:29:29 [HandleFileRequest[127.0.0.1]]:Access denied: C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\css\bootstrap.css.map.
+SkillHub.exe: 000017B8: 23:30:40 [HandleFileRequest[127.0.0.1]]:File not found: C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\.js
+SkillHub.exe: 00001C0C: 23:30:42 [HandleFileRequest[127.0.0.1]]:Access denied: C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\css\bootstrap.css.map.
+SkillHub.exe: 000023A0: 23:30:44 [HandleFileRequest[127.0.0.1]]:Access denied: C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\js\bootstrap.js.map.
+SkillHub.exe: 00000CB4: 23:33:25 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: Q9CVvNRIm510E6576F7 ) : Addr: $005437A1
+SkillHub.exe: 00002678: 23:33:34 [HandleFileRequest[127.0.0.1]]:Access denied: C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\js\bootstrap.js.map.
+SkillHub.exe: 00002680: 23:33:34 [HandleFileRequest[127.0.0.1]]:Access denied: C:\Desenvolvimento\DelphiFullStack_1_0\SkillHub\Frontend-WebUnigui\assets\css\bootstrap.css.map.
+SkillHub.exe: 000026EC: 23:33:43 [127.0.0.1]:Exception : Informar o usúario! : Addr: $0091FC98
+SkillHub.exe: 00001230: 23:34:54 [127.0.0.1]:Exception : Informar o usúario! : Addr: $0091FC98
+SkillHub.exe: 000024F8: 23:35:19 [127.0.0.1]:Exception : Informar a senha! : Addr: $0091FCD3
