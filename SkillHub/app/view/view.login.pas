@@ -129,6 +129,7 @@ uses view.principal, uLoading, uConnection, uUrl, System.JSON;
 procedure TfrmLogin.btnLoginClick(Sender: TObject);
 var
   LCon:TConnection;
+  LUsuario:TUsuario;
 begin
 
   TLoading.Show(self,'Aguarde');
@@ -165,7 +166,21 @@ begin
           Application.CreateForm(TfrmPrincipal, frmPrincipal);
       end);
 
-      frmPrincipal.CarregaTela;
+      LJo:= TJSONObject.ParseJSONValue(LResult) as TJSONObject;
+      var LCod:= StrToIntDef(LJo.GetValue<string>('cod'),0);
+
+      LUsuario.Cod:= LCod;
+      LUsuario.Nome:= LJo.GetValue<string>('nome');
+      LUsuario.Email:= LJo.GetValue<string>('email');
+      LUsuario.CPF:= LJo.GetValue<string>('cpf');
+      LUsuario.Foto:= LJo.GetValue<string>('foto');
+
+      if LJo.GetValue<string>('tipoUsuario') = 'cliente' then
+        LUsuario.Tipo:= TTipoUsuario.Cliente;
+      if LJo.GetValue<string>('tipoUsuario') = 'colaborador' then
+        LUsuario.Tipo:= TTipoUsuario.Colaborador;
+
+      frmPrincipal.CarregaTela(LUsuario);
 
       TThread.Synchronize(nil,
       procedure

@@ -1,10 +1,9 @@
 object frameProfissao: TframeProfissao
-  Size.Width = 121.000000000000000000
-  Size.Height = 147.000000000000000000
+  Size.Width = 120.000000000000000000
+  Size.Height = 148.000000000000000000
   Size.PlatformDefault = False
   object btn: TLayout
     Align = Left
-    HitTest = True
     Margins.Left = 16.000000000000000000
     Margins.Top = 16.000000000000000000
     Margins.Right = 16.000000000000000000
@@ -12,7 +11,7 @@ object frameProfissao: TframeProfissao
     Position.X = 16.000000000000000000
     Position.Y = 16.000000000000000000
     Size.Width = 92.000000000000000000
-    Size.Height = 115.000000000000000000
+    Size.Height = 116.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
     object GosRectangle2: TGosRectangle
@@ -21,7 +20,7 @@ object frameProfissao: TframeProfissao
       Locked = True
       HitTest = False
       Size.Width = 92.000000000000000000
-      Size.Height = 88.000000000000000000
+      Size.Height = 89.000000000000000000
       Size.PlatformDefault = False
       Stroke.Kind = None
       XRadius = 15.000000000000000000
@@ -34,7 +33,7 @@ object frameProfissao: TframeProfissao
         Margins.Right = 16.000000000000000000
         Margins.Bottom = 16.000000000000000000
         Size.Width = 60.000000000000000000
-        Size.Height = 56.000000000000000000
+        Size.Height = 57.000000000000000000
         Size.PlatformDefault = False
         Svg.OverrideColor = claBlack
       end
@@ -43,7 +42,7 @@ object frameProfissao: TframeProfissao
       Align = Bottom
       Locked = True
       Margins.Top = 8.000000000000000000
-      Position.Y = 96.000000000000000000
+      Position.Y = 97.000000000000000000
       Size.Width = 92.000000000000000000
       Size.Height = 19.000000000000000000
       Size.PlatformDefault = False

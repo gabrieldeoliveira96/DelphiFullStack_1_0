@@ -3,7 +3,7 @@ object frmLogin: TfrmLogin
   Top = 0
   Caption = 'Form3'
   ClientHeight = 820
-  ClientWidth = 382
+  ClientWidth = 384
   Fill.Color = xFFEBECF1
   Fill.Kind = Solid
   Position = ScreenCenter
@@ -15,18 +15,18 @@ object frmLogin: TfrmLogin
   DesignerMasterStyle = 0
   object TabControl1: TTabControl
     Align = Contents
-    Size.Width = 382.000000000000000000
+    Size.Width = 384.000000000000000000
     Size.Height = 820.000000000000000000
     Size.PlatformDefault = False
     TabIndex = 0
     TabOrder = 0
     TabPosition = PlatformDefault
     Sizes = (
-      382s
+      384s
       794s
-      382s
+      384s
       794s
-      382s
+      384s
       794s)
     object tabLogin: TTabItem
       CustomIcon = <
@@ -44,7 +44,7 @@ object frmLogin: TfrmLogin
       object recbody: TRectangle
         Align = Contents
         Fill.Color = xFFEBECF1
-        Size.Width = 382.000000000000000000
+        Size.Width = 384.000000000000000000
         Size.Height = 794.000000000000000000
         Size.PlatformDefault = False
         Stroke.Kind = None
@@ -55,7 +55,7 @@ object frmLogin: TfrmLogin
           Margins.Right = 16.000000000000000000
           Position.X = 16.000000000000000000
           Position.Y = 40.000000000000000000
-          Size.Width = 350.000000000000000000
+          Size.Width = 352.000000000000000000
           Size.Height = 153.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 0
@@ -141,7 +141,7 @@ object frmLogin: TfrmLogin
           object SkLabel1: TSkLabel
             Align = Bottom
             Position.Y = 77.000000000000000000
-            Size.Width = 350.000000000000000000
+            Size.Width = 352.000000000000000000
             Size.Height = 76.000000000000000000
             Size.PlatformDefault = False
             StyledSettings = [Family, FontColor]
@@ -159,7 +159,7 @@ object frmLogin: TfrmLogin
           Margins.Right = 16.000000000000000000
           Position.X = 16.000000000000000000
           Position.Y = 315.000000000000000000
-          Size.Width = 350.000000000000000000
+          Size.Width = 352.000000000000000000
           Size.Height = 158.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 2
@@ -308,9 +308,9 @@ object frmLogin: TfrmLogin
           object SkLabel2: TSkLabel
             Align = Bottom
             Margins.Right = 32.000000000000000000
-            Position.Y = 139.000000000000000000
-            Size.Width = 318.000000000000000000
-            Size.Height = 19.000000000000000000
+            Position.Y = 138.800003051757800000
+            Size.Width = 320.000000000000000000
+            Size.Height = 19.200000762939450000
             Size.PlatformDefault = False
             StyledSettings = [Family, Size, FontColor]
             TextSettings.Font.Weight = Bold
@@ -324,7 +324,7 @@ object frmLogin: TfrmLogin
         object Layout3: TLayout
           Align = Bottom
           Position.Y = 595.000000000000000000
-          Size.Width = 382.000000000000000000
+          Size.Width = 384.000000000000000000
           Size.Height = 199.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 1
@@ -349,7 +349,7 @@ object frmLogin: TfrmLogin
             Margins.Top = 16.000000000000000000
             Margins.Right = 32.000000000000000000
             Margins.Bottom = 16.000000000000000000
-            Size.Width = 318.000000000000000000
+            Size.Width = 320.000000000000000000
             Size.Height = 57.000000000000000000
             Size.PlatformDefault = False
             Position.X = 32.000000000000000000
@@ -372,7 +372,7 @@ object frmLogin: TfrmLogin
             Background.Border.Kind = None
             Margins.Left = 32.000000000000000000
             Margins.Right = 32.000000000000000000
-            Size.Width = 318.000000000000000000
+            Size.Width = 320.000000000000000000
             Size.Height = 57.000000000000000000
             Size.PlatformDefault = False
             Position.X = 32.000000000000000000
@@ -395,7 +395,7 @@ object frmLogin: TfrmLogin
         item
         end>
       IsSelected = False
-      Size.Width = 188.000000000000000000
+      Size.Width = 187.000000000000000000
       Size.Height = 26.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = ''
@@ -406,7 +406,7 @@ object frmLogin: TfrmLogin
       object recCliente: TRectangle
         Align = Contents
         Fill.Color = xFFEBECF1
-        Size.Width = 382.000000000000000000
+        Size.Width = 384.000000000000000000
         Size.Height = 794.000000000000000000
         Size.PlatformDefault = False
         Stroke.Kind = None
@@ -417,7 +417,7 @@ object frmLogin: TfrmLogin
           Margins.Right = 16.000000000000000000
           Position.X = 16.000000000000000000
           Position.Y = 40.000000000000000000
-          Size.Width = 350.000000000000000000
+          Size.Width = 352.000000000000000000
           Size.Height = 153.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 0
@@ -425,7 +425,7 @@ object frmLogin: TfrmLogin
             Align = HorzCenter
             Margins.Top = 30.000000000000000000
             Margins.Bottom = 30.000000000000000000
-            Position.X = 153.000000000000000000
+            Position.X = 154.000000000000000000
             Position.Y = 30.000000000000000000
             Size.Width = 44.000000000000000000
             Size.Height = 55.000000000000000000
@@ -486,13 +486,13 @@ object frmLogin: TfrmLogin
           object Layout11: TLayout
             Align = Bottom
             Position.Y = 115.000000000000000000
-            Size.Width = 350.000000000000000000
+            Size.Width = 352.000000000000000000
             Size.Height = 38.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
             object SkLabel3: TSkLabel
               Align = Client
-              Size.Width = 280.000000000000000000
+              Size.Width = 282.000000000000000000
               Size.Height = 38.000000000000000000
               Size.PlatformDefault = False
               StyledSettings = [Family, FontColor]
@@ -508,7 +508,7 @@ object frmLogin: TfrmLogin
               Fill.Color = claWhite
               Margins.Top = 4.000000000000000000
               Margins.Bottom = 4.000000000000000000
-              Position.X = 280.000000000000000000
+              Position.X = 282.000000000000000000
               Position.Y = 4.000000000000000000
               Size.Width = 70.000000000000000000
               Size.Height = 30.000000000000000000
@@ -563,7 +563,7 @@ object frmLogin: TfrmLogin
           Margins.Right = 16.000000000000000000
           Position.X = 16.000000000000000000
           Position.Y = 262.000000000000000000
-          Size.Width = 350.000000000000000000
+          Size.Width = 352.000000000000000000
           Size.Height = 263.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 2
@@ -869,7 +869,7 @@ object frmLogin: TfrmLogin
         object Layout10: TLayout
           Align = Bottom
           Position.Y = 595.000000000000000000
-          Size.Width = 382.000000000000000000
+          Size.Width = 384.000000000000000000
           Size.Height = 199.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 1
@@ -894,7 +894,7 @@ object frmLogin: TfrmLogin
             Margins.Top = 16.000000000000000000
             Margins.Right = 32.000000000000000000
             Margins.Bottom = 16.000000000000000000
-            Size.Width = 318.000000000000000000
+            Size.Width = 320.000000000000000000
             Size.Height = 57.000000000000000000
             Size.PlatformDefault = False
             Position.X = 32.000000000000000000
@@ -917,7 +917,7 @@ object frmLogin: TfrmLogin
             Background.Border.Kind = None
             Margins.Left = 32.000000000000000000
             Margins.Right = 32.000000000000000000
-            Size.Width = 318.000000000000000000
+            Size.Width = 320.000000000000000000
             Size.Height = 57.000000000000000000
             Size.PlatformDefault = False
             Position.X = 32.000000000000000000

@@ -15,7 +15,6 @@ type
     Layout2: TLayout;
     SkLabel2: TSkLabel;
     Line1: TLine;
-    SkLabel3: TSkLabel;
   private
     { Private declarations }
   public

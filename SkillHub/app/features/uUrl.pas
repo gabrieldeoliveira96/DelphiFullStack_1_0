@@ -10,7 +10,11 @@ interface
   const UrlListaCategoria = UrlServidor+'listar/categoria';
   const UrlListaProfissao = UrlServidor+'listar/profissao';
   const UrlListaServico = UrlServidor+'listar/servico';
+  const UrlListaServicoUsuario = UrlServidor+'listar/servico/usuario';
   const UrlListaSubCategoria = UrlServidor+'listar/subcategoria';
+  const UrlObterUsuario = UrlServidor+'obter/usuario';
+  const UrlObterNotificacao = UrlServidor+'obter/notificacao';
+  const UrlCadastroServico = UrlServidor+'cadastrar/servico';
 
 
 implementation

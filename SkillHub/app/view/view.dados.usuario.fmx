@@ -2,8 +2,8 @@ object frmDadosdoUsuario: TfrmDadosdoUsuario
   Left = 0
   Top = 0
   Caption = 'Form1'
-  ClientHeight = 764
-  ClientWidth = 433
+  ClientHeight = 576
+  ClientWidth = 432
   Fill.Color = xFFEBECF1
   Fill.Kind = Solid
   Position = ScreenCenter
@@ -14,37 +14,37 @@ object frmDadosdoUsuario: TfrmDadosdoUsuario
   DesignerMasterStyle = 0
   object LayoutBody: TLayout
     Align = Client
-    Size.Width = 433.000000000000000000
-    Size.Height = 539.000000000000000000
+    Size.Width = 432.000000000000000000
+    Size.Height = 351.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 1
     object Rectangle2: TRectangle
       Align = Client
       Corners = [TopLeft, TopRight]
       Fill.Color = claWhite
-      Size.Width = 433.000000000000000000
-      Size.Height = 539.000000000000000000
+      Size.Width = 432.000000000000000000
+      Size.Height = 351.000000000000000000
       Size.PlatformDefault = False
       Stroke.Kind = None
       XRadius = 40.000000000000000000
       YRadius = 40.000000000000000000
       object VertScrollBox1: TVertScrollBox
         Align = Client
-        Size.Width = 433.000000000000000000
-        Size.Height = 539.000000000000000000
+        Size.Width = 432.000000000000000000
+        Size.Height = 351.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
-        Viewport.Width = 433.000000000000000000
-        Viewport.Height = 539.000000000000000000
+        Viewport.Width = 416.000000000000000000
+        Viewport.Height = 351.000000000000000000
         object Layout3: TLayout
           Align = Top
-          Size.Width = 433.000000000000000000
+          Size.Width = 416.000000000000000000
           Size.Height = 401.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 0
           object LayoutNome: TLayout
             Align = Top
-            Size.Width = 433.000000000000000000
+            Size.Width = 416.000000000000000000
             Size.Height = 100.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 3
@@ -68,14 +68,14 @@ object frmDadosdoUsuario: TfrmDadosdoUsuario
               Align = Bottom
               LineType = Bottom
               Position.Y = 99.000000000000000000
-              Size.Width = 433.000000000000000000
+              Size.Width = 416.000000000000000000
               Size.Height = 1.000000000000000000
               Size.PlatformDefault = False
               Stroke.Color = xFFD9D9D9
             end
             object SkLabel1: TSkLabel
               Align = Client
-              Size.Width = 317.000000000000000000
+              Size.Width = 300.000000000000000000
               Size.Height = 99.000000000000000000
               Size.PlatformDefault = False
               StyledSettings = [Family, Style]
@@ -90,7 +90,7 @@ object frmDadosdoUsuario: TfrmDadosdoUsuario
           object LayoutCPF: TLayout
             Align = Top
             Position.Y = 100.000000000000000000
-            Size.Width = 433.000000000000000000
+            Size.Width = 416.000000000000000000
             Size.Height = 100.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 2
@@ -99,7 +99,7 @@ object frmDadosdoUsuario: TfrmDadosdoUsuario
               Margins.Left = 36.000000000000000000
               Margins.Right = 24.000000000000000000
               Position.X = 36.000000000000000000
-              Size.Width = 35.000000000000000000
+              Size.Width = 35.200000762939450000
               Size.Height = 99.000000000000000000
               Size.PlatformDefault = False
               StyledSettings = [Family, FontColor]
@@ -114,14 +114,14 @@ object frmDadosdoUsuario: TfrmDadosdoUsuario
               Align = Bottom
               LineType = Bottom
               Position.Y = 99.000000000000000000
-              Size.Width = 433.000000000000000000
+              Size.Width = 416.000000000000000000
               Size.Height = 1.000000000000000000
               Size.PlatformDefault = False
               Stroke.Color = xFFD9D9D9
             end
             object SkLabel4: TSkLabel
               Align = Client
-              Size.Width = 338.000000000000000000
+              Size.Width = 320.799987792968800000
               Size.Height = 99.000000000000000000
               Size.PlatformDefault = False
               StyledSettings = [Family, Style]
@@ -136,7 +136,7 @@ object frmDadosdoUsuario: TfrmDadosdoUsuario
           object LayoutEmail: TLayout
             Align = Top
             Position.Y = 200.000000000000000000
-            Size.Width = 433.000000000000000000
+            Size.Width = 416.000000000000000000
             Size.Height = 100.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 1
@@ -145,7 +145,7 @@ object frmDadosdoUsuario: TfrmDadosdoUsuario
               Margins.Left = 36.000000000000000000
               Margins.Right = 24.000000000000000000
               Position.X = 36.000000000000000000
-              Size.Width = 58.000000000000000000
+              Size.Width = 58.400001525878910000
               Size.Height = 99.000000000000000000
               Size.PlatformDefault = False
               StyledSettings = [Family, FontColor]
@@ -160,14 +160,14 @@ object frmDadosdoUsuario: TfrmDadosdoUsuario
               Align = Bottom
               LineType = Bottom
               Position.Y = 99.000000000000000000
-              Size.Width = 433.000000000000000000
+              Size.Width = 416.000000000000000000
               Size.Height = 1.000000000000000000
               Size.PlatformDefault = False
               Stroke.Color = xFFD9D9D9
             end
             object SkLabel7: TSkLabel
               Align = Client
-              Size.Width = 315.000000000000000000
+              Size.Width = 297.600006103515600000
               Size.Height = 99.000000000000000000
               Size.PlatformDefault = False
               StyledSettings = [Family, Style]
@@ -182,7 +182,7 @@ object frmDadosdoUsuario: TfrmDadosdoUsuario
           object Layout5: TLayout
             Align = Top
             Position.Y = 300.000000000000000000
-            Size.Width = 433.000000000000000000
+            Size.Width = 416.000000000000000000
             Size.Height = 100.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
@@ -190,7 +190,7 @@ object frmDadosdoUsuario: TfrmDadosdoUsuario
               Align = Client
               Margins.Left = 24.000000000000000000
               Margins.Right = 24.000000000000000000
-              Size.Width = 385.000000000000000000
+              Size.Width = 368.000000000000000000
               Size.Height = 99.000000000000000000
               Size.PlatformDefault = False
               StyledSettings = [Family, FontColor]
@@ -206,7 +206,7 @@ object frmDadosdoUsuario: TfrmDadosdoUsuario
               Align = Bottom
               LineType = Bottom
               Position.Y = 99.000000000000000000
-              Size.Width = 433.000000000000000000
+              Size.Width = 416.000000000000000000
               Size.Height = 1.000000000000000000
               Size.PlatformDefault = False
               Stroke.Color = xFFD9D9D9
@@ -218,14 +218,14 @@ object frmDadosdoUsuario: TfrmDadosdoUsuario
   end
   object LayoutTopo: TLayout
     Align = Top
-    Size.Width = 433.000000000000000000
+    Size.Width = 432.000000000000000000
     Size.Height = 225.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
     object Rectangle1: TRectangle
       Align = Client
       Fill.Color = xFFEBECF1
-      Size.Width = 433.000000000000000000
+      Size.Width = 432.000000000000000000
       Size.Height = 225.000000000000000000
       Size.PlatformDefault = False
       Stroke.Kind = None
@@ -236,7 +236,7 @@ object frmDadosdoUsuario: TfrmDadosdoUsuario
         Margins.Right = 16.000000000000000000
         Position.X = 16.000000000000000000
         Position.Y = 16.000000000000000000
-        Size.Width = 401.000000000000000000
+        Size.Width = 400.000000000000000000
         Size.Height = 50.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0

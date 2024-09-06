@@ -50,11 +50,6 @@ type
     LayoutFiltro: TLayout;
     VertScrollBox1: TVertScrollBox;
     SkLabel7: TSkLabel;
-    frameServico1: TframeServico;
-    frameServico2: TframeServico;
-    frameServico3: TframeServico;
-    frameServico4: TframeServico;
-    frameServico5: TframeServico;
     lbFiltro: TListBox;
     procedure Button1Click(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
@@ -62,6 +57,7 @@ type
     procedure btnPesquisaClick(Sender: TObject);
   private
     { Private declarations }
+    procedure ExibeServico(AQtdUltimosPedidos: integer = -1);
   public
     { Public declarations }
     procedure CarregaTela(ACategoria:TObjectList<TframeCategoria>);
@@ -74,7 +70,7 @@ implementation
 
 {$R *.fmx}
 
-uses view.pesquisa.servico;
+uses view.pesquisa.servico, model.servico, controller.imagens;
 
 procedure TfrmServicoInesistente.btnPesquisaClick(Sender: TObject);
 begin
@@ -110,16 +106,14 @@ begin
     LListBoxItem.Height:= 150;
     LListBoxItem.Text:= EmptyStr;
 
-
-
-
-
     LListBoxItem.AddObject(LFrame);
 
 
     lbFiltro.AddObject(LListBoxItem);
 
   end;
+
+  ExibeServico(3);
 
 
 end;
@@ -134,6 +128,63 @@ end;
 procedure TfrmServicoInesistente.SpeedButton1Click(Sender: TObject);
 begin
   close;
+end;
+
+procedure TfrmServicoInesistente.ExibeServico(AQtdUltimosPedidos: integer = -1);
+var
+ LFrame:TframeServico;
+ LBitmap:TBitmap;
+ LCount:integer;
+begin
+
+  LCount:= 0;
+
+  TThread.Synchronize(nil,
+  procedure
+  begin
+     VertScrollBox1.BeginUpdate;
+  end);
+
+  dmServico.memServico.First;
+  while not dmServico.memServico.Eof do
+  begin
+
+    if LCount = AQtdUltimosPedidos then
+      break;
+
+    Inc(LCount);
+
+    LFrame:= TframeServico.Create(self);
+    LFrame.Align:= TAlignLayout.Top;
+    LFrame.Margins.Left:= 16;
+    LFrame.Margins.Right:= 16;
+    LFrame.Margins.Top:= 16;
+    LFrame.Name:= 'Frame_'+
+      dmServico.memServicoCOD.AsString+
+      Random(378472).ToString+
+      FormatDateTime('hhmmsszzz',now);
+
+    LFrame.lblTexto.Text:= dmServico.memServicoTITULO.AsString;
+    LFrame.lblkm.Text:= dmServico.memServicokm.AsString  + ' km';
+    LFrame.Tag := dmServico.memServicocod.AsInteger;
+    LFrame.TagString := dmServico.memServicosubcategoria.AsString;
+
+    LBitmap:= controller.imagens.BitmapFromBase64(dmServico.memServicofoto.AsString);
+    LFrame.recImg.Fill.Bitmap.Bitmap:= LBitmap;
+
+    VertScrollBox1.AddObject(LFrame);
+//    FListServico.Add(LFrame);
+
+    dmServico.memServico.Next;
+  end;
+
+  TThread.Synchronize(nil,
+  procedure
+  begin
+    VertScrollBox1.EndUpdate;
+  end);
+
+
 end;
 
 end.

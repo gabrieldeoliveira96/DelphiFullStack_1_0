@@ -34,7 +34,7 @@ object frameCategoria: TframeCategoria
       Margins.Bottom = 16.000000000000000000
       Position.Y = 97.000000000000000000
       Size.Width = 104.000000000000000000
-      Size.Height = 19.200000762939450000
+      Size.Height = 19.000000000000000000
       Size.PlatformDefault = False
       StyledSettings = [Family, Size]
       TextSettings.Font.Weight = Semibold

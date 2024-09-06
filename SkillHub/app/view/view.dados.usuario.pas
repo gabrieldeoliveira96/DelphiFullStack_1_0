@@ -6,7 +6,7 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, System.Skia,
   FMX.Skia, FMX.Effects, FMX.Filter.Effects, FMX.Controls.Presentation,
-  FMX.StdCtrls, FMX.Objects, FMX.Layouts;
+  FMX.StdCtrls, FMX.Objects, FMX.Layouts, view.usuario, view.principal;
 
 type
   TfrmDadosdoUsuario = class(TForm)
@@ -45,6 +45,7 @@ type
     { Private declarations }
   public
     { Public declarations }
+    procedure CarregaTela(AUsuario:TUsuario);
   end;
 
 var
@@ -53,6 +54,15 @@ var
 implementation
 
 {$R *.fmx}
+
+procedure TfrmDadosdoUsuario.CarregaTela(AUsuario: TUsuario);
+begin
+
+  SkLabel1.Text:= AUsuario.Nome;
+  SkLabel4.Text:= AUsuario.CPF;
+  SkLabel7.Text:= AUsuario.Email;
+
+end;
 
 procedure TfrmDadosdoUsuario.FormClose(Sender: TObject;
   var Action: TCloseAction);
@@ -65,5 +75,7 @@ procedure TfrmDadosdoUsuario.SpeedButton1Click(Sender: TObject);
 begin
   close;
 end;
+
+
 
 end.

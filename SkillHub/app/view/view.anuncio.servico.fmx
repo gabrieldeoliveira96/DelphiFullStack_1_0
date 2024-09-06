@@ -2,26 +2,28 @@ object frmAnuncioServico: TfrmAnuncioServico
   Left = 0
   Top = 0
   Caption = 'Form1'
-  ClientHeight = 728
-  ClientWidth = 486
+  ClientHeight = 556
+  ClientWidth = 560
   Fill.Color = xFFEBECF1
   Fill.Kind = Solid
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
   OnClose = FormClose
+  OnDestroy = FormDestroy
   DesignerMasterStyle = 0
   object VertScrollBox1: TVertScrollBox
     Align = Client
-    Size.Width = 486.000000000000000000
-    Size.Height = 728.000000000000000000
+    Size.Width = 560.000000000000000000
+    Size.Height = 556.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
-    Viewport.Width = 470.000000000000000000
-    Viewport.Height = 728.000000000000000000
+    Viewport.Width = 544.000000000000000000
+    Viewport.Height = 556.000000000000000000
     object LayoutTop: TLayout
       Align = Top
-      Size.Width = 470.000000000000000000
+      Size.Width = 544.000000000000000000
       Size.Height = 145.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
@@ -105,13 +107,13 @@ object frmAnuncioServico: TfrmAnuncioServico
       end
       object Layout1: TLayout
         Align = Top
-        Size.Width = 470.000000000000000000
+        Size.Width = 544.000000000000000000
         Size.Height = 50.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
         object Layout2: TLayout
           Align = Contents
-          Size.Width = 470.000000000000000000
+          Size.Width = 544.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 1
@@ -133,7 +135,7 @@ object frmAnuncioServico: TfrmAnuncioServico
     object LayoutEndereco: TLayout
       Align = Top
       Position.Y = 681.000000000000000000
-      Size.Width = 470.000000000000000000
+      Size.Width = 544.000000000000000000
       Size.Height = 696.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 4
@@ -145,7 +147,7 @@ object frmAnuncioServico: TfrmAnuncioServico
         Margins.Right = 24.000000000000000000
         Position.X = 24.000000000000000000
         Position.Y = 24.000000000000000000
-        Size.Width = 422.000000000000000000
+        Size.Width = 496.000000000000000000
         Size.Height = 641.000000000000000000
         Size.PlatformDefault = False
         Stroke.Kind = None
@@ -158,12 +160,12 @@ object frmAnuncioServico: TfrmAnuncioServico
           Margins.Right = 16.000000000000000000
           Position.X = 16.000000000000000000
           Position.Y = 61.000000000000000000
-          Size.Width = 390.000000000000000000
+          Size.Width = 464.000000000000000000
           Size.Height = 1.000000000000000000
           Size.PlatformDefault = False
           Stroke.Color = xFFEDEDED
         end
-        object GosEditView1: TGosEditView
+        object edtCategoria: TGosEditView
           Touch.InteractiveGestures = [LongTap, DoubleTap]
           Align = Top
           Background.Border.Color.Default = xBFC0C0C0
@@ -183,7 +185,7 @@ object frmAnuncioServico: TfrmAnuncioServico
           Margins.Top = 8.000000000000000000
           Margins.Right = 16.000000000000000000
           Margins.Bottom = 8.000000000000000000
-          Size.Width = 390.000000000000000000
+          Size.Width = 464.000000000000000000
           Size.Height = 45.000000000000000000
           Size.PlatformDefault = False
           Position.X = 16.000000000000000000
@@ -195,7 +197,7 @@ object frmAnuncioServico: TfrmAnuncioServico
           TextSettings.Gravity = CenterVertical
           DisableFocusEffect = True
         end
-        object GosEditView2: TGosEditView
+        object edtSubCategoria: TGosEditView
           Touch.InteractiveGestures = [LongTap, DoubleTap]
           Align = Top
           Background.Border.Color.Default = xBFC0C0C0
@@ -215,7 +217,7 @@ object frmAnuncioServico: TfrmAnuncioServico
           Margins.Top = 8.000000000000000000
           Margins.Right = 16.000000000000000000
           Margins.Bottom = 8.000000000000000000
-          Size.Width = 390.000000000000000000
+          Size.Width = 464.000000000000000000
           Size.Height = 45.000000000000000000
           Size.PlatformDefault = False
           Position.X = 16.000000000000000000
@@ -227,7 +229,7 @@ object frmAnuncioServico: TfrmAnuncioServico
           TextSettings.Gravity = CenterVertical
           DisableFocusEffect = True
         end
-        object GosEditView5: TGosEditView
+        object edtProfissao: TGosEditView
           Touch.InteractiveGestures = [LongTap, DoubleTap]
           Align = Top
           Background.Border.Color.Default = xBFC0C0C0
@@ -247,7 +249,7 @@ object frmAnuncioServico: TfrmAnuncioServico
           Margins.Top = 8.000000000000000000
           Margins.Right = 16.000000000000000000
           Margins.Bottom = 8.000000000000000000
-          Size.Width = 390.000000000000000000
+          Size.Width = 464.000000000000000000
           Size.Height = 45.000000000000000000
           Size.PlatformDefault = False
           Position.X = 16.000000000000000000
@@ -266,7 +268,7 @@ object frmAnuncioServico: TfrmAnuncioServico
           Margins.Right = 16.000000000000000000
           Position.X = 16.000000000000000000
           Position.Y = 123.000000000000000000
-          Size.Width = 390.000000000000000000
+          Size.Width = 464.000000000000000000
           Size.Height = 1.000000000000000000
           Size.PlatformDefault = False
           Stroke.Color = xFFEDEDED
@@ -278,7 +280,7 @@ object frmAnuncioServico: TfrmAnuncioServico
           Margins.Top = 40.000000000000000000
           Margins.Right = 40.000000000000000000
           Margins.Bottom = 40.000000000000000000
-          Size.Width = 342.000000000000000000
+          Size.Width = 416.000000000000000000
           Size.Height = 376.000000000000000000
           Size.PlatformDefault = False
           Stroke.Color = claGray
@@ -344,7 +346,7 @@ object frmAnuncioServico: TfrmAnuncioServico
     object LayoutTitulo: TLayout
       Align = Top
       Position.Y = 145.000000000000000000
-      Size.Width = 470.000000000000000000
+      Size.Width = 544.000000000000000000
       Size.Height = 176.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 2
@@ -356,7 +358,7 @@ object frmAnuncioServico: TfrmAnuncioServico
         Margins.Right = 24.000000000000000000
         Position.X = 24.000000000000000000
         Position.Y = 24.000000000000000000
-        Size.Width = 422.000000000000000000
+        Size.Width = 496.000000000000000000
         Size.Height = 132.000000000000000000
         Size.PlatformDefault = False
         Stroke.Kind = None
@@ -369,12 +371,12 @@ object frmAnuncioServico: TfrmAnuncioServico
           Margins.Right = 16.000000000000000000
           Position.X = 16.000000000000000000
           Position.Y = 61.000000000000000000
-          Size.Width = 390.000000000000000000
+          Size.Width = 464.000000000000000000
           Size.Height = 1.000000000000000000
           Size.PlatformDefault = False
           Stroke.Color = xFFEDEDED
         end
-        object GosEditView3: TGosEditView
+        object edtTitulo: TGosEditView
           Touch.InteractiveGestures = [LongTap, DoubleTap]
           Align = Top
           Background.Border.Color.Default = xBFC0C0C0
@@ -394,7 +396,7 @@ object frmAnuncioServico: TfrmAnuncioServico
           Margins.Top = 8.000000000000000000
           Margins.Right = 16.000000000000000000
           Margins.Bottom = 8.000000000000000000
-          Size.Width = 390.000000000000000000
+          Size.Width = 464.000000000000000000
           Size.Height = 45.000000000000000000
           Size.PlatformDefault = False
           Position.X = 16.000000000000000000
@@ -406,7 +408,7 @@ object frmAnuncioServico: TfrmAnuncioServico
           TextSettings.Gravity = CenterVertical
           DisableFocusEffect = True
         end
-        object GosEditView4: TGosEditView
+        object edtDescricao: TGosEditView
           Touch.InteractiveGestures = [LongTap, DoubleTap]
           Align = Top
           Background.Border.Color.Default = xBFC0C0C0
@@ -426,7 +428,7 @@ object frmAnuncioServico: TfrmAnuncioServico
           Margins.Top = 8.000000000000000000
           Margins.Right = 16.000000000000000000
           Margins.Bottom = 8.000000000000000000
-          Size.Width = 390.000000000000000000
+          Size.Width = 464.000000000000000000
           Size.Height = 45.000000000000000000
           Size.PlatformDefault = False
           Position.X = 16.000000000000000000
@@ -443,7 +445,7 @@ object frmAnuncioServico: TfrmAnuncioServico
     object LayoutServico: TLayout
       Align = Top
       Position.Y = 321.000000000000000000
-      Size.Width = 470.000000000000000000
+      Size.Width = 544.000000000000000000
       Size.Height = 360.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 3
@@ -455,7 +457,7 @@ object frmAnuncioServico: TfrmAnuncioServico
         Margins.Right = 24.000000000000000000
         Position.X = 24.000000000000000000
         Position.Y = 24.000000000000000000
-        Size.Width = 422.000000000000000000
+        Size.Width = 496.000000000000000000
         Size.Height = 313.000000000000000000
         Size.PlatformDefault = False
         Stroke.Kind = None
@@ -468,12 +470,12 @@ object frmAnuncioServico: TfrmAnuncioServico
           Margins.Right = 16.000000000000000000
           Position.X = 16.000000000000000000
           Position.Y = 61.000000000000000000
-          Size.Width = 390.000000000000000000
+          Size.Width = 464.000000000000000000
           Size.Height = 1.000000000000000000
           Size.PlatformDefault = False
           Stroke.Color = xFFEDEDED
         end
-        object GosEditView8: TGosEditView
+        object edtCep: TGosEditView
           Touch.InteractiveGestures = [LongTap, DoubleTap]
           Align = Top
           Background.Border.Color.Default = xBFC0C0C0
@@ -493,7 +495,7 @@ object frmAnuncioServico: TfrmAnuncioServico
           Margins.Top = 8.000000000000000000
           Margins.Right = 16.000000000000000000
           Margins.Bottom = 8.000000000000000000
-          Size.Width = 390.000000000000000000
+          Size.Width = 464.000000000000000000
           Size.Height = 45.000000000000000000
           Size.PlatformDefault = False
           Position.X = 16.000000000000000000
@@ -505,7 +507,7 @@ object frmAnuncioServico: TfrmAnuncioServico
           TextSettings.Gravity = CenterVertical
           DisableFocusEffect = True
         end
-        object GosEditView9: TGosEditView
+        object edtEndereco: TGosEditView
           Touch.InteractiveGestures = [LongTap, DoubleTap]
           Align = Top
           Background.Border.Color.Default = xBFC0C0C0
@@ -525,7 +527,7 @@ object frmAnuncioServico: TfrmAnuncioServico
           Margins.Top = 8.000000000000000000
           Margins.Right = 16.000000000000000000
           Margins.Bottom = 8.000000000000000000
-          Size.Width = 390.000000000000000000
+          Size.Width = 464.000000000000000000
           Size.Height = 45.000000000000000000
           Size.PlatformDefault = False
           Position.X = 16.000000000000000000
@@ -537,7 +539,7 @@ object frmAnuncioServico: TfrmAnuncioServico
           TextSettings.Gravity = CenterVertical
           DisableFocusEffect = True
         end
-        object GosEditView10: TGosEditView
+        object edtBairro: TGosEditView
           Touch.InteractiveGestures = [LongTap, DoubleTap]
           Align = Top
           Background.Border.Color.Default = xBFC0C0C0
@@ -557,7 +559,7 @@ object frmAnuncioServico: TfrmAnuncioServico
           Margins.Top = 8.000000000000000000
           Margins.Right = 16.000000000000000000
           Margins.Bottom = 8.000000000000000000
-          Size.Width = 390.000000000000000000
+          Size.Width = 464.000000000000000000
           Size.Height = 45.000000000000000000
           Size.PlatformDefault = False
           Position.X = 16.000000000000000000
@@ -576,12 +578,12 @@ object frmAnuncioServico: TfrmAnuncioServico
           Margins.Right = 16.000000000000000000
           Position.X = 16.000000000000000000
           Position.Y = 123.000000000000000000
-          Size.Width = 390.000000000000000000
+          Size.Width = 464.000000000000000000
           Size.Height = 1.000000000000000000
           Size.PlatformDefault = False
           Stroke.Color = xFFEDEDED
         end
-        object GosEditView11: TGosEditView
+        object edtNumero: TGosEditView
           Touch.InteractiveGestures = [LongTap, DoubleTap]
           Align = Top
           Background.Border.Color.Default = xBFC0C0C0
@@ -601,7 +603,7 @@ object frmAnuncioServico: TfrmAnuncioServico
           Margins.Top = 8.000000000000000000
           Margins.Right = 16.000000000000000000
           Margins.Bottom = 8.000000000000000000
-          Size.Width = 390.000000000000000000
+          Size.Width = 464.000000000000000000
           Size.Height = 45.000000000000000000
           Size.PlatformDefault = False
           Position.X = 16.000000000000000000
@@ -613,7 +615,7 @@ object frmAnuncioServico: TfrmAnuncioServico
           TextSettings.Gravity = CenterVertical
           DisableFocusEffect = True
         end
-        object GosEditView12: TGosEditView
+        object edtComplemento: TGosEditView
           Touch.InteractiveGestures = [LongTap, DoubleTap]
           Align = Top
           Background.Border.Color.Default = xBFC0C0C0
@@ -633,7 +635,7 @@ object frmAnuncioServico: TfrmAnuncioServico
           Margins.Top = 8.000000000000000000
           Margins.Right = 16.000000000000000000
           Margins.Bottom = 8.000000000000000000
-          Size.Width = 390.000000000000000000
+          Size.Width = 464.000000000000000000
           Size.Height = 45.000000000000000000
           Size.PlatformDefault = False
           Position.X = 16.000000000000000000
@@ -652,7 +654,7 @@ object frmAnuncioServico: TfrmAnuncioServico
           Margins.Right = 16.000000000000000000
           Position.X = 16.000000000000000000
           Position.Y = 185.000000000000000000
-          Size.Width = 390.000000000000000000
+          Size.Width = 464.000000000000000000
           Size.Height = 1.000000000000000000
           Size.PlatformDefault = False
           Stroke.Color = xFFEDEDED
@@ -664,11 +666,55 @@ object frmAnuncioServico: TfrmAnuncioServico
           Margins.Right = 16.000000000000000000
           Position.X = 16.000000000000000000
           Position.Y = 247.000000000000000000
-          Size.Width = 390.000000000000000000
+          Size.Width = 464.000000000000000000
           Size.Height = 1.000000000000000000
           Size.PlatformDefault = False
           Stroke.Color = xFFEDEDED
         end
+      end
+    end
+    object Layout3: TLayout
+      Align = Top
+      Position.Y = 1377.000000000000000000
+      Size.Width = 544.000000000000000000
+      Size.Height = 88.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object btnSalvar: TGosButtonView
+        Align = Top
+        Background.XRadius = 20.000000000000000000
+        Background.YRadius = 20.000000000000000000
+        Background.ItemDefault.Kind = Gradient
+        Background.ItemDefault.Gradient.Points = <
+          item
+            Color = xFF5F49E5
+            Offset = 0.000000000000000000
+          end
+          item
+            Color = xFF9280E0
+            Offset = 1.000000000000000000
+          end>
+        Background.ItemDefault.Gradient.StartPosition.X = 0.500000000000000000
+        Background.ItemDefault.Gradient.StopPosition.X = 0.499999970197677600
+        Background.Border.Kind = None
+        Margins.Left = 32.000000000000000000
+        Margins.Top = 16.000000000000000000
+        Margins.Right = 32.000000000000000000
+        Margins.Bottom = 16.000000000000000000
+        Size.Width = 480.000000000000000000
+        Size.Height = 57.000000000000000000
+        Size.PlatformDefault = False
+        Position.X = 32.000000000000000000
+        Position.Y = 16.000000000000000000
+        TabOrder = 0
+        OnClick = btnSalvarClick
+        Text = 'Salvar'
+        TextSettings.Color.Default = claWhite
+        TextSettings.Color.Focused = claNull
+        TextSettings.Color.Selected = claNull
+        TextSettings.Color.Enabled = claNull
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.Gravity = Center
       end
     end
   end

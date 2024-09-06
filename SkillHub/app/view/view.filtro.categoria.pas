@@ -10,11 +10,9 @@ uses
   frame.subcategoria;
 
 type
-  TTipoFiltro = (ReformasEReparos, ServicosDomesticos, DesignETecnologia,
-  Assitencia, Consultoria, Veiculo);
+  TTipoFiltro = (Categoria, Profissao);
 
   TfrmFiltroCategoria = class(TForm)
-    LayoutTopo: TLayout;
     SpeedButton1: TSpeedButton;
     FillRGBEffect1: TFillRGBEffect;
     Layout1: TLayout;
@@ -64,6 +62,7 @@ type
     frameServico4: TframeServico;
     frameServico5: TframeServico;
     VertScrollBox2: TVertScrollBox;
+    LayoutLabelTop: TLayout;
     procedure SpeedButton1Click(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnPesquisaClick(Sender: TObject);
@@ -116,7 +115,8 @@ begin
   LRectFiltro.XRadius:= 25;
   LRectFiltro.YRadius:= 25;
   LRectFiltro.Align:= TAlignLayout.Center;
-  LRectFiltro.Fill.Color:= $FF7767DA;
+
+
   LRectFiltro.Stroke.Kind:= TBrushKind.None;
 
   LSvg:= TSkSvg.Create(self);
@@ -126,13 +126,11 @@ begin
   LSvg.Margins.Left:= 8;
   LSvg.Margins.Right:= 8;
   LSvg.Margins.Bottom:= 8;
-  LSvg.Svg.OverrideColor:= TAlphaColors.White;
 
   LLabel:= TSkLabel.Create(self);
   LLabel.Text:= AText;
   LLabel.Align:= TAlignLayout.Bottom;
   LLabel.TextSettings.Font.Weight:= TFontWeight.Semibold;
-  LLabel.TextSettings.FontColor:= TAlphaColors.White;
   LLabel.TextSettings.HorzAlign:= TSkTextHorzAlign.Center;
   LLabel.Margins.Bottom:= 16;
 
@@ -145,13 +143,29 @@ begin
   CarregaSubCategoria(FCod);
 
   case AFiltro of
-    ReformasEReparos: ;
-    ServicosDomesticos: ;
-    DesignETecnologia: ;
-    Assitencia: ;
-    Consultoria: ;
-    Veiculo: ;
+    Categoria:
+    begin
+
+      LayoutLabelTop.Visible:= true;
+      LayoutFiltros.Visible:= true;
+      LRectFiltro.Fill.Color:= $FF7767DA;
+      LSvg.Svg.OverrideColor:= TAlphaColors.White;
+      LLabel.TextSettings.FontColor:= TAlphaColors.White;
+
+    end;
+
+    Profissao:
+    begin
+
+      LayoutLabelTop.Visible:= false;
+      LayoutFiltros.Visible:= false;
+      LRectFiltro.Fill.Color:= TAlphaColors.White;
+      LSvg.Svg.OverrideColor:= TAlphaColors.Black;
+      LLabel.TextSettings.FontColor:= TAlphaColors.Black;
+
+    end;
   end;
+
 end;
 
 procedure TfrmFiltroCategoria.FormClose(Sender: TObject;

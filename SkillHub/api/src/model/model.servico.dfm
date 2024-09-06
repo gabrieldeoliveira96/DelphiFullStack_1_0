@@ -1,6 +1,7 @@
 inherited DmServico: TDmServico
   Height = 341
   Width = 433
+  PixelsPerInch = 120
   inherited Conexao: TFDConnection
     Connected = True
     Left = 51

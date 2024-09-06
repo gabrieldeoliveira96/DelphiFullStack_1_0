@@ -4,32 +4,32 @@
 	"installedModules": {
 		"github.com/hashload/horse": {
 			"name": "horse",
-			"version": "3.1.5",
-			"hash": "3824f65f99e511ba73d3fdd2f6d16413",
+			"version": "3.1.6",
+			"hash": "7fdacf6b762af6406e17d06e1c5fb0a1",
 			"artifacts": {},
 			"failed": false,
 			"changed": false
 		},
 		"github.com/hashload/jhonson": {
 			"name": "jhonson",
-			"version": "1.1.6",
-			"hash": "6408c0964998a945994d4bf29d2c88c5",
+			"version": "1.1.9",
+			"hash": "ab9663f2e7c0ab2086e560c9c66ce092",
 			"artifacts": {},
 			"failed": false,
 			"changed": false
 		},
 		"github.com/viniciussanchez/dataset-serialize": {
 			"name": "dataset-serialize",
-			"version": "v2.5.1",
-			"hash": "ae435c9a81088a7c1635b41b4c69b89e",
+			"version": "v2.5.9",
+			"hash": "62a95816d2cac761b15521c06fe43109",
 			"artifacts": {},
 			"failed": false,
 			"changed": false
 		},
 		"https://github.com/viniciussanchez/dataset-serialize": {
 			"name": "dataset-serialize",
-			"version": "v2.5.2",
-			"hash": "ae435c9a81088a7c1635b41b4c69b89e",
+			"version": "v2.5.9",
+			"hash": "62a95816d2cac761b15521c06fe43109",
 			"artifacts": {},
 			"failed": false,
 			"changed": true

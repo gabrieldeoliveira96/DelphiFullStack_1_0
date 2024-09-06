@@ -1,6 +1,7 @@
 inherited DmLogin: TDmLogin
   Height = 250
   Width = 335
+  PixelsPerInch = 120
   inherited Conexao: TFDConnection
     Connected = True
     Left = 51

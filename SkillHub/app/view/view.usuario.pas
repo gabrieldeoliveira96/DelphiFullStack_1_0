@@ -6,9 +6,11 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Layouts,
   FMX.Controls.Presentation, FMX.StdCtrls, System.Skia, FMX.Objects, FMX.Skia,
-  FMX.Effects, FMX.Filter.Effects;
+  FMX.Effects, FMX.Filter.Effects, System.JSON, uLoading, uFancyDialog,
+  view.principal;
 
 type
+
   TfrmUsuario = class(TForm)
     LayoutTopo: TLayout;
     Layout1: TLayout;
@@ -35,15 +37,21 @@ type
     Line4: TLine;
     VertScrollBox1: TVertScrollBox;
     Layout4: TLayout;
-    SkLabel6: TSkLabel;
+    lblSair: TSkLabel;
     procedure LayoutNotificacoesClick(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure LayoutDadosDaContaClick(Sender: TObject);
+    procedure lblSairClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
   private
+    FUsuario:TUsuario;
+    FMsg:TFancyDialog;
     { Private declarations }
   public
     { Public declarations }
+    procedure CarregaTela(AUsuario: TUsuario);
   end;
 
 var
@@ -53,7 +61,20 @@ implementation
 
 {$R *.fmx}
 
-uses view.notificacao, view.dados.usuario;
+uses view.notificacao, view.dados.usuario, uConnection, uUrl;
+
+procedure TfrmUsuario.CarregaTela(AUsuario: TUsuario);
+begin
+
+  FUsuario:= AUsuario;
+
+  TThread.Synchronize(nil,
+  procedure
+  begin
+    skLabel1.Text:= FUsuario.Nome;
+  end);
+
+end;
 
 procedure TfrmUsuario.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
@@ -61,19 +82,73 @@ begin
   frmUsuario:= nil;
 end;
 
+procedure TfrmUsuario.FormCreate(Sender: TObject);
+begin
+  FMsg:= TFancyDialog.Create(self);
+end;
+
+procedure TfrmUsuario.FormDestroy(Sender: TObject);
+begin
+  FreeAndNil(FMsg);
+end;
+
 procedure TfrmUsuario.LayoutDadosDaContaClick(Sender: TObject);
 begin
   if not Assigned(frmDadosdoUsuario) then
     Application.CreateForm(TfrmDadosdoUsuario, frmDadosdoUsuario);
+  frmDadosdoUsuario.CarregaTela(FUsuario);
   frmDadosdoUsuario.Show;
 
 end;
 
 procedure TfrmUsuario.LayoutNotificacoesClick(Sender: TObject);
 begin
-  if not Assigned(frmNotificacao) then
-    Application.CreateForm(TfrmNotificacao, frmNotificacao);
-  frmNotificacao.Show;
+  TLoading.Show(self,'Aguarde');
+
+  TThread.CreateAnonymousThread(
+  procedure
+  begin
+    try
+      TThread.Synchronize(nil,
+      procedure
+      begin
+        if not Assigned(frmNotificacao) then
+          Application.CreateForm(TfrmNotificacao, frmNotificacao);
+      end);
+
+      if FUsuario.Tipo = TTipoUsuario.Cliente then
+        frmNotificacao.CarregaTela(1);
+      if FUsuario.Tipo = TTipoUsuario.Colaborador then
+        frmNotificacao.CarregaTela(2);
+
+      TThread.Synchronize(nil,
+      procedure
+      begin
+        frmNotificacao.Show;
+      end);
+    finally
+      TThread.Synchronize(nil,
+      procedure
+      begin
+        TLoading.Hide;
+
+      end)
+    end;
+  end).Start;
+
+end;
+
+procedure TfrmUsuario.lblSairClick(Sender: TObject);
+begin
+  FMsg.Show(TIconDialog.Question,
+  'Confirme',
+  'Confirme para sair do aplicativo',
+  'Confirmar',
+  procedure
+  begin
+    Application.Terminate;
+  end,
+  'Cancelar');
 
 end;
 
